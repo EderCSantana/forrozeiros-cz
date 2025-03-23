@@ -3,19 +3,21 @@ import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Facebook, Instagram, Menu, X } from "lucide-react";
 import LanguageSelector from "./LanguageSelector";
-
-const navItems = [
-  { name: "About Forró", path: "/about-forro" },
-  { name: "About Us", path: "/about-us" },
-  { name: "Events", path: "/events" },
-  { name: "Our Rules", path: "/rules" },
-  { name: "Partners", path: "/partners" },
-  { name: "Contact", path: "/contact" },
-];
+import { useLanguage } from "../contexts/LanguageContext";
 
 const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const location = useLocation();
+  const { t } = useLanguage();
+
+  const navItems = [
+    { name: t("nav.about_forro"), path: "/about-forro" },
+    { name: t("nav.about_us"), path: "/about-us" },
+    { name: t("nav.events"), path: "/events" },
+    { name: t("nav.rules"), path: "/rules" },
+    { name: t("nav.partners"), path: "/partners" },
+    { name: t("nav.contact"), path: "/contact" },
+  ];
 
   const toggleMobileMenu = () => {
     setMobileMenuOpen(!mobileMenuOpen);
@@ -38,7 +40,7 @@ const Header = () => {
           <nav className="hidden md:flex items-center space-x-1 lg:space-x-3">
             {navItems.map((item) => (
               <Link
-                key={item.name}
+                key={item.path}
                 to={item.path}
                 className={`nav-link ${
                   location.pathname === item.path ? "text-dance-orange" : ""
@@ -92,7 +94,7 @@ const Header = () => {
         <nav className="container-fluid py-4 flex flex-col space-y-3">
           {navItems.map((item) => (
             <Link
-              key={item.name}
+              key={item.path}
               to={item.path}
               className={`nav-link ${
                 location.pathname === item.path ? "text-dance-orange" : ""

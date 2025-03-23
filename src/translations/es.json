@@ -1,0 +1,70 @@
+
+{
+  "nav.about_forro": "Sobre Forró",
+  "nav.about_us": "Sobre Nosotros",
+  "nav.events": "Eventos",
+  "nav.rules": "Nuestras Reglas",
+  "nav.partners": "Socios",
+  "nav.contact": "Contacto",
+
+  "rules.title": "Nuestras Reglas",
+  "rules.subtitle": "Directrices para garantizar una experiencia segura, respetuosa y agradable para todos",
+  "rules.community_guidelines": "Directrices de la Comunidad",
+  "rules.community_description": "En DanceEvent, fomentamos una comunidad basada en el respeto, la inclusión y la alegría compartida del baile. Nuestras directrices ayudan a mantener un ambiente positivo donde todos se sientan bienvenidos y seguros.",
+  
+  "rules.respect_consent": "Respeto y Consentimiento",
+  "rules.respect.item1": "Siempre pide permiso antes de bailar con alguien y respeta su decisión si se niega.",
+  "rules.respect.item2": "Mantén un contacto físico apropiado durante los bailes. Si no estás seguro sobre un movimiento o posición, pregunta primero.",
+  "rules.respect.item3": "Escucha los comentarios de tu pareja y ajústate en consecuencia.",
+  "rules.respect.item4": "Cualquiera puede terminar un baile en cualquier momento sin explicación.",
+  "rules.respect.item5": "Reporta cualquier situación incómoda a nuestro personal inmediatamente.",
+  
+  "rules.floor_etiquette": "Etiqueta en la Pista",
+  "rules.floor.item1": "Sé consciente de tu entorno y de los otros bailarines en la pista.",
+  "rules.floor.item2": "Adapta tus movimientos al espacio disponible—guarda los movimientos más grandes para cuando la pista esté menos concurrida.",
+  "rules.floor.item3": "Sigue el flujo general en sentido contrario a las agujas del reloj cuando sea aplicable.",
+  "rules.floor.item4": "Si ocurre una colisión, asegúrate de que todos estén bien y pide disculpas antes de continuar.",
+  "rules.floor.item5": "En condiciones de aglomeración, prioriza la seguridad sobre los movimientos elaborados.",
+  
+  "rules.inclusivity": "Inclusividad",
+  "rules.inclusivity.item1": "Damos la bienvenida a bailarines de todos los orígenes, identidades, edades y niveles de habilidad.",
+  "rules.inclusivity.item2": "Se anima a los bailarines experimentados a bailar con principiantes y proporcionar orientación de apoyo.",
+  "rules.inclusivity.item3": "No se tolerará ningún tipo de lenguaje o comportamiento discriminatorio.",
+  "rules.inclusivity.item4": "Fomentamos el cambio de roles y el aprendizaje tanto de las posiciones de guía como de seguimiento.",
+  "rules.inclusivity.item5": "Sé paciente y apoya a aquellos que están aprendiendo.",
+  
+  "rules.hygiene": "Higiene Personal y Vestimenta",
+  "rules.hygiene.item1": "Asiste a los eventos recién duchado y usando desodorante.",
+  "rules.hygiene.item2": "Lleva un cambio de ropa o camisetas extra si tiendes a transpirar mucho.",
+  "rules.hygiene.item3": "Usa ropa cómoda y limpia, apropiada para el movimiento.",
+  "rules.hygiene.item4": "Elige calzado que no dañe el suelo de baile (evita zapatos de calle con suciedad o suelas de goma que puedan marcar el suelo).",
+  "rules.hygiene.item5": "Considera llevar una toalla de mano para uso personal.",
+  
+  "rules.conduct": "Conducta General",
+  "rules.conduct.item1": "Llega a tiempo a las clases y respeta las indicaciones del instructor.",
+  "rules.conduct.item2": "Se desaconseja el consumo excesivo de alcohol—por favor, bebe responsablemente.",
+  "rules.conduct.item3": "La fotografía y el video en eventos deben ser consensuados. Pregunta antes de tomar fotos de otros.",
+  "rules.conduct.item4": "Apoya el evento pagando las cuotas de entrada correspondientes.",
+  "rules.conduct.item5": "Ayuda a construir nuestra comunidad dando la bienvenida a los recién llegados y creando una atmósfera positiva.",
+  
+  "rules.violations": "Consecuencias por Incumplimiento de las Reglas",
+  "rules.violations_description": "Tomamos estas directrices seriamente para garantizar la seguridad y el disfrute de todos. Las violaciones se abordarán de la siguiente manera:",
+  
+  "rules.first_occurrence": "Primera Ocurrencia:",
+  "rules.first_occurrence_description": "Un recordatorio verbal sobre nuestras directrices comunitarias.",
+  
+  "rules.second_occurrence": "Segunda Ocurrencia:",
+  "rules.second_occurrence_description": "Una advertencia formal y posible retirada temporal del evento actual.",
+  
+  "rules.serious_violations": "Violaciones Graves o Repetidas:",
+  "rules.serious_violations_description": "Suspensión de eventos futuros o exclusión permanente de nuestra comunidad.",
+  
+  "rules.immediate_ejection": "Expulsión Inmediata:",
+  "rules.immediate_ejection_description": "Violaciones graves como acoso, comportamiento amenazante o poner en peligro a otros resultarán en la retirada inmediata sin reembolso.",
+  
+  "rules.reporting": "Cómo Reportar Problemas",
+  "rules.reporting_description": "Si experimentas o presencias un comportamiento que viola estas directrices, por favor repórtalo inmediatamente a cualquier miembro del personal u organizador del evento. También puedes contactarnos directamente en:",
+  "rules.reporting_email": "Email: safety@danceevent.com",
+  "rules.reporting_phone": "Teléfono: (123) 456-7890",
+  "rules.reporting_confidential": "Todos los reportes serán tratados confidencialmente, y se tomarán las medidas apropiadas."
+}

@@ -1,0 +1,21 @@
+
+{
+  "nav.about_forro": "O Forró",
+  "nav.about_us": "O Nás",
+  "nav.events": "Podujatia",
+  "nav.rules": "Naše Pravidlá",
+  "nav.partners": "Partneri",
+  "nav.contact": "Kontakt",
+
+  "rules.title": "Naše Pravidlá",
+  "rules.subtitle": "Pokyny na zabezpečenie bezpečného, úctivého a príjemného zážitku pre všetkých",
+  "rules.community_guidelines": "Komunitné Pokyny",
+  "rules.community_description": "V DanceEvent podporujeme komunitu založenú na rešpekte, inkluzivite a spoločnej radosti z tanca. Naše pokyny pomáhajú udržiavať pozitívne prostredie, kde sa každý cíti vítaný a bezpečný.",
+  
+  "rules.respect_consent": "Rešpekt a Súhlas",
+  "rules.respect.item1": "Vždy sa opýtajte pred tancom s niekým a rešpektujte ich rozhodnutie, ak odmietnu.",
+  "rules.respect.item2": "Udržujte vhodný fyzický kontakt počas tancov. Ak si nie ste istí pohybom alebo držaním, najprv sa opýtajte.",
+  "rules.respect.item3": "Počúvajte spätnú väzbu vášho partnera a prispôsobte sa.",
+  "rules.respect.item4": "Ktokoľvek môže kedykoľvek ukončiť tanec bez vysvetlenia.",
+  "rules.respect.item5": "Nahláste akékoľvek nepríjemné situácie nášmu personálu okamžite."
+}

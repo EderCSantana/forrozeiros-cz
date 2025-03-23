@@ -1,29 +1,21 @@
 
 import { useState, useRef, useEffect } from "react";
 import { ChevronDown, Check } from "lucide-react";
-
-const languages = [
-  { code: "EN", name: "English" },
-  { code: "ES", name: "Español" },
-  { code: "SK", name: "Slovenčina" },
-  { code: "CZ", name: "Čeština" },
-  { code: "UA", name: "Українська" },
-  { code: "RU", name: "Русский" },
-  { code: "PT", name: "Português" },
-  { code: "PT-BR", name: "Português (Brasil)" },
-];
+import { useLanguage, languages } from "../contexts/LanguageContext";
 
 const LanguageSelector = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [selectedLanguage, setSelectedLanguage] = useState(languages[0]);
+  const { language, setLanguage } = useLanguage();
   const dropdownRef = useRef<HTMLDivElement>(null);
+
+  const selectedLanguage = languages.find(lang => lang.code === language) || languages[0];
 
   const toggleDropdown = () => {
     setIsOpen(!isOpen);
   };
 
-  const selectLanguage = (language: typeof languages[0]) => {
-    setSelectedLanguage(language);
+  const selectLanguage = (languageCode: string) => {
+    setLanguage(languageCode);
     setIsOpen(false);
   };
 
@@ -63,20 +55,20 @@ const LanguageSelector = () => {
       {isOpen && (
         <div className="absolute right-0 mt-2 py-2 w-48 bg-white rounded-md shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none z-50 animate-fade-in">
           <div className="max-h-56 overflow-y-auto">
-            {languages.map((language) => (
+            {languages.map((lang) => (
               <button
-                key={language.code}
-                onClick={() => selectLanguage(language)}
+                key={lang.code}
+                onClick={() => selectLanguage(lang.code)}
                 className={`flex items-center justify-between w-full px-4 py-2 text-sm hover:bg-dance-cream transition-colors duration-150 ${
-                  selectedLanguage.code === language.code
+                  language === lang.code
                     ? "text-dance-orange"
                     : "text-dance-black"
                 }`}
               >
                 <span>
-                  {language.code} - {language.name}
+                  {lang.code} - {lang.name}
                 </span>
-                {selectedLanguage.code === language.code && (
+                {language === lang.code && (
                   <Check size={16} className="text-dance-orange" />
                 )}
               </button>
