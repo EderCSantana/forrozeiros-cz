@@ -5,12 +5,7 @@ import React, { createContext, useContext, useState, useEffect, ReactNode } from
 export const languages = [
   { code: "EN", name: "English" },
   { code: "ES", name: "Español" },
-  { code: "SK", name: "Slovenčina" },
-  { code: "CZ", name: "Čeština" },
-  { code: "UA", name: "Українська" },
-  { code: "RU", name: "Русский" },
-  { code: "PT", name: "Português" },
-  { code: "PT-BR", name: "Português (Brasil)" },
+  { code: "PT", name: "Português" }
 ];
 
 type LanguageContextType = {
@@ -41,19 +36,27 @@ export const LanguageProvider = ({ children }: LanguageProviderProps) => {
   const [translations, setTranslations] = useState<Record<string, string>>({});
   const [isLoading, setIsLoading] = useState(true);
 
-  // Load translations when language changes
   useEffect(() => {
     const loadTranslations = async () => {
       setIsLoading(true);
       try {
-        const langData = await import(`../translations/${language.toLowerCase()}.json`);
-        setTranslations(langData.default);
+        const sections = ['navigation', 'rules', 'about_forro', 'footer'];
+        const loadedTranslations: Record<string, string> = {};
+
+        for (const section of sections) {
+          const sectionData = await import(`../translations/sections/${section}.json`);
+          const langCode = language.toLowerCase();
+          const sectionTranslations = sectionData.default[langCode] || sectionData.default['en'];
+          Object.assign(loadedTranslations, sectionTranslations);
+        }
+
+        setTranslations(loadedTranslations);
       } catch (error) {
         console.error(`Failed to load translations for ${language}`, error);
-        // Fallback to English if translation file is missing
+        // Fallback to English if translation files are missing
         if (language !== "EN") {
-          const fallbackData = await import("../translations/en.json");
-          setTranslations(fallbackData.default);
+          const fallbackData = await import("../translations/sections/navigation.json");
+          setTranslations(fallbackData.default.en);
         }
       } finally {
         setIsLoading(false);
@@ -64,10 +67,9 @@ export const LanguageProvider = ({ children }: LanguageProviderProps) => {
     loadTranslations();
   }, [language]);
 
-  // Translation function
   const t = (key: string) => {
-    if (isLoading) return key; // Return key while loading
-    return translations[key] || key; // Fallback to key if translation missing
+    if (isLoading) return key;
+    return translations[key] || key;
   };
 
   return (

@@ -1,0 +1,27 @@
+
+{
+  "en": {
+    "footer.quick_links": "Quick Links",
+    "footer.contact_us": "Contact Us",
+    "footer.stay_updated": "Stay Updated",
+    "footer.newsletter": "Subscribe to our newsletter for the latest events and updates",
+    "footer.subscribe": "Subscribe",
+    "footer.rights": "All rights reserved. Designed with ♥ for dance lovers."
+  },
+  "es": {
+    "footer.quick_links": "Enlaces Rápidos",
+    "footer.contact_us": "Contáctanos",
+    "footer.stay_updated": "Mantente Actualizado",
+    "footer.newsletter": "Suscríbete a nuestro boletín para los últimos eventos y actualizaciones",
+    "footer.subscribe": "Suscribirse",
+    "footer.rights": "Todos los derechos reservados. Diseñado con ♥ para amantes del baile."
+  },
+  "pt": {
+    "footer.quick_links": "Links Rápidos",
+    "footer.contact_us": "Contate-nos",
+    "footer.stay_updated": "Fique Atualizado",
+    "footer.newsletter": "Inscreva-se em nossa newsletter para os últimos eventos e atualizações",
+    "footer.subscribe": "Inscrever-se",
+    "footer.rights": "Todos os direitos reservados. Projetado com ♥ para amantes da dança."
+  }
+}
