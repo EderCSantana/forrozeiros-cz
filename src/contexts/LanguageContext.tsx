@@ -5,7 +5,9 @@ import React, { createContext, useContext, useState, useEffect, ReactNode } from
 export const languages = [
   { code: "EN", name: "English" },
   { code: "ES", name: "Español" },
-  { code: "PT", name: "Português" }
+  { code: "PT", name: "Português" },
+  { code: "SK", name: "Slovenčina" },
+  { code: "UA", name: "Українська" }
 ];
 
 type LanguageContextType = {
@@ -55,19 +57,28 @@ export const LanguageProvider = ({ children }: LanguageProviderProps) => {
         const loadedTranslations: Record<string, string> = {};
 
         for (const section of sections) {
-          const sectionData = await import(`../translations/sections/${section}.json`);
-          const langCode = language.toLowerCase();
-          const sectionTranslations = sectionData.default[langCode] || sectionData.default['en'];
-          Object.assign(loadedTranslations, sectionTranslations);
+          try {
+            const sectionData = await import(`../translations/sections/${section}.json`);
+            const langCode = language.toLowerCase();
+            const sectionTranslations = sectionData[langCode] || sectionData['en'];
+            
+            if (sectionTranslations) {
+              Object.assign(loadedTranslations, sectionTranslations);
+            }
+          } catch (error) {
+            console.error(`Failed to load section: ${section}`, error);
+          }
         }
 
         setTranslations(loadedTranslations);
       } catch (error) {
         console.error(`Failed to load translations for ${language}`, error);
         // Fallback to English if translation files are missing
-        if (language !== "EN") {
+        try {
           const fallbackData = await import("../translations/sections/general.json");
-          setTranslations(fallbackData.default.en);
+          setTranslations(fallbackData.en);
+        } catch (fallbackError) {
+          console.error("Failed to load fallback translations", fallbackError);
         }
       } finally {
         setIsLoading(false);
