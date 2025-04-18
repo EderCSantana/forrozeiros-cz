@@ -1,0 +1,30 @@
+
+{
+  "en": {
+    "events.title": "Events",
+    "events.subtitle": "Join us for amazing dance experiences",
+    "events.upcoming": "Upcoming Events",
+    "events.past": "Past Events",
+    "events.register": "Register",
+    "events.learn_more": "Learn More",
+    "events.no_events": "No events scheduled at the moment"
+  },
+  "es": {
+    "events.title": "Eventos",
+    "events.subtitle": "Únete a nosotros para experiencias de baile increíbles",
+    "events.upcoming": "Próximos Eventos",
+    "events.past": "Eventos Pasados",
+    "events.register": "Registrarse",
+    "events.learn_more": "Más Información",
+    "events.no_events": "No hay eventos programados en este momento"
+  },
+  "pt": {
+    "events.title": "Eventos",
+    "events.subtitle": "Junte-se a nós para experiências incríveis de dança",
+    "events.upcoming": "Próximos Eventos",
+    "events.past": "Eventos Passados",
+    "events.register": "Registrar",
+    "events.learn_more": "Saiba Mais",
+    "events.no_events": "Nenhum evento programado no momento"
+  }
+}

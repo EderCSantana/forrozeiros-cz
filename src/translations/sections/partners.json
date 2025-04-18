@@ -1,0 +1,24 @@
+
+{
+  "en": {
+    "partners.title": "Our Partners",
+    "partners.subtitle": "Working together to promote dance culture",
+    "partners.become_partner": "Become a Partner",
+    "partners.contact_us": "Contact Us for Partnership",
+    "partners.no_partners": "Currently seeking new partnerships"
+  },
+  "es": {
+    "partners.title": "Nuestros Socios",
+    "partners.subtitle": "Trabajando juntos para promover la cultura del baile",
+    "partners.become_partner": "Conviértete en Socio",
+    "partners.contact_us": "Contáctanos para Asociarte",
+    "partners.no_partners": "Actualmente buscando nuevas asociaciones"
+  },
+  "pt": {
+    "partners.title": "Nossos Parceiros",
+    "partners.subtitle": "Trabalhando juntos para promover a cultura da dança",
+    "partners.become_partner": "Torne-se um Parceiro",
+    "partners.contact_us": "Contate-nos para Parcerias",
+    "partners.no_partners": "Atualmente buscando novas parcerias"
+  }
+}

@@ -40,7 +40,18 @@ export const LanguageProvider = ({ children }: LanguageProviderProps) => {
     const loadTranslations = async () => {
       setIsLoading(true);
       try {
-        const sections = ['navigation', 'rules', 'about_forro', 'footer'];
+        const sections = [
+          'navigation',
+          'rules',
+          'about_forro',
+          'footer',
+          'general',
+          'about_us',
+          'events',
+          'partners',
+          'contact',
+          'home'
+        ];
         const loadedTranslations: Record<string, string> = {};
 
         for (const section of sections) {
@@ -55,7 +66,7 @@ export const LanguageProvider = ({ children }: LanguageProviderProps) => {
         console.error(`Failed to load translations for ${language}`, error);
         // Fallback to English if translation files are missing
         if (language !== "EN") {
-          const fallbackData = await import("../translations/sections/navigation.json");
+          const fallbackData = await import("../translations/sections/general.json");
           setTranslations(fallbackData.default.en);
         }
       } finally {

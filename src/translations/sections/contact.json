@@ -1,0 +1,36 @@
+
+{
+  "en": {
+    "contact.title": "Contact Us",
+    "contact.subtitle": "Get in touch with our team",
+    "contact.form.name": "Name",
+    "contact.form.email": "Email",
+    "contact.form.message": "Message",
+    "contact.form.submit": "Send Message",
+    "contact.location": "Location",
+    "contact.phone": "Phone",
+    "contact.email": "Email"
+  },
+  "es": {
+    "contact.title": "Contáctanos",
+    "contact.subtitle": "Ponte en contacto con nuestro equipo",
+    "contact.form.name": "Nombre",
+    "contact.form.email": "Correo electrónico",
+    "contact.form.message": "Mensaje",
+    "contact.form.submit": "Enviar Mensaje",
+    "contact.location": "Ubicación",
+    "contact.phone": "Teléfono",
+    "contact.email": "Correo electrónico"
+  },
+  "pt": {
+    "contact.title": "Contate-nos",
+    "contact.subtitle": "Entre em contato com nossa equipe",
+    "contact.form.name": "Nome",
+    "contact.form.email": "E-mail",
+    "contact.form.message": "Mensagem",
+    "contact.form.submit": "Enviar Mensagem",
+    "contact.location": "Localização",
+    "contact.phone": "Telefone",
+    "contact.email": "E-mail"
+  }
+}

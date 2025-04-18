@@ -1,0 +1,39 @@
+
+{
+  "en": {
+    "home.hero.title": "Welcome to DanceEvent",
+    "home.hero.subtitle": "Experience the Joy of Brazilian Dance",
+    "home.features.title": "Why Choose Us",
+    "home.features.events": "Regular Events",
+    "home.features.community": "Vibrant Community",
+    "home.features.music": "Live Music",
+    "home.updates.title": "Latest Updates",
+    "home.updates.subtitle": "Stay informed about our newest events, classes, and community news",
+    "home.cta.title": "Ready to Join the Dance?",
+    "home.cta.subtitle": "Experience the joy of Forró dancing with our welcoming community"
+  },
+  "es": {
+    "home.hero.title": "Bienvenido a DanceEvent",
+    "home.hero.subtitle": "Experimenta la Alegría de la Danza Brasileña",
+    "home.features.title": "Por Qué Elegirnos",
+    "home.features.events": "Eventos Regulares",
+    "home.features.community": "Comunidad Vibrante",
+    "home.features.music": "Música en Vivo",
+    "home.updates.title": "Últimas Actualizaciones",
+    "home.updates.subtitle": "Mantente informado sobre nuestros nuevos eventos, clases y noticias de la comunidad",
+    "home.cta.title": "¿Listo para Unirte al Baile?",
+    "home.cta.subtitle": "Experimenta la alegría del Forró con nuestra acogedora comunidad"
+  },
+  "pt": {
+    "home.hero.title": "Bem-vindo ao DanceEvent",
+    "home.hero.subtitle": "Experimente a Alegria da Dança Brasileira",
+    "home.features.title": "Por Que Nos Escolher",
+    "home.features.events": "Eventos Regulares",
+    "home.features.community": "Comunidade Vibrante",
+    "home.features.music": "Música ao Vivo",
+    "home.updates.title": "Últimas Atualizações",
+    "home.updates.subtitle": "Fique informado sobre nossos novos eventos, aulas e notícias da comunidade",
+    "home.cta.title": "Pronto para Entrar na Dança?",
+    "home.cta.subtitle": "Experimente a alegria do Forró com nossa comunidade acolhedora"
+  }
+}
