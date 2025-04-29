@@ -140,141 +140,127 @@ const AboutForro = () => {
         </div>
       </section>
       
-      {/* Forró Styles Section */}
+      {/* Forró Styles Section - Combined */}
       <section className="py-16 bg-dance-yellow/30">
         <div className="container-fluid mx-auto">
           <div className="flex items-center gap-3 mb-10">
             <Music className="h-8 w-8 text-dance-brown" />
             <h2 className="text-3xl font-display font-medium text-dance-brown">
-              {t("about_forro.cultural_title")}
+              {t("about_forro.styles_title")}
             </h2>
           </div>
           
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
-            <div>
-              <h3 className="text-2xl font-display font-semibold mb-6 text-dance-brown">
-                Musical Styles of Forró
-              </h3>
+          <p className="text-lg text-gray-800 mb-8">
+            {t("about_forro.styles_p1")}
+          </p>
+          
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <Accordion type="single" collapsible className="space-y-4">
+              <AccordionItem value="pe-de-serra" className="bg-white rounded-lg shadow-sm border-none">
+                <AccordionTrigger className="px-6 py-4 hover:no-underline rounded-t-lg">
+                  <span className="text-lg font-medium text-dance-brown">{t("about_forro.style_1_name")}</span>
+                </AccordionTrigger>
+                <AccordionContent className="px-6 pb-4 pt-0">
+                  <p className="text-gray-700">
+                    {t("about_forro.style_1_desc")}
+                  </p>
+                </AccordionContent>
+              </AccordionItem>
               
-              <Accordion type="single" collapsible className="space-y-4">
-                <AccordionItem value="pe-de-serra" className="bg-white rounded-lg shadow-sm border-none">
-                  <AccordionTrigger className="px-6 py-4 hover:no-underline rounded-t-lg">
-                    <span className="text-lg font-medium text-dance-brown">Pé de Serra</span>
-                  </AccordionTrigger>
-                  <AccordionContent className="px-6 pb-4 pt-0">
-                    <p className="text-gray-700">
-                      This style stays true to traditional roots, characterized by its acoustic instrumentation and strong rhythms. 
-                      Songs often tell stories of rural life and Brazilian folklore.
-                    </p>
-                  </AccordionContent>
-                </AccordionItem>
-                
-                <AccordionItem value="universitario" className="bg-white rounded-lg shadow-sm border-none">
-                  <AccordionTrigger className="px-6 py-4 hover:no-underline rounded-t-lg">
-                    <span className="text-lg font-medium text-dance-brown">Forró Universitário</span>
-                  </AccordionTrigger>
-                  <AccordionContent className="px-6 pb-4 pt-0">
-                    <p className="text-gray-700">
-                      A modern interpretation that became popular in university settings, blending traditional elements 
-                      with contemporary influences, and often featuring a more diverse range of instruments and arrangements.
-                    </p>
-                  </AccordionContent>
-                </AccordionItem>
-                
-                <AccordionItem value="eletronico" className="bg-white rounded-lg shadow-sm border-none">
-                  <AccordionTrigger className="px-6 py-4 hover:no-underline rounded-t-lg">
-                    <span className="text-lg font-medium text-dance-brown">Forró Eletrônico</span>
-                  </AccordionTrigger>
-                  <AccordionContent className="px-6 pb-4 pt-0">
-                    <p className="text-gray-700">
-                      Emerged in the 1990s, incorporating electronic instruments and beats, making it more accessible to 
-                      younger audiences. It retains the essence of traditional Forró while aiming for broader appeal in 
-                      urban settings.
-                    </p>
-                  </AccordionContent>
-                </AccordionItem>
-                
-                <AccordionItem value="rojao" className="bg-white rounded-lg shadow-sm border-none">
-                  <AccordionTrigger className="px-6 py-4 hover:no-underline rounded-t-lg">
-                    <span className="text-lg font-medium text-dance-brown">Rojão</span>
-                  </AccordionTrigger>
-                  <AccordionContent className="px-6 pb-4 pt-0">
-                    <p className="text-gray-700">
-                      A lively and upbeat rhythm that emphasizes a strong, clear beat, often used in dances 
-                      that involve quick footwork and energetic movements.
-                    </p>
-                  </AccordionContent>
-                </AccordionItem>
-              </Accordion>
-            </div>
-            
-            <div>
-              <h3 className="text-2xl font-display font-semibold mb-6 text-dance-brown">
-                Dance Styles of Forró
-              </h3>
+              <AccordionItem value="universitario" className="bg-white rounded-lg shadow-sm border-none">
+                <AccordionTrigger className="px-6 py-4 hover:no-underline rounded-t-lg">
+                  <span className="text-lg font-medium text-dance-brown">{t("about_forro.style_2_name")}</span>
+                </AccordionTrigger>
+                <AccordionContent className="px-6 pb-4 pt-0">
+                  <p className="text-gray-700">
+                    {t("about_forro.style_2_desc")}
+                  </p>
+                </AccordionContent>
+              </AccordionItem>
               
-              <Accordion type="single" collapsible className="space-y-4">
-                <AccordionItem value="xaxado" className="bg-white rounded-lg shadow-sm border-none">
-                  <AccordionTrigger className="px-6 py-4 hover:no-underline rounded-t-lg">
-                    <span className="text-lg font-medium text-dance-brown">Xaxado</span>
-                  </AccordionTrigger>
-                  <AccordionContent className="px-6 pb-4 pt-0">
-                    <p className="text-gray-700">
-                      This dance includes distinct hip movements and emphasizes rhythm, often associated with the cangaço 
-                      (bandit culture) where men and women dance proudly, showcasing their strength and elegance.
-                    </p>
-                  </AccordionContent>
-                </AccordionItem>
-                
-                <AccordionItem value="arrasta-pe" className="bg-white rounded-lg shadow-sm border-none">
-                  <AccordionTrigger className="px-6 py-4 hover:no-underline rounded-t-lg">
-                    <span className="text-lg font-medium text-dance-brown">Arrasta-Pé</span>
-                  </AccordionTrigger>
-                  <AccordionContent className="px-6 pb-4 pt-0">
-                    <p className="text-gray-700">
-                      A festive dance style celebrated during forró parties, characterized by a mix of rhythmic footwork 
-                      and lively partner interactions, creating an upbeat and communal atmosphere.
-                    </p>
-                  </AccordionContent>
-                </AccordionItem>
-                
-                <AccordionItem value="xote" className="bg-white rounded-lg shadow-sm border-none">
-                  <AccordionTrigger className="px-6 py-4 hover:no-underline rounded-t-lg">
-                    <span className="text-lg font-medium text-dance-brown">Xote</span>
-                  </AccordionTrigger>
-                  <AccordionContent className="px-6 pb-4 pt-0">
-                    <p className="text-gray-700">
-                      A slower dance rhythm that allows for a more romantic and relaxed style. It is often danced 
-                      in a close hold and typically features a gentle, flowing motion.
-                    </p>
-                  </AccordionContent>
-                </AccordionItem>
-                
-                <AccordionItem value="baiao" className="bg-white rounded-lg shadow-sm border-none">
-                  <AccordionTrigger className="px-6 py-4 hover:no-underline rounded-t-lg">
-                    <span className="text-lg font-medium text-dance-brown">Baião</span>
-                  </AccordionTrigger>
-                  <AccordionContent className="px-6 pb-4 pt-0">
-                    <p className="text-gray-700">
-                      A hallmark rhythm of Forró, marked by syncopation and a lively tempo. It often includes 
-                      call-and-response vocals, intensifying the interaction between dancers and musicians.
-                    </p>
-                  </AccordionContent>
-                </AccordionItem>
-                
-                <AccordionItem value="coco" className="bg-white rounded-lg shadow-sm border-none">
-                  <AccordionTrigger className="px-6 py-4 hover:no-underline rounded-t-lg">
-                    <span className="text-lg font-medium text-dance-brown">Coco</span>
-                  </AccordionTrigger>
-                  <AccordionContent className="px-6 pb-4 pt-0">
-                    <p className="text-gray-700">
-                      While traditionally separate from Forró, Coco is often blended into Forró music, characterized by 
-                      its upbeat tempo and percussive elements, making it suitable for dance.
-                    </p>
-                  </AccordionContent>
-                </AccordionItem>
-              </Accordion>
-            </div>
+              <AccordionItem value="eletronico" className="bg-white rounded-lg shadow-sm border-none">
+                <AccordionTrigger className="px-6 py-4 hover:no-underline rounded-t-lg">
+                  <span className="text-lg font-medium text-dance-brown">{t("about_forro.style_3_name")}</span>
+                </AccordionTrigger>
+                <AccordionContent className="px-6 pb-4 pt-0">
+                  <p className="text-gray-700">
+                    {t("about_forro.style_3_desc")}
+                  </p>
+                </AccordionContent>
+              </AccordionItem>
+              
+              <AccordionItem value="rojao" className="bg-white rounded-lg shadow-sm border-none">
+                <AccordionTrigger className="px-6 py-4 hover:no-underline rounded-t-lg">
+                  <span className="text-lg font-medium text-dance-brown">{t("about_forro.style_4_name")}</span>
+                </AccordionTrigger>
+                <AccordionContent className="px-6 pb-4 pt-0">
+                  <p className="text-gray-700">
+                    {t("about_forro.style_4_desc")}
+                  </p>
+                </AccordionContent>
+              </AccordionItem>
+            </Accordion>
+          
+            <Accordion type="single" collapsible className="space-y-4">
+              <AccordionItem value="xaxado" className="bg-white rounded-lg shadow-sm border-none">
+                <AccordionTrigger className="px-6 py-4 hover:no-underline rounded-t-lg">
+                  <span className="text-lg font-medium text-dance-brown">{t("about_forro.style_5_name")}</span>
+                </AccordionTrigger>
+                <AccordionContent className="px-6 pb-4 pt-0">
+                  <p className="text-gray-700">
+                    {t("about_forro.style_5_desc")}
+                  </p>
+                </AccordionContent>
+              </AccordionItem>
+              
+              <AccordionItem value="arrasta-pe" className="bg-white rounded-lg shadow-sm border-none">
+                <AccordionTrigger className="px-6 py-4 hover:no-underline rounded-t-lg">
+                  <span className="text-lg font-medium text-dance-brown">{t("about_forro.style_6_name")}</span>
+                </AccordionTrigger>
+                <AccordionContent className="px-6 pb-4 pt-0">
+                  <p className="text-gray-700">
+                    {t("about_forro.style_6_desc")}
+                  </p>
+                </AccordionContent>
+              </AccordionItem>
+              
+              <AccordionItem value="xote" className="bg-white rounded-lg shadow-sm border-none">
+                <AccordionTrigger className="px-6 py-4 hover:no-underline rounded-t-lg">
+                  <span className="text-lg font-medium text-dance-brown">{t("about_forro.style_7_name")}</span>
+                </AccordionTrigger>
+                <AccordionContent className="px-6 pb-4 pt-0">
+                  <p className="text-gray-700">
+                    {t("about_forro.style_7_desc")}
+                  </p>
+                </AccordionContent>
+              </AccordionItem>
+              
+              <AccordionItem value="baiao" className="bg-white rounded-lg shadow-sm border-none">
+                <AccordionTrigger className="px-6 py-4 hover:no-underline rounded-t-lg">
+                  <span className="text-lg font-medium text-dance-brown">{t("about_forro.style_8_name")}</span>
+                </AccordionTrigger>
+                <AccordionContent className="px-6 pb-4 pt-0">
+                  <p className="text-gray-700">
+                    {t("about_forro.style_8_desc")}
+                  </p>
+                </AccordionContent>
+              </AccordionItem>
+            </Accordion>
+          </div>
+
+          <div className="mt-8">
+            <Accordion type="single" collapsible className="space-y-4 max-w-xl mx-auto">
+              <AccordionItem value="coco" className="bg-white rounded-lg shadow-sm border-none">
+                <AccordionTrigger className="px-6 py-4 hover:no-underline rounded-t-lg">
+                  <span className="text-lg font-medium text-dance-brown">{t("about_forro.style_9_name")}</span>
+                </AccordionTrigger>
+                <AccordionContent className="px-6 pb-4 pt-0">
+                  <p className="text-gray-700">
+                    {t("about_forro.style_9_desc")}
+                  </p>
+                </AccordionContent>
+              </AccordionItem>
+            </Accordion>
           </div>
           
           <div className="mt-16 text-center">

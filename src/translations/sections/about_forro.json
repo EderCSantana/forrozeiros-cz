@@ -18,9 +18,35 @@
     "about_forro.dance_style_list_3_name": "Triangle",
     "about_forro.dance_style_list_3_desc": "– adds high-pitched percussive accents.",
 
-    "about_forro.cultural_title": "Main Styles of Forró",
-    "about_forro.cultural_p1": "Musical Styles of Forró\n\nPé de Serra: This style stays true to traditional roots, characterized by its acoustic instrumentation and strong rhythms. Songs often tell stories of rural life and Brazilian folklore.\n\nForró Universitário: A modern interpretation that became popular in university settings, blending traditional elements with contemporary influences, and often featuring a more diverse range of instruments and arrangements.\n\nForró Eletrônico: Emerged in the 1990s, incorporating electronic instruments and beats, making it more accessible to younger audiences. It retains the essence of traditional Forró while aiming for broader appeal in urban settings.\n\nRojão: A lively and upbeat rhythm that emphasizes a strong, clear beat, often used in dances that involve quick footwork and energetic movements.",
-    "about_forro.cultural_p2": "Dance Styles of Forró\n\nXaxado: This dance includes distinct hip movements and emphasizes rhythm, often associated with the cangaço (bandit culture) where men and women dance proudly, showcasing their strength and elegance.\n\nArrasta-Pé: A festive dance style celebrated during forró parties, characterized by a mix of rhythmic footwork and lively partner interactions, creating an upbeat and communal atmosphere.\n\nXote: A slower dance rhythm that allows for a more romantic and relaxed style. It is often danced in a close hold and typically features a gentle, flowing motion.\n\nBaião: A hallmark rhythm of Forró, marked by syncopation and a lively tempo. It often includes call-and-response vocals, intensifying the interaction between dancers and musicians.\n\nCoco: While traditionally separate from Forró, Coco is often blended into Forró music, characterized by its upbeat tempo and percussive elements, making it suitable for dance.",
+    "about_forro.styles_title": "Styles of Forró",
+    "about_forro.styles_p1": "Forró encompasses various styles, each with its own unique characteristics and expressions:",
+
+    "about_forro.style_1_name": "Pé de Serra",
+    "about_forro.style_1_desc": "This style stays true to traditional roots, characterized by its acoustic instrumentation and strong rhythms. Songs often tell stories of rural life and Brazilian folklore.",
+    
+    "about_forro.style_2_name": "Forró Universitário",
+    "about_forro.style_2_desc": "A modern interpretation that became popular in university settings, blending traditional elements with contemporary influences, and often featuring a more diverse range of instruments and arrangements.",
+    
+    "about_forro.style_3_name": "Forró Eletrônico",
+    "about_forro.style_3_desc": "Emerged in the 1990s, incorporating electronic instruments and beats, making it more accessible to younger audiences. It retains the essence of traditional Forró while aiming for broader appeal in urban settings.",
+    
+    "about_forro.style_4_name": "Rojão",
+    "about_forro.style_4_desc": "A lively and upbeat rhythm that emphasizes a strong, clear beat, often used in dances that involve quick footwork and energetic movements.",
+    
+    "about_forro.style_5_name": "Xaxado",
+    "about_forro.style_5_desc": "This dance includes distinct hip movements and emphasizes rhythm, often associated with the cangaço (bandit culture) where men and women dance proudly, showcasing their strength and elegance.",
+    
+    "about_forro.style_6_name": "Arrasta-Pé",
+    "about_forro.style_6_desc": "A festive dance style celebrated during forró parties, characterized by a mix of rhythmic footwork and lively partner interactions, creating an upbeat and communal atmosphere.",
+    
+    "about_forro.style_7_name": "Xote",
+    "about_forro.style_7_desc": "A slower dance rhythm that allows for a more romantic and relaxed style. It is often danced in a close hold and typically features a gentle, flowing motion.",
+    
+    "about_forro.style_8_name": "Baião",
+    "about_forro.style_8_desc": "A hallmark rhythm of Forró, marked by syncopation and a lively tempo. It often includes call-and-response vocals, intensifying the interaction between dancers and musicians.",
+    
+    "about_forro.style_9_name": "Coco",
+    "about_forro.style_9_desc": "While traditionally separate from Forró, Coco is often blended into Forró music, characterized by its upbeat tempo and percussive elements, making it suitable for dance.",
 
     "about_forro.try_forro": "Want to Try Forró?",
     "about_forro.try_forro_desc": "Join our weekly classes and experience the joy of forró dancing!",
