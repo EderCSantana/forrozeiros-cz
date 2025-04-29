@@ -1,8 +1,9 @@
+
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import { useLanguage } from "../contexts/LanguageContext";
 import TitleStripe from "../components/TitleStripe";
-import { Shield, Users, User, BookOpen } from "lucide-react";
+import { Shield, Users, User, BookOpen, Coffee } from "lucide-react";
 
 const RulesSection = ({ 
   title, 
@@ -45,119 +46,46 @@ const Rules = () => {
           </div>
           
           <RulesSection 
-            title={t("rules.community_guidelines")}
-            description={t("rules.community_description")}
-            icon={Users}
-          >
-            {/* Adding children content to fix the error */}
-            <p className="text-dance-black text-opacity-80">
-              Our community thrives on mutual respect and shared passion for dance.
-            </p>
-          </RulesSection>
-          
-          <RulesSection 
-            title={t("rules.respect_consent")}
-            icon={User}
-          >
-            <ul className="list-disc pl-6 space-y-3 text-dance-black text-opacity-80">
-              <li>{t("rules.respect.item1")}</li>
-              <li>{t("rules.respect.item2")}</li>
-              <li>{t("rules.respect.item3")}</li>
-              <li>{t("rules.respect.item4")}</li>
-              <li>{t("rules.respect.item5")}</li>
-            </ul>
-          </RulesSection>
-          
-          <RulesSection 
-            title={t("rules.floor_etiquette")}
-            icon={BookOpen}
-          >
-            <ul className="list-disc pl-6 space-y-3 text-dance-black text-opacity-80">
-              <li>{t("rules.floor.item1")}</li>
-              <li>{t("rules.floor.item2")}</li>
-              <li>{t("rules.floor.item3")}</li>
-              <li>{t("rules.floor.item4")}</li>
-              <li>{t("rules.floor.item5")}</li>
-            </ul>
-          </RulesSection>
-          
-          <RulesSection 
-            title={t("rules.inclusivity")}
+            title={t("rules.general_rules")}
+            description={t("rules.general_description")}
             icon={Users}
           >
             <ul className="list-disc pl-6 space-y-3 text-dance-black text-opacity-80">
-              <li>{t("rules.inclusivity.item1")}</li>
-              <li>{t("rules.inclusivity.item2")}</li>
-              <li>{t("rules.inclusivity.item3")}</li>
-              <li>{t("rules.inclusivity.item4")}</li>
-              <li>{t("rules.inclusivity.item5")}</li>
+              <li>{t("rules.general.item1")}</li>
+              <li>{t("rules.general.item2")}</li>
+              <li>{t("rules.general.item3")}</li>
+              <li>{t("rules.general.item4")}</li>
+              <li>{t("rules.general.item5")}</li>
+              <li>{t("rules.general.item6")}</li>
+              <li>{t("rules.general.item7")}</li>
+              <li>{t("rules.general.item8")}</li>
             </ul>
           </RulesSection>
           
           <RulesSection 
-            title={t("rules.hygiene")}
-            icon={User}
+            title={t("rules.prostor_rules")}
+            icon={Coffee}
           >
             <ul className="list-disc pl-6 space-y-3 text-dance-black text-opacity-80">
-              <li>{t("rules.hygiene.item1")}</li>
-              <li>{t("rules.hygiene.item2")}</li>
-              <li>{t("rules.hygiene.item3")}</li>
-              <li>{t("rules.hygiene.item4")}</li>
-              <li>{t("rules.hygiene.item5")}</li>
+              <li>{t("rules.prostor.item1")}</li>
+              <li>{t("rules.prostor.item2")}</li>
+              <li>{t("rules.prostor.item3")}</li>
+              <li>{t("rules.prostor.item4")}</li>
             </ul>
           </RulesSection>
           
           <RulesSection 
-            title={t("rules.conduct")}
+            title={t("rules.recommendations")}
             icon={BookOpen}
           >
             <ul className="list-disc pl-6 space-y-3 text-dance-black text-opacity-80">
-              <li>{t("rules.conduct.item1")}</li>
-              <li>{t("rules.conduct.item2")}</li>
-              <li>{t("rules.conduct.item3")}</li>
-              <li>{t("rules.conduct.item4")}</li>
-              <li>{t("rules.conduct.item5")}</li>
+              <li>{t("rules.recommendations.item1")}</li>
+              <li>{t("rules.recommendations.item2")}</li>
+              <li>{t("rules.recommendations.item3")}</li>
+              <li>{t("rules.recommendations.item4")}</li>
+              <li>{t("rules.recommendations.item5")}</li>
+              <li>{t("rules.recommendations.item6")}</li>
             </ul>
-          </RulesSection>
-          
-          <RulesSection 
-            title={t("rules.violations")}
-            description={t("rules.violations_description")}
-            icon={Shield}
-          >
-            <div className="space-y-6 text-dance-black text-opacity-80">
-              <div>
-                <h4 className="font-bold mb-1">{t("rules.first_occurrence")}</h4>
-                <p>{t("rules.first_occurrence_description")}</p>
-              </div>
-              
-              <div>
-                <h4 className="font-bold mb-1">{t("rules.second_occurrence")}</h4>
-                <p>{t("rules.second_occurrence_description")}</p>
-              </div>
-              
-              <div>
-                <h4 className="font-bold mb-1">{t("rules.serious_violations")}</h4>
-                <p>{t("rules.serious_violations_description")}</p>
-              </div>
-              
-              <div>
-                <h4 className="font-bold mb-1">{t("rules.immediate_ejection")}</h4>
-                <p>{t("rules.immediate_ejection_description")}</p>
-              </div>
-            </div>
-          </RulesSection>
-          
-          <RulesSection 
-            title={t("rules.reporting")}
-            description={t("rules.reporting_description")}
-            icon={Shield}
-          >
-            <div className="bg-dance-beige bg-opacity-50 p-6 rounded-lg space-y-3 text-dance-black text-opacity-80">
-              <p>{t("rules.reporting_email")}</p>
-              <p>{t("rules.reporting_phone")}</p>
-              <p className="italic">{t("rules.reporting_confidential")}</p>
-            </div>
           </RulesSection>
         </div>
       </main>
