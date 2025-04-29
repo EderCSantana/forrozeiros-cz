@@ -25,7 +25,7 @@ const Header = () => {
   };
 
   return (
-    <header className="sticky top-0 z-50 w-full bg-dance-flag-green bg-opacity-95 backdrop-blur-md shadow-sm transition-all duration-300">
+    <header className="sticky top-0 z-50 w-full bg-[#ffeec0] bg-opacity-95 backdrop-blur-md shadow-sm transition-all duration-300">
       <div className="container-fluid mx-auto">
         <div className="flex items-center justify-between py-4">
           {/* Logo */}
@@ -45,8 +45,8 @@ const Header = () => {
               <Link
                 key={item.path}
                 to={item.path}
-                className={`nav-link text-white ${
-                  location.pathname === item.path ? "text-dance-yellow" : ""
+                className={`nav-link text-dance-brown ${
+                  location.pathname === item.path ? "text-dance-orange" : ""
                 }`}
               >
                 {item.name}
@@ -60,7 +60,7 @@ const Header = () => {
               href="https://facebook.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-white hover:text-dance-yellow transition-colors duration-300"
+              className="text-dance-brown hover:text-dance-orange transition-colors duration-300"
               aria-label="Facebook"
             >
               <Facebook size={20} />
@@ -69,7 +69,7 @@ const Header = () => {
               href="https://instagram.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-white hover:text-dance-yellow transition-colors duration-300"
+              className="text-dance-brown hover:text-dance-orange transition-colors duration-300"
               aria-label="Instagram"
             >
               <Instagram size={20} />
@@ -79,7 +79,7 @@ const Header = () => {
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden text-white hover:text-dance-yellow focus:outline-none"
+            className="md:hidden text-dance-brown hover:text-dance-orange focus:outline-none"
             onClick={toggleMobileMenu}
             aria-label="Toggle mobile menu"
           >
@@ -90,7 +90,7 @@ const Header = () => {
 
       {/* Mobile Menu */}
       <div
-        className={`md:hidden absolute top-full left-0 right-0 bg-dance-flag-green bg-opacity-95 backdrop-blur-md shadow-md transform transition-transform duration-300 ease-in-out ${
+        className={`md:hidden absolute top-full left-0 right-0 bg-[#ffeec0] bg-opacity-95 backdrop-blur-md shadow-md transform transition-transform duration-300 ease-in-out ${
           mobileMenuOpen ? "translate-y-0" : "-translate-y-full"
         }`}
       >
@@ -99,20 +99,20 @@ const Header = () => {
             <Link
               key={item.path}
               to={item.path}
-              className={`nav-link text-white ${
-                location.pathname === item.path ? "text-dance-yellow" : ""
+              className={`nav-link text-dance-brown ${
+                location.pathname === item.path ? "text-dance-orange" : ""
               }`}
               onClick={() => setMobileMenuOpen(false)}
             >
               {item.name}
             </Link>
           ))}
-          <div className="flex items-center space-x-4 pt-3 border-t border-white border-opacity-20">
+          <div className="flex items-center space-x-4 pt-3 border-t border-dance-brown border-opacity-20">
             <a
               href="https://facebook.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-white hover:text-dance-yellow transition-colors duration-300"
+              className="text-dance-brown hover:text-dance-orange transition-colors duration-300"
               aria-label="Facebook"
             >
               <Facebook size={20} />
@@ -121,7 +121,7 @@ const Header = () => {
               href="https://instagram.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-white hover:text-dance-yellow transition-colors duration-300"
+              className="text-dance-brown hover:text-dance-orange transition-colors duration-300"
               aria-label="Instagram"
             >
               <Instagram size={20} />
