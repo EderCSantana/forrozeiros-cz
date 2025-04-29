@@ -5,20 +5,6 @@ import Footer from "../components/Footer";
 import TitleStripe from "../components/TitleStripe";
 import { useLanguage } from "../contexts/LanguageContext";
 
-// Forró logo component
-const ForroLogo = () => {
-  return (
-    <div className="flex justify-center my-4">
-      <div className="text-dance-green forro-logo text-3xl relative">
-        <span className="block">FO</span>
-        <span className="block">R</span>
-        <span className="block text-dance-orange">Z</span>
-        <span className="block">EI</span>
-        <span className="block">ROS</span>
-      </div>
-    </div>
-  );
-};
 
 const AboutUs = () => {
   const { t } = useLanguage();
@@ -31,7 +17,6 @@ const AboutUs = () => {
       
       <main className="flex-grow container-fluid mx-auto py-12">
         <div className="max-w-4xl mx-auto">
-          <ForroLogo />
           
           <div className="mt-8 bg-white p-8 rounded-lg shadow-md">
             <h2 className="text-2xl font-bold text-dance-brown mb-6">

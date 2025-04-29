@@ -1,8 +1,6 @@
-
 {
   "en": {
     "events.title": "Events",
-    "events.subtitle": "Join us for amazing dance experiences",
     "events.upcoming": "Upcoming Events",
     "events.past": "Past Events",
     "events.register": "Register",
@@ -48,7 +46,6 @@
   },
   "es": {
     "events.title": "Eventos",
-    "events.subtitle": "Únete a nosotros para experiencias de baile increíbles",
     "events.upcoming": "Próximos Eventos",
     "events.past": "Eventos Pasados",
     "events.register": "Registrarse",
@@ -94,7 +91,6 @@
   },
   "pt": {
     "events.title": "Eventos",
-    "events.subtitle": "Junte-se a nós para experiências incríveis de dança",
     "events.upcoming": "Próximos Eventos",
     "events.past": "Eventos Passados",
     "events.register": "Registrar",
