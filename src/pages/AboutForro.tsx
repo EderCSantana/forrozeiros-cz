@@ -3,7 +3,7 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import { useLanguage } from "../contexts/LanguageContext";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import { Dance, Flag, Music } from "lucide-react";
+import { Music, Flag, Users } from "lucide-react";
 
 const AboutForro = () => {
   const { t } = useLanguage();
@@ -65,7 +65,7 @@ const AboutForro = () => {
 
               <div className="space-y-6">
                 <div className="flex items-center gap-3">
-                  <Dance className="h-8 w-8 text-dance-brown" />
+                  <Users className="h-8 w-8 text-dance-brown" />
                   <h2 className="text-3xl font-display font-medium text-dance-brown">
                     {t("about_forro.dance_style_title")}
                   </h2>
