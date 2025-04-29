@@ -19,69 +19,82 @@ const Footer = () => {
                 Spreading the joy of Forró in Czechia and beyond.<br />
                 Workshops · Parties · Community · Culture
               </p>
-              <p className="text-white text-opacity-80 mb-4">
-                Want to organize a Forró event at your school, company, or project?
-              </p>
               <p className="text-white text-opacity-80 italic">
                 Made by the Forrozeiros collective.
               </p>
             </div>
 
-            {/* Quick Links */}
+            {/* Quick Links - Now in 2 columns */}
             <div>
               <h3 className="text-xl font-display font-medium mb-4">
                 Quick Links
               </h3>
-              <ul className="space-y-2 text-white text-opacity-80">
-                <li>
-                  <Link
-                    to="/about-forro"
-                    className="hover:text-dance-orange transition-colors duration-300"
-                  >
-                    About Forró
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    to="/about-us"
-                    className="hover:text-dance-orange transition-colors duration-300"
-                  >
-                    About Us
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    to="/events"
-                    className="hover:text-dance-orange transition-colors duration-300"
-                  >
-                    Events
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    to="/rules"
-                    className="hover:text-dance-orange transition-colors duration-300"
-                  >
-                    Our Rules
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    to="/partners"
-                    className="hover:text-dance-orange transition-colors duration-300"
-                  >
-                    Partners
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    to="/contact"
-                    className="hover:text-dance-orange transition-colors duration-300"
-                  >
-                    Contact
-                  </Link>
-                </li>
-              </ul>
+              <div className="grid grid-cols-2 gap-2">
+                <div>
+                  <ul className="space-y-2 text-white text-opacity-80">
+                    <li>
+                      <Link
+                        to="/about-forro"
+                        className="hover:text-dance-orange transition-colors duration-300"
+                      >
+                        About Forró
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        to="/about-us"
+                        className="hover:text-dance-orange transition-colors duration-300"
+                      >
+                        About Us
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        to="/events"
+                        className="hover:text-dance-orange transition-colors duration-300"
+                      >
+                        Events
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        to="/custom-events"
+                        className="hover:text-dance-orange transition-colors duration-300"
+                      >
+                        Custom Events
+                      </Link>
+                    </li>
+                  </ul>
+                </div>
+                <div>
+                  <ul className="space-y-2 text-white text-opacity-80">
+                    <li>
+                      <Link
+                        to="/rules"
+                        className="hover:text-dance-orange transition-colors duration-300"
+                      >
+                        Our Rules
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        to="/partners"
+                        className="hover:text-dance-orange transition-colors duration-300"
+                      >
+                        Partners
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        to="/contact"
+                        className="hover:text-dance-orange transition-colors duration-300"
+                      >
+                        Contact
+                      </Link>
+                    </li>
+                  </ul>
+                </div>
+              </div>
             </div>
 
             {/* Contact Info */}
@@ -129,8 +142,7 @@ const Footer = () => {
         {/* Bottom Footer */}
         <div className="border-t border-white border-opacity-10 py-6 text-center text-white text-opacity-60">
           <p>
-            © {year} Forrozeiros.cz. All rights reserved. 
-            <span className="text-dance-orange mx-1">♥</span>
+            © {year} Forrozeiros.cz. All rights reserved. Made by the Forrozeiros collective.
           </p>
         </div>
       </div>

@@ -3,6 +3,7 @@ import React from "react";
 import { useLanguage } from "../contexts/LanguageContext";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import TitleStripe from "../components/TitleStripe";
 import { School, University, Building, HandHeart, Gift, Calendar } from "lucide-react";
 
 const CustomEvents = () => {
@@ -11,12 +12,9 @@ const CustomEvents = () => {
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
-      <div className="flex-grow">
+      <TitleStripe title={t("custom_events.title")} />
+      <div className="flex-grow bg-dance-beige">
         <div className="container-fluid mx-auto py-8 md:py-12">
-          <h1 className="text-3xl md:text-5xl font-bold text-center mb-8 text-dance-brown">
-            {t("custom_events.title")}
-          </h1>
-
           <div className="max-w-3xl mx-auto mb-10">
             <p className="text-lg mb-6">
               {t("custom_events.intro")}

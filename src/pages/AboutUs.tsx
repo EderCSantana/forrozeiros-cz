@@ -2,30 +2,7 @@
 import { PartyPopper, Music, Users } from "lucide-react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-
-// Bunting flags component
-const BuntingFlags = () => {
-  const flagColors = [
-    'bg-dance-flag-red', 
-    'bg-dance-flag-blue', 
-    'bg-dance-flag-green', 
-    'bg-dance-flag-orange'
-  ];
-  
-  return (
-    <div className="bunting-container relative w-full flex justify-center py-2">
-      <div className="flex items-center">
-        {[...Array(12)].map((_, i) => (
-          <div 
-            key={i} 
-            className={`flag ${flagColors[i % flagColors.length]} animate-flag-wave`} 
-            style={{ animationDelay: `${i * 0.2}s` }}
-          />
-        ))}
-      </div>
-    </div>
-  );
-};
+import TitleStripe from "../components/TitleStripe";
 
 // Forró logo component
 const ForroLogo = () => {
@@ -47,22 +24,8 @@ const AboutUs = () => {
     <div className="min-h-screen flex flex-col bg-dance-beige">
       <Header />
       
-      {/* Hero Section with Bunting Flags */}
-      <section className="relative py-16 bg-dance-brown">
-        <BuntingFlags />
-        <div className="container-fluid mx-auto text-center pt-4 pb-8">
-          <h1 className="text-5xl md:text-7xl font-bold mb-4 text-dance-beige animate-fade-in">
-            FORRÓ
-          </h1>
-          <h2 className="text-3xl md:text-5xl font-bold text-dance-orange mb-6 animate-fade-in animation-delay-200">
-            ABOUT US
-          </h2>
-          <p className="text-xl text-dance-beige text-opacity-90 max-w-2xl mx-auto animate-fade-in animation-delay-300">
-            Meet the passionate team behind DanceEvent
-          </p>
-        </div>
-        <BuntingFlags />
-      </section>
+      {/* Hero Section with Title Stripe */}
+      <TitleStripe title="ABOUT US" />
       
       {/* Our Story */}
       <section className="py-16 bg-dance-beige">
@@ -106,7 +69,6 @@ const AboutUs = () => {
       
       {/* Our Team */}
       <section className="py-16 bg-dance-beige relative">
-        <BuntingFlags />
         <div className="container-fluid mx-auto">
           <div className="text-center mb-12 pt-4">
             <h2 className="text-4xl font-bold mb-4 text-dance-brown forro-heading">
@@ -235,7 +197,6 @@ const AboutUs = () => {
       
       {/* CTA */}
       <section className="py-16 bg-dance-brown text-white relative">
-        <BuntingFlags />
         <div className="container-fluid mx-auto text-center pt-8">
           <h2 className="text-4xl font-bold mb-4 text-dance-beige">
             Join Our Community
@@ -250,7 +211,6 @@ const AboutUs = () => {
             Get in Touch
           </a>
         </div>
-        <BuntingFlags />
       </section>
       
       <Footer />
