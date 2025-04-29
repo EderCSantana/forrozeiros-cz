@@ -25,7 +25,7 @@ const Header = () => {
   };
 
   return (
-    <header className="sticky top-0 z-50 w-full bg-dance-green bg-opacity-95 backdrop-blur-md shadow-sm transition-all duration-300">
+    <header className="sticky top-0 z-50 w-full bg-dance-flag-green bg-opacity-95 backdrop-blur-md shadow-sm transition-all duration-300">
       <div className="container-fluid mx-auto">
         <div className="flex items-center justify-between py-4">
           {/* Logo */}
@@ -90,7 +90,7 @@ const Header = () => {
 
       {/* Mobile Menu */}
       <div
-        className={`md:hidden absolute top-full left-0 right-0 bg-dance-green bg-opacity-95 backdrop-blur-md shadow-md transform transition-transform duration-300 ease-in-out ${
+        className={`md:hidden absolute top-full left-0 right-0 bg-dance-flag-green bg-opacity-95 backdrop-blur-md shadow-md transform transition-transform duration-300 ease-in-out ${
           mobileMenuOpen ? "translate-y-0" : "-translate-y-full"
         }`}
       >
