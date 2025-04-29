@@ -64,16 +64,19 @@ export default {
 					ring: 'hsl(var(--sidebar-ring))'
 				},
 				dance: {
-					brown: '#8B4513',
-					orange: '#F97316',
-					lightOrange: '#FDBA74',
-					blue: '#0EA5E9',
-					red: '#DC2626',
-					yellow: '#FACC15',
-					green: '#22C55E',
-					black: '#111111',
-					cream: '#FEF3C7',
-					beige: '#F5F5DC'
+					brown: '#B84C00', // Darker brown from FORRÓ text
+					orange: '#FF9500', // Bright orange from PARTY text
+					green: '#006837', // Green from WORKSHOP text and logo
+					blue: '#0055A4', // Blue from bunting flags
+					red: '#ED254E', // Red from bunting flags
+					yellow: '#FEF7CD', // Cream/yellow background
+					beige: '#FFF1D0', // Light beige background
+					flag: {
+						red: '#E94653', // Red flag color
+						blue: '#0055A4', // Blue flag color
+						green: '#006837', // Green flag color
+						orange: '#FF9500', // Orange flag color
+					}
 				}
 			},
 			borderRadius: {
@@ -83,7 +86,8 @@ export default {
 			},
 			fontFamily: {
 				sans: ['Inter', 'sans-serif'],
-				display: ['Playfair Display', 'serif']
+				display: ['Playfair Display', 'serif'],
+				forroLogo: ['Arial', 'sans-serif'],
 			},
 			keyframes: {
 				'accordion-down': {
@@ -121,6 +125,10 @@ export default {
 				float: {
 					'0%, 100%': { transform: 'translateY(0)' },
 					'50%': { transform: 'translateY(-5px)' }
+				},
+				'flag-wave': {
+					'0%, 100%': { transform: 'rotate(-2deg)' },
+					'50%': { transform: 'rotate(2deg)' }
 				}
 			},
 			animation: {
@@ -132,7 +140,8 @@ export default {
 				'slide-out': 'slide-out 0.5s ease-out',
 				'center-underline': 'center-underline 0.3s ease-out',
 				'carousel-fade': 'carousel-fade 15s infinite',
-				'float': 'float 3s ease-in-out infinite'
+				'float': 'float 3s ease-in-out infinite',
+				'flag-wave': 'flag-wave 3s ease-in-out infinite'
 			},
 			backgroundImage: {
 				'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
