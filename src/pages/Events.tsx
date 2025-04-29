@@ -112,10 +112,10 @@ const Events = () => {
               <p className="flex items-center gap-2 mt-4"><FileText size={18} className="text-dance-brown" /> {t("events.seasonal_rules")}</p>
             </EventSection>
             
-            {/* Nearby Events Section */}
+            {/* Nearby Events Section - Updated with new image */}
             <EventSection 
               title={t("events.nearby_title")}
-              image="/lovable-uploads/abf8c344-9fb4-470e-8e0f-af49193ff973.png"
+              image="/lovable-uploads/388cb454-d069-4e71-9e8c-a8487c1f074c.png"
             >
               <p>{t("events.nearby_intro")}</p>
               <ul className="list-disc pl-5">
