@@ -31,9 +31,11 @@ const Header = () => {
           {/* Logo */}
           <Link to="/" className="flex-shrink-0">
             <div className="flex items-center">
-              <span className="font-display text-2xl font-bold text-dance-brown">
-                Dance<span className="text-dance-orange">Event</span>
-              </span>
+              <img 
+                src="/lovable-uploads/c454e34b-5903-4ae4-97f6-b2d66315c01c.png" 
+                alt="Forró Zeiros" 
+                className="h-12 md:h-16"
+              />
             </div>
           </Link>
 

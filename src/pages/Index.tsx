@@ -61,9 +61,27 @@ const Index = () => {
     <div className={`min-h-screen flex flex-col transition-opacity duration-800 ${isLoaded ? 'opacity-100' : 'opacity-0'}`}>
       <Header />
       
-      {/* Hero Carousel */}
+      {/* Hero Carousel with Logo Overlay */}
       <section className="relative">
         <Carousel images={carouselImages} />
+        <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-40">
+          <div className="text-center">
+            <img 
+              src="/lovable-uploads/c454e34b-5903-4ae4-97f6-b2d66315c01c.png" 
+              alt="Forró Zeiros" 
+              className="w-64 md:w-80 mx-auto mb-6"
+            />
+            <h2 className="text-white text-xl md:text-2xl font-light mt-4">Experience the joy of Brazilian dance</h2>
+            <div className="mt-8">
+              <a 
+                href="/events" 
+                className="forro-button inline-block mx-2"
+              >
+                Join an Event
+              </a>
+            </div>
+          </div>
+        </div>
       </section>
 
       {/* Features Section */}
