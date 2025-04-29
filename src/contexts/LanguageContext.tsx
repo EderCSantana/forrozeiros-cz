@@ -52,7 +52,8 @@ export const LanguageProvider = ({ children }: LanguageProviderProps) => {
           'events',
           'partners',
           'contact',
-          'home'
+          'home',
+          'custom_events' // Added custom_events section
         ];
         const loadedTranslations: Record<string, string> = {};
 
