@@ -72,10 +72,10 @@ const Events = () => {
               <p>{t("events.weekly_contribution")}</p>
             </EventSection>
             
-            {/* Weekly Events in Letna Section */}
+            {/* Weekly Events in Letna Section - Updated with new image */}
             <EventSection 
               title={t("events.letna_title")}
-              image="/lovable-uploads/ca5e9a2a-1a24-4954-b0f2-1ec1bef8945a.png"
+              image="/lovable-uploads/a6572eb9-c316-45bf-9e11-2e8bfc2ff42c.png"
               imageOnLeft={true}
             >
               <p className="flex items-center gap-2"><Clock size={18} className="text-dance-brown" /> {t("events.letna_when")}</p>
@@ -112,7 +112,7 @@ const Events = () => {
               <p className="flex items-center gap-2 mt-4"><FileText size={18} className="text-dance-brown" /> {t("events.seasonal_rules")}</p>
             </EventSection>
             
-            {/* Nearby Events Section - Updated with new image */}
+            {/* Nearby Events Section */}
             <EventSection 
               title={t("events.nearby_title")}
               image="/lovable-uploads/388cb454-d069-4e71-9e8c-a8487c1f074c.png"
