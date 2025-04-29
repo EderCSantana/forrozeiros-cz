@@ -1,4 +1,3 @@
-
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import { useLanguage } from "../contexts/LanguageContext";
@@ -50,7 +49,10 @@ const Rules = () => {
             description={t("rules.community_description")}
             icon={Users}
           >
-            {/* Community Guidelines content */}
+            {/* Adding children content to fix the error */}
+            <p className="text-dance-black text-opacity-80">
+              Our community thrives on mutual respect and shared passion for dance.
+            </p>
           </RulesSection>
           
           <RulesSection 
