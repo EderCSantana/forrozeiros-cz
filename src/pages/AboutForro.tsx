@@ -111,15 +111,7 @@ const AboutForro = () => {
             
             {/* Sidebar */}
             <div className="lg:col-span-1">
-              <div className="sticky top-24 space-y-8">
-                <div className="rounded-lg overflow-hidden shadow-lg">
-                  <img 
-                    src="https://images.unsplash.com/photo-1504609773096-104ff2c73ba4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" 
-                    alt="Forró dancers" 
-                    className="w-full h-auto"
-                  />
-                </div>
-                
+              <div className="sticky top-24 space-y-8">               
                 <div className="bg-dance-brown text-white p-6 rounded-lg">
                   <h3 className="text-xl font-display font-semibold mb-4">
                     {t("about_forro.try_forro")}
