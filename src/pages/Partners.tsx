@@ -16,7 +16,13 @@ const Partners = () => {
       
       <TitleStripe title={t("partners.title")} />
       
-         
+
+      
+      {/* Partners Grid - Removed "Our Valued Partners" heading */}
+      <section className="py-16 bg-white">
+        <div className="container-fluid mx-auto">
+          {/* Heading removed as requested */}
+          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {partners.map(partner => (
               <div key={partner.id} className="bg-white rounded-lg overflow-hidden shadow-sm border border-dance-cream transition-all duration-300 hover:shadow-md hover:-translate-y-1">
@@ -52,7 +58,12 @@ const Partners = () => {
         </div>
       </section>
       
+<<<<<<< HEAD
+
+      
+=======
     
+>>>>>>> 01e2f6f604e091cf0c1531f7330bdbc0c35b909e
       <Footer />
     </div>
   );
