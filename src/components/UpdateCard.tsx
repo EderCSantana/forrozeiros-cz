@@ -7,6 +7,7 @@ interface UpdateCardProps {
   content: string;
   tags?: string[];
   imageUrl?: string;
+  imageAlt?: string;
 }
 
 const UpdateCard = ({
@@ -15,6 +16,7 @@ const UpdateCard = ({
   content,
   tags = [],
   imageUrl,
+  imageAlt,
 }: UpdateCardProps) => {
   return (
     <div className="bg-white rounded-lg shadow-sm border border-dance-cream overflow-hidden transition-all duration-300 hover:shadow-md hover:-translate-y-1">
@@ -22,7 +24,7 @@ const UpdateCard = ({
         <div className="w-full h-48 overflow-hidden">
           <img
             src={imageUrl}
-            alt={title}
+            alt={imageAlt || title}
             className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
           />
         </div>

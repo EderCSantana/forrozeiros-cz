@@ -5,20 +5,35 @@
     "partners.subtitle": "Working together to promote dance culture",
     "partners.become_partner": "Become a Partner",
     "partners.contact_us": "Contact Us for Partnership",
-    "partners.no_partners": "Currently seeking new partnerships"
+    "partners.no_partners": "Currently seeking new partnerships",
+    "partners.venues": "Venues",
+    "partners.teachers": "Teachers",
+    "partners.local_band": "Local Band",
+    "partners.others": "Other Partners",
+    "partners.visit_website": "Visit Website"
   },
   "es": {
     "partners.title": "Nuestros Socios",
     "partners.subtitle": "Trabajando juntos para promover la cultura del baile",
     "partners.become_partner": "Conviértete en Socio",
     "partners.contact_us": "Contáctanos para Asociarte",
-    "partners.no_partners": "Actualmente buscando nuevas asociaciones"
+    "partners.no_partners": "Actualmente buscando nuevas asociaciones",
+    "partners.venues": "Lugares",
+    "partners.teachers": "Profesores",
+    "partners.local_band": "Banda Local",
+    "partners.others": "Otros Socios",
+    "partners.visit_website": "Visitar Sitio Web"
   },
   "pt": {
     "partners.title": "Nossos Parceiros",
     "partners.subtitle": "Trabalhando juntos para promover a cultura da dança",
     "partners.become_partner": "Torne-se um Parceiro",
     "partners.contact_us": "Contate-nos para Parcerias",
-    "partners.no_partners": "Atualmente buscando novas parcerias"
+    "partners.no_partners": "Atualmente buscando novas parcerias",
+    "partners.venues": "Locais",
+    "partners.teachers": "Professores",
+    "partners.local_band": "Banda Local",
+    "partners.others": "Outros Parceiros",
+    "partners.visit_website": "Visitar Site"
   }
 }
