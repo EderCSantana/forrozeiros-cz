@@ -1,0 +1,57 @@
+
+{
+  "en": {
+    "custom_events.title": "Custom Events",
+    "custom_events.intro": "We offer tailor-made forró workshops in collaboration with experienced teachers for various institutions and occasions. Whether it's for education, community building, or simply fun, forró brings people together in an inclusive and joyful way.",
+    "custom_events.help_intro": "Here's where we can help organize workshops:",
+    "custom_events.schools_title": "Schools",
+    "custom_events.schools_content": "Forró is a fantastic way to introduce students to Brazilian culture, music, and partner dance. It encourages teamwork, rhythm, and physical activity in a fun and interactive environment.",
+    "custom_events.universities_title": "Universities",
+    "custom_events.universities_content": "University cultural programs and student organizations often look for engaging and diverse events. A forró workshop is a great way to explore world cultures, promote inclusion, and provide a relaxing break from academic life.",
+    "custom_events.team_building_title": "Company Team Buildings",
+    "custom_events.team_building_content": "Forró workshops make unique and fun team-building activities. Dancing together fosters communication, trust, and a positive team spirit while bringing joy and energy to the workplace.",
+    "custom_events.nonprofit_events_title": "Non-Profit Events",
+    "custom_events.nonprofit_events_content": "We love collaborating with non-profits! Forró workshops add an element of warmth, inclusivity, and cultural richness to community-focused initiatives and outreach programs.",
+    "custom_events.nonprofit_projects_title": "Non-Profit Projects",
+    "custom_events.nonprofit_projects_content": "If you're running a long-term community project or initiative, we can help bring people together through recurring or one-time dance sessions, contributing to your social impact goals.",
+    "custom_events.public_events_title": "Workshops in Approved and Public Events",
+    "custom_events.public_events_content": "We participate in local festivals, multicultural events, and open-air happenings. Our workshops attract people of all ages and backgrounds and add vibrant energy to public gatherings.",
+    "custom_events.assistance": "We offer assistance with teacher selection, scheduling, and all organizational details free of charge. Our aim is to be a \"glass window\" to present forró to others and share its joy and cultural richness with as many people as possible. 🌟"
+  },
+  "es": {
+    "custom_events.title": "Eventos Personalizados",
+    "custom_events.intro": "Ofrecemos talleres de forró a medida en colaboración con profesores experimentados para diversas instituciones y ocasiones. Ya sea para educación, construcción comunitaria o simplemente diversión, el forró une a las personas de manera inclusiva y alegre.",
+    "custom_events.help_intro": "Estos son los lugares donde podemos ayudar a organizar talleres:",
+    "custom_events.schools_title": "Escuelas",
+    "custom_events.schools_content": "El forró es una manera fantástica de introducir a los estudiantes a la cultura brasileña, la música y el baile en pareja. Fomenta el trabajo en equipo, el ritmo y la actividad física en un ambiente divertido e interactivo.",
+    "custom_events.universities_title": "Universidades",
+    "custom_events.universities_content": "Los programas culturales universitarios y las organizaciones estudiantiles a menudo buscan eventos atractivos y diversos. Un taller de forró es una excelente manera de explorar culturas del mundo, promover la inclusión y proporcionar un descanso relajante de la vida académica.",
+    "custom_events.team_building_title": "Team Buildings Empresariales",
+    "custom_events.team_building_content": "Los talleres de forró crean actividades únicas y divertidas para la construcción de equipos. Bailar juntos fomenta la comunicación, la confianza y un espíritu de equipo positivo, aportando alegría y energía al lugar de trabajo.",
+    "custom_events.nonprofit_events_title": "Eventos Sin Fines de Lucro",
+    "custom_events.nonprofit_events_content": "¡Nos encanta colaborar con organizaciones sin fines de lucro! Los talleres de forró añaden un elemento de calidez, inclusividad y riqueza cultural a las iniciativas comunitarias y programas de divulgación.",
+    "custom_events.nonprofit_projects_title": "Proyectos Sin Fines de Lucro",
+    "custom_events.nonprofit_projects_content": "Si estás llevando a cabo un proyecto comunitario o iniciativa a largo plazo, podemos ayudar a unir a las personas mediante sesiones de baile recurrentes o únicas, contribuyendo a tus objetivos de impacto social.",
+    "custom_events.public_events_title": "Talleres en Eventos Aprobados y Públicos",
+    "custom_events.public_events_content": "Participamos en festivales locales, eventos multiculturales y actividades al aire libre. Nuestros talleres atraen a personas de todas las edades y orígenes, y añaden una energía vibrante a las reuniones públicas.",
+    "custom_events.assistance": "Ofrecemos asistencia con la selección de profesores, programación y todos los detalles organizativos sin costo alguno. Nuestro objetivo es ser una \"ventana transparente\" para presentar el forró a otros y compartir su alegría y riqueza cultural con la mayor cantidad de personas posible. 🌟"
+  },
+  "pt": {
+    "custom_events.title": "Eventos Personalizados",
+    "custom_events.intro": "Oferecemos workshops de forró sob medida em colaboração com professores experientes para várias instituições e ocasiões. Seja para educação, construção de comunidade ou simplesmente diversão, o forró reúne as pessoas de maneira inclusiva e alegre.",
+    "custom_events.help_intro": "Aqui está onde podemos ajudar a organizar workshops:",
+    "custom_events.schools_title": "Escolas",
+    "custom_events.schools_content": "O forró é uma maneira fantástica de apresentar aos estudantes a cultura brasileira, música e dança de salão. Incentiva o trabalho em equipe, ritmo e atividade física em um ambiente divertido e interativo.",
+    "custom_events.universities_title": "Universidades",
+    "custom_events.universities_content": "Programas culturais universitários e organizações estudantis frequentemente procuram eventos envolventes e diversos. Um workshop de forró é uma ótima maneira de explorar culturas mundiais, promover inclusão e proporcionar uma pausa relaxante da vida acadêmica.",
+    "custom_events.team_building_title": "Team Buildings Empresariais",
+    "custom_events.team_building_content": "Workshops de forró criam atividades únicas e divertidas para a construção de equipes. Dançar juntos promove comunicação, confiança e um espírito positivo de equipe, trazendo alegria e energia para o ambiente de trabalho.",
+    "custom_events.nonprofit_events_title": "Eventos Sem Fins Lucrativos",
+    "custom_events.nonprofit_events_content": "Adoramos colaborar com organizações sem fins lucrativos! Workshops de forró adicionam um elemento de calor, inclusão e riqueza cultural às iniciativas focadas na comunidade e programas de divulgação.",
+    "custom_events.nonprofit_projects_title": "Projetos Sem Fins Lucrativos",
+    "custom_events.nonprofit_projects_content": "Se você está executando um projeto comunitário de longo prazo ou iniciativa, podemos ajudar a reunir pessoas através de sessões de dança recorrentes ou únicas, contribuindo para seus objetivos de impacto social.",
+    "custom_events.public_events_title": "Workshops em Eventos Aprovados e Públicos",
+    "custom_events.public_events_content": "Participamos de festivais locais, eventos multiculturais e acontecimentos ao ar livre. Nossos workshops atraem pessoas de todas as idades e origens e adicionam energia vibrante a reuniões públicas.",
+    "custom_events.assistance": "Oferecemos assistência com seleção de professores, agendamento e todos os detalhes organizacionais gratuitamente. Nosso objetivo é ser uma \"janela de vidro\" para apresentar o forró a outros e compartilhar sua alegria e riqueza cultural com o maior número possível de pessoas. 🌟"
+  }
+}

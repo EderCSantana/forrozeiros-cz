@@ -4,6 +4,7 @@
     "nav.about_forro": "About Forró",
     "nav.about_us": "About Us",
     "nav.events": "Events",
+    "nav.custom_events": "Custom Events",
     "nav.rules": "Our Rules",
     "nav.partners": "Partners",
     "nav.contact": "Contact"
@@ -12,6 +13,7 @@
     "nav.about_forro": "Sobre Forró",
     "nav.about_us": "Sobre Nosotros",
     "nav.events": "Eventos",
+    "nav.custom_events": "Eventos Personalizados",
     "nav.rules": "Nuestras Reglas",
     "nav.partners": "Socios",
     "nav.contact": "Contacto"
@@ -20,6 +22,7 @@
     "nav.about_forro": "Sobre o Forró",
     "nav.about_us": "Sobre Nós",
     "nav.events": "Eventos",
+    "nav.custom_events": "Eventos Personalizados",
     "nav.rules": "Nossas Regras",
     "nav.partners": "Parceiros",
     "nav.contact": "Contato"

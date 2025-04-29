@@ -9,6 +9,7 @@ import Index from "./pages/Index";
 import AboutForro from "./pages/AboutForro";
 import AboutUs from "./pages/AboutUs";
 import Events from "./pages/Events";
+import CustomEvents from "./pages/CustomEvents";
 import Rules from "./pages/Rules";
 import Partners from "./pages/Partners";
 import Contact from "./pages/Contact";
@@ -28,6 +29,7 @@ const App = () => (
             <Route path="/about-forro" element={<AboutForro />} />
             <Route path="/about-us" element={<AboutUs />} />
             <Route path="/events" element={<Events />} />
+            <Route path="/custom-events" element={<CustomEvents />} />
             <Route path="/rules" element={<Rules />} />
             <Route path="/partners" element={<Partners />} />
             <Route path="/contact" element={<Contact />} />

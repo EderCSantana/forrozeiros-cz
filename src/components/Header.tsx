@@ -14,6 +14,7 @@ const Header = () => {
     { name: t("nav.about_forro"), path: "/about-forro" },
     { name: t("nav.about_us"), path: "/about-us" },
     { name: t("nav.events"), path: "/events" },
+    { name: t("nav.custom_events"), path: "/custom-events" },
     { name: t("nav.rules"), path: "/rules" },
     { name: t("nav.partners"), path: "/partners" },
     { name: t("nav.contact"), path: "/contact" },
