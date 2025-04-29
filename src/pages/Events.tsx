@@ -1,11 +1,11 @@
+
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import { CalendarDays, MapPin, Clock, Users, Music, Ticket } from "lucide-react";
+import { CalendarDays, MapPin, Clock, Users, Music, Ticket, PenSquare } from "lucide-react";
 import TitleStripe from "../components/TitleStripe";
 import { useLanguage } from "../contexts/LanguageContext";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Separator } from "@/components/ui/separator";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 
 const Events = () => {
@@ -67,8 +67,8 @@ const Events = () => {
             {/* Regular Events Tab Content */}
             <TabsContent value="regular" className="space-y-4">
               <EventSection 
-                title={t("events.weekly_title")}
-                image="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&h=600"
+                title={t("events.weekly_title_new")}
+                image="/lovable-uploads/2cae19c8-c3d2-4964-ae04-bf0e54d92caf.png"
               >
                 <p className="flex items-center gap-2"><Clock size={18} className="text-dance-brown" /> {t("events.weekly_when")}</p>
                 <p className="flex items-center gap-2"><Users size={18} className="text-dance-brown" /> {t("events.weekly_format")}</p>
@@ -79,8 +79,8 @@ const Events = () => {
               </EventSection>
               
               <EventSection 
-                title={t("events.letna_title")}
-                image="https://images.unsplash.com/photo-1518495973542-4542c06a5843?auto=format&fit=crop&w=600&h=600"
+                title={t("events.letna_title_new")}
+                image="/lovable-uploads/2b8c018f-ce33-4f4f-b82e-be1f678ab5ea.png"
                 imageOnLeft={true}
               >
                 <p className="flex items-center gap-2"><Clock size={18} className="text-dance-brown" /> {t("events.letna_when")}</p>
@@ -93,7 +93,7 @@ const Events = () => {
             <TabsContent value="partner" className="space-y-4">
               <EventSection 
                 title={t("events.partner_title")}
-                image="https://images.unsplash.com/photo-1500673922987-e212871fec22?auto=format&fit=crop&w=600&h=600"
+                image="/lovable-uploads/16fc820e-4071-48a1-9ef2-b11d7b121c53.png"
               >
                 <p className="flex items-center gap-2"><Music size={18} className="text-dance-brown" /> {t("events.partner_concerts")}</p>
                 <p className="flex items-center gap-2"><CalendarDays size={18} className="text-dance-brown" /> {t("events.partner_schedule")}</p>
@@ -104,8 +104,8 @@ const Events = () => {
             {/* Other Events Tab Content */}
             <TabsContent value="other" className="space-y-8">
               <EventSection 
-                title={t("events.seasonal_title")}
-                image="https://images.unsplash.com/photo-1501854140801-50d01698950b?auto=format&fit=crop&w=600&h=600"
+                title={t("events.seasonal_title_new")}
+                image="/lovable-uploads/abf8c344-9fb4-470e-8e0f-af49193ff973.png"
               >
                 <p>{t("events.seasonal_intro")}</p>
                 <ul className="list-disc pl-5">
@@ -118,9 +118,20 @@ const Events = () => {
               </EventSection>
               
               <EventSection 
+                title={t("events.others_title")}
+                image="/lovable-uploads/abf8c344-9fb4-470e-8e0f-af49193ff973.png"
+                imageOnLeft={true}
+              >
+                <p>{t("events.others_description")}</p>
+                <p className="flex items-center gap-2 mt-4">
+                  <PenSquare size={18} className="text-dance-brown" /> {t("events.contact_us")}
+                </p>
+              </EventSection>
+              
+              <EventSection 
                 title={t("events.nearby_title")}
                 image="https://images.unsplash.com/photo-1523712999610-f77fbcfc3843?auto=format&fit=crop&w=600&h=600"
-                imageOnLeft={true}
+                imageOnLeft={false}
               >
                 <p>{t("events.nearby_intro")}</p>
                 <ul className="list-disc pl-5">

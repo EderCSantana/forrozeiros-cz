@@ -9,7 +9,7 @@
     "events.learn_more": "Learn More",
     "events.no_events": "No events scheduled at the moment",
     
-    "events.weekly_title": "Weekly Event at Komunitní Prostor Smíchov",
+    "events.weekly_title_new": "Weekly Events",
     "events.weekly_when": "When: Every Wednesday from 19:30 to 22:00.",
     "events.weekly_format": "Format: A short workshop for beginners at the beginning, followed by social dancing.",
     "events.weekly_after": "After-event: We stay until 23:00 in the café for socializing.",
@@ -17,7 +17,7 @@
     "events.weekly_rules": "Rules: Please check our event rules.",
     "events.weekly_contribution": "Contribution: Donation-based. Contributions are not mandatory, but they help sustain the event.",
     
-    "events.letna_title": "Letná Park Outdoor Event",
+    "events.letna_title_new": "Frequent Events",
     "events.letna_when": "When: Every two weeks from 18:30 to 23:00 (only during warm summer days).",
     "events.letna_where": "Where: On the stairs behind the Metronome.",
     "events.letna_schedule": "Schedule: Check our calendar for specific dates.",
@@ -27,13 +27,17 @@
     "events.partner_schedule": "Schedule: Check our calendar for upcoming dates.",
     "events.partner_entrance": "Entrance: Paid entry.",
     
-    "events.seasonal_title": "Seasonal Events",
+    "events.seasonal_title_new": "Seasonal Event",
     "events.seasonal_intro": "Some larger cultural events sometimes feature forró, including:",
     "events.seasonal_lusofona": "Lusófona (Portuguese language event)",
     "events.seasonal_kinobrasil": "KinoBrasil",
     "events.seasonal_brazilfest": "Brazil Fest Brno",
     "events.seasonal_festas": "Festas Juninas (various organizers, held between June and July)",
     "events.seasonal_note": "Note: We are not necessarily involved in organizing these events, and they may not always include forró. However, we support them, and when forró is part of the program, we encourage our community to participate.",
+    
+    "events.others_title": "Others",
+    "events.others_description": "We are open to organize private and public events. If you are interested in having a forró workshop, performance, or class at your event, please contact us.",
+    "events.contact_us": "Contact us for more information",
     
     "events.nearby_title": "Nearby Events",
     "events.nearby_intro": "We support forró events happening in cities close to Prague, such as:",
@@ -51,7 +55,7 @@
     "events.learn_more": "Más Información",
     "events.no_events": "No hay eventos programados en este momento",
     
-    "events.weekly_title": "Evento Semanal en Komunitní Prostor Smíchov",
+    "events.weekly_title_new": "Eventos Semanales",
     "events.weekly_when": "Cuándo: Todos los miércoles de 19:30 a 22:00.",
     "events.weekly_format": "Formato: Un breve taller para principiantes al inicio, seguido de baile social.",
     "events.weekly_after": "Después del evento: Nos quedamos hasta las 23:00 en la cafetería para socializar.",
@@ -59,7 +63,7 @@
     "events.weekly_rules": "Reglas: Por favor, consulta nuestras reglas del evento.",
     "events.weekly_contribution": "Contribución: Basada en donaciones. Las contribuciones no son obligatorias, pero ayudan a mantener el evento.",
     
-    "events.letna_title": "Evento al Aire Libre en Parque Letná",
+    "events.letna_title_new": "Eventos Frecuentes",
     "events.letna_when": "Cuándo: Cada dos semanas de 18:30 a 23:00 (solo durante días calurosos de verano).",
     "events.letna_where": "Dónde: En las escaleras detrás del Metrónomo.",
     "events.letna_schedule": "Horario: Consulta nuestro calendario para fechas específicas.",
@@ -69,13 +73,17 @@
     "events.partner_schedule": "Horario: Consulta nuestro calendario para próximas fechas.",
     "events.partner_entrance": "Entrada: Pago de entrada.",
     
-    "events.seasonal_title": "Eventos Estacionales",
+    "events.seasonal_title_new": "Evento Estacional",
     "events.seasonal_intro": "Algunos eventos culturales más grandes a veces incluyen forró, entre ellos:",
     "events.seasonal_lusofona": "Lusófona (evento de lengua portuguesa)",
     "events.seasonal_kinobrasil": "KinoBrasil",
     "events.seasonal_brazilfest": "Brazil Fest Brno",
     "events.seasonal_festas": "Festas Juninas (varios organizadores, entre junio y julio)",
     "events.seasonal_note": "Nota: No necesariamente estamos involucrados en la organización de estos eventos, y puede que no siempre incluyan forró. Sin embargo, los apoyamos, y cuando el forró forma parte del programa, animamos a nuestra comunidad a participar.",
+    
+    "events.others_title": "Otros",
+    "events.others_description": "Estamos abiertos a organizar eventos privados y públicos. Si estás interesado en tener un taller de forró, una presentación o una clase en tu evento, contáctanos.",
+    "events.contact_us": "Contáctanos para más información",
     
     "events.nearby_title": "Eventos Cercanos",
     "events.nearby_intro": "Apoyamos eventos de forró que ocurren en ciudades cercanas a Praga, como:",
@@ -93,7 +101,7 @@
     "events.learn_more": "Saiba Mais",
     "events.no_events": "Nenhum evento programado no momento",
     
-    "events.weekly_title": "Evento Semanal no Komunitní Prostor Smíchov",
+    "events.weekly_title_new": "Eventos Semanais",
     "events.weekly_when": "Quando: Todas as quartas-feiras das 19:30 às 22:00.",
     "events.weekly_format": "Formato: Uma breve oficina para iniciantes no começo, seguida de dança social.",
     "events.weekly_after": "Pós-evento: Ficamos até às 23:00 no café para socializar.",
@@ -101,7 +109,7 @@
     "events.weekly_rules": "Regras: Por favor, consulte nossas regras do evento.",
     "events.weekly_contribution": "Contribuição: Baseada em doação. Contribuições não são obrigatórias, mas ajudam a manter o evento.",
     
-    "events.letna_title": "Evento ao Ar Livre no Parque Letná",
+    "events.letna_title_new": "Eventos Frequentes",
     "events.letna_when": "Quando: A cada duas semanas das 18:30 às 23:00 (apenas durante os dias quentes de verão).",
     "events.letna_where": "Onde: Nas escadas atrás do Metrônomo.",
     "events.letna_schedule": "Programação: Consulte nosso calendário para datas específicas.",
@@ -111,13 +119,17 @@
     "events.partner_schedule": "Programação: Consulte nosso calendário para próximas datas.",
     "events.partner_entrance": "Entrada: Paga.",
     
-    "events.seasonal_title": "Eventos Sazonais",
+    "events.seasonal_title_new": "Evento Sazonal",
     "events.seasonal_intro": "Alguns eventos culturais maiores às vezes apresentam forró, incluindo:",
     "events.seasonal_lusofona": "Lusófona (evento de língua portuguesa)",
     "events.seasonal_kinobrasil": "KinoBrasil",
     "events.seasonal_brazilfest": "Brazil Fest Brno",
     "events.seasonal_festas": "Festas Juninas (vários organizadores, realizadas entre junho e julho)",
     "events.seasonal_note": "Nota: Não estamos necessariamente envolvidos na organização desses eventos, e eles podem nem sempre incluir forró. No entanto, os apoiamos, e quando o forró faz parte do programa, incentivamos nossa comunidade a participar.",
+    
+    "events.others_title": "Outros",
+    "events.others_description": "Estamos abertos para organizar eventos privados e públicos. Se você estiver interessado em ter um workshop de forró, apresentação ou aula no seu evento, entre em contato conosco.",
+    "events.contact_us": "Entre em contato para mais informações",
     
     "events.nearby_title": "Eventos Próximos",
     "events.nearby_intro": "Apoiamos eventos de forró que acontecem em cidades próximas a Praga, como:",
