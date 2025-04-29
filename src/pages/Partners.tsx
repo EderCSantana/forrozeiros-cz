@@ -57,13 +57,7 @@ const Partners = () => {
           </div>
         </div>
       </section>
-      
-<<<<<<< HEAD
 
-      
-=======
-    
->>>>>>> 01e2f6f604e091cf0c1531f7330bdbc0c35b909e
       <Footer />
     </div>
   );
