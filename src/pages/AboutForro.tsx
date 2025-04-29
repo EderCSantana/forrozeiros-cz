@@ -57,9 +57,13 @@ const AboutForro = () => {
                   <p className="text-gray-800">
                     {t("about_forro.origins_p1")}
                   </p>
-                  <p className="text-gray-800">
-                    {t("about_forro.origins_p2")}
-                  </p>
+                  <div className="bg-dance-yellow/30 p-5 rounded-lg">
+                    <ul className="list-disc pl-6 space-y-2 text-gray-800">
+                      {t("about_forro.origins_p2").split("\n").map((item, index) => (
+                        <li key={index}>{item}</li>
+                      ))}
+                    </ul>
+                  </div>
                 </div>
               </div>
 
@@ -77,7 +81,7 @@ const AboutForro = () => {
                       The Dance
                     </h3>
                     <div className="space-y-3 text-gray-800">
-                      <p className="whitespace-pre-line">{t("about_forro.dance_style_p1")}</p>
+                      <p>{t("about_forro.dance_style_p1")}</p>
                     </div>
                   </div>
                   
@@ -155,15 +159,12 @@ const AboutForro = () => {
               <Accordion type="single" collapsible className="space-y-4">
                 <AccordionItem value="pe-de-serra" className="bg-white rounded-lg shadow-sm border-none">
                   <AccordionTrigger className="px-6 py-4 hover:no-underline rounded-t-lg">
-                    <span className="text-lg font-medium text-dance-brown">Forró Pé de Serra</span>
+                    <span className="text-lg font-medium text-dance-brown">Pé de Serra</span>
                   </AccordionTrigger>
                   <AccordionContent className="px-6 pb-4 pt-0">
                     <p className="text-gray-700">
-                      The most traditional form of forró. Played with the classic trio (accordion, zabumba, and triangle). 
-                      Lyrics often talk about love, rural life, and nostalgia.
-                    </p>
-                    <p className="text-gray-700 mt-2">
-                      <strong>Key artists:</strong> Luiz Gonzaga, Jackson do Pandeiro, Dominguinhos.
+                      This style stays true to traditional roots, characterized by its acoustic instrumentation and strong rhythms. 
+                      Songs often tell stories of rural life and Brazilian folklore.
                     </p>
                   </AccordionContent>
                 </AccordionItem>
@@ -174,11 +175,8 @@ const AboutForro = () => {
                   </AccordionTrigger>
                   <AccordionContent className="px-6 pb-4 pt-0">
                     <p className="text-gray-700">
-                      A modern version that became popular among young people. Uses additional instruments 
-                      like bass, guitar, and flute.
-                    </p>
-                    <p className="text-gray-700 mt-2">
-                      <strong>Key artists:</strong> Falamansa, Bicho de Pé, Trio Virgulino.
+                      A modern interpretation that became popular in university settings, blending traditional elements 
+                      with contemporary influences, and often featuring a more diverse range of instruments and arrangements.
                     </p>
                   </AccordionContent>
                 </AccordionItem>
@@ -189,64 +187,21 @@ const AboutForro = () => {
                   </AccordionTrigger>
                   <AccordionContent className="px-6 pb-4 pt-0">
                     <p className="text-gray-700">
-                      Uses electronic elements such as keyboards and electric guitar.
-                    </p>
-                    <p className="text-gray-700 mt-2">
-                      <strong>Key artists:</strong> Aviões do Forró, Wesley Safadão, Calcinha Preta.
-                    </p>
-                  </AccordionContent>
-                </AccordionItem>
-                
-                <AccordionItem value="roots" className="bg-white rounded-lg shadow-sm border-none">
-                  <AccordionTrigger className="px-6 py-4 hover:no-underline rounded-t-lg">
-                    <span className="text-lg font-medium text-dance-brown">Forró Roots</span>
-                  </AccordionTrigger>
-                  <AccordionContent className="px-6 pb-4 pt-0">
-                    <p className="text-gray-700">
-                      A revival of pé de serra with more improvisation and musical experimentation.
-                    </p>
-                    <p className="text-gray-700 mt-2">
-                      <strong>Key artists:</strong> Trio Alvorada, Quarteto Olinda, Os 3 do Nordeste.
+                      Emerged in the 1990s, incorporating electronic instruments and beats, making it more accessible to 
+                      younger audiences. It retains the essence of traditional Forró while aiming for broader appeal in 
+                      urban settings.
                     </p>
                   </AccordionContent>
                 </AccordionItem>
                 
-                <AccordionItem value="pisadinha" className="bg-white rounded-lg shadow-sm border-none">
+                <AccordionItem value="rojao" className="bg-white rounded-lg shadow-sm border-none">
                   <AccordionTrigger className="px-6 py-4 hover:no-underline rounded-t-lg">
-                    <span className="text-lg font-medium text-dance-brown">Pisadinha</span>
+                    <span className="text-lg font-medium text-dance-brown">Rojão</span>
                   </AccordionTrigger>
                   <AccordionContent className="px-6 pb-4 pt-0">
                     <p className="text-gray-700">
-                      A modern, simplified version of forró with a strong electronic bass. Has a steady, 
-                      repetitive beat, making it very danceable.
-                    </p>
-                    <p className="text-gray-700 mt-2">
-                      <strong>Key artists:</strong> Barão da Pisadinha, Aldair Playboy.
-                    </p>
-                  </AccordionContent>
-                </AccordionItem>
-                
-                <AccordionItem value="risca-faca" className="bg-white rounded-lg shadow-sm border-none">
-                  <AccordionTrigger className="px-6 py-4 hover:no-underline rounded-t-lg">
-                    <span className="text-lg font-medium text-dance-brown">Risca-Faca</span>
-                  </AccordionTrigger>
-                  <AccordionContent className="px-6 pb-4 pt-0">
-                    <p className="text-gray-700">
-                      A fast and aggressive style, often linked to street parties and intense dancing. 
-                      Lyrics usually focus on jealousy, passion, and nightlife conflicts. Less common in 
-                      mainstream forró but influential in regional dance scenes.
-                    </p>
-                  </AccordionContent>
-                </AccordionItem>
-                
-                <AccordionItem value="rato" className="bg-white rounded-lg shadow-sm border-none">
-                  <AccordionTrigger className="px-6 py-4 hover:no-underline rounded-t-lg">
-                    <span className="text-lg font-medium text-dance-brown">Rato</span>
-                  </AccordionTrigger>
-                  <AccordionContent className="px-6 pb-4 pt-0">
-                    <p className="text-gray-700">
-                      A playful, humorous subgenre of forró that often includes satirical lyrics, 
-                      exaggerated instrumentation, and an experimental approach to rhythm and melody.
+                      A lively and upbeat rhythm that emphasizes a strong, clear beat, often used in dances 
+                      that involve quick footwork and energetic movements.
                     </p>
                   </AccordionContent>
                 </AccordionItem>
@@ -259,26 +214,14 @@ const AboutForro = () => {
               </h3>
               
               <Accordion type="single" collapsible className="space-y-4">
-                <AccordionItem value="xote" className="bg-white rounded-lg shadow-sm border-none">
+                <AccordionItem value="xaxado" className="bg-white rounded-lg shadow-sm border-none">
                   <AccordionTrigger className="px-6 py-4 hover:no-underline rounded-t-lg">
-                    <span className="text-lg font-medium text-dance-brown">Xote</span>
+                    <span className="text-lg font-medium text-dance-brown">Xaxado</span>
                   </AccordionTrigger>
                   <AccordionContent className="px-6 pb-4 pt-0">
                     <p className="text-gray-700">
-                      The slowest and most romantic style of forró. Danced in close embrace, with smooth, 
-                      swaying movements.
-                    </p>
-                  </AccordionContent>
-                </AccordionItem>
-                
-                <AccordionItem value="baiao" className="bg-white rounded-lg shadow-sm border-none">
-                  <AccordionTrigger className="px-6 py-4 hover:no-underline rounded-t-lg">
-                    <span className="text-lg font-medium text-dance-brown">Baião</span>
-                  </AccordionTrigger>
-                  <AccordionContent className="px-6 pb-4 pt-0">
-                    <p className="text-gray-700">
-                      The original rhythm of forró, popularized by Luiz Gonzaga. Characterized by 
-                      syncopated beats and bouncy footwork.
+                      This dance includes distinct hip movements and emphasizes rhythm, often associated with the cangaço 
+                      (bandit culture) where men and women dance proudly, showcasing their strength and elegance.
                     </p>
                   </AccordionContent>
                 </AccordionItem>
@@ -289,68 +232,44 @@ const AboutForro = () => {
                   </AccordionTrigger>
                   <AccordionContent className="px-6 pb-4 pt-0">
                     <p className="text-gray-700">
-                      A fast and lively dance, commonly seen at festa junina. Involves quick footwork 
-                      and energetic spins.
+                      A festive dance style celebrated during forró parties, characterized by a mix of rhythmic footwork 
+                      and lively partner interactions, creating an upbeat and communal atmosphere.
                     </p>
                   </AccordionContent>
                 </AccordionItem>
                 
-                <AccordionItem value="xaxado" className="bg-white rounded-lg shadow-sm border-none">
+                <AccordionItem value="xote" className="bg-white rounded-lg shadow-sm border-none">
                   <AccordionTrigger className="px-6 py-4 hover:no-underline rounded-t-lg">
-                    <span className="text-lg font-medium text-dance-brown">Xaxado</span>
+                    <span className="text-lg font-medium text-dance-brown">Xote</span>
                   </AccordionTrigger>
                   <AccordionContent className="px-6 pb-4 pt-0">
                     <p className="text-gray-700">
-                      Originally a solo dance performed by cangaceiros (bandits of the Northeast). 
-                      Now adapted into partner dancing, featuring sharp footwork.
+                      A slower dance rhythm that allows for a more romantic and relaxed style. It is often danced 
+                      in a close hold and typically features a gentle, flowing motion.
                     </p>
                   </AccordionContent>
                 </AccordionItem>
                 
-                <AccordionItem value="rojao" className="bg-white rounded-lg shadow-sm border-none">
+                <AccordionItem value="baiao" className="bg-white rounded-lg shadow-sm border-none">
                   <AccordionTrigger className="px-6 py-4 hover:no-underline rounded-t-lg">
-                    <span className="text-lg font-medium text-dance-brown">Rojão</span>
+                    <span className="text-lg font-medium text-dance-brown">Baião</span>
                   </AccordionTrigger>
                   <AccordionContent className="px-6 pb-4 pt-0">
                     <p className="text-gray-700">
-                      A very fast-paced style, similar to arrasta-pé but with even quicker steps. 
-                      Requires high energy and stamina.
+                      A hallmark rhythm of Forró, marked by syncopation and a lively tempo. It often includes 
+                      call-and-response vocals, intensifying the interaction between dancers and musicians.
                     </p>
                   </AccordionContent>
                 </AccordionItem>
                 
-                <AccordionItem value="pisadinha-dance" className="bg-white rounded-lg shadow-sm border-none">
+                <AccordionItem value="coco" className="bg-white rounded-lg shadow-sm border-none">
                   <AccordionTrigger className="px-6 py-4 hover:no-underline rounded-t-lg">
-                    <span className="text-lg font-medium text-dance-brown">Pisadinha</span>
+                    <span className="text-lg font-medium text-dance-brown">Coco</span>
                   </AccordionTrigger>
                   <AccordionContent className="px-6 pb-4 pt-0">
                     <p className="text-gray-700">
-                      A simplified and bouncy dance with fewer steps and a strong focus on hip movements. 
-                      Often danced in a relaxed, free-flowing style.
-                    </p>
-                  </AccordionContent>
-                </AccordionItem>
-                
-                <AccordionItem value="risca-faca-dance" className="bg-white rounded-lg shadow-sm border-none">
-                  <AccordionTrigger className="px-6 py-4 hover:no-underline rounded-t-lg">
-                    <span className="text-lg font-medium text-dance-brown">Risca-Faca</span>
-                  </AccordionTrigger>
-                  <AccordionContent className="px-6 pb-4 pt-0">
-                    <p className="text-gray-700">
-                      A highly energetic dance, often performed with dramatic spins and aggressive steps. 
-                      Has a rebellious and intense feel, reflecting its roots in street dance culture.
-                    </p>
-                  </AccordionContent>
-                </AccordionItem>
-                
-                <AccordionItem value="rato-dance" className="bg-white rounded-lg shadow-sm border-none">
-                  <AccordionTrigger className="px-6 py-4 hover:no-underline rounded-t-lg">
-                    <span className="text-lg font-medium text-dance-brown">Rato</span>
-                  </AccordionTrigger>
-                  <AccordionContent className="px-6 pb-4 pt-0">
-                    <p className="text-gray-700">
-                      Known for its humorous, loose interpretation and exaggerated expressions. Often 
-                      performed in informal, spontaneous settings with a focus on fun and playfulness.
+                      While traditionally separate from Forró, Coco is often blended into Forró music, characterized by 
+                      its upbeat tempo and percussive elements, making it suitable for dance.
                     </p>
                   </AccordionContent>
                 </AccordionItem>
