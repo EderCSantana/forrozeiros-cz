@@ -1,9 +1,9 @@
-
 import { useState } from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import { Mail, Send, CheckCircle, Facebook, Instagram } from "lucide-react";
 import { useLanguage } from "../contexts/LanguageContext";
+import TitleStripe from "../components/TitleStripe";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -48,6 +48,8 @@ const Contact = () => {
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
+      
+      <TitleStripe title={t("contact.title") || "CONTACT US"} />
       
       {/* Hero Section with Bunting Flags */}
       <section className="relative py-16 bg-dance-brown">

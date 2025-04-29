@@ -1,8 +1,10 @@
-
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import TitleStripe from "../components/TitleStripe";
+import { useLanguage } from "../contexts/LanguageContext";
 
 const Partners = () => {
+  const { t } = useLanguage();
   // Sample partner data
   const partners = [
     {
@@ -58,6 +60,8 @@ const Partners = () => {
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
+      
+      <TitleStripe title={t("partners.title")} />
       
       {/* Hero Section */}
       <section className="relative py-20 bg-dance-green text-white">

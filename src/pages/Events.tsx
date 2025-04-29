@@ -1,9 +1,11 @@
-
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import { CalendarDays, MapPin, Clock, Users } from "lucide-react";
+import TitleStripe from "../components/TitleStripe";
+import { useLanguage } from "../contexts/LanguageContext";
 
 const Events = () => {
+  const { t } = useLanguage();
   // Sample events data
   const upcomingEvents = [
     {
@@ -56,17 +58,7 @@ const Events = () => {
     <div className="min-h-screen flex flex-col">
       <Header />
       
-      {/* Hero Section */}
-      <section className="relative py-20 bg-dance-blue text-white">
-        <div className="container-fluid mx-auto text-center">
-          <h1 className="text-4xl md:text-5xl font-display font-bold mb-4 animate-fade-in">
-            Events
-          </h1>
-          <p className="text-xl text-white text-opacity-90 max-w-2xl mx-auto animate-fade-in animation-delay-200">
-            Join us for classes, workshops, and social dances
-          </p>
-        </div>
-      </section>
+      <TitleStripe title={t("events.title")} />
       
       {/* Featured Events */}
       <section className="py-16 bg-white">

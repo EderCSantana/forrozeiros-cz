@@ -1,7 +1,7 @@
-
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import { useLanguage } from "../contexts/LanguageContext";
+import TitleStripe from "../components/TitleStripe";
 
 const Rules = () => {
   const { t } = useLanguage();
@@ -10,17 +10,7 @@ const Rules = () => {
     <div className="min-h-screen flex flex-col">
       <Header />
       
-      {/* Hero Section */}
-      <section className="relative py-20 bg-dance-red text-white">
-        <div className="container-fluid mx-auto text-center">
-          <h1 className="text-4xl md:text-5xl font-display font-bold mb-4 animate-fade-in">
-            {t("rules.title")}
-          </h1>
-          <p className="text-xl text-white text-opacity-90 max-w-2xl mx-auto animate-fade-in animation-delay-200">
-            {t("rules.subtitle")}
-          </p>
-        </div>
-      </section>
+      <TitleStripe title={t("rules.title")} />
       
       {/* Main Content */}
       <section className="py-16 bg-white">
