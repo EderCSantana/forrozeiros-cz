@@ -1,6 +1,6 @@
 
 import { Link } from "react-router-dom";
-import { Facebook, Instagram, Mail, Phone, MapPin } from "lucide-react";
+import { Facebook, Instagram, Mail } from "lucide-react";
 
 const Footer = () => {
   const year = new Date().getFullYear();
@@ -9,36 +9,22 @@ const Footer = () => {
     <footer className="bg-dance-brown text-white">
       <div className="container-fluid mx-auto">
         <div className="pt-16 pb-10">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* About Column */}
             <div>
               <h3 className="text-xl font-display font-medium mb-4">
-                Dance<span className="text-dance-orange">Event</span>
+                Forrozeiros.cz
               </h3>
               <p className="text-white text-opacity-80 mb-4">
-                Bringing the joy and rhythm of Forró dance to communities around
-                the world. Join us and experience the vibrant culture of Brazil.
+                Spreading the joy of Forró in Czechia and beyond.<br />
+                Workshops · Parties · Community · Culture
               </p>
-              <div className="flex space-x-3">
-                <a
-                  href="https://facebook.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="bg-white bg-opacity-10 hover:bg-opacity-20 p-2 rounded-full transition-all duration-300"
-                  aria-label="Facebook"
-                >
-                  <Facebook size={18} />
-                </a>
-                <a
-                  href="https://instagram.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="bg-white bg-opacity-10 hover:bg-opacity-20 p-2 rounded-full transition-all duration-300"
-                  aria-label="Instagram"
-                >
-                  <Instagram size={18} />
-                </a>
-              </div>
+              <p className="text-white text-opacity-80 mb-4">
+                Want to organize a Forró event at your school, company, or project?
+              </p>
+              <p className="text-white text-opacity-80 italic">
+                Made by the Forrozeiros collective.
+              </p>
             </div>
 
             {/* Quick Links */}
@@ -104,53 +90,38 @@ const Footer = () => {
                 Contact Us
               </h3>
               <ul className="space-y-3 text-white text-opacity-80">
-                <li className="flex items-start">
-                  <MapPin size={18} className="mr-3 mt-1 flex-shrink-0" />
-                  <span>123 Dance Street, Rhythm City, 10001</span>
-                </li>
-                <li className="flex items-center">
-                  <Phone size={18} className="mr-3 flex-shrink-0" />
-                  <a
-                    href="tel:+1234567890"
-                    className="hover:text-dance-orange transition-colors duration-300"
-                  >
-                    +1 (234) 567-890
-                  </a>
-                </li>
                 <li className="flex items-center">
                   <Mail size={18} className="mr-3 flex-shrink-0" />
                   <a
-                    href="mailto:info@danceevent.com"
+                    href="mailto:forrozeiroscz@gmail.com"
                     className="hover:text-dance-orange transition-colors duration-300"
                   >
-                    info@danceevent.com
+                    forrozeiroscz@gmail.com
+                  </a>
+                </li>
+                <li className="flex items-center">
+                  <Facebook size={18} className="mr-3 flex-shrink-0" />
+                  <a
+                    href="https://www.facebook.com/profile.php?id=61571664788308"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-dance-orange transition-colors duration-300"
+                  >
+                    Forrozeiros CZ
+                  </a>
+                </li>
+                <li className="flex items-center">
+                  <Instagram size={18} className="mr-3 flex-shrink-0" />
+                  <a
+                    href="https://www.instagram.com/forrozeiros_cz/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-dance-orange transition-colors duration-300"
+                  >
+                    @forrozeiros_cz
                   </a>
                 </li>
               </ul>
-            </div>
-
-            {/* Newsletter */}
-            <div>
-              <h3 className="text-xl font-display font-medium mb-4">
-                Stay Updated
-              </h3>
-              <p className="text-white text-opacity-80 mb-4">
-                Subscribe to our newsletter for the latest events and updates.
-              </p>
-              <form className="flex flex-col space-y-3">
-                <input
-                  type="email"
-                  placeholder="Your email address"
-                  className="px-4 py-2 rounded bg-white bg-opacity-10 focus:bg-opacity-20 border border-white border-opacity-20 focus:outline-none text-white placeholder-white placeholder-opacity-60"
-                  required
-                />
-                <button
-                  type="submit"
-                  className="bg-dance-orange hover:bg-dance-orange/90 text-white py-2 px-4 rounded transition-colors duration-300"
-                >
-                  Subscribe
-                </button>
-              </form>
             </div>
           </div>
         </div>
@@ -158,9 +129,8 @@ const Footer = () => {
         {/* Bottom Footer */}
         <div className="border-t border-white border-opacity-10 py-6 text-center text-white text-opacity-60">
           <p>
-            © {year} DanceEvent. All rights reserved. Designed with
+            © {year} Forrozeiros.cz. All rights reserved. 
             <span className="text-dance-orange mx-1">♥</span>
-            for dance lovers.
           </p>
         </div>
       </div>

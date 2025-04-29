@@ -2,7 +2,8 @@
 import { useState } from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import { Mail, Phone, MapPin, Send, CheckCircle } from "lucide-react";
+import { Mail, Send, CheckCircle, Facebook, Instagram } from "lucide-react";
+import { useLanguage } from "../contexts/LanguageContext";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -13,6 +14,7 @@ const Contact = () => {
   });
   
   const [formSubmitted, setFormSubmitted] = useState(false);
+  const { t } = useLanguage();
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
@@ -39,26 +41,47 @@ const Contact = () => {
     setTimeout(() => {
       setFormSubmitted(false);
     }, 5000);
+    
+    // In a real implementation, you would send an email to forrozeiroscz@gmail.com
   };
 
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
       
-      {/* Hero Section */}
-      <section className="relative py-20 bg-dance-yellow text-white">
-        <div className="container-fluid mx-auto text-center">
-          <h1 className="text-4xl md:text-5xl font-display font-bold mb-4 animate-fade-in">
-            Contact Us
+      {/* Hero Section with Bunting Flags */}
+      <section className="relative py-16 bg-dance-brown">
+        <div className="bunting-container relative w-full flex justify-center py-2">
+          <div className="flex items-center">
+            {[...Array(12)].map((_, i) => (
+              <div 
+                key={i} 
+                className={`flag bg-dance-flag-red bg-dance-flag-blue bg-dance-flag-green bg-dance-flag-orange animate-flag-wave`} 
+                style={{ animationDelay: `${i * 0.2}s` }}
+              />
+            ))}
+          </div>
+        </div>
+        <div className="container-fluid mx-auto text-center pt-4 pb-8">
+          <h1 className="text-3xl md:text-5xl font-bold mb-4 text-dance-beige animate-fade-in">
+            CONTACT US
           </h1>
-          <p className="text-xl text-white text-opacity-90 max-w-2xl mx-auto animate-fade-in animation-delay-200">
-            We'd love to hear from you! Reach out with questions or to join our community
-          </p>
+        </div>
+        <div className="bunting-container relative w-full flex justify-center py-2">
+          <div className="flex items-center">
+            {[...Array(12)].map((_, i) => (
+              <div 
+                key={i} 
+                className={`flag bg-dance-flag-red bg-dance-flag-blue bg-dance-flag-green bg-dance-flag-orange animate-flag-wave`} 
+                style={{ animationDelay: `${i * 0.2}s` }}
+              />
+            ))}
+          </div>
         </div>
       </section>
       
       {/* Contact Info & Form Section */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-dance-beige">
         <div className="container-fluid mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Contact Info */}
@@ -70,49 +93,14 @@ const Contact = () => {
               <div className="space-y-8">
                 <div className="flex items-start">
                   <div className="w-12 h-12 bg-dance-orange bg-opacity-10 rounded-full flex items-center justify-center mr-4">
-                    <MapPin className="text-dance-orange" />
+                    <Mail className="text-dance-orange" />
                   </div>
                   <div>
-                    <h3 className="text-lg font-medium mb-1 text-dance-black">Our Location</h3>
-                    <p className="text-dance-black text-opacity-80">
-                      123 Dance Street<br />
-                      Rhythm City, RC 10001
-                    </p>
-                  </div>
-                </div>
-                
-                <div className="flex items-start">
-                  <div className="w-12 h-12 bg-dance-blue bg-opacity-10 rounded-full flex items-center justify-center mr-4">
-                    <Mail className="text-dance-blue" />
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-medium mb-1 text-dance-black">Email Us</h3>
-                    <p className="text-dance-black text-opacity-80">
-                      <a href="mailto:info@danceevent.com" className="hover:text-dance-orange transition-colors">
-                        info@danceevent.com
+                    <h3 className="text-lg font-medium mb-1 text-dance-brown">Email Us</h3>
+                    <p className="text-dance-brown text-opacity-80">
+                      <a href="mailto:forrozeiroscz@gmail.com" className="hover:text-dance-orange transition-colors">
+                        forrozeiroscz@gmail.com
                       </a>
-                    </p>
-                    <p className="text-dance-black text-opacity-80">
-                      <a href="mailto:events@danceevent.com" className="hover:text-dance-orange transition-colors">
-                        events@danceevent.com
-                      </a>
-                    </p>
-                  </div>
-                </div>
-                
-                <div className="flex items-start">
-                  <div className="w-12 h-12 bg-dance-green bg-opacity-10 rounded-full flex items-center justify-center mr-4">
-                    <Phone className="text-dance-green" />
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-medium mb-1 text-dance-black">Call Us</h3>
-                    <p className="text-dance-black text-opacity-80">
-                      <a href="tel:+1234567890" className="hover:text-dance-orange transition-colors">
-                        +1 (234) 567-890
-                      </a>
-                    </p>
-                    <p className="text-sm text-dance-black text-opacity-60 mt-1">
-                      Monday-Friday: 9am-5pm
                     </p>
                   </div>
                 </div>
@@ -122,38 +110,40 @@ const Contact = () => {
                 <h3 className="text-xl font-display font-medium mb-4 text-dance-brown">
                   Follow Us
                 </h3>
-                <p className="text-dance-black text-opacity-80 mb-4">
+                <p className="text-dance-brown text-opacity-80 mb-4">
                   Stay connected with us on social media for the latest updates and event announcements.
                 </p>
                 <div className="flex space-x-4">
                   <a 
-                    href="https://facebook.com" 
+                    href="https://www.facebook.com/profile.php?id=61571664788308" 
                     target="_blank" 
                     rel="noopener noreferrer" 
-                    className="w-10 h-10 bg-dance-brown bg-opacity-10 hover:bg-opacity-20 rounded-full flex items-center justify-center transition-colors duration-300"
+                    className="flex items-center text-dance-brown hover:text-dance-orange transition-colors duration-300"
                   >
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-dance-brown">
-                      <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
-                    </svg>
+                    <div className="w-10 h-10 bg-dance-brown bg-opacity-10 hover:bg-opacity-20 rounded-full flex items-center justify-center mr-2 transition-colors duration-300">
+                      <Facebook size={20} />
+                    </div>
+                    <span>Forrozeiros CZ</span>
                   </a>
+                </div>
+                <div className="mt-4">
                   <a 
-                    href="https://instagram.com" 
+                    href="https://www.instagram.com/forrozeiros_cz/" 
                     target="_blank" 
                     rel="noopener noreferrer" 
-                    className="w-10 h-10 bg-dance-orange bg-opacity-10 hover:bg-opacity-20 rounded-full flex items-center justify-center transition-colors duration-300"
+                    className="flex items-center text-dance-brown hover:text-dance-orange transition-colors duration-300"
                   >
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-dance-orange">
-                      <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-                      <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-                      <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-                    </svg>
+                    <div className="w-10 h-10 bg-dance-orange bg-opacity-10 hover:bg-opacity-20 rounded-full flex items-center justify-center mr-2 transition-colors duration-300">
+                      <Instagram size={20} />
+                    </div>
+                    <span>@forrozeiros_cz</span>
                   </a>
                 </div>
               </div>
             </div>
             
             {/* Contact Form */}
-            <div className="bg-white rounded-lg p-8 shadow-sm border border-dance-cream">
+            <div className="forro-border p-8 bg-dance-yellow">
               <h2 className="text-2xl font-display font-medium mb-6 text-dance-brown">
                 Send Us a Message
               </h2>
@@ -170,7 +160,7 @@ const Contact = () => {
                 <form onSubmit={handleSubmit}>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                     <div>
-                      <label htmlFor="name" className="block text-sm font-medium text-dance-black mb-1">
+                      <label htmlFor="name" className="block text-sm font-medium text-dance-brown mb-1">
                         Your Name *
                       </label>
                       <input 
@@ -184,7 +174,7 @@ const Contact = () => {
                       />
                     </div>
                     <div>
-                      <label htmlFor="email" className="block text-sm font-medium text-dance-black mb-1">
+                      <label htmlFor="email" className="block text-sm font-medium text-dance-brown mb-1">
                         Your Email *
                       </label>
                       <input 
@@ -200,7 +190,7 @@ const Contact = () => {
                   </div>
                   
                   <div className="mb-6">
-                    <label htmlFor="subject" className="block text-sm font-medium text-dance-black mb-1">
+                    <label htmlFor="subject" className="block text-sm font-medium text-dance-brown mb-1">
                       Subject *
                     </label>
                     <select
@@ -222,7 +212,7 @@ const Contact = () => {
                   </div>
                   
                   <div className="mb-6">
-                    <label htmlFor="message" className="block text-sm font-medium text-dance-black mb-1">
+                    <label htmlFor="message" className="block text-sm font-medium text-dance-brown mb-1">
                       Your Message *
                     </label>
                     <textarea
@@ -245,23 +235,6 @@ const Contact = () => {
                   </button>
                 </form>
               )}
-            </div>
-          </div>
-        </div>
-      </section>
-      
-      {/* Map Section */}
-      <section className="py-16 bg-dance-cream bg-opacity-30">
-        <div className="container-fluid mx-auto">
-          <h2 className="text-3xl font-display font-medium mb-8 text-dance-brown text-center">
-            Find Us
-          </h2>
-          
-          <div className="rounded-lg overflow-hidden shadow-md h-96 border border-dance-cream">
-            {/* Here you would normally embed a map using Google Maps, Mapbox, etc. 
-                For this example, we'll use a placeholder */}
-            <div className="w-full h-full bg-dance-cream bg-opacity-50 flex items-center justify-center">
-              <p className="text-dance-brown text-opacity-80">Map Placeholder - Interactive map would be embedded here</p>
             </div>
           </div>
         </div>

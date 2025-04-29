@@ -28,13 +28,13 @@ const Header = () => {
     <header className="sticky top-0 z-50 w-full bg-[#ffeec0] bg-opacity-95 backdrop-blur-md shadow-sm transition-all duration-300">
       <div className="container-fluid mx-auto">
         <div className="flex items-center justify-between py-4">
-          {/* Logo */}
-          <Link to="/" className="flex-shrink-0">
+          {/* Logo as Home Button */}
+          <Link to="/" className="flex-shrink-0" aria-label="Home">
             <div className="flex items-center">
               <img 
                 src="/lovable-uploads/c454e34b-5903-4ae4-97f6-b2d66315c01c.png" 
                 alt="Forró Zeiros" 
-                className="h-12 md:h-16"
+                className="h-14 md:h-20"
               />
             </div>
           </Link>
@@ -57,7 +57,7 @@ const Header = () => {
           {/* Social and Language Selector */}
           <div className="hidden md:flex items-center space-x-4">
             <a
-              href="https://facebook.com"
+              href="https://www.facebook.com/profile.php?id=61571664788308"
               target="_blank"
               rel="noopener noreferrer"
               className="text-dance-brown hover:text-dance-orange transition-colors duration-300"
@@ -66,7 +66,7 @@ const Header = () => {
               <Facebook size={20} />
             </a>
             <a
-              href="https://instagram.com"
+              href="https://www.instagram.com/forrozeiros_cz/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-dance-brown hover:text-dance-orange transition-colors duration-300"
@@ -109,7 +109,7 @@ const Header = () => {
           ))}
           <div className="flex items-center space-x-4 pt-3 border-t border-dance-brown border-opacity-20">
             <a
-              href="https://facebook.com"
+              href="https://www.facebook.com/profile.php?id=61571664788308"
               target="_blank"
               rel="noopener noreferrer"
               className="text-dance-brown hover:text-dance-orange transition-colors duration-300"
@@ -118,7 +118,7 @@ const Header = () => {
               <Facebook size={20} />
             </a>
             <a
-              href="https://instagram.com"
+              href="https://www.instagram.com/forrozeiros_cz/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-dance-brown hover:text-dance-orange transition-colors duration-300"
