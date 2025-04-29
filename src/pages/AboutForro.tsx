@@ -77,28 +77,6 @@ const AboutForro = () => {
             </div>
             
             <div className="md:col-span-1 space-y-8">
-              <div className="bg-dance-cream bg-opacity-30 p-6 rounded-lg">
-                <h3 className="text-xl font-display font-medium mb-4 text-dance-brown">
-                  {t("about_forro.key_figures")}
-                </h3>
-                <ul className="space-y-4">
-                  <li>
-                    <h4 className="font-medium">{t("about_forro.key_figure_1_name")}</h4>
-                    <p className="text-sm text-dance-black text-opacity-70">{t("about_forro.key_figure_1_desc")}</p>
-                  </li>
-                  <li>
-                    <h4 className="font-medium">{t("about_forro.key_figure_2_name")}</h4>
-                    <p className="text-sm text-dance-black text-opacity-70">{t("about_forro.key_figure_2_desc")}</p>
-                  </li>
-                  {t("about_forro.key_figure_3_name") && (
-                    <li>
-                      <h4 className="font-medium">{t("about_forro.key_figure_3_name")}</h4>
-                      <p className="text-sm text-dance-black text-opacity-70">{t("about_forro.key_figure_3_desc")}</p>
-                    </li>
-                  )}
-                </ul>
-              </div>
-              
               <div className="rounded-lg overflow-hidden shadow-sm">
                 <img 
                   src="https://images.unsplash.com/photo-1504609773096-104ff2c73ba4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" 
