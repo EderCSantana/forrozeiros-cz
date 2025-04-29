@@ -51,37 +51,6 @@ const Contact = () => {
       
       <TitleStripe title={t("contact.title") || "CONTACT US"} />
       
-      {/* Hero Section with Bunting Flags */}
-      <section className="relative py-16 bg-dance-brown">
-        <div className="bunting-container relative w-full flex justify-center py-2">
-          <div className="flex items-center">
-            {[...Array(12)].map((_, i) => (
-              <div 
-                key={i} 
-                className={`flag bg-dance-flag-red bg-dance-flag-blue bg-dance-flag-green bg-dance-flag-orange animate-flag-wave`} 
-                style={{ animationDelay: `${i * 0.2}s` }}
-              />
-            ))}
-          </div>
-        </div>
-        <div className="container-fluid mx-auto text-center pt-4 pb-8">
-          <h1 className="text-3xl md:text-5xl font-bold mb-4 text-dance-beige animate-fade-in">
-            CONTACT US
-          </h1>
-        </div>
-        <div className="bunting-container relative w-full flex justify-center py-2">
-          <div className="flex items-center">
-            {[...Array(12)].map((_, i) => (
-              <div 
-                key={i} 
-                className={`flag bg-dance-flag-red bg-dance-flag-blue bg-dance-flag-green bg-dance-flag-orange animate-flag-wave`} 
-                style={{ animationDelay: `${i * 0.2}s` }}
-              />
-            ))}
-          </div>
-        </div>
-      </section>
-      
       {/* Contact Info & Form Section */}
       <section className="py-16 bg-dance-beige">
         <div className="container-fluid mx-auto">
