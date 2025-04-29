@@ -1,3 +1,4 @@
+
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import { CalendarDays, MapPin, Clock, Users, Music, Ticket, PenSquare } from "lucide-react";
@@ -6,6 +7,7 @@ import { useLanguage } from "../contexts/LanguageContext";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Separator } from "@/components/ui/separator";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
+import { Link } from "react-router-dom";
 
 const Events = () => {
   const { t } = useLanguage();
@@ -101,16 +103,20 @@ const Events = () => {
               <p className="italic">{t("events.seasonal_note")}</p>
             </EventSection>
             
-            {/* Others Section - Without Picture */}
-            <EventSection 
-              title={t("events.others_title")}
-            >
-              <p>{t("events.others_description")}</p>
-              <p>{t("events.others_private")}</p>
-              <p className="flex items-center gap-2 mt-4">
-                <PenSquare size={18} className="text-dance-brown" /> {t("events.contact_us")}
-              </p>
-            </EventSection>
+            {/* Custom Events Section - Link to Custom Events Page */}
+            <div className="py-8">
+              <h3 className="text-2xl font-display font-bold mb-6 text-dance-brown">{t("events.custom_events_title")}</h3>
+              <div className="prose max-w-none space-y-4">
+                <p>{t("events.custom_events_description")}</p>
+                <p>{t("events.custom_events_private")}</p>
+                <div className="mt-6">
+                  <Link to="/custom-events" className="inline-flex items-center gap-2 px-4 py-2 bg-dance-orange text-white rounded-md hover:bg-dance-brown transition-colors duration-300">
+                    <PenSquare size={18} /> {t("events.custom_events_learn_more")}
+                  </Link>
+                </div>
+              </div>
+              <Separator className="mt-8" />
+            </div>
             
             {/* Nearby Events Section */}
             <EventSection 

@@ -1,3 +1,4 @@
+
 {
   "en": {
     "events.title": "Events",
@@ -32,9 +33,10 @@
     "events.seasonal_festas": "Festas Juninas (various organizers, held between June and July)",
     "events.seasonal_note": "Note: We are not necessarily involved in organizing these events, and they may not always include forró. However, we support them, and when forró is part of the program, we encourage our community to participate.",
     
-    "events.others_title": "Others",
-    "events.others_description": "We are open to organize private and public events. If you are interested in having a forró workshop, performance, or class at your event, please contact us.",
-    "events.others_private": "Our team can provide customized forró experiences for your private gathering or public event. You can organize with us anything from short demonstrations to full workshops.",
+    "events.custom_events_title": "Custom Events",
+    "events.custom_events_description": "We are open to organize private and public events. If you are interested in having a forró workshop, performance, or class at your event, please contact us.",
+    "events.custom_events_private": "Our team can provide customized forró experiences for your private gathering or public event. You can organize with us anything from short demonstrations to full workshops.",
+    "events.custom_events_learn_more": "Learn more about custom events",
     "events.contact_us": "Contact us for more information",
     
     "events.nearby_title": "Nearby Events",
@@ -77,9 +79,10 @@
     "events.seasonal_festas": "Festas Juninas (varios organizadores, entre junio y julio)",
     "events.seasonal_note": "Nota: No necesariamente estamos involucrados en la organización de estos eventos, y puede que no siempre incluyan forró. Sin embargo, los apoyamos, y cuando el forró forma parte del programa, animamos a nuestra comunidad a participar.",
     
-    "events.others_title": "Otros",
-    "events.others_description": "Estamos abiertos a organizar eventos privados y públicos. Si estás interesado en tener un taller de forró, una presentación o una clase en tu evento, contáctanos.",
-    "events.others_private": "Nuestro equipo puede proporcionar experiencias de forró personalizadas para tu reunión privada o evento público. Puedes organizar con nosotros desde breves demostraciones hasta talleres completos.",
+    "events.custom_events_title": "Eventos Personalizados",
+    "events.custom_events_description": "Estamos abiertos a organizar eventos privados y públicos. Si estás interesado en tener un taller de forró, una presentación o una clase en tu evento, contáctanos.",
+    "events.custom_events_private": "Nuestro equipo puede proporcionar experiencias de forró personalizadas para tu reunión privada o evento público. Puedes organizar con nosotros desde breves demostraciones hasta talleres completos.",
+    "events.custom_events_learn_more": "Aprende más sobre eventos personalizados",
     "events.contact_us": "Contáctanos para más información",
     
     "events.nearby_title": "Eventos Cercanos",
@@ -122,9 +125,10 @@
     "events.seasonal_festas": "Festas Juninas (vários organizadores, realizadas entre junho e julho)",
     "events.seasonal_note": "Nota: Não estamos necessariamente envolvidos na organização desses eventos, e eles podem nem sempre incluir forró. No entanto, os apoiamos, e quando o forró faz parte do programa, incentivamos nossa comunidade a participar.",
     
-    "events.others_title": "Outros",
-    "events.others_description": "Estamos abertos para organizar eventos privados e públicos. Se você estiver interessado em ter um workshop de forró, apresentação ou aula no seu evento, entre em contato conosco.",
-    "events.others_private": "Nossa equipe pode fornecer experiências de forró personalizadas para seu evento privado ou público. Você pode organizar conosco desde breves demonstrações até workshops completos.",
+    "events.custom_events_title": "Eventos Personalizados",
+    "events.custom_events_description": "Estamos abertos para organizar eventos privados e públicos. Se você estiver interessado em ter um workshop de forró, apresentação ou aula no seu evento, entre em contato conosco.",
+    "events.custom_events_private": "Nossa equipe pode fornecer experiências de forró personalizadas para seu evento privado ou público. Você pode organizar conosco desde breves demonstrações até workshops completos.",
+    "events.custom_events_learn_more": "Saiba mais sobre eventos personalizados",
     "events.contact_us": "Entre em contato para mais informações",
     
     "events.nearby_title": "Eventos Próximos",
