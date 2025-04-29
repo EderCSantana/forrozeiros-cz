@@ -56,7 +56,6 @@ const Events = () => {
       
       <main className="flex-grow py-12 bg-white">
         <div className="container-fluid mx-auto">
-          <p className="text-center text-lg mb-10">{t("events.subtitle")}</p>
           
           <div className="space-y-8">
             {/* Weekly Events Section */}
