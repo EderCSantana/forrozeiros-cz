@@ -7,54 +7,7 @@ const Partners = () => {
   const { t } = useLanguage();
   // Sample partner data
   const partners = [
-    {
-      id: 1,
-      name: "Rhythm Studios",
-      description: "A premiere dance space hosting our weekly classes and special workshops.",
-      logoUrl: "https://placehold.co/200x100/dance-brown/white?text=Rhythm+Studios",
-      website: "https://example.com",
-      category: "Venue"
-    },
-    {
-      id: 2,
-      name: "Brazilian Cultural Center",
-      description: "Supporting our mission to promote Brazilian dance and music traditions.",
-      logoUrl: "https://placehold.co/200x100/dance-orange/white?text=Brazilian+Cultural+Center",
-      website: "https://example.com",
-      category: "Cultural Organization"
-    },
-    {
-      id: 3,
-      name: "Community Arts Foundation",
-      description: "Providing grants and resources for our educational programs.",
-      logoUrl: "https://placehold.co/200x100/dance-blue/white?text=Arts+Foundation",
-      website: "https://example.com",
-      category: "Non-Profit"
-    },
-    {
-      id: 4,
-      name: "SoundWaves Music",
-      description: "Live band that performs authentic forró music at our events.",
-      logoUrl: "https://placehold.co/200x100/dance-green/white?text=SoundWaves",
-      website: "https://example.com",
-      category: "Music"
-    },
-    {
-      id: 5,
-      name: "Café Brasil",
-      description: "Restaurant providing authentic Brazilian cuisine for our festivals.",
-      logoUrl: "https://placehold.co/200x100/dance-yellow/white?text=Café+Brasil",
-      website: "https://example.com",
-      category: "Food & Beverage"
-    },
-    {
-      id: 6,
-      name: "Dance Apparel Co.",
-      description: "Supplying comfortable, stylish dance wear for our community.",
-      logoUrl: "https://placehold.co/200x100/dance-red/white?text=Dance+Apparel",
-      website: "https://example.com",
-      category: "Retail"
-    }
+    
   ];
 
   return (

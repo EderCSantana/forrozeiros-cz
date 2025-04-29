@@ -22,34 +22,6 @@ const Index = () => {
     }
   ];
 
-  // Latest updates data
-  const latestUpdates = [
-    {
-      id: 1,
-      title: "Summer Forró Festival Announced",
-      date: "May 15, 2023",
-      content: "Join us for three days of dancing, workshops, and live music at our annual Summer Forró Festival. Early bird tickets now available!",
-      tags: ["Festival", "Summer", "Workshops"],
-      imageUrl: "https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6a3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
-    },
-    {
-      id: 2,
-      title: "New Beginner Classes Starting Next Month",
-      date: "May 10, 2023",
-      content: "We're thrilled to announce new beginner Forró classes starting in June. Perfect for those who want to learn this beautiful Brazilian dance from scratch.",
-      tags: ["Classes", "Beginners"],
-      imageUrl: "https://images.unsplash.com/photo-1551248429-40975aa4de74?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1380&q=80"
-    },
-    {
-      id: 3,
-      title: "Special Guest Teacher from Brazil",
-      date: "May 5, 2023",
-      content: "We're excited to welcome Maestro João from Rio de Janeiro for a special two-week intensive workshop series. Spaces limited, book now!",
-      tags: ["Workshop", "Special Guest"],
-      imageUrl: "https://images.unsplash.com/photo-1524594152303-9fd13543fe6e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
-    }
-  ];
-
   const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
@@ -142,25 +114,6 @@ const Index = () => {
             <a href="#" className="inline-flex items-center text-dance-orange hover:text-dance-brown transition-colors duration-300">
               <span className="mr-2">View all updates</span>
               <ArrowRight size={16} />
-            </a>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-20 bg-dance-brown text-white">
-        <div className="container-fluid mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-display font-medium mb-4">Ready to Join the Dance?</h2>
-          <p className="text-white text-opacity-90 max-w-2xl mx-auto mb-8">
-            Experience the joy of Forró dancing with our welcoming community.
-            No partner or previous experience needed!
-          </p>
-          <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <a href="/events" className="bg-dance-orange hover:bg-dance-orange/90 text-white py-3 px-6 rounded-md shadow-md transition-all duration-300 font-medium">
-              Upcoming Events
-            </a>
-            <a href="/contact" className="bg-white bg-opacity-10 hover:bg-opacity-20 text-white py-3 px-6 rounded-md shadow-md transition-all duration-300 font-medium">
-              Contact Us
             </a>
           </div>
         </div>
