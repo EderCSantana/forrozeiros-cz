@@ -43,11 +43,11 @@ const AboutForro = () => {
                 {t("about_forro.dance_style_title")}
               </h2>
               
-              <p className="mb-4 text-dance-black text-opacity-80">
+              <p className="mb-4 text-dance-black text-opacity-80 whitespace-pre-line">
                 {t("about_forro.dance_style_p1")}
               </p>
               
-              <p className="mb-4 text-dance-black text-opacity-80">
+              <p className="mb-4 text-dance-black text-opacity-80 whitespace-pre-line">
                 {t("about_forro.dance_style_p2")}
               </p>
               
@@ -67,11 +67,11 @@ const AboutForro = () => {
                 {t("about_forro.cultural_title")}
               </h2>
               
-              <p className="mb-4 text-dance-black text-opacity-80">
+              <p className="mb-4 text-dance-black text-opacity-80 whitespace-pre-line">
                 {t("about_forro.cultural_p1")}
               </p>
               
-              <p className="text-dance-black text-opacity-80">
+              <p className="text-dance-black text-opacity-80 whitespace-pre-line">
                 {t("about_forro.cultural_p2")}
               </p>
             </div>
@@ -90,10 +90,12 @@ const AboutForro = () => {
                     <h4 className="font-medium">{t("about_forro.key_figure_2_name")}</h4>
                     <p className="text-sm text-dance-black text-opacity-70">{t("about_forro.key_figure_2_desc")}</p>
                   </li>
-                  <li>
-                    <h4 className="font-medium">{t("about_forro.key_figure_3_name")}</h4>
-                    <p className="text-sm text-dance-black text-opacity-70">{t("about_forro.key_figure_3_desc")}</p>
-                  </li>
+                  {t("about_forro.key_figure_3_name") && (
+                    <li>
+                      <h4 className="font-medium">{t("about_forro.key_figure_3_name")}</h4>
+                      <p className="text-sm text-dance-black text-opacity-70">{t("about_forro.key_figure_3_desc")}</p>
+                    </li>
+                  )}
                 </ul>
               </div>
               
