@@ -16,24 +16,17 @@ const Partners = () => {
       
       <TitleStripe title={t("partners.title")} />
       
-      {/* Hero Section */}
+      {/* Hero Section - Removed the requested text */}
       <section className="relative py-20 bg-dance-green text-white">
         <div className="container-fluid mx-auto text-center">
-          <h1 className="text-4xl md:text-5xl font-display font-bold mb-4 animate-fade-in">
-            Our Partners
-          </h1>
-          <p className="text-xl text-white text-opacity-90 max-w-2xl mx-auto animate-fade-in animation-delay-200">
-            The organizations and businesses that help make our events possible
-          </p>
+          {/* Hero content removed as requested */}
         </div>
       </section>
       
-      {/* Partners Grid */}
+      {/* Partners Grid - Removed "Our Valued Partners" heading */}
       <section className="py-16 bg-white">
         <div className="container-fluid mx-auto">
-          <h2 className="text-3xl font-display font-medium mb-12 text-dance-brown text-center">
-            Our Valued Partners
-          </h2>
+          {/* Heading removed as requested */}
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {partners.map(partner => (
