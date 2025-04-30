@@ -1,5 +1,5 @@
 
-import React from "react";
+import React, { useEffect, useState } from "react";
 import {
   Carousel as ShadcnCarousel,
   CarouselContent,
@@ -8,6 +8,7 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import { Card, CardContent } from "@/components/ui/card";
+import { useCarousel } from "@/components/ui/carousel";
 
 interface CarouselProps {
   images: {
@@ -15,12 +16,37 @@ interface CarouselProps {
     src: string;
     alt: string;
   }[];
+  autoRotate?: boolean;
+  interval?: number;
 }
 
-const Carousel: React.FC<CarouselProps> = ({ images }) => {
+const Carousel: React.FC<CarouselProps> = ({ 
+  images, 
+  autoRotate = true, 
+  interval = 5000 
+}) => {
+  const [api, setApi] = useState<ReturnType<typeof useCarousel>["api"]>();
+  
+  // Set up auto-rotation
+  useEffect(() => {
+    if (api && autoRotate) {
+      const autoRotateInterval = setInterval(() => {
+        api.scrollNext();
+      }, interval);
+      
+      return () => {
+        clearInterval(autoRotateInterval);
+      };
+    }
+  }, [api, autoRotate, interval]);
+
   return (
     <div className="w-full max-h-[600px] overflow-hidden relative">
-      <ShadcnCarousel className="w-full" opts={{ loop: true }}>
+      <ShadcnCarousel 
+        className="w-full" 
+        opts={{ loop: true }} 
+        setApi={setApi}
+      >
         <CarouselContent>
           {images.map((image) => (
             <CarouselItem key={image.id}>
