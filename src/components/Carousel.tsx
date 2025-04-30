@@ -1,79 +1,46 @@
 
-import { useEffect, useState } from "react";
+import React from "react";
+import {
+  Carousel as ShadcnCarousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
+import { Card, CardContent } from "@/components/ui/card";
 
 interface CarouselProps {
   images: {
+    id: number;
     src: string;
     alt: string;
   }[];
-  interval?: number;
 }
 
-const Carousel = ({ images, interval = 5000 }: CarouselProps) => {
-  const [currentSlide, setCurrentSlide] = useState(0);
-
-  useEffect(() => {
-    if (images.length <= 1) return;
-
-    const slideInterval = setInterval(() => {
-      setCurrentSlide((current) => (current + 1) % images.length);
-    }, interval);
-
-    return () => clearInterval(slideInterval);
-  }, [images.length, interval]);
-
-  if (!images || images.length === 0) {
-    return null;
-  }
-
+const Carousel: React.FC<CarouselProps> = ({ images }) => {
   return (
-    <div className="relative w-full h-[70vh] overflow-hidden">
-      {images.map((image, index) => (
-        <div
-          key={index}
-          className={`absolute inset-0 transition-opacity duration-1000 ${
-            index === currentSlide ? "opacity-100" : "opacity-0"
-          }`}
-        >
-          <div
-            className="w-full h-full bg-cover bg-center"
-            style={{ backgroundImage: `url(${image.src})` }}
-            aria-label={image.alt}
-          ></div>
-          <div className="absolute inset-0 bg-black bg-opacity-30"></div>
-        </div>
-      ))}
-
-      {/* Caption overlay */}
-      <div className="absolute inset-0 flex items-center justify-center text-white p-4">
-        <div className="max-w-4xl text-center">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold mb-4 drop-shadow-lg animate-fade-in">
-            Experience the Rhythm of Forró
-          </h1>
-          <p className="text-lg md:text-xl opacity-90 max-w-2xl mx-auto mb-6 drop-shadow-md animate-fade-in animation-delay-100">
-            Immerse yourself in the vibrant world of Brazilian dance
-          </p>
-          <button className="bg-dance-orange hover:bg-dance-brown text-white py-3 px-6 rounded-md shadow-md transition-all duration-300 transform hover:-translate-y-1 font-medium animate-fade-in animation-delay-200">
-            Discover Our Events
-          </button>
-        </div>
-      </div>
-
-      {/* Carousel indicators */}
-      <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 flex space-x-2">
-        {images.map((_, index) => (
-          <button
-            key={index}
-            onClick={() => setCurrentSlide(index)}
-            className={`w-2.5 h-2.5 rounded-full transition-all duration-300 ${
-              index === currentSlide
-                ? "bg-white w-8"
-                : "bg-white bg-opacity-50"
-            }`}
-            aria-label={`Go to slide ${index + 1}`}
-          />
-        ))}
-      </div>
+    <div className="w-full max-h-[600px] overflow-hidden relative">
+      <ShadcnCarousel className="w-full" opts={{ loop: true }}>
+        <CarouselContent>
+          {images.map((image) => (
+            <CarouselItem key={image.id}>
+              <div className="p-0">
+                <Card className="border-0 rounded-none">
+                  <CardContent className="flex items-center justify-center p-0 aspect-[16/9] overflow-hidden">
+                    <img
+                      src={image.src}
+                      alt={image.alt}
+                      className="w-full h-full object-cover"
+                    />
+                  </CardContent>
+                </Card>
+              </div>
+            </CarouselItem>
+          ))}
+        </CarouselContent>
+        <CarouselPrevious className="absolute left-4 top-1/2 -translate-y-1/2" />
+        <CarouselNext className="absolute right-4 top-1/2 -translate-y-1/2" />
+      </ShadcnCarousel>
     </div>
   );
 };
