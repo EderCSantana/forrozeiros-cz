@@ -12,8 +12,8 @@ const carouselImages = [
   },
   {
     id: 3,
-    src: "/lovable-uploads/98e6c411-deaa-458b-8a4d-3ac6cd965e14.png",
-    alt: "Forró Party and Workshop promotional poster"
+    src: "/lovable-uploads/0c2dc1bd-b55b-4dc2-b6b8-037e818ad339.png",
+    alt: "Forró Party and Workshop promotional poster with colorful bunting"
   }
 ];
 
