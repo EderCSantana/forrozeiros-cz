@@ -1,18 +1,13 @@
 
 import { PartyPopper, Music, Users } from "lucide-react";
-import Header from "../components/Header";
-import Footer from "../components/Footer";
 import TitleStripe from "../components/TitleStripe";
 import { useLanguage } from "../contexts/LanguageContext";
-
 
 const AboutUs = () => {
   const { t } = useLanguage();
   
   return (
     <div className="min-h-screen flex flex-col bg-dance-beige">
-      <Header />
-      
       <TitleStripe title={t("about_us.title")} />
       
       <main className="flex-grow container-fluid mx-auto py-12">
@@ -39,8 +34,6 @@ const AboutUs = () => {
           </div>
         </div>
       </main>
-      
-      <Footer />
     </div>
   );
 };

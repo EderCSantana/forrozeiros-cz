@@ -1,6 +1,4 @@
 
-import Header from "../components/Header";
-import Footer from "../components/Footer";
 import { useLanguage } from "../contexts/LanguageContext";
 import TitleStripe from "../components/TitleStripe";
 import { Shield, Users, User, BookOpen, Coffee } from "lucide-react";
@@ -35,8 +33,6 @@ const Rules = () => {
   
   return (
     <div className="min-h-screen flex flex-col">
-      <Header />
-      
       <TitleStripe title={t("rules.title")} />
       
       <main className="flex-grow py-12 md:py-16 bg-white">
@@ -89,8 +85,6 @@ const Rules = () => {
           </RulesSection>
         </div>
       </main>
-      
-      <Footer />
     </div>
   );
 };

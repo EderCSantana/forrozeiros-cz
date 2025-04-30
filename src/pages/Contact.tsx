@@ -1,6 +1,4 @@
 import { useState } from "react";
-import Header from "../components/Header";
-import Footer from "../components/Footer";
 import { Mail, Send, CheckCircle, Facebook, Instagram } from "lucide-react";
 import { useLanguage } from "../contexts/LanguageContext";
 import TitleStripe from "../components/TitleStripe";
@@ -47,8 +45,6 @@ const Contact = () => {
 
   return (
     <div className="min-h-screen flex flex-col">
-      <Header />
-      
       <TitleStripe title={t("contact.title") || "CONTACT US"} />
       
       {/* Contact Info & Form Section */}
@@ -210,8 +206,6 @@ const Contact = () => {
           </div>
         </div>
       </section>
-      
-      <Footer />
     </div>
   );
 };
