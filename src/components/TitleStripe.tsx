@@ -26,7 +26,7 @@ const TitleStripe = ({ title }: { title: string }) => {
   };
 
   return (
-    <section className="relative py-16 bg-dance-brown">
+    <section className="relative py-16 bg-dance-brown w-full">
       <BuntingFlags />
       <div className="container-fluid mx-auto text-center pt-4 pb-8">
         <h2 className="text-3xl md:text-5xl font-bold text-dance-orange mb-6 animate-fade-in animation-delay-200">
