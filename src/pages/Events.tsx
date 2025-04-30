@@ -73,23 +73,6 @@ const Events = () => {
         <div className="container-fluid mx-auto">
           <TitleStripe title={t("events.title")} />
           
-          {/* Google Calendar Section */}
-          <div className="py-8 mb-8">
-            <h3 className="text-2xl font-display font-bold mb-6 text-dance-brown">{t("events.upcoming")}</h3>
-            <div className="w-full rounded-lg shadow-lg overflow-hidden border border-gray-300">
-              <iframe 
-                src="https://calendar.google.com/calendar/embed?src=e8ddb3cd29730329a30172cb6608bbe61305f3e2474c25aca8f2d91493d4856b%40group.calendar.google.com&src=96a92991a19223a6af005363e4dd8ab3f165f54838946d445ddd55e24d23d02d%40group.calendar.google.com&ctz=Europe%2FPrague" 
-                width="100%" 
-                height={calendarHeight} 
-                frameBorder="0" 
-                scrolling="no"
-                title="Forró Events Calendar"
-                className="bg-white"
-              />
-            </div>
-            <Separator className="mt-8" />
-          </div>
-          
           <div className="space-y-8">
             {/* Weekly Events in Prostor Section */}
             <EventSection 
@@ -173,6 +156,22 @@ const Events = () => {
                 </div>
               </div>
               <Separator className="mt-8" />
+            </div>
+          </div>
+          
+          {/* Google Calendar Section - Moved to bottom */}
+          <div className="py-8 mt-8">
+            <h3 className="text-2xl font-display font-bold mb-6 text-dance-brown">{t("events.upcoming")}</h3>
+            <div className="w-full rounded-lg shadow-lg overflow-hidden border border-dance-orange">
+              <iframe 
+                src="https://calendar.google.com/calendar/embed?src=e8ddb3cd29730329a30172cb6608bbe61305f3e2474c25aca8f2d91493d4856b%40group.calendar.google.com&src=96a92991a19223a6af005363e4dd8ab3f165f54838946d445ddd55e24d23d02d%40group.calendar.google.com&ctz=Europe%2FPrague&bgcolor=%23FFF1D0&color=%23B84C00&color=%23FF9900" 
+                width="100%" 
+                height={calendarHeight} 
+                frameBorder="0" 
+                scrolling="no"
+                title="Forró Events Calendar"
+                className="bg-dance-beige"
+              />
             </div>
           </div>
         </div>

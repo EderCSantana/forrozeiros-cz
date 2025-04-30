@@ -40,7 +40,7 @@ const Carousel: React.FC<CarouselProps> = ({
   }, [api, autoRotate, interval]);
 
   return (
-    <div className="w-full max-h-[400px] overflow-hidden relative">
+    <div className="w-full overflow-hidden relative">
       <ShadcnCarousel 
         className="w-full" 
         opts={{ loop: true }} 
@@ -51,7 +51,7 @@ const Carousel: React.FC<CarouselProps> = ({
             <CarouselItem key={image.id}>
               <div className="p-0">
                 <Card className="border-0 rounded-none">
-                  <CardContent className="flex items-center justify-center p-0 aspect-[16/9] max-h-[400px] overflow-hidden">
+                  <CardContent className="flex items-center justify-center p-0 aspect-[16/9] overflow-hidden">
                     <img
                       src={image.src}
                       alt={image.alt}

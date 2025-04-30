@@ -33,7 +33,6 @@ const TitleStripe = ({ title }: { title: string }) => {
           {title}
         </h2>
       </div>
-      <BuntingFlags />
     </section>
   );
 };
