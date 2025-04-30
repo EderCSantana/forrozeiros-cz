@@ -1,6 +1,3 @@
-
-import Header from "../components/Header";
-import Footer from "../components/Footer";
 import TitleStripe from "../components/TitleStripe";
 import { useLanguage } from "../contexts/LanguageContext";
 import { Building, Coffee, Music, User, GraduationCap, Globe } from "lucide-react";
@@ -126,8 +123,6 @@ const Partners = () => {
 
   return (
     <div className="min-h-screen flex flex-col">
-      <Header />
-      
       <TitleStripe title={t("partners.title")} />
       
       <main className="flex-grow py-12 md:py-16 bg-white">
@@ -327,8 +322,6 @@ const Partners = () => {
           </PartnerSection>
         </div>
       </main>
-
-      <Footer />
     </div>
   );
 };

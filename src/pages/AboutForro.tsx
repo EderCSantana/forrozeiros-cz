@@ -1,4 +1,3 @@
-
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import { useLanguage } from "../contexts/LanguageContext";
@@ -10,7 +9,6 @@ const AboutForro = () => {
   
   return (
     <div className="min-h-screen flex flex-col bg-dance-beige">
-      <Header />
       
       {/* Hero Section */}
       <section className="relative py-16 md:py-24 bg-dance-brown text-white">
