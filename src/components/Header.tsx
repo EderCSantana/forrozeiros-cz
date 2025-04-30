@@ -1,9 +1,15 @@
 
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Facebook, Instagram, Menu, X } from "lucide-react";
+import { Facebook, Instagram, Menu, X, ChevronDown } from "lucide-react";
 import LanguageSelector from "./LanguageSelector";
 import { useLanguage } from "../contexts/LanguageContext";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 
 const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -34,18 +40,18 @@ const Header = () => {
               <img 
                 src="/lovable-uploads/c454e34b-5903-4ae4-97f6-b2d66315c01c.png" 
                 alt="Forró Zeiros" 
-                className="h-14 md:h-20"
+                className="h-14 md:h-16"
               />
             </div>
           </Link>
 
-          {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-1 lg:space-x-3">
+          {/* Desktop Navigation for larger screens */}
+          <nav className="hidden lg:flex items-center space-x-1 xl:space-x-3">
             {navItems.map((item) => (
               <Link
                 key={item.path}
                 to={item.path}
-                className={`nav-link text-dance-brown ${
+                className={`nav-link text-dance-brown text-sm xl:text-base ${
                   location.pathname === item.path ? "text-dance-orange" : ""
                 }`}
               >
@@ -54,8 +60,31 @@ const Header = () => {
             ))}
           </nav>
 
+          {/* Tablet Menu Dropdown (medium screens) */}
+          <div className="hidden md:block lg:hidden">
+            <DropdownMenu>
+              <DropdownMenuTrigger className="flex items-center text-dance-brown hover:text-dance-orange">
+                Menu <ChevronDown className="ml-1 h-4 w-4" />
+              </DropdownMenuTrigger>
+              <DropdownMenuContent align="end">
+                {navItems.map((item) => (
+                  <DropdownMenuItem key={item.path} asChild>
+                    <Link
+                      to={item.path}
+                      className={`w-full text-sm ${
+                        location.pathname === item.path ? "text-dance-orange" : "text-dance-brown"
+                      }`}
+                    >
+                      {item.name}
+                    </Link>
+                  </DropdownMenuItem>
+                ))}
+              </DropdownMenuContent>
+            </DropdownMenu>
+          </div>
+
           {/* Social and Language Selector */}
-          <div className="hidden md:flex items-center space-x-4">
+          <div className="flex items-center space-x-2 sm:space-x-4">
             <a
               href="https://www.facebook.com/profile.php?id=61571664788308"
               target="_blank"

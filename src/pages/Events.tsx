@@ -1,15 +1,33 @@
 
-import Header from "../components/Header";
-import Footer from "../components/Footer";
 import { CalendarDays, MapPin, Clock, Users, Music, Ticket, PenSquare, FileText } from "lucide-react";
 import TitleStripe from "../components/TitleStripe";
 import { useLanguage } from "../contexts/LanguageContext";
 import { Separator } from "@/components/ui/separator";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { Link } from "react-router-dom";
+import { useState, useEffect } from "react";
 
 const Events = () => {
   const { t } = useLanguage();
+  const [calendarHeight, setCalendarHeight] = useState(600);
+  
+  // Adjust calendar height based on window size
+  useEffect(() => {
+    const updateHeight = () => {
+      const width = window.innerWidth;
+      if (width < 640) {
+        setCalendarHeight(400);
+      } else if (width < 1024) {
+        setCalendarHeight(500);
+      } else {
+        setCalendarHeight(600);
+      }
+    };
+    
+    updateHeight();
+    window.addEventListener('resize', updateHeight);
+    return () => window.removeEventListener('resize', updateHeight);
+  }, []);
   
   // Event section component for consistent styling
   const EventSection = ({ 
@@ -51,12 +69,26 @@ const Events = () => {
 
   return (
     <div className="min-h-screen flex flex-col">
-      <Header />
-      
-      <TitleStripe title={t("events.title")} />
-      
       <main className="flex-grow py-12 bg-white">
         <div className="container-fluid mx-auto">
+          <TitleStripe title={t("events.title")} />
+          
+          {/* Google Calendar Section */}
+          <div className="py-8 mb-8">
+            <h3 className="text-2xl font-display font-bold mb-6 text-dance-brown">{t("events.upcoming")}</h3>
+            <div className="w-full rounded-lg shadow-lg overflow-hidden border border-gray-300">
+              <iframe 
+                src="https://calendar.google.com/calendar/embed?src=e8ddb3cd29730329a30172cb6608bbe61305f3e2474c25aca8f2d91493d4856b%40group.calendar.google.com&src=96a92991a19223a6af005363e4dd8ab3f165f54838946d445ddd55e24d23d02d%40group.calendar.google.com&ctz=Europe%2FPrague" 
+                width="100%" 
+                height={calendarHeight} 
+                frameBorder="0" 
+                scrolling="no"
+                title="Forró Events Calendar"
+                className="bg-white"
+              />
+            </div>
+            <Separator className="mt-8" />
+          </div>
           
           <div className="space-y-8">
             {/* Weekly Events in Prostor Section */}
@@ -145,8 +177,6 @@ const Events = () => {
           </div>
         </div>
       </main>
-      
-      <Footer />
     </div>
   );
 };
