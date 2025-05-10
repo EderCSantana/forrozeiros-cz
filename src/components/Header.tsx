@@ -1,5 +1,5 @@
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import { Facebook, Instagram, Menu, X, ChevronDown } from "lucide-react";
 import LanguageSelector from "./LanguageSelector";
@@ -41,7 +41,7 @@ const Header = () => {
   };
 
   // Setup intersection observer to update active section on scroll
-  useState(() => {
+  useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
