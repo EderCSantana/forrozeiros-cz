@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import { Facebook, Instagram, Menu, X, ChevronDown } from "lucide-react";
 import LanguageSelector from "./LanguageSelector";
@@ -95,7 +94,7 @@ const Header = () => {
     >
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between py-4">
-          {/* Logo as Home Button */}
+          {/* Logo as Home Button - Updated with new logo */}
           <a 
             onClick={() => scrollToSection("home")} 
             className="flex-shrink-0 cursor-pointer" 
@@ -103,7 +102,7 @@ const Header = () => {
           >
             <div className="flex items-center">
               <img 
-                src="/lovable-uploads/c454e34b-5903-4ae4-97f6-b2d66315c01c.png" 
+                src="/lovable-uploads/762ed430-c94d-4c3e-b69a-7b4da26f6abb.png" 
                 alt="Forró Zeiros" 
                 className="h-12 md:h-14 lg:h-16"
               />
@@ -193,7 +192,7 @@ const Header = () => {
         <div className="container mx-auto px-4 py-4">
           <div className="flex justify-between items-center mb-6">
             <img 
-              src="/lovable-uploads/c454e34b-5903-4ae4-97f6-b2d66315c01c.png" 
+              src="/lovable-uploads/762ed430-c94d-4c3e-b69a-7b4da26f6abb.png" 
               alt="Forró Zeiros" 
               className="h-10"
             />

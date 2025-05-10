@@ -37,7 +37,7 @@ const Contact = () => {
       
       // Send the email using EmailJS
       const response = await emailjs.send(
-        "service_3p1ihft", // Updated Service ID
+        "service_3p1ihft", // Service ID
         "template_7xi16lp", // Template ID
         {
           from_name: formData.name,
