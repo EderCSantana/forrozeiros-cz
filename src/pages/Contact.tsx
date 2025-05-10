@@ -32,23 +32,22 @@ const Contact = () => {
     setIsSubmitting(true);
     
     try {
-      // Initialize EmailJS with your user ID (will use public key)
+      // Initialize EmailJS with your user ID (public key)
       emailjs.init("jp2t2sduFbiqDO4QK");
       
       // Send the email using EmailJS
-      const result = await emailjs.send(
-        "default_service", // Service ID
+      const response = await emailjs.send(
+        "service_3p1ihft", // Updated Service ID
         "template_7xi16lp", // Template ID
         {
           from_name: formData.name,
-          reply_to: formData.email, 
+          reply_to: formData.email,
           subject: formData.subject,
           message: formData.message,
-          to_email: "forrozeiroscz@gmail.com" // Target email address
         }
       );
       
-      console.log("Email sent successfully:", result.text);
+      console.log("Email sent successfully:", response);
       setFormSubmitted(true);
       
       // Reset form
