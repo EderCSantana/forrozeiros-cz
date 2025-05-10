@@ -145,7 +145,7 @@ const Partners = () => {
                   <p>The venue supports diverse artistic and physical activities, including forró, balfolk, swing dance, yoga, tai chi chuan, and movement improvisation. It plays a vital role in the local cultural landscape and is the home of our weekly forró events.</p>
                 </>
               }
-              imageUrl="public/lovable-uploads/2c6ea6ad-f9c8-4ae6-8770-9a1c57f0ead7.png"
+              imageUrl="/lovable-uploads/2c6ea6ad-f9c8-4ae6-8770-9a1c57f0ead7.png"
               websiteUrl="https://komunitniprostorevangelik.cz"
               contactInfo={
                 <>
@@ -167,7 +167,7 @@ const Partners = () => {
                   <p>Beyond serving delicious coffee, Dorado Coffee supports the arts and community by hosting events and concerts. Recently, it has become a cozy spot for forró concerts with Três Corações, where dancers gather and enjoy the rhythms of Brazil.</p>
                 </>
               }
-              imageUrl="public/lovable-uploads/da5481c2-3179-4ed6-a48e-bbc1ab623685.png"
+              imageUrl="/lovable-uploads/da5481c2-3179-4ed6-a48e-bbc1ab623685.png"
               websiteUrl="https://doradocoffee.cz"
               contactInfo={
                 <>
@@ -185,7 +185,7 @@ const Partners = () => {
           <PartnerSection title="Teachers" icon={GraduationCap}>
             <TeacherCard
               name="Emilson Bernardes"
-              imageUrl="public/lovable-uploads/c88e5523-748b-4dc0-8324-e940ec54e172.png"
+              imageUrl="/lovable-uploads/c88e5523-748b-4dc0-8324-e940ec54e172.png"
               description={
                 <>
                   <p className="mb-2"><strong>Tanečník, lektor tance, choreograf</strong></p>
@@ -271,7 +271,7 @@ const Partners = () => {
                   <p>Três Corações is a local forró band founded by Devail Santos. The band has been playing for several years and is a staple in the Prague forró scene, performing around one to two concerts per month. Their repertoire spans a variety of forró styles and rhythms, making them a beloved presence at community events and dance nights.</p>
                 </>
               }
-              imageUrl="public/lovable-uploads/4248740d-6b87-4e68-8294-ae54f0b5c7fe.png"
+              imageUrl="/lovable-uploads/4248740d-6b87-4e68-8294-ae54f0b5c7fe.png"
               websiteUrl="https://facebook.com/grupo.tres.coracoes.2025"
               contactInfo={
                 <>
@@ -283,7 +283,7 @@ const Partners = () => {
                   <div className="mt-3">
                     <div className="flex items-center gap-2">
                       <Avatar className="h-8 w-8">
-                        <AvatarImage src="public/lovable-uploads/31c5fb8c-8211-47ba-b540-cbf45b0af818.png" alt="Devail Santos" />
+                        <AvatarImage src="/lovable-uploads/31c5fb8c-8211-47ba-b540-cbf45b0af818.png" alt="Devail Santos" />
                         <AvatarFallback>DS</AvatarFallback>
                       </Avatar>
                       <h5 className="font-medium">Devail Santos</h5>
