@@ -16,42 +16,42 @@ const HomePage = () => {
   return (
     <div className="flex flex-col">
       {/* Home Section */}
-      <section id="home" className="scroll-mt-20">
+      <section id="home" className="scroll-mt-20 px-4 md:px-6 lg:px-8">
         <Index />
       </section>
       
       {/* About Forró Section */}
-      <section id="about-forro" className="scroll-mt-20">
+      <section id="about-forro" className="scroll-mt-20 px-4 md:px-6 lg:px-8">
         <AboutForro />
       </section>
       
       {/* About Us Section */}
-      <section id="about-us" className="scroll-mt-20">
+      <section id="about-us" className="scroll-mt-20 px-4 md:px-6 lg:px-8">
         <AboutUs />
       </section>
       
       {/* Events Section */}
-      <section id="events" className="scroll-mt-20">
+      <section id="events" className="scroll-mt-20 px-4 md:px-6 lg:px-8">
         <Events />
       </section>
       
       {/* Custom Events Section */}
-      <section id="custom-events" className="scroll-mt-20">
+      <section id="custom-events" className="scroll-mt-20 px-4 md:px-6 lg:px-8">
         <CustomEvents />
       </section>
       
       {/* Rules Section */}
-      <section id="rules" className="scroll-mt-20">
+      <section id="rules" className="scroll-mt-20 px-4 md:px-6 lg:px-8">
         <Rules />
       </section>
       
       {/* Partners Section */}
-      <section id="partners" className="scroll-mt-20">
+      <section id="partners" className="scroll-mt-20 px-4 md:px-6 lg:px-8">
         <Partners />
       </section>
       
       {/* Contact Section */}
-      <section id="contact" className="scroll-mt-20">
+      <section id="contact" className="scroll-mt-20 px-4 md:px-6 lg:px-8">
         <Contact />
       </section>
     </div>
