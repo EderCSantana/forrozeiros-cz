@@ -7,14 +7,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { LanguageProvider } from "./contexts/LanguageContext";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
-import Index from "./pages/Index";
-import AboutForro from "./pages/AboutForro";
-import AboutUs from "./pages/AboutUs";
-import Events from "./pages/Events";
-import CustomEvents from "./pages/CustomEvents";
-import Rules from "./pages/Rules";
-import Partners from "./pages/Partners";
-import Contact from "./pages/Contact";
+import HomePage from "./pages/HomePage";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -30,15 +23,8 @@ const App = () => (
             <Header />
             <div className="flex-grow">
               <Routes>
-                <Route path="/" element={<Index />} />
-                <Route path="/about-forro" element={<AboutForro />} />
-                <Route path="/about-us" element={<AboutUs />} />
-                <Route path="/events" element={<Events />} />
-                <Route path="/custom-events" element={<CustomEvents />} />
-                <Route path="/rules" element={<Rules />} />
-                <Route path="/partners" element={<Partners />} />
-                <Route path="/contact" element={<Contact />} />
-                {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+                <Route path="/" element={<HomePage />} />
+                {/* Fallback route for any other paths */}
                 <Route path="*" element={<NotFound />} />
               </Routes>
             </div>

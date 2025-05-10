@@ -1,6 +1,6 @@
 
 import { useState } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import { Facebook, Instagram, Menu, X, ChevronDown } from "lucide-react";
 import LanguageSelector from "./LanguageSelector";
 import { useLanguage } from "../contexts/LanguageContext";
@@ -13,29 +13,69 @@ import {
 
 const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const location = useLocation();
+  const [activeSection, setActiveSection] = useState("home");
   const { t } = useLanguage();
 
   const navItems = [
-    { name: t("nav.about_forro"), path: "/about-forro" },
-    { name: t("nav.about_us"), path: "/about-us" },
-    { name: t("nav.events"), path: "/events" },
-    { name: t("nav.custom_events"), path: "/custom-events" },
-    { name: t("nav.rules"), path: "/rules" },
-    { name: t("nav.partners"), path: "/partners" },
-    { name: t("nav.contact"), path: "/contact" },
+    { name: t("nav.home"), id: "home" },
+    { name: t("nav.about_forro"), id: "about-forro" },
+    { name: t("nav.about_us"), id: "about-us" },
+    { name: t("nav.events"), id: "events" },
+    { name: t("nav.custom_events"), id: "custom-events" },
+    { name: t("nav.rules"), id: "rules" },
+    { name: t("nav.partners"), id: "partners" },
+    { name: t("nav.contact"), id: "contact" },
   ];
 
   const toggleMobileMenu = () => {
     setMobileMenuOpen(!mobileMenuOpen);
   };
 
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+      setActiveSection(sectionId);
+      setMobileMenuOpen(false);
+    }
+  };
+
+  // Setup intersection observer to update active section on scroll
+  useState(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setActiveSection(entry.target.id);
+          }
+        });
+      },
+      { threshold: 0.5 }
+    );
+
+    navItems.forEach((item) => {
+      const element = document.getElementById(item.id);
+      if (element) observer.observe(element);
+    });
+
+    return () => {
+      navItems.forEach((item) => {
+        const element = document.getElementById(item.id);
+        if (element) observer.unobserve(element);
+      });
+    };
+  }, []);
+
   return (
     <header className="sticky top-0 z-50 w-full bg-[#ffeec0] bg-opacity-95 backdrop-blur-md shadow-sm transition-all duration-300">
       <div className="container-fluid mx-auto">
         <div className="flex items-center justify-between py-4">
           {/* Logo as Home Button */}
-          <Link to="/" className="flex-shrink-0" aria-label="Home">
+          <a 
+            onClick={() => scrollToSection("home")} 
+            className="flex-shrink-0 cursor-pointer" 
+            aria-label="Home"
+          >
             <div className="flex items-center">
               <img 
                 src="/lovable-uploads/c454e34b-5903-4ae4-97f6-b2d66315c01c.png" 
@@ -43,20 +83,20 @@ const Header = () => {
                 className="h-14 md:h-16"
               />
             </div>
-          </Link>
+          </a>
 
           {/* Desktop Navigation for larger screens */}
           <nav className="hidden lg:flex items-center space-x-1 xl:space-x-3">
             {navItems.map((item) => (
-              <Link
-                key={item.path}
-                to={item.path}
-                className={`nav-link text-dance-brown text-sm xl:text-base ${
-                  location.pathname === item.path ? "text-dance-orange" : ""
+              <a
+                key={item.id}
+                onClick={() => scrollToSection(item.id)}
+                className={`nav-link text-dance-brown text-sm xl:text-base cursor-pointer ${
+                  activeSection === item.id ? "text-dance-orange" : ""
                 }`}
               >
                 {item.name}
-              </Link>
+              </a>
             ))}
           </nav>
 
@@ -68,15 +108,15 @@ const Header = () => {
               </DropdownMenuTrigger>
               <DropdownMenuContent align="end">
                 {navItems.map((item) => (
-                  <DropdownMenuItem key={item.path} asChild>
-                    <Link
-                      to={item.path}
-                      className={`w-full text-sm ${
-                        location.pathname === item.path ? "text-dance-orange" : "text-dance-brown"
+                  <DropdownMenuItem key={item.id} asChild>
+                    <a
+                      onClick={() => scrollToSection(item.id)}
+                      className={`w-full text-sm cursor-pointer ${
+                        activeSection === item.id ? "text-dance-orange" : "text-dance-brown"
                       }`}
                     >
                       {item.name}
-                    </Link>
+                    </a>
                   </DropdownMenuItem>
                 ))}
               </DropdownMenuContent>
@@ -125,16 +165,15 @@ const Header = () => {
       >
         <nav className="container-fluid py-4 flex flex-col space-y-3">
           {navItems.map((item) => (
-            <Link
-              key={item.path}
-              to={item.path}
-              className={`nav-link text-dance-brown ${
-                location.pathname === item.path ? "text-dance-orange" : ""
+            <a
+              key={item.id}
+              onClick={() => scrollToSection(item.id)}
+              className={`nav-link text-dance-brown cursor-pointer ${
+                activeSection === item.id ? "text-dance-orange" : ""
               }`}
-              onClick={() => setMobileMenuOpen(false)}
             >
               {item.name}
-            </Link>
+            </a>
           ))}
           <div className="flex items-center space-x-4 pt-3 border-t border-dance-brown border-opacity-20">
             <a

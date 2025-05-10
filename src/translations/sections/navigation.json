@@ -1,6 +1,7 @@
 
 {
   "en": {
+    "nav.home": "Home",
     "nav.about_forro": "About Forró",
     "nav.about_us": "About Us",
     "nav.events": "Events",
@@ -10,6 +11,7 @@
     "nav.contact": "Contact"
   },
   "es": {
+    "nav.home": "Inicio",
     "nav.about_forro": "Sobre Forró",
     "nav.about_us": "Sobre Nosotros",
     "nav.events": "Eventos",
@@ -19,6 +21,7 @@
     "nav.contact": "Contacto"
   },
   "pt": {
+    "nav.home": "Início",
     "nav.about_forro": "Sobre o Forró",
     "nav.about_us": "Sobre Nós",
     "nav.events": "Eventos",
