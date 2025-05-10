@@ -1,7 +1,10 @@
+
 import { useState } from "react";
 import { Mail, Send, CheckCircle, Facebook, Instagram } from "lucide-react";
 import { useLanguage } from "../contexts/LanguageContext";
 import TitleStripe from "../components/TitleStripe";
+import emailjs from "emailjs-com";
+import { useToast } from "@/hooks/use-toast";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -11,8 +14,10 @@ const Contact = () => {
     message: ""
   });
   
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [formSubmitted, setFormSubmitted] = useState(false);
   const { t } = useLanguage();
+  const { toast } = useToast();
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
@@ -22,25 +27,59 @@ const Contact = () => {
     }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // In a real app, you would send this data to your backend
-    console.log("Form submitted:", formData);
-    // Show success message
-    setFormSubmitted(true);
-    // Reset form
-    setFormData({
-      name: "",
-      email: "",
-      subject: "",
-      message: ""
-    });
-    // Reset success message after 5 seconds
-    setTimeout(() => {
-      setFormSubmitted(false);
-    }, 5000);
+    setIsSubmitting(true);
     
-    // In a real implementation, you would send an email to forrozeiroscz@gmail.com
+    try {
+      // Initialize EmailJS with your user ID (will use public key)
+      emailjs.init("jp2t2sduFbiqDO4QK");
+      
+      // Send the email using EmailJS
+      const result = await emailjs.send(
+        "default_service", // Service ID
+        "template_7xi16lp", // Template ID
+        {
+          from_name: formData.name,
+          reply_to: formData.email, 
+          subject: formData.subject,
+          message: formData.message,
+          to_email: "forrozeiroscz@gmail.com" // Target email address
+        }
+      );
+      
+      console.log("Email sent successfully:", result.text);
+      setFormSubmitted(true);
+      
+      // Reset form
+      setFormData({
+        name: "",
+        email: "",
+        subject: "",
+        message: ""
+      });
+      
+      // Show success message
+      toast({
+        title: "Message sent!",
+        description: "We've received your message and will get back to you soon.",
+        variant: "default",
+      });
+      
+      // Reset success message after 5 seconds
+      setTimeout(() => {
+        setFormSubmitted(false);
+      }, 5000);
+    } catch (error) {
+      console.error("Failed to send email:", error);
+      toast({
+        title: "Error sending message",
+        description: "Please try again later or contact us directly at forrozeiroscz@gmail.com",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -196,9 +235,22 @@ const Contact = () => {
                   <button 
                     type="submit" 
                     className="w-full bg-dance-brown hover:bg-dance-brown/90 text-white py-3 px-4 rounded-md transition-colors duration-300 flex items-center justify-center"
+                    disabled={isSubmitting}
                   >
-                    <Send size={18} className="mr-2" />
-                    Send Message
+                    {isSubmitting ? (
+                      <span className="flex items-center">
+                        <svg className="animate-spin -ml-1 mr-2 h-4 w-4 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                          <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                          <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                        </svg>
+                        Sending...
+                      </span>
+                    ) : (
+                      <>
+                        <Send size={18} className="mr-2" />
+                        Send Message
+                      </>
+                    )}
                   </button>
                 </form>
               )}
