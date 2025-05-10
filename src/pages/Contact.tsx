@@ -98,7 +98,7 @@ const Contact = () => {
               <div className="space-y-8">
                 <div className="flex items-start">
                   <div className="w-12 h-12 bg-dance-orange bg-opacity-10 rounded-full flex items-center justify-center mr-4">
-                    <Mail className="text-dance-orange" size={20} />
+                    <Mail size={20} className="text-dance-orange" />
                   </div>
                   <div>
                     <h3 className="text-lg font-medium mb-1 text-dance-brown">Email Us</h3>
@@ -125,7 +125,7 @@ const Contact = () => {
                     rel="noopener noreferrer" 
                     className="flex items-center text-dance-brown hover:text-dance-orange transition-colors duration-300"
                   >
-                    <div className="w-10 h-10 bg-dance-brown bg-opacity-10 rounded-full flex items-center justify-center mr-2 transition-colors duration-300">
+                    <div className="w-10 h-10 bg-dance-brown bg-opacity-10 rounded-full flex items-center justify-center mr-2">
                       <Facebook size={20} className="text-dance-brown" />
                     </div>
                     <span>Forrozeiros CZ</span>
@@ -138,7 +138,7 @@ const Contact = () => {
                     rel="noopener noreferrer" 
                     className="flex items-center text-dance-brown hover:text-dance-orange transition-colors duration-300"
                   >
-                    <div className="w-10 h-10 bg-dance-orange bg-opacity-10 rounded-full flex items-center justify-center mr-2 transition-colors duration-300">
+                    <div className="w-10 h-10 bg-dance-orange bg-opacity-10 rounded-full flex items-center justify-center mr-2">
                       <Instagram size={20} className="text-dance-orange" />
                     </div>
                     <span>@forrozeiros_cz</span>
