@@ -1,5 +1,5 @@
+
 import Header from "../components/Header";
-import Footer from "../components/Footer";
 import { useLanguage } from "../contexts/LanguageContext";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Music, Flag, Users } from "lucide-react";
@@ -263,8 +263,6 @@ const AboutForro = () => {
           </div>
         </div>
       </section>
-      
-      <Footer />
     </div>
   );
 };
