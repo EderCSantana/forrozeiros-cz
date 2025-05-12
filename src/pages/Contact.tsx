@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Mail, Send, CheckCircle, Facebook, Instagram } from "lucide-react";
 import { useLanguage } from "../contexts/LanguageContext";
@@ -12,7 +11,6 @@ const Contact = () => {
     email: "",
     subject: "",
     message: "",
-    to_email: "forrozeiroscz@gmail.com" // Explicitly set recipient email
   });
   
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -33,16 +31,15 @@ const Contact = () => {
     setIsSubmitting(true);
     
     try {
-      // Initialize EmailJS with your user ID (public key)
+      // Initialize EmailJS with the correct public key
       emailjs.init("GFqRe3DcWmHiOXw2q");
       
-      // Prepare the template parameters - include the destination email directly
+      // Prepare the template parameters
       const templateParams = {
         from_name: formData.name,
         reply_to: formData.email,
         subject: formData.subject,
         message: formData.message,
-        to_email: "forrozeiroscz@gmail.com" // Hardcoded recipient email
       };
       
       console.log("Sending email with parameters:", templateParams);
@@ -63,7 +60,6 @@ const Contact = () => {
         email: "",
         subject: "",
         message: "",
-        to_email: "forrozeiroscz@gmail.com"
       });
       
       // Show success message
