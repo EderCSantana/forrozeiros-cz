@@ -46,6 +46,13 @@ const Header = () => {
     }
   };
 
+  // Improve mobile menu behavior
+  const closeMobileMenu = () => {
+    if (mobileMenuOpen) {
+      setMobileMenuOpen(false);
+    }
+  };
+
   // Check scroll position to add background on scroll
   useEffect(() => {
     const handleScroll = () => {
@@ -85,6 +92,36 @@ const Header = () => {
       });
     };
   }, []);
+
+  // Close mobile menu on window resize to prevent menu issues
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth >= 768 && mobileMenuOpen) {
+        setMobileMenuOpen(false);
+      }
+    };
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, [mobileMenuOpen]);
+
+  // Close mobile menu when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (e: MouseEvent) => {
+      const mobileMenu = document.getElementById('mobile-menu');
+      const mobileMenuButton = document.getElementById('mobile-menu-button');
+      
+      if (mobileMenu && mobileMenuButton && 
+          !mobileMenu.contains(e.target as Node) && 
+          !mobileMenuButton.contains(e.target as Node) &&
+          mobileMenuOpen) {
+        setMobileMenuOpen(false);
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, [mobileMenuOpen]);
 
   return (
     <header 
@@ -174,6 +211,7 @@ const Header = () => {
 
           {/* Mobile Menu Button */}
           <button
+            id="mobile-menu-button"
             className="md:hidden text-dance-brown hover:text-dance-orange focus:outline-none"
             onClick={toggleMobileMenu}
             aria-label="Toggle mobile menu"
@@ -185,9 +223,11 @@ const Header = () => {
 
       {/* Mobile Menu - Improved Animation and Styling */}
       <div
+        id="mobile-menu"
         className={`md:hidden fixed inset-0 bg-[#ffeec0] z-40 transition-transform duration-300 ease-in-out ${
           mobileMenuOpen ? "translate-y-0" : "-translate-y-full"
         }`}
+        onClick={(e) => e.target === e.currentTarget && closeMobileMenu()}
       >
         <div className="container mx-auto px-4 py-4">
           <div className="flex justify-between items-center mb-6">

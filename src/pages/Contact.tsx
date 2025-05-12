@@ -33,17 +33,18 @@ const Contact = () => {
     
     try {
       // Initialize EmailJS with your user ID (public key)
-      emailjs.init("jp2t2sduFbiqDO4QK");
+      emailjs.init("GFqRe3DcWmHiOXw2q");
       
       // Send the email using EmailJS
       const response = await emailjs.send(
-        "service_3p1ihft", // Service ID
-        "template_7xi16lp", // Template ID
+        "service_ccysmtt", // Service ID
+        "template_hzeiy2f", // Template ID
         {
           from_name: formData.name,
           reply_to: formData.email,
           subject: formData.subject,
           message: formData.message,
+          to_email: "forrozeiroscz@gmail.com" // Explicitly set recipient
         }
       );
       

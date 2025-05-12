@@ -1,5 +1,5 @@
 
-import React, { createContext, useContext, useState, useEffect, ReactNode } from "react";
+import React, { createContext, useContext, useState, useEffect, ReactNode, useMemo } from "react";
 
 // Define our available languages
 export const languages = [
@@ -14,6 +14,7 @@ type LanguageContextType = {
   language: string;
   setLanguage: (code: string) => void;
   t: (key: string) => string;
+  isLoading: boolean;
 };
 
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
@@ -30,6 +31,9 @@ type LanguageProviderProps = {
   children: ReactNode;
 };
 
+// Cache for translations to avoid repeated fetch
+const translationCache: Record<string, Record<string, string>> = {};
+
 export const LanguageProvider = ({ children }: LanguageProviderProps) => {
   const [language, setLanguage] = useState(() => {
     const savedLanguage = localStorage.getItem("language");
@@ -41,7 +45,15 @@ export const LanguageProvider = ({ children }: LanguageProviderProps) => {
   useEffect(() => {
     const loadTranslations = async () => {
       setIsLoading(true);
+      
       try {
+        // If we already have this language cached, use it immediately
+        if (translationCache[language]) {
+          setTranslations(translationCache[language]);
+          setIsLoading(false);
+          return;
+        }
+        
         const sections = [
           'navigation',
           'rules',
@@ -53,14 +65,17 @@ export const LanguageProvider = ({ children }: LanguageProviderProps) => {
           'partners',
           'contact',
           'home',
-          'custom_events' // Added custom_events section
+          'custom_events'
         ];
+        
         const loadedTranslations: Record<string, string> = {};
+        const langCode = language.toLowerCase();
 
-        for (const section of sections) {
+        // Use Promise.all for parallel loading
+        await Promise.all(sections.map(async (section) => {
           try {
+            // Dynamic import, only for the needed language
             const sectionData = await import(`../translations/sections/${section}.json`);
-            const langCode = language.toLowerCase();
             const sectionTranslations = sectionData[langCode] || sectionData['en'];
             
             if (sectionTranslations) {
@@ -69,17 +84,25 @@ export const LanguageProvider = ({ children }: LanguageProviderProps) => {
           } catch (error) {
             console.error(`Failed to load section: ${section}`, error);
           }
-        }
+        }));
 
+        // Store in cache
+        translationCache[language] = loadedTranslations;
         setTranslations(loadedTranslations);
       } catch (error) {
         console.error(`Failed to load translations for ${language}`, error);
+        
         // Fallback to English if translation files are missing
-        try {
-          const fallbackData = await import("../translations/sections/general.json");
-          setTranslations(fallbackData.en);
-        } catch (fallbackError) {
-          console.error("Failed to load fallback translations", fallbackError);
+        if (!translationCache['EN']) {
+          try {
+            const fallbackData = await import("../translations/sections/general.json");
+            translationCache['EN'] = fallbackData.en;
+            setTranslations(fallbackData.en);
+          } catch (fallbackError) {
+            console.error("Failed to load fallback translations", fallbackError);
+          }
+        } else {
+          setTranslations(translationCache['EN']);
         }
       } finally {
         setIsLoading(false);
@@ -90,13 +113,16 @@ export const LanguageProvider = ({ children }: LanguageProviderProps) => {
     loadTranslations();
   }, [language]);
 
-  const t = (key: string) => {
-    if (isLoading) return key;
-    return translations[key] || key;
-  };
+  // Memoize the context value
+  const contextValue = useMemo(() => ({
+    language,
+    setLanguage,
+    t: (key: string) => translations[key] || key,
+    isLoading
+  }), [language, translations, isLoading]);
 
   return (
-    <LanguageContext.Provider value={{ language, setLanguage, t }}>
+    <LanguageContext.Provider value={contextValue}>
       {children}
     </LanguageContext.Provider>
   );
