@@ -11,7 +11,8 @@ const Contact = () => {
     name: "",
     email: "",
     subject: "",
-    message: ""
+    message: "",
+    to_email: "forrozeiroscz@gmail.com" // Explicitly set recipient email
   });
   
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -35,17 +36,22 @@ const Contact = () => {
       // Initialize EmailJS with your user ID (public key)
       emailjs.init("GFqRe3DcWmHiOXw2q");
       
+      // Prepare the template parameters - include the destination email directly
+      const templateParams = {
+        from_name: formData.name,
+        reply_to: formData.email,
+        subject: formData.subject,
+        message: formData.message,
+        to_email: "forrozeiroscz@gmail.com" // Hardcoded recipient email
+      };
+      
+      console.log("Sending email with parameters:", templateParams);
+      
       // Send the email using EmailJS
       const response = await emailjs.send(
         "service_ccysmtt", // Service ID
         "template_hzeiy2f", // Template ID
-        {
-          from_name: formData.name,
-          reply_to: formData.email,
-          subject: formData.subject,
-          message: formData.message,
-          to_email: "forrozeiroscz@gmail.com" // Explicitly set recipient
-        }
+        templateParams
       );
       
       console.log("Email sent successfully:", response);
@@ -56,7 +62,8 @@ const Contact = () => {
         name: "",
         email: "",
         subject: "",
-        message: ""
+        message: "",
+        to_email: "forrozeiroscz@gmail.com"
       });
       
       // Show success message
@@ -88,7 +95,7 @@ const Contact = () => {
       
       {/* Contact Info & Form Section */}
       <section className="py-16 bg-dance-beige">
-        <div className="container-fluid mx-auto">
+        <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Contact Info */}
             <div>
@@ -149,13 +156,13 @@ const Contact = () => {
             </div>
             
             {/* Contact Form */}
-            <div className="forro-border p-8 bg-dance-yellow">
+            <div className="bg-white p-8 rounded-lg shadow-md">
               <h2 className="text-2xl font-display font-medium mb-6 text-dance-brown">
                 Send Us a Message
               </h2>
               
               {formSubmitted ? (
-                <div className="bg-dance-green bg-opacity-10 text-dance-green p-4 rounded-lg flex items-start">
+                <div className="bg-green-50 text-green-600 p-4 rounded-lg flex items-start">
                   <CheckCircle className="mr-3 flex-shrink-0" />
                   <div>
                     <h3 className="font-medium">Thank you!</h3>
@@ -163,8 +170,8 @@ const Contact = () => {
                   </div>
                 </div>
               ) : (
-                <form onSubmit={handleSubmit}>
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                <form onSubmit={handleSubmit} className="space-y-4">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
                       <label htmlFor="name" className="block text-sm font-medium text-dance-brown mb-1">
                         Your Name *
@@ -176,7 +183,7 @@ const Contact = () => {
                         value={formData.name}
                         onChange={handleChange}
                         required
-                        className="w-full px-4 py-2 border border-dance-cream rounded-md focus:outline-none focus:ring-2 focus:ring-dance-orange focus:border-transparent transition-all"
+                        className="w-full px-4 py-2 border border-gray-200 rounded-md focus:outline-none focus:ring-2 focus:ring-dance-orange focus:border-transparent transition-all"
                       />
                     </div>
                     <div>
@@ -190,12 +197,12 @@ const Contact = () => {
                         value={formData.email}
                         onChange={handleChange}
                         required
-                        className="w-full px-4 py-2 border border-dance-cream rounded-md focus:outline-none focus:ring-2 focus:ring-dance-orange focus:border-transparent transition-all"
+                        className="w-full px-4 py-2 border border-gray-200 rounded-md focus:outline-none focus:ring-2 focus:ring-dance-orange focus:border-transparent transition-all"
                       />
                     </div>
                   </div>
                   
-                  <div className="mb-6">
+                  <div>
                     <label htmlFor="subject" className="block text-sm font-medium text-dance-brown mb-1">
                       Subject *
                     </label>
@@ -205,7 +212,7 @@ const Contact = () => {
                       value={formData.subject}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-2 border border-dance-cream rounded-md focus:outline-none focus:ring-2 focus:ring-dance-orange focus:border-transparent transition-all"
+                      className="w-full px-4 py-2 border border-gray-200 rounded-md focus:outline-none focus:ring-2 focus:ring-dance-orange focus:border-transparent transition-all"
                     >
                       <option value="">Select a subject</option>
                       <option value="General Inquiry">General Inquiry</option>
@@ -217,7 +224,7 @@ const Contact = () => {
                     </select>
                   </div>
                   
-                  <div className="mb-6">
+                  <div>
                     <label htmlFor="message" className="block text-sm font-medium text-dance-brown mb-1">
                       Your Message *
                     </label>
@@ -228,7 +235,7 @@ const Contact = () => {
                       value={formData.message}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-2 border border-dance-cream rounded-md focus:outline-none focus:ring-2 focus:ring-dance-orange focus:border-transparent transition-all"
+                      className="w-full px-4 py-2 border border-gray-200 rounded-md focus:outline-none focus:ring-2 focus:ring-dance-orange focus:border-transparent transition-all"
                     ></textarea>
                   </div>
                   
