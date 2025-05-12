@@ -16,7 +16,7 @@ const CustomEvents = () => {
             <p className="text-lg mb-6">
               {t("custom_events.intro")}
             </p>
-            <p className="text-xl font-medium text-dance-brown mb-6">
+            <p className="text-xl font-medium text-dance-brown mb-6 no-bullet">
               {t("custom_events.help_intro")}
             </p>
           </div>
@@ -25,7 +25,7 @@ const CustomEvents = () => {
             <div className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-all duration-300">
               <div className="flex items-center mb-4">
                 <School className="text-dance-orange mr-3" size={28} />
-                <h3 className="text-xl font-semibold text-dance-brown">{t("custom_events.schools_title")}</h3>
+                <h3 className="text-xl font-semibold text-dance-brown no-bullet">{t("custom_events.schools_title")}</h3>
               </div>
               <p>{t("custom_events.schools_content")}</p>
             </div>
@@ -33,7 +33,7 @@ const CustomEvents = () => {
             <div className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-all duration-300">
               <div className="flex items-center mb-4">
                 <University className="text-dance-orange mr-3" size={28} />
-                <h3 className="text-xl font-semibold text-dance-brown">{t("custom_events.universities_title")}</h3>
+                <h3 className="text-xl font-semibold text-dance-brown no-bullet">{t("custom_events.universities_title")}</h3>
               </div>
               <p>{t("custom_events.universities_content")}</p>
             </div>
@@ -41,7 +41,7 @@ const CustomEvents = () => {
             <div className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-all duration-300">
               <div className="flex items-center mb-4">
                 <Building className="text-dance-orange mr-3" size={28} />
-                <h3 className="text-xl font-semibold text-dance-brown">{t("custom_events.team_building_title")}</h3>
+                <h3 className="text-xl font-semibold text-dance-brown no-bullet">{t("custom_events.team_building_title")}</h3>
               </div>
               <p>{t("custom_events.team_building_content")}</p>
             </div>
@@ -49,7 +49,7 @@ const CustomEvents = () => {
             <div className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-all duration-300">
               <div className="flex items-center mb-4">
                 <HandHeart className="text-dance-orange mr-3" size={28} />
-                <h3 className="text-xl font-semibold text-dance-brown">{t("custom_events.nonprofit_events_title")}</h3>
+                <h3 className="text-xl font-semibold text-dance-brown no-bullet">{t("custom_events.nonprofit_events_title")}</h3>
               </div>
               <p>{t("custom_events.nonprofit_events_content")}</p>
             </div>
@@ -57,7 +57,7 @@ const CustomEvents = () => {
             <div className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-all duration-300">
               <div className="flex items-center mb-4">
                 <Gift className="text-dance-orange mr-3" size={28} />
-                <h3 className="text-xl font-semibold text-dance-brown">{t("custom_events.nonprofit_projects_title")}</h3>
+                <h3 className="text-xl font-semibold text-dance-brown no-bullet">{t("custom_events.nonprofit_projects_title")}</h3>
               </div>
               <p>{t("custom_events.nonprofit_projects_content")}</p>
             </div>
@@ -65,7 +65,7 @@ const CustomEvents = () => {
             <div className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-all duration-300">
               <div className="flex items-center mb-4">
                 <Calendar className="text-dance-orange mr-3" size={28} />
-                <h3 className="text-xl font-semibold text-dance-brown">{t("custom_events.public_events_title")}</h3>
+                <h3 className="text-xl font-semibold text-dance-brown no-bullet">{t("custom_events.public_events_title")}</h3>
               </div>
               <p>{t("custom_events.public_events_content")}</p>
             </div>

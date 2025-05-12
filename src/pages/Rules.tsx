@@ -19,7 +19,7 @@ const RulesSection = ({
       <div className="w-12 h-12 bg-dance-orange bg-opacity-10 rounded-full flex items-center justify-center mr-4">
         <Icon className="text-dance-orange" size={24} />
       </div>
-      <h3 className="text-2xl md:text-3xl font-display font-medium">{title}</h3>
+      <h3 className="text-2xl md:text-3xl font-display font-medium no-bullet">{title}</h3>
     </div>
     
     {description && <p className="text-dance-black text-opacity-80 mb-6">{description}</p>}
@@ -38,7 +38,7 @@ const Rules = () => {
       <main className="flex-grow py-12 md:py-16 bg-white">
         <div className="container-fluid max-w-4xl mx-auto">
           <div className="mb-12">
-            <h2 className="text-xl md:text-2xl font-medium text-dance-brown mb-4">{t("rules.subtitle")}</h2>
+            <h2 className="text-xl md:text-2xl font-medium text-dance-brown mb-4 no-bullet">{t("rules.subtitle")}</h2>
           </div>
           
           <RulesSection 

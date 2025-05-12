@@ -1,3 +1,4 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -95,6 +96,16 @@
     padding-left: 1rem;
     padding-right: 1rem;
   }
+  
+  /* Remove bullet points from all headings */
+  h1, h2, h3, h4, h5, h6 {
+    list-style-type: none;
+  }
+  
+  /* Remove bullet points from list items in sections that shouldn't have them */
+  section ul li::before {
+    display: none;
+  }
 }
 
 @layer components {
@@ -114,6 +125,12 @@
     border-right: 20px solid transparent;
     border-bottom: 32px solid;
     margin: 0 4px;
+  }
+  
+  /* Remove unwanted list styles */
+  .no-bullet,
+  .no-bullet li {
+    list-style-type: none !important;
   }
   
   /* Custom section styles for single page app */
