@@ -131,7 +131,7 @@ const Header = () => {
     >
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between py-4">
-          {/* Logo as Home Button - Updated with new logo */}
+          {/* Logo as Home Button */}
           <a 
             onClick={() => scrollToSection("home")} 
             className="flex-shrink-0 cursor-pointer" 
@@ -221,7 +221,7 @@ const Header = () => {
         </div>
       </div>
 
-      {/* Mobile Menu - Improved Animation and Styling */}
+      {/* Mobile Menu */}
       <div
         id="mobile-menu"
         className={`md:hidden fixed inset-0 bg-[#ffeec0] z-40 transition-transform duration-300 ease-in-out ${
