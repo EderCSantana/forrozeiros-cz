@@ -1,4 +1,3 @@
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -97,14 +96,20 @@
     padding-right: 1rem;
   }
   
-  /* Remove bullet points from all headings */
-  h1, h2, h3, h4, h5, h6 {
-    list-style-type: none;
+  /* Remove bullet points from all headings and section titles */
+  h1, h2, h3, h4, h5, h6,
+  section h1, section h2, section h3, section h4, section h5, section h6,
+  .section-title, .no-bullet {
+    list-style-type: none !important;
+    position: static !important;
   }
   
   /* Remove bullet points from list items in sections that shouldn't have them */
-  section ul li::before {
-    display: none;
+  section ul li::before,
+  h3::before,
+  h4::before {
+    display: none !important;
+    content: none !important;
   }
 }
 
