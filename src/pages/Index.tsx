@@ -6,7 +6,7 @@ import TitleStripe from "../components/TitleStripe";
 import carouselImages from "../data/carouselImages";
 
 const Index: React.FC = () => {
-  const { language, t } = useLanguage();
+  const { t } = useLanguage();
   const [calendarHeight, setCalendarHeight] = useState(600);
 
   useEffect(() => {
