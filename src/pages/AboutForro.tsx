@@ -1,4 +1,3 @@
-
 import Header from "../components/Header";
 import { useLanguage } from "../contexts/LanguageContext";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
@@ -16,9 +15,6 @@ const AboutForro = () => {
           <h1 className="text-4xl md:text-6xl font-display font-bold mb-6 animate-fade-in text-dance-orange">
             {t("about_forro.title")}
           </h1>
-          <p className="text-xl max-w-3xl mx-auto animate-fade-in animation-delay-200">
-            {t("about_forro.subtitle")}
-          </p>
         </div>
         
         {/* Decorative bunting flags - commented out but kept for future use */}
