@@ -21,8 +21,12 @@ const AboutForro = () => {
           </p>
         </div>
         
-        {/* Decorative bunting flags */}
-        <div className="bunting-flags absolute top-0 left-0 right-0">
+        {/* Decorative bunting flags - commented out but kept for future use */}
+        {/* 
+        This is the animated bunting flags component that can be re-enabled in the future.
+        It displays decorative triangular flags with different colors and a wave animation.
+        */}
+        {/* <div className="bunting-flags absolute top-0 left-0 right-0">
           <div className="bunting-container flex justify-center">
             {[...Array(12)].map((_, i) => {
               const colors = ["bg-dance-flag-red", "bg-dance-flag-blue", "bg-dance-flag-green", "bg-dance-flag-orange"];
@@ -35,7 +39,7 @@ const AboutForro = () => {
               );
             })}
           </div>
-        </div>
+        </div> */}
       </section>
       
       {/* What is Forró Section */}
