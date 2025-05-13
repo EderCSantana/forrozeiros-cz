@@ -16,7 +16,7 @@
     "general.save": "Guardar",
     "general.cancel": "Cancelar",
     "general.submit": "Enviar",
-    "general.read_more": "Leer Más"
+    "general.read_more": "Leer más"
   },
   "pt": {
     "general.loading": "Carregando...",
@@ -25,16 +25,16 @@
     "general.save": "Salvar",
     "general.cancel": "Cancelar",
     "general.submit": "Enviar",
-    "general.read_more": "Leia Mais"
+    "general.read_more": "Leia mais"
   },
-  "sk": {
-    "general.loading": "Načítava sa...",
-    "general.error": "Vyskytla sa chyba",
-    "general.close": "Zavrieť",
-    "general.save": "Uložiť",
-    "general.cancel": "Zrušiť",
-    "general.submit": "Odoslať",
-    "general.read_more": "Čítať viac"
+  "ru": {
+    "general.loading": "Загрузка...",
+    "general.error": "Произошла ошибка",
+    "general.close": "Закрыть",
+    "general.save": "Сохранить",
+    "general.cancel": "Отмена",
+    "general.submit": "Отправить",
+    "general.read_more": "Читать далее"
   },
   "ua": {
     "general.loading": "Завантаження...",
@@ -44,5 +44,23 @@
     "general.cancel": "Скасувати",
     "general.submit": "Надіслати",
     "general.read_more": "Читати далі"
+  },
+  "cz": {
+    "general.loading": "Načítání...",
+    "general.error": "Došlo k chybě",
+    "general.close": "Zavřít",
+    "general.save": "Uložit",
+    "general.cancel": "Zrušit",
+    "general.submit": "Odeslat",
+    "general.read_more": "Číst více"
+  },
+  "sk": {
+    "general.loading": "Načítava sa...",
+    "general.error": "Došlo k chybe",
+    "general.close": "Zavrieť",
+    "general.save": "Uložiť",
+    "general.cancel": "Zrušiť",
+    "general.submit": "Odoslať",
+    "general.read_more": "Čítať viac"
   }
 }

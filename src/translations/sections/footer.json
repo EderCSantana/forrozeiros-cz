@@ -11,33 +11,49 @@
   "es": {
     "footer.quick_links": "Enlaces Rápidos",
     "footer.contact_us": "Contáctanos",
-    "footer.stay_updated": "Mantente Actualizado",
-    "footer.newsletter": "Suscríbete a nuestro boletín para los últimos eventos y actualizaciones",
+    "footer.stay_updated": "Mantente Informado",
+    "footer.newsletter": "Suscríbete a nuestro boletín para conocer los últimos eventos y actualizaciones",
     "footer.subscribe": "Suscribirse",
-    "footer.rights": "Todos los derechos reservados. Diseñado con ♥ para amantes del baile."
+    "footer.rights": "Todos los derechos reservados. Diseñado con ♥ para los amantes del baile."
   },
   "pt": {
     "footer.quick_links": "Links Rápidos",
-    "footer.contact_us": "Contate-nos",
+    "footer.contact_us": "Fale Conosco",
     "footer.stay_updated": "Fique Atualizado",
-    "footer.newsletter": "Inscreva-se em nossa newsletter para os últimos eventos e atualizações",
+    "footer.newsletter": "Inscreva-se na nossa newsletter para receber as últimas novidades e eventos",
     "footer.subscribe": "Inscrever-se",
-    "footer.rights": "Todos os direitos reservados. Projetado com ♥ para amantes da dança."
+    "footer.rights": "Todos os direitos reservados. Criado com ♥ para os amantes da dança."
   },
-  "sk": {
-    "footer.quick_links": "Rýchle odkazy",
-    "footer.contact_us": "Kontaktujte nás",
-    "footer.stay_updated": "Zostaňte informovaní",
-    "footer.newsletter": "Prihláste sa k odberu noviniek o najnovších podujatiach a aktualizáciách",
-    "footer.subscribe": "Prihlásiť sa",
-    "footer.rights": "Všetky práva vyhradené. Navrhnuté s ♥ pre milovníkov tanca."
+  "ru": {
+    "footer.quick_links": "Быстрые ссылки",
+    "footer.contact_us": "Связаться с нами",
+    "footer.stay_updated": "Будьте в курсе",
+    "footer.newsletter": "Подпишитесь на нашу рассылку, чтобы получать информацию о событиях и новостях",
+    "footer.subscribe": "Подписаться",
+    "footer.rights": "Все права защищены. Сделано с ♥ для любителей танцев."
   },
   "ua": {
     "footer.quick_links": "Швидкі посилання",
     "footer.contact_us": "Зв'яжіться з нами",
     "footer.stay_updated": "Будьте в курсі",
-    "footer.newsletter": "Підпишіться на нашу розсилку для отримання інформації про останні події та оновлення",
+    "footer.newsletter": "Підпишіться на нашу розсилку, щоб отримувати останні події та новини",
     "footer.subscribe": "Підписатися",
-    "footer.rights": "Всі права захищені. Розроблено з ♥ для любителів танців."
+    "footer.rights": "Всі права захищені. Створено з ♥ для шанувальників танцю."
+  },
+  "cz": {
+    "footer.quick_links": "Rychlé Odkazy",
+    "footer.contact_us": "Kontaktujte nás",
+    "footer.stay_updated": "Zůstaňte v obraze",
+    "footer.newsletter": "Přihlaste se k odběru novinek a událostí",
+    "footer.subscribe": "Odebírat",
+    "footer.rights": "Všechna práva vyhrazena. Navrženo s ♥ pro milovníky tance."
+  },
+  "sk": {
+    "footer.quick_links": "Rýchle Odkazy",
+    "footer.contact_us": "Kontaktujte nás",
+    "footer.stay_updated": "Zostaňte informovaní",
+    "footer.newsletter": "Prihláste sa na odber noviniek a udalostí",
+    "footer.subscribe": "Odoberať",
+    "footer.rights": "Všetky práva vyhradené. Navrhnuté s ♥ pre milovníkov tanca."
   }
 }

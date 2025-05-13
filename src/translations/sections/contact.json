@@ -12,47 +12,69 @@
     "contact.email": "Email"
   },
   "es": {
-    "contact.title": "Contáctanos",
-    "contact.subtitle": "Ponte en contacto con nuestro equipo",
-    "contact.form.name": "Nombre",
-    "contact.form.email": "Correo electrónico",
-    "contact.form.message": "Mensaje",
-    "contact.form.submit": "Enviar Mensaje",
-    "contact.location": "Ubicación",
-    "contact.phone": "Teléfono",
-    "contact.email": "Correo electrónico"
-  },
-  "pt": {
-    "contact.title": "Contate-nos",
-    "contact.subtitle": "Entre em contato com nossa equipe",
-    "contact.form.name": "Nome",
-    "contact.form.email": "E-mail",
-    "contact.form.message": "Mensagem",
-    "contact.form.submit": "Enviar Mensagem",
-    "contact.location": "Localização",
-    "contact.phone": "Telefone",
-    "contact.email": "E-mail"
-  },
-  "sk": {
-    "contact.title": "Kontaktujte nás",
-    "contact.subtitle": "Spojte sa s naším tímom",
-    "contact.form.name": "Meno",
-    "contact.form.email": "Email",
-    "contact.form.message": "Správa",
-    "contact.form.submit": "Odoslať správu",
-    "contact.location": "Lokácia",
-    "contact.phone": "Telefón",
-    "contact.email": "Email"
-  },
-  "ua": {
-    "contact.title": "Зв'язатися з нами",
-    "contact.subtitle": "Зв'яжіться з нашою командою",
-    "contact.form.name": "Ім'я",
-    "contact.form.email": "Електронна пошта",
-    "contact.form.message": "Повідомлення",
-    "contact.form.submit": "Надіслати повідомлення",
-    "contact.location": "Розташування",
-    "contact.phone": "Телефон",
-    "contact.email": "Електронна пошта"
-  }
+  "contact.title": "Contáctanos",
+  "contact.subtitle": "Ponte en contacto con nuestro equipo",
+  "contact.form.name": "Nombre",
+  "contact.form.email": "Correo electrónico",
+  "contact.form.message": "Mensaje",
+  "contact.form.submit": "Enviar mensaje",
+  "contact.location": "Ubicación",
+  "contact.phone": "Teléfono",
+  "contact.email": "Correo electrónico"
+},
+"pt": {
+  "contact.title": "Fale Conosco",
+  "contact.subtitle": "Entre em contato com nossa equipe",
+  "contact.form.name": "Nome",
+  "contact.form.email": "E-mail",
+  "contact.form.message": "Mensagem",
+  "contact.form.submit": "Enviar Mensagem",
+  "contact.location": "Localização",
+  "contact.phone": "Telefone",
+  "contact.email": "E-mail"
+},
+"ru": {
+  "contact.title": "Свяжитесь с нами",
+  "contact.subtitle": "Свяжитесь с нашей командой",
+  "contact.form.name": "Имя",
+  "contact.form.email": "Электронная почта",
+  "contact.form.message": "Сообщение",
+  "contact.form.submit": "Отправить сообщение",
+  "contact.location": "Местоположение",
+  "contact.phone": "Телефон",
+  "contact.email": "Электронная почта"
+},
+"ua": {
+  "contact.title": "Зв’яжіться з нами",
+  "contact.subtitle": "Зв’яжіться з нашою командою",
+  "contact.form.name": "Ім’я",
+  "contact.form.email": "Електронна пошта",
+  "contact.form.message": "Повідомлення",
+  "contact.form.submit": "Надіслати повідомлення",
+  "contact.location": "Місцезнаходження",
+  "contact.phone": "Телефон",
+  "contact.email": "Електронна пошта"
+},
+"cz": {
+  "contact.title": "Kontaktujte nás",
+  "contact.subtitle": "Spojte se s naším týmem",
+  "contact.form.name": "Jméno",
+  "contact.form.email": "E-mail",
+  "contact.form.message": "Zpráva",
+  "contact.form.submit": "Odeslat zprávu",
+  "contact.location": "Adresa",
+  "contact.phone": "Telefon",
+  "contact.email": "E-mail"
+},
+"sk": {
+  "contact.title": "Kontaktujte nás",
+  "contact.subtitle": "Spojte sa s naším tímom",
+  "contact.form.name": "Meno",
+  "contact.form.email": "E-mail",
+  "contact.form.message": "Správa",
+  "contact.form.submit": "Odoslať správu",
+  "contact.location": "Adresa",
+  "contact.phone": "Telefón",
+  "contact.email": "E-mail"
+}
 }
