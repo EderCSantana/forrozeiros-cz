@@ -1,4 +1,3 @@
-
 import TitleStripe from "../components/TitleStripe";
 import { useLanguage } from "../contexts/LanguageContext";
 import { Building, Coffee, Music, User, GraduationCap, Globe } from "lucide-react";
@@ -7,32 +6,32 @@ import { Separator } from "@/components/ui/separator";
 import { Button } from "@/components/ui/button";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
-const PartnerSection = ({
-  title,
-  icon: Icon,
-  children,
-}: {
-  title: string;
-  icon: React.ElementType;
-  children: React.ReactNode;
-}) => (
-  <section className="mb-16">
-    <div className="flex items-center mb-6">
-      <Icon className="text-dance-orange mr-4" size={24} />
-      <h3 className="text-2xl md:text-3xl font-display font-medium no-bullet">
-        {title}
-      </h3>
-    </div>
-    
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-      {children}
-    </div>
-  </section>
-);
-
 const Partners = () => {
   const { t } = useLanguage();
   
+  const PartnerSection = ({
+    title,
+    icon: Icon,
+    children,
+  }: {
+    title: string;
+    icon: React.ElementType;
+    children: React.ReactNode;
+  }) => (
+    <section className="mb-16">
+      <div className="flex items-center mb-6">
+        <Icon className="text-dance-orange mr-4" size={24} />
+        <h3 className="text-2xl md:text-3xl font-display font-medium no-bullet">
+          {title}
+        </h3>
+      </div>
+      
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        {children}
+      </div>
+    </section>
+  );
+
   const PartnerCard = ({ 
     title, 
     description, 
@@ -313,4 +312,3 @@ const Partners = () => {
 };
 
 export default Partners;
-
