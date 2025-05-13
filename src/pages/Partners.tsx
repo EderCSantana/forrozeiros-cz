@@ -230,7 +230,7 @@ const Partners = () => {
             
             {/* Other Forró Teachers */}
             <div className="md:col-span-2 mt-6">
-              <h4 className="text-lg font-medium text-dance-brown mb-3">Other Forró Teachers in Prague</h4>
+              <h4 className="text-lg font-medium text-dance-brown mb-3 no-bullet">Other Forró Teachers in Prague</h4>
               <p className="mb-4 text-dance-black text-opacity-80">There are other talented dance teachers in Prague who are not currently offering regular forró classes but occasionally give workshops. Follow their work to stay updated:</p>
               
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -240,7 +240,7 @@ const Partners = () => {
                       <AvatarImage src="public/lovable-uploads/f00dd62e-aa39-4ffa-89fd-dbb71a75823f.png" alt="Carlos & Fernanda" />
                       <AvatarFallback>CF</AvatarFallback>
                     </Avatar>
-                    <h5 className="text-dance-brown font-medium">Carlos & Fernanda</h5>
+                    <h5 className="text-dance-brown font-medium no-bullet">Carlos & Fernanda</h5>
                   </div>
                   <div className="text-sm space-y-1 text-dance-black text-opacity-80">
                     <p>Instagram: <a href="https://instagram.com/carlosandfernanda" target="_blank" rel="noopener noreferrer" className="text-dance-orange hover:underline">@carlosandfernanda</a></p>
@@ -255,7 +255,7 @@ const Partners = () => {
                       <AvatarImage src="public/lovable-uploads/e758027e-2d62-4b95-978a-9723007d7120.png" alt="André Negrão" />
                       <AvatarFallback>AN</AvatarFallback>
                     </Avatar>
-                    <h5 className="text-dance-brown font-medium">André Negrão</h5>
+                    <h5 className="text-dance-brown font-medium no-bullet">André Negrão</h5>
                   </div>
                   <div className="text-sm space-y-1 text-dance-black text-opacity-80">
                     <p>Instagram: <a href="https://instagram.com/andrenegrao_official" target="_blank" rel="noopener noreferrer" className="text-dance-orange hover:underline">@andrenegrao_official</a></p>

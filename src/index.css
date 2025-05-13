@@ -1,3 +1,4 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -96,18 +97,29 @@
     padding-right: 1rem;
   }
   
-  /* Remove bullet points from all headings and section titles */
+  /* Completely remove all bullet points from headings and section titles */
   h1, h2, h3, h4, h5, h6,
   section h1, section h2, section h3, section h4, section h5, section h6,
   .section-title, .no-bullet {
     list-style-type: none !important;
     position: static !important;
+    display: block !important;
+  }
+  
+  /* Remove bullets and pseudo-elements */
+  h1::before, h2::before, h3::before, h4::before, h5::before, h6::before,
+  .section-title::before, .no-bullet::before,
+  h1::after, h2::after, h3::after, h4::after, h5::after, h6::after,
+  .section-title::after, .no-bullet::after {
+    display: none !important;
+    content: none !important;
   }
   
   /* Remove bullet points from list items in sections that shouldn't have them */
   section ul li::before,
-  h3::before,
-  h4::before {
+  section ul li::after,
+  .no-bullet li::before,
+  .no-bullet li::after {
     display: none !important;
     content: none !important;
   }
