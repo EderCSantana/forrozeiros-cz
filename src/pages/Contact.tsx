@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import { Mail, Send, CheckCircle, Facebook, Instagram } from "lucide-react";
 import { useLanguage } from "../contexts/LanguageContext";
@@ -46,8 +47,8 @@ const Contact = () => {
       
       // Send the email using EmailJS
       const response = await emailjs.send(
-        "service_ccysmtt", // Service ID
-        "template_hzeiy2f", // Template ID
+        "service_fv979s4", // Updated Service ID
+        "template_cyr9l4q", // Updated Template ID
         templateParams
       );
       
