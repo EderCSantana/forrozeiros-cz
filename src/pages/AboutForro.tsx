@@ -13,7 +13,7 @@ const AboutForro = () => {
       {/* Hero Section */}
       <section className="relative py-16 md:py-24 bg-dance-brown text-white">
         <div className="container-fluid mx-auto text-center">
-          <h1 className="text-4xl md:text-6xl font-display font-bold mb-6 animate-fade-in">
+          <h1 className="text-4xl md:text-6xl font-display font-bold mb-6 animate-fade-in text-dance-orange">
             {t("about_forro.title")}
           </h1>
           <p className="text-xl max-w-3xl mx-auto animate-fade-in animation-delay-200">

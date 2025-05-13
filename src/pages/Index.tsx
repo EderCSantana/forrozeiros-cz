@@ -50,7 +50,7 @@ const Index: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div>
             <h2 className="text-2xl font-bold mb-4">
-              {translations.welcome?.title || t('home.hero.title')}
+              {/* Removed the welcome title */}
             </h2>
             <div
               className="prose max-w-none"
@@ -61,7 +61,7 @@ const Index: React.FC = () => {
           </div>
           <div>
             <h2 className="text-2xl font-bold mb-4">
-              {translations.mission?.title || t('home.hero.subtitle')}
+              {/* Removed the mission subtitle */}
             </h2>
             <div
               className="prose max-w-none"
