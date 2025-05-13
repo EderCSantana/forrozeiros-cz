@@ -1,8 +1,11 @@
 
-
 // TitleStripe component for consistent page headers
 const TitleStripe = ({ title }: { title: string }) => {
-  // Bunting flags subcomponent
+  // Bunting flags subcomponent - commented out but kept for future use
+  /* 
+  This is the animated bunting flags component that can be re-enabled in the future.
+  It displays decorative triangular flags with different colors and a wave animation.
+  */
   const BuntingFlags = () => {
     const flagColors = [
       'bg-dance-flag-red', 
@@ -28,7 +31,8 @@ const TitleStripe = ({ title }: { title: string }) => {
 
   return (
     <section className="relative py-16 bg-dance-brown w-full">
-      <BuntingFlags />
+      {/* Bunting flags commented out - can be re-enabled by uncommenting the line below */}
+      {/* <BuntingFlags /> */}
       <div className="container-fluid mx-auto text-center pt-4 pb-8">
         <h2 className="text-3xl md:text-5xl font-bold text-dance-orange mb-6 animate-fade-in animation-delay-200 no-bullet">
           {title}
