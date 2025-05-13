@@ -35,10 +35,12 @@ const Contact = () => {
       // Initialize EmailJS with the correct public key
       emailjs.init("-Q-rUQo795S9S_uXQ");
       
-      // Prepare the template parameters
+      // Prepare the template parameters with correct field names
+      // These should match the template variables in EmailJS
       const templateParams = {
         from_name: formData.name,
-        reply_to: formData.email,
+        from_email: formData.email,
+        to_name: "Forrozeiros CZ",
         subject: formData.subject,
         message: formData.message,
       };
@@ -47,8 +49,8 @@ const Contact = () => {
       
       // Send the email using EmailJS
       const response = await emailjs.send(
-        "service_fv979s4", // Updated Service ID
-        "template_cyr9l4q", // Updated Template ID
+        "service_fv979s4", // Service ID
+        "template_cyr9l4q", // Template ID
         templateParams
       );
       
