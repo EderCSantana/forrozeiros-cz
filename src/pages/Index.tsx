@@ -2,7 +2,6 @@
 import React, { useState, useEffect } from "react";
 import { useLanguage } from "../contexts/LanguageContext";
 import Carousel from "../components/Carousel";
-import UpdateCard from "../components/UpdateCard";
 import TitleStripe from "../components/TitleStripe";
 import carouselImages from "../data/carouselImages";
 
@@ -33,49 +32,8 @@ const Index: React.FC = () => {
       <Carousel images={carouselImages} />
 
       <div className="container mx-auto px-4 py-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div>
-            <h2 className="text-2xl font-bold mb-4">
-              {t('home.welcome.title')}
-            </h2>
-            <div
-              className="prose max-w-none"
-              dangerouslySetInnerHTML={{
-                __html: t('home.welcome.content'),
-              }}
-            />
-          </div>
-          <div>
-            <h2 className="text-2xl font-bold mb-4">
-              {t('home.mission.title')}
-            </h2>
-            <div
-              className="prose max-w-none"
-              dangerouslySetInnerHTML={{ __html: t('home.mission.content') }}
-            />
-          </div>
-        </div>
-
-        {/* Latest Updates Section - Commented out as requested
-        <div className="mt-16">
-          <TitleStripe title={t('home.updates.title')} />
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
-            {Array.from({ length: 3 }).map((_, index) => (
-              <UpdateCard
-                key={index}
-                date={t(`home.updates.items.${index}.date`)}
-                title={t(`home.updates.items.${index}.title`)}
-                content={t(`home.updates.items.${index}.content`)}
-                link={t(`home.updates.items.${index}.link`)}
-                linkText={t(`home.updates.items.${index}.linkText`)}
-              />
-            ))}
-          </div>
-        </div>
-        */}
-        
         {/* Calendar Section for Homepage */}
-        <div className="mt-16">
+        <div className="mt-8">
           <h2 className="text-2xl font-bold mb-6 text-dance-brown">
             {t('home.calendar.title')}
           </h2>
