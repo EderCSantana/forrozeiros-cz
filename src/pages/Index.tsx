@@ -50,29 +50,29 @@ const Index: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div>
             <h2 className="text-2xl font-bold mb-4">
-              {/* Removed the welcome title */}
+              {t('home.welcome.title')}
             </h2>
             <div
               className="prose max-w-none"
               dangerouslySetInnerHTML={{
-                __html: translations.welcome?.content || "",
+                __html: t('home.welcome.content'),
               }}
             />
           </div>
           <div>
             <h2 className="text-2xl font-bold mb-4">
-              {/* Removed the mission subtitle */}
+              {t('home.mission.title')}
             </h2>
             <div
               className="prose max-w-none"
-              dangerouslySetInnerHTML={{ __html: translations.mission?.content || "" }}
+              dangerouslySetInnerHTML={{ __html: t('home.mission.content') }}
             />
           </div>
         </div>
 
         {/* Latest Updates Section - Commented out as requested
         <div className="mt-16">
-          <TitleStripe title={translations.updates?.title || t('home.updates.title')} />
+          <TitleStripe title={t('home.updates.title')} />
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
             {translations.updates?.items?.map((update: any, index: number) => (
               <UpdateCard
@@ -91,7 +91,7 @@ const Index: React.FC = () => {
         {/* Calendar Section for Homepage */}
         <div className="mt-16">
           <h2 className="text-2xl font-bold mb-6 text-dance-brown">
-            {t('events.upcoming') || "Upcoming Events"}
+            {t('home.calendar.title')}
           </h2>
           <div className="w-full rounded-lg shadow-lg overflow-hidden border border-dance-orange">
             <iframe 

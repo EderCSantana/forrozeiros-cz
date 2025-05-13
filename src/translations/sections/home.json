@@ -10,7 +10,12 @@
     "home.updates.title": "Latest Updates",
     "home.updates.subtitle": "Stay informed about our newest events, classes, and community news",
     "home.cta.title": "Ready to Join the Dance?",
-    "home.cta.subtitle": "Experience the joy of Forró dancing with our welcoming community"
+    "home.cta.subtitle": "Experience the joy of Forró dancing with our welcoming community",
+    "home.welcome.title": "",
+    "home.welcome.content": "",
+    "home.mission.title": "",
+    "home.mission.content": "",
+    "home.calendar.title": "Upcoming Events"
   },
   "es": {
     "home.hero.title": "Bienvenido a DanceEvent",
@@ -22,7 +27,12 @@
     "home.updates.title": "Últimas Actualizaciones",
     "home.updates.subtitle": "Mantente informado sobre nuestros nuevos eventos, clases y noticias de la comunidad",
     "home.cta.title": "¿Listo para Unirte al Baile?",
-    "home.cta.subtitle": "Experimenta la alegría del Forró con nuestra acogedora comunidad"
+    "home.cta.subtitle": "Experimenta la alegría del Forró con nuestra acogedora comunidad",
+    "home.welcome.title": "",
+    "home.welcome.content": "",
+    "home.mission.title": "",
+    "home.mission.content": "",
+    "home.calendar.title": "Próximos Eventos"
   },
   "pt": {
     "home.hero.title": "Bem-vindo ao DanceEvent",
@@ -34,7 +44,12 @@
     "home.updates.title": "Últimas Atualizações",
     "home.updates.subtitle": "Fique informado sobre nossos novos eventos, aulas e notícias da comunidade",
     "home.cta.title": "Pronto para Entrar na Dança?",
-    "home.cta.subtitle": "Experimente a alegria do Forró com nossa comunidade acolhedora"
+    "home.cta.subtitle": "Experimente a alegria do Forró com nossa comunidade acolhedora",
+    "home.welcome.title": "",
+    "home.welcome.content": "",
+    "home.mission.title": "",
+    "home.mission.content": "",
+    "home.calendar.title": "Próximos Eventos"
   },
   "sk": {
     "home.hero.title": "Vitajte v DanceEvent",
@@ -46,7 +61,12 @@
     "home.updates.title": "Najnovšie aktualizácie",
     "home.updates.subtitle": "Zostaňte informovaní o našich najnovších podujatiach, kurzoch a novinkách komunity",
     "home.cta.title": "Pripravení sa pridať k tancu?",
-    "home.cta.subtitle": "Zažite radosť z tancovania Forró s našou priateľskou komunitou"
+    "home.cta.subtitle": "Zažite radosť z tancovania Forró s našou priateľskou komunitou",
+    "home.welcome.title": "",
+    "home.welcome.content": "",
+    "home.mission.title": "",
+    "home.mission.content": "",
+    "home.calendar.title": "Nadchádzajúce udalosti"
   },
   "ua": {
     "home.hero.title": "Ласкаво просимо до DanceEvent",
@@ -58,6 +78,11 @@
     "home.updates.title": "Останні оновлення",
     "home.updates.subtitle": "Будьте в курсі наших найновіших подій, занять та новин спільноти",
     "home.cta.title": "Готові приєднатися до танцю?",
-    "home.cta.subtitle": "Відчуйте радість танцю Форро з нашою привітною спільнотою"
+    "home.cta.subtitle": "Відчуйте радість танцю Форро з нашою привітною спільнотою",
+    "home.welcome.title": "",
+    "home.welcome.content": "",
+    "home.mission.title": "",
+    "home.mission.content": "",
+    "home.calendar.title": "Майбутні події"
   }
 }

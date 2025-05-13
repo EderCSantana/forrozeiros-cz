@@ -129,15 +129,15 @@ const Partners = () => {
         <div className="container-fluid mx-auto">
           <div className="mb-12">
             <h2 className="text-xl md:text-2xl font-medium text-dance-brown mb-4 no-bullet">
-              Partners of Forrozeiros Prague
+              {t("partners.intro")}
             </h2>
             <p className="text-dance-black text-opacity-80">
-              We are proud to collaborate with these wonderful organizations and individuals who help us spread the joy of forró in Prague.
+              {t("partners.intro.description")}
             </p>
           </div>
           
           {/* Venues Section */}
-          <PartnerSection title="Venues" icon={Building}>
+          <PartnerSection title={t("partners.venues")} icon={Building}>
             <PartnerCard
               title="Komunitní Prostor Smíchov"
               description={
@@ -184,7 +184,7 @@ const Partners = () => {
           </PartnerSection>
           
           {/* Teachers Section */}
-          <PartnerSection title="Teachers" icon={GraduationCap}>
+          <PartnerSection title={t("partners.teachers")} icon={GraduationCap}>
             <TeacherCard
               name="Emilson Bernardes"
               imageUrl="/lovable-uploads/c88e5523-748b-4dc0-8324-e940ec54e172.png"
@@ -265,7 +265,7 @@ const Partners = () => {
           </PartnerSection>
           
           {/* Local Band Section */}
-          <PartnerSection title="Local Band" icon={Music}>
+          <PartnerSection title={t("partners.local_band")} icon={Music}>
             <PartnerCard
               title="Três Corações"
               description={
@@ -301,7 +301,7 @@ const Partners = () => {
           </PartnerSection>
           
           {/* Others Section */}
-          <PartnerSection title="Others" icon={Globe}>
+          <PartnerSection title={t("partners.others")} icon={Globe}>
             <PartnerCard
               title="Instituto Camões - Prague"
               description={

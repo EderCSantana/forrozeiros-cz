@@ -10,7 +10,9 @@
     "partners.teachers": "Teachers",
     "partners.local_band": "Local Band",
     "partners.others": "Other Partners",
-    "partners.visit_website": "Visit Website"
+    "partners.visit_website": "Visit Website",
+    "partners.intro": "Partners of Forrozeiros Prague",
+    "partners.intro.description": "We are proud to collaborate with these wonderful organizations and individuals who help us spread the joy of forró in Prague."
   },
   "es": {
     "partners.title": "Nuestros Socios",
@@ -22,7 +24,9 @@
     "partners.teachers": "Profesores",
     "partners.local_band": "Banda Local",
     "partners.others": "Otros Socios",
-    "partners.visit_website": "Visitar Sitio Web"
+    "partners.visit_website": "Visitar Sitio Web",
+    "partners.intro": "Socios de Forrozeiros Prague",
+    "partners.intro.description": "Estamos orgullosos de colaborar con estas maravillosas organizaciones e individuos que nos ayudan a difundir la alegría del forró en Praga."
   },
   "pt": {
     "partners.title": "Nossos Parceiros",
@@ -34,7 +38,9 @@
     "partners.teachers": "Professores",
     "partners.local_band": "Banda Local",
     "partners.others": "Outros Parceiros",
-    "partners.visit_website": "Visitar Site"
+    "partners.visit_website": "Visitar Site",
+    "partners.intro": "Parceiros de Forrozeiros Prague",
+    "partners.intro.description": "Temos orgulho de colaborar com estas maravilhosas organizações e indivíduos que nos ajudam a espalhar a alegria do forró em Praga."
   },
   "sk": {
     "partners.title": "Naši partneri",
@@ -46,7 +52,9 @@
     "partners.teachers": "Učitelia",
     "partners.local_band": "Miestna kapela",
     "partners.others": "Ďalší partneri",
-    "partners.visit_website": "Navštíviť webstránku"
+    "partners.visit_website": "Navštíviť webstránku",
+    "partners.intro": "Partneri Forrozeiros Prague",
+    "partners.intro.description": "Sme hrdí na spoluprácu s týmito úžasnými organizáciami a jednotlivcami, ktorí nám pomáhajú šíriť radosť z forra v Prahe."
   },
   "ua": {
     "partners.title": "Наші партнери",
@@ -58,6 +66,8 @@
     "partners.teachers": "Викладачі",
     "partners.local_band": "Місцевий гурт",
     "partners.others": "Інші партнери",
-    "partners.visit_website": "Відвідати веб-сайт"
+    "partners.visit_website": "Відвідати веб-сайт",
+    "partners.intro": "Партнери Forrozeiros Prague",
+    "partners.intro.description": "Ми пишаємося співпрацею з цими чудовими організаціями та людьми, які допомагають нам поширювати радість форро в Празі."
   }
 }
