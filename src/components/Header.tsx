@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from "react";
 import { Facebook, Instagram, Menu, X, ChevronDown } from "lucide-react";
 import LanguageSelector from "./LanguageSelector";
@@ -42,13 +43,6 @@ const Header = () => {
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
       setActiveSection(sectionId);
-      setMobileMenuOpen(false);
-    }
-  };
-
-  // Improve mobile menu behavior
-  const closeMobileMenu = () => {
-    if (mobileMenuOpen) {
       setMobileMenuOpen(false);
     }
   };
@@ -164,7 +158,7 @@ const Header = () => {
             </NavigationMenuList>
           </NavigationMenu>
 
-          {/* Tablet Navigation Dropdown (medium screens) */}
+          {/* Tablet Navigation Dropdown (medium screens only) */}
           <div className="hidden md:block lg:hidden">
             <DropdownMenu>
               <DropdownMenuTrigger className="flex items-center text-dance-brown hover:text-dance-orange bg-transparent border-none hover:bg-transparent focus:ring-0">
@@ -186,8 +180,8 @@ const Header = () => {
             </DropdownMenu>
           </div>
 
-          {/* Social Icons and Language Selector */}
-          <div className="hidden sm:flex items-center space-x-2 sm:space-x-4">
+          {/* Social Icons and Language Selector - Only visible on non-mobile screens */}
+          <div className="hidden md:flex items-center space-x-2 sm:space-x-4">
             <a
               href="https://www.facebook.com/profile.php?id=61571664788308"
               target="_blank"
@@ -209,7 +203,7 @@ const Header = () => {
             <LanguageSelector />
           </div>
 
-          {/* Mobile Menu Button */}
+          {/* Mobile Menu Button - Only visible on mobile */}
           <button
             id="mobile-menu-button"
             className="md:hidden text-dance-brown hover:text-dance-orange focus:outline-none"
@@ -221,69 +215,64 @@ const Header = () => {
         </div>
       </div>
 
-      {/* Mobile Menu */}
-      <div
-        id="mobile-menu"
-        className={`md:hidden fixed inset-0 bg-[#ffeec0] z-40 transition-transform duration-300 ease-in-out ${
-          mobileMenuOpen ? "translate-y-0" : "-translate-y-full"
-        }`}
-        onClick={(e) => e.target === e.currentTarget && closeMobileMenu()}
-      >
-        <div className="container mx-auto px-4 py-4">
-          <div className="flex justify-between items-center mb-6">
-            <img 
-              src="/lovable-uploads/762ed430-c94d-4c3e-b69a-7b4da26f6abb.png" 
-              alt="Forró Zeiros" 
-              className="h-10"
-            />
-            <button
-              className="text-dance-brown hover:text-dance-orange focus:outline-none"
-              onClick={toggleMobileMenu}
-              aria-label="Close mobile menu"
-            >
-              <X size={24} />
-            </button>
-          </div>
-          
-          <nav className="flex flex-col space-y-4">
-            {navItems.map((item) => (
-              <a
-                key={item.id}
-                onClick={() => scrollToSection(item.id)}
-                className={`text-lg font-medium py-2 border-b border-dance-brown border-opacity-10 ${
-                  activeSection === item.id ? "text-dance-orange" : "text-dance-brown"
-                }`}
+      {/* Mobile Menu - Only renders when mobileMenuOpen is true */}
+      {mobileMenuOpen && (
+        <div
+          id="mobile-menu"
+          className="md:hidden fixed inset-0 bg-[#ffeec0] z-40 pt-20 px-4 overflow-y-auto"
+        >
+          <div className="container mx-auto">
+            <div className="flex justify-end mb-6">
+              <button
+                className="text-dance-brown hover:text-dance-orange focus:outline-none"
+                onClick={toggleMobileMenu}
+                aria-label="Close mobile menu"
               >
-                {item.name}
-              </a>
-            ))}
-          </nav>
-          
-          <div className="mt-8 flex items-center justify-between">
-            <div className="flex space-x-4">
-              <a
-                href="https://www.facebook.com/profile.php?id=61571664788308"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-dance-brown hover:text-dance-orange transition-colors duration-300"
-                aria-label="Facebook"
-              >
-                <Facebook size={24} />
-              </a>
-              <a
-                href="https://www.instagram.com/forrozeiros_cz/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-dance-brown hover:text-dance-orange transition-colors duration-300"
-                aria-label="Instagram"
-              >
-                <Instagram size={24} />
-              </a>
+                <X size={24} />
+              </button>
             </div>
-            <LanguageSelector />
+            
+            <nav className="flex flex-col space-y-4">
+              {navItems.map((item) => (
+                <a
+                  key={item.id}
+                  onClick={() => scrollToSection(item.id)}
+                  className={`text-lg font-medium py-2 border-b border-dance-brown border-opacity-10 ${
+                    activeSection === item.id ? "text-dance-orange" : "text-dance-brown"
+                  }`}
+                >
+                  {item.name}
+                </a>
+              ))}
+            </nav>
+            
+            {/* Social media and language selector in mobile menu */}
+            <div className="mt-8 flex items-center justify-between">
+              <div className="flex space-x-4">
+                <a
+                  href="https://www.facebook.com/profile.php?id=61571664788308"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-dance-brown hover:text-dance-orange transition-colors duration-300"
+                  aria-label="Facebook"
+                >
+                  <Facebook size={24} />
+                </a>
+                <a
+                  href="https://www.instagram.com/forrozeiros_cz/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-dance-brown hover:text-dance-orange transition-colors duration-300"
+                  aria-label="Instagram"
+                >
+                  <Instagram size={24} />
+                </a>
+              </div>
+              <LanguageSelector />
+            </div>
           </div>
         </div>
-      </div>
+      )}
     </header>
   );
 };
