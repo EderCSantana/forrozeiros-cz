@@ -33,7 +33,7 @@ const Contact = () => {
     
     try {
       // Initialize EmailJS with the correct public key
-      emailjs.init("-Q-rUQo795S9S_uXQ");
+      emailjs.init("GFqRe3DcWmHiOXw2q");
       
       // Prepare the template parameters
       const templateParams = {
