@@ -73,7 +73,7 @@ const PartnerCard = ({
     </CardContent>
     <CardFooter>
       <Button asChild className="w-full bg-dance-orange hover:bg-dance-orange/90">
-        <a href={websiteUrl} target="_blank" rel="noopener noreferrer">Visit Website</a>
+        <a href={websiteUrl} target="_blank" rel="noopener noreferrer">{t("partners.visit_website")}</a>
       </Button>
     </CardFooter>
   </Card>
@@ -139,44 +139,36 @@ const Partners = () => {
           {/* Venues Section */}
           <PartnerSection title={t("partners.venues")} icon={Building}>
             <PartnerCard
-              title="Komunitní Prostor Smíchov"
+              title={t("partners.venues.kps.title")}
               description={
-                <>
-                  <p className="mb-3">Komunitní Prostor Smíchov (KPS) is a multifunctional community space in Prague that hosts cultural, educational, and social activities. It aims to bring people together across generations and backgrounds, including socially disadvantaged families, seniors, immigrants, and ethnic minorities.</p>
-                  <p>Rooted in values of self-awareness, education, and action, KPS offers a variety of programs that range from meditative practices to community gardening and legal counseling.</p>
-                  <p>The venue supports diverse artistic and physical activities, including forró, balfolk, swing dance, yoga, tai chi chuan, and movement improvisation. It plays a vital role in the local cultural landscape and is the home of our weekly forró events.</p>
-                </>
+                <div dangerouslySetInnerHTML={{ __html: t("partners.venues.kps.description") }} />
               }
               imageUrl="/lovable-uploads/2c6ea6ad-f9c8-4ae6-8770-9a1c57f0ead7.png"
-              websiteUrl="https://komunitniprostorevangelik.cz"
+              websiteUrl={t("partners.venues.kps.website")}
               contactInfo={
                 <>
                   <div className="grid gap-1">
-                    <div>Address: Na Doubkové 8, 150 00 Praha 5</div>
-                    <div>Facebook: <a href="https://facebook.com/kpsmichov" target="_blank" rel="noopener noreferrer" className="text-dance-orange hover:underline">facebook.com/kpsmichov</a></div>
-                    <div>Instagram: <a href="https://instagram.com/komunitniprostorsmichov" target="_blank" rel="noopener noreferrer" className="text-dance-orange hover:underline">@komunitniprostorsmichov</a></div>
+                    <div>{t("partners.venues.kps.address")}</div>
+                    <div>Facebook: <a href="https://facebook.com/kpsmichov" target="_blank" rel="noopener noreferrer" className="text-dance-orange hover:underline">{t("partners.venues.kps.facebook")}</a></div>
+                    <div>Instagram: <a href="https://instagram.com/komunitniprostorsmichov" target="_blank" rel="noopener noreferrer" className="text-dance-orange hover:underline">{t("partners.venues.kps.instagram")}</a></div>
                   </div>
                 </>
               }
             />
             
             <PartnerCard
-              title="Dorado Coffee"
+              title={t("partners.venues.dorado.title")}
               description={
-                <>
-                  <p className="mb-3">Dorado Coffee is a small family-run coffee shop with roots in Colombia. Founded by Ami and his family, who grew up farming coffee in the mountains of Villagómez, Colombia, the business brings a personal and ethical touch to Prague's coffee scene.</p>
-                  <p>The mission of Dorado is to provide high-quality coffee while ensuring fair conditions for the farmers who grow it.</p>
-                  <p>Beyond serving delicious coffee, Dorado Coffee supports the arts and community by hosting events and concerts. Recently, it has become a cozy spot for forró concerts with Três Corações, where dancers gather and enjoy the rhythms of Brazil.</p>
-                </>
+                <div dangerouslySetInnerHTML={{ __html: t("partners.venues.dorado.description") }} />
               }
               imageUrl="/lovable-uploads/da5481c2-3179-4ed6-a48e-bbc1ab623685.png"
-              websiteUrl="https://doradocoffee.cz"
+              websiteUrl={t("partners.venues.dorado.website")}
               contactInfo={
                 <>
                   <div className="grid gap-1">
-                    <div>Address: Letohrádek Kinských, Kinského zahrada 98, 150 00 Praha 5-Petřín</div>
-                    <div>Facebook: <a href="https://facebook.com/doradocoffee.cz" target="_blank" rel="noopener noreferrer" className="text-dance-orange hover:underline">facebook.com/doradocoffee.cz</a></div>
-                    <div>Instagram: <a href="https://instagram.com/doradocoffee.cz" target="_blank" rel="noopener noreferrer" className="text-dance-orange hover:underline">@doradocoffee.cz</a></div>
+                    <div>{t("partners.venues.dorado.address")}</div>
+                    <div>Facebook: <a href="https://facebook.com/doradocoffee.cz" target="_blank" rel="noopener noreferrer" className="text-dance-orange hover:underline">{t("partners.venues.dorado.facebook")}</a></div>
+                    <div>Instagram: <a href="https://instagram.com/doradocoffee.cz" target="_blank" rel="noopener noreferrer" className="text-dance-orange hover:underline">{t("partners.venues.dorado.instagram")}</a></div>
                   </div>
                 </>
               }
@@ -186,78 +178,75 @@ const Partners = () => {
           {/* Teachers Section */}
           <PartnerSection title={t("partners.teachers")} icon={GraduationCap}>
             <TeacherCard
-              name="Emilson Bernardes"
+              name={t("partners.teachers.emilson.name")}
               imageUrl="/lovable-uploads/c88e5523-748b-4dc0-8324-e940ec54e172.png"
               description={
                 <>
-                  <p className="mb-2"><strong>Tanečník, lektor tance, choreograf</strong></p>
-                  <p className="mb-3">Emilson is a Brazilian dancer who has been living in Prague for 12 years. He brings rich experience in improvisation and choreography, having participated in numerous workshops, festivals, and congresses around the world. In recent years, he has been organizing dance events and promoting Brazilian culture throughout Europe. Emilson is multilingual—he speaks Portuguese, Spanish, English, and Czech.</p>
-                  <p>In Prague, he teaches various Latin and Brazilian dances, including forró, samba, salsa, and bachata. He has also been involved with La Tropical, offering classes and spreading the joy of dance.</p>
+                  <p className="mb-2"><strong>{t("partners.teachers.emilson.title")}</strong></p>
+                  <div dangerouslySetInnerHTML={{ __html: t("partners.teachers.emilson.description") }} />
                   
                   <ul className="list-disc pl-5 mt-3 space-y-1">
-                    <li><strong>Specialization:</strong> Samba, Bolero, Tango, Salsa, Rumba, Bachata, Forró, Zouk, Kizomba</li>
-                    <li><strong>Experience:</strong> Carnival - Imperio Serrano Samba School, Brazil</li>
-                    <li><strong>Achievement:</strong> Czech Dance Master 2016</li>
+                    <li><strong>{t("partners.teachers.emilson.specialization")}</strong></li>
+                    <li><strong>{t("partners.teachers.emilson.experience")}</strong></li>
+                    <li><strong>{t("partners.teachers.emilson.achievement")}</strong></li>
                   </ul>
                 </>
               }
               socialLinks={
                 <>
                   <div className="grid gap-1">
-                    <div>Website: <a href="https://www.latropical.cz/node/5514" target="_blank" rel="noopener noreferrer" className="text-dance-orange hover:underline">www.latropical.cz/node/5514</a></div>
-                    <div>Facebook: <a href="https://facebook.com/emilson.bernardes" target="_blank" rel="noopener noreferrer" className="text-dance-orange hover:underline">facebook.com/emilson.bernardes</a></div>
-                    <div>Instagram: <a href="https://instagram.com/emilson_bernardes" target="_blank" rel="noopener noreferrer" className="text-dance-orange hover:underline">@emilson_bernardes</a></div>
+                    <div>Website: <a href={t("partners.teachers.emilson.website")} target="_blank" rel="noopener noreferrer" className="text-dance-orange hover:underline">{t("partners.teachers.emilson.website")}</a></div>
+                    <div>Facebook: <a href="https://facebook.com/emilson.bernardes" target="_blank" rel="noopener noreferrer" className="text-dance-orange hover:underline">{t("partners.teachers.emilson.facebook")}</a></div>
+                    <div>Instagram: <a href="https://instagram.com/emilson_bernardes" target="_blank" rel="noopener noreferrer" className="text-dance-orange hover:underline">{t("partners.teachers.emilson.instagram")}</a></div>
                   </div>
                 </>
               }
             />
             
             <TeacherCard
-              name="Zuzana & Olga"
+              name={t("partners.teachers.zuzana_olga.name")}
               description={
-                <>
-                  <p>Zuzana and Olga teach together, with an approach focused on balance, embrace, and foundational movement. Although they started teaching recently, they have been actively engaged in the European forró scene, attending festivals and staying connected to the community. They regularly teach basic steps at Prostor events with the help of volunteers, and they also give workshops.</p>
-                </>
+                <div dangerouslySetInnerHTML={{ __html: t("partners.teachers.zuzana_olga.description") }} />
               }
               socialLinks={
                 <>
-                  <div>Instagram: <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer" className="text-dance-orange hover:underline">Zuzana</a> | <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer" className="text-dance-orange hover:underline">Olga</a></div>
+                  <div>Instagram: <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer" className="text-dance-orange hover:underline">{t("partners.teachers.zuzana_olga.instagram")}</a></div>
                 </>
               }
             />
             
             {/* Other Forró Teachers */}
             <div className="md:col-span-2 mt-6">
-              <h4 className="text-lg font-medium text-dance-brown mb-3 no-bullet">Other Forró Teachers in Prague</h4>
-              <p className="mb-4 text-dance-black text-opacity-80">There are other talented dance teachers in Prague who are not currently offering regular forró classes but occasionally give workshops. Follow their work to stay updated:</p>
+              <h4 className="text-lg font-medium text-dance-brown mb-3 no-bullet">{t("partners.teachers.others.title")}</h4>
+              <p className="mb-4 text-dance-black text-opacity-80">{t("partners.teachers.others.description")}</p>
               
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="bg-dance-cream bg-opacity-20 p-4 rounded-lg">
                   <div className="flex items-center gap-3 mb-2">
                     <Avatar className="h-10 w-10">
-                      <AvatarImage src="public/lovable-uploads/f00dd62e-aa39-4ffa-89fd-dbb71a75823f.png" alt="Carlos & Fernanda" />
+                      <AvatarImage src="public/lovable-uploads/f00dd62e-aa39-4ffa-89fd-dbb71a75823f.png" alt={t("partners.teachers.carlos_fernanda.name")} />
                       <AvatarFallback>CF</AvatarFallback>
                     </Avatar>
-                    <h5 className="text-dance-brown font-medium no-bullet">Carlos & Fernanda</h5>
+                    <h5 className="text-dance-brown font-medium no-bullet">{t("partners.teachers.carlos_fernanda.name")}</h5>
                   </div>
                   <div className="text-sm space-y-1 text-dance-black text-opacity-80">
-                    <p>Instagram: <a href="https://instagram.com/carlosandfernanda" target="_blank" rel="noopener noreferrer" className="text-dance-orange hover:underline">@carlosandfernanda</a></p>
-                    <p>Facebook: <a href="https://facebook.com/CarlosAndFernana" target="_blank" rel="noopener noreferrer" className="text-dance-orange hover:underline">CarlosAndFernana</a></p>
-                    <p>Website: <a href="https://www.carlosfernanda.com/" target="_blank" rel="noopener noreferrer" className="text-dance-orange hover:underline">www.carlosfernanda.com</a></p>
+                    <p>Instagram: <a href="https://instagram.com/carlosandfernanda" target="_blank" rel="noopener noreferrer" className="text-dance-orange hover:underline">{t("partners.teachers.carlos_fernanda.instagram")}</a></p>
+                    <p>Facebook: <a href="https://facebook.com/CarlosAndFernana" target="_blank" rel="noopener noreferrer" className="text-dance-orange hover:underline">{t("partners.teachers.carlos_fernanda.facebook")}</a></p>
+                    <p>Website: <a href="https://www.carlosfernanda.com/" target="_blank" rel="noopener noreferrer" className="text-dance-orange hover:underline">{t("partners.teachers.carlos_fernanda.website")}</a></p>
                   </div>
                 </div>
                 
                 <div className="bg-dance-cream bg-opacity-20 p-4 rounded-lg">
                   <div className="flex items-center gap-3 mb-2">
                     <Avatar className="h-10 w-10">
-                      <AvatarImage src="public/lovable-uploads/e758027e-2d62-4b95-978a-9723007d7120.png" alt="André Negrão" />
+                      <AvatarImage src="public/lovable-uploads/e758027e-2d62-4b95-978a-9723007d7120.png" alt={t("partners.teachers.andre.name")} />
                       <AvatarFallback>AN</AvatarFallback>
                     </Avatar>
-                    <h5 className="text-dance-brown font-medium no-bullet">André Negrão</h5>
+                    <h5 className="text-dance-brown font-medium no-bullet">{t("partners.teachers.andre.name")}</h5>
                   </div>
                   <div className="text-sm space-y-1 text-dance-black text-opacity-80">
-                    <p>Instagram: <a href="https://instagram.com/andrenegrao_official" target="_blank" rel="noopener noreferrer" className="text-dance-orange hover:underline">@andrenegrao_official</a></p>
-                    <p>Facebook: <a href="https://facebook.com/andre.negraoii.5" target="_blank" rel="noopener noreferrer" className="text-dance-orange hover:underline">andre.negraoii.5</a></p>
+                    <p>Instagram: <a href="https://instagram.com/andrenegrao_official" target="_blank" rel="noopener noreferrer" className="text-dance-orange hover:underline">{t("partners.teachers.andre.instagram")}</a></p>
+                    <p>Facebook: <a href="https://facebook.com/andre.negraoii.5" target="_blank" rel="noopener noreferrer" className="text-dance-orange hover:underline">{t("partners.teachers.andre.facebook")}</a></p>
                   </div>
                 </div>
               </div>
@@ -267,32 +256,30 @@ const Partners = () => {
           {/* Local Band Section */}
           <PartnerSection title={t("partners.local_band")} icon={Music}>
             <PartnerCard
-              title="Três Corações"
+              title={t("partners.band.tres_coracoes.title")}
               description={
-                <>
-                  <p>Três Corações is a local forró band founded by Devail Santos. The band has been playing for several years and is a staple in the Prague forró scene, performing around one to two concerts per month. Their repertoire spans a variety of forró styles and rhythms, making them a beloved presence at community events and dance nights.</p>
-                </>
+                <div dangerouslySetInnerHTML={{ __html: t("partners.band.tres_coracoes.description") }} />
               }
               imageUrl="/lovable-uploads/4248740d-6b87-4e68-8294-ae54f0b5c7fe.png"
-              websiteUrl="https://facebook.com/grupo.tres.coracoes.2025"
+              websiteUrl={t("partners.band.tres_coracoes.website")}
               contactInfo={
                 <>
                   <div className="grid gap-1">
-                    <div>Facebook: <a href="https://facebook.com/grupo.tres.coracoes.2025" target="_blank" rel="noopener noreferrer" className="text-dance-orange hover:underline">facebook.com/grupo.tres.coracoes.2025</a></div>
-                    <div>Instagram: <a href="https://instagram.com/grupo_trescoracoes" target="_blank" rel="noopener noreferrer" className="text-dance-orange hover:underline">@grupo_trescoracoes</a></div>
+                    <div>Facebook: <a href="https://facebook.com/grupo.tres.coracoes.2025" target="_blank" rel="noopener noreferrer" className="text-dance-orange hover:underline">{t("partners.band.tres_coracoes.facebook")}</a></div>
+                    <div>Instagram: <a href="https://instagram.com/grupo_trescoracoes" target="_blank" rel="noopener noreferrer" className="text-dance-orange hover:underline">{t("partners.band.tres_coracoes.instagram")}</a></div>
                   </div>
                   
                   <div className="mt-3">
                     <div className="flex items-center gap-2">
                       <Avatar className="h-8 w-8">
-                        <AvatarImage src="/lovable-uploads/31c5fb8c-8211-47ba-b540-cbf45b0af818.png" alt="Devail Santos" />
+                        <AvatarImage src="/lovable-uploads/31c5fb8c-8211-47ba-b540-cbf45b0af818.png" alt={t("partners.band.devail.name")} />
                         <AvatarFallback>DS</AvatarFallback>
                       </Avatar>
-                      <h5 className="font-medium">Devail Santos</h5>
+                      <h5 className="font-medium">{t("partners.band.devail.name")}</h5>
                     </div>
                     <div className="text-sm mt-1">
-                      <div>Facebook: <a href="https://facebook.com/devanil.santos" target="_blank" rel="noopener noreferrer" className="text-dance-orange hover:underline">facebook.com/devanil.santos</a></div>
-                      <div>Instagram: <a href="https://instagram.com/devanilsantossamek" target="_blank" rel="noopener noreferrer" className="text-dance-orange hover:underline">@devanilsantossamek</a></div>
+                      <div>Facebook: <a href="https://facebook.com/devanil.santos" target="_blank" rel="noopener noreferrer" className="text-dance-orange hover:underline">{t("partners.band.devail.facebook")}</a></div>
+                      <div>Instagram: <a href="https://instagram.com/devanilsantossamek" target="_blank" rel="noopener noreferrer" className="text-dance-orange hover:underline">{t("partners.band.devail.instagram")}</a></div>
                     </div>
                   </div>
                 </>
@@ -303,20 +290,16 @@ const Partners = () => {
           {/* Others Section */}
           <PartnerSection title={t("partners.others")} icon={Globe}>
             <PartnerCard
-              title="Instituto Camões - Prague"
+              title={t("partners.others.camoes.title")}
               description={
-                <>
-                  <p className="mb-3">The Centro de Língua Portuguesa Instituto Camões in Prague is the result of a cooperation agreement between Instituto Camões and Charles University. It aims to promote the Portuguese language and the wide-ranging cultural diversity associated with it.</p>
-                  <p className="mb-3">The center supports anyone who uses or wishes to use the Portuguese language in their personal or professional lives, joining a global community of over 230 million speakers across five continents.</p>
-                  <p>Instituto Camões values cultural activities and has occasionally featured forró in its events, such as the Lusófona festival. We maintain a close relationship with the staff at the institute and deeply appreciate their work and support. If you've fallen in love with forró and want to learn the language in which its lyrics are written, the institute offers Portuguese language courses.</p>
-                </>
+                <div dangerouslySetInnerHTML={{ __html: t("partners.others.camoes.description") }} />
               }
-              websiteUrl="https://pt.institutocamoes-praga.cz/"
+              websiteUrl={t("partners.others.camoes.website")}
               contactInfo={
                 <>
                   <div className="grid gap-1">
-                    <div>Facebook: <a href="https://facebook.com/institutocamoespraga" target="_blank" rel="noopener noreferrer" className="text-dance-orange hover:underline">facebook.com/institutocamoespraga</a></div>
-                    <div>Instagram: <a href="https://instagram.com/instituto_camoes_praga" target="_blank" rel="noopener noreferrer" className="text-dance-orange hover:underline">@instituto_camoes_praga</a></div>
+                    <div>Facebook: <a href="https://facebook.com/institutocamoespraga" target="_blank" rel="noopener noreferrer" className="text-dance-orange hover:underline">{t("partners.others.camoes.facebook")}</a></div>
+                    <div>Instagram: <a href="https://instagram.com/instituto_camoes_praga" target="_blank" rel="noopener noreferrer" className="text-dance-orange hover:underline">{t("partners.others.camoes.instagram")}</a></div>
                   </div>
                 </>
               }

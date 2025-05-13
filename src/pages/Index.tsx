@@ -8,23 +8,9 @@ import carouselImages from "../data/carouselImages";
 
 const Index: React.FC = () => {
   const { language, t } = useLanguage();
-  const [translations, setTranslations] = useState<any>({
-    welcome: { title: "", content: "" },
-    mission: { title: "", content: "" },
-    updates: { title: "", items: [] }
-  });
   const [calendarHeight, setCalendarHeight] = useState(600);
 
   useEffect(() => {
-    // Use dynamic import to load translations
-    import(`../translations/sections/home.json`)
-      .then((module) => {
-        setTranslations(module[language.toLowerCase()] || {});
-      })
-      .catch((error) => {
-        console.error("Failed to load translations:", error);
-      });
-      
     // Adjust calendar height based on window size
     const updateHeight = () => {
       const width = window.innerWidth;
@@ -40,7 +26,7 @@ const Index: React.FC = () => {
     updateHeight();
     window.addEventListener('resize', updateHeight);
     return () => window.removeEventListener('resize', updateHeight);
-  }, [language]);
+  }, []);
 
   return (
     <div className="flex-1">
@@ -74,14 +60,14 @@ const Index: React.FC = () => {
         <div className="mt-16">
           <TitleStripe title={t('home.updates.title')} />
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
-            {translations.updates?.items?.map((update: any, index: number) => (
+            {Array.from({ length: 3 }).map((_, index) => (
               <UpdateCard
                 key={index}
-                date={update.date}
-                title={update.title}
-                content={update.content}
-                link={update.link}
-                linkText={update.linkText}
+                date={t(`home.updates.items.${index}.date`)}
+                title={t(`home.updates.items.${index}.title`)}
+                content={t(`home.updates.items.${index}.content`)}
+                link={t(`home.updates.items.${index}.link`)}
+                linkText={t(`home.updates.items.${index}.linkText`)}
               />
             ))}
           </div>
