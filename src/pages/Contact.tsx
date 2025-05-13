@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Mail, Send, CheckCircle, Facebook, Instagram } from "lucide-react";
 import { useLanguage } from "../contexts/LanguageContext";
@@ -35,14 +34,12 @@ const Contact = () => {
       // Initialize EmailJS with the correct public key
       emailjs.init("-Q-rUQo795S9S_uXQ");
       
-      // Prepare the template parameters with correct field names
-      // These should match the template variables in EmailJS
+      // Prepare the template parameters matching your EmailJS template variables
       const templateParams = {
-        from_name: formData.name,
-        from_email: formData.email,
-        to_name: "Forrozeiros CZ",
-        subject: formData.subject,
+        title: formData.subject,
+        name: formData.name,
         message: formData.message,
+        email: formData.email
       };
       
       console.log("Sending email with parameters:", templateParams);
