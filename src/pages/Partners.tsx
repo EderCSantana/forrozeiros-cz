@@ -1,3 +1,4 @@
+
 import TitleStripe from "../components/TitleStripe";
 import { useLanguage } from "../contexts/LanguageContext";
 import { Building, Coffee, Music, User, GraduationCap, Globe } from "lucide-react";
@@ -29,97 +30,97 @@ const PartnerSection = ({
   </section>
 );
 
-const PartnerCard = ({ 
-  title, 
-  description, 
-  websiteUrl, 
-  imageUrl,
-  contactInfo
-}: { 
-  title: string; 
-  description: React.ReactNode; 
-  websiteUrl: string;
-  imageUrl?: string;
-  contactInfo?: React.ReactNode;
-}) => (
-  <Card className="bg-white border border-dance-cream hover:shadow-md transition-all duration-300">
-    <CardHeader>
-      <div className="flex items-center justify-between">
-        <CardTitle className="text-xl text-dance-brown">{title}</CardTitle>
-        {imageUrl && (
-          <div className="w-16 h-16 rounded-full overflow-hidden bg-white">
+const Partners = () => {
+  const { t } = useLanguage();
+  
+  const PartnerCard = ({ 
+    title, 
+    description, 
+    websiteUrl, 
+    imageUrl,
+    contactInfo
+  }: { 
+    title: string; 
+    description: React.ReactNode; 
+    websiteUrl: string;
+    imageUrl?: string;
+    contactInfo?: React.ReactNode;
+  }) => (
+    <Card className="bg-white border border-dance-cream hover:shadow-md transition-all duration-300">
+      <CardHeader>
+        <div className="flex items-center justify-between">
+          <CardTitle className="text-xl text-dance-brown">{title}</CardTitle>
+          {imageUrl && (
+            <div className="w-16 h-16 rounded-full overflow-hidden bg-white">
+              <img src={imageUrl} alt={title} className="w-full h-full object-cover" />
+            </div>
+          )}
+        </div>
+      </CardHeader>
+      <CardContent>
+        {imageUrl && imageUrl.includes("2c6ea6ad") && (
+          <div className="w-full h-48 mb-4 rounded-md overflow-hidden">
             <img src={imageUrl} alt={title} className="w-full h-full object-cover" />
           </div>
         )}
-      </div>
-    </CardHeader>
-    <CardContent>
-      {imageUrl && imageUrl.includes("2c6ea6ad") && (
-        <div className="w-full h-48 mb-4 rounded-md overflow-hidden">
-          <img src={imageUrl} alt={title} className="w-full h-full object-cover" />
+        <div className="prose text-dance-black text-opacity-80 mb-4">
+          {description}
         </div>
-      )}
-      <div className="prose text-dance-black text-opacity-80 mb-4">
-        {description}
-      </div>
-      {contactInfo && (
-        <>
-          <Separator className="my-4" />
-          <div className="text-sm text-dance-black text-opacity-70">
-            {contactInfo}
-          </div>
-        </>
-      )}
-    </CardContent>
-    <CardFooter>
-      <Button asChild className="w-full bg-dance-orange hover:bg-dance-orange/90">
-        <a href={websiteUrl} target="_blank" rel="noopener noreferrer">{t("partners.visit_website")}</a>
-      </Button>
-    </CardFooter>
-  </Card>
-);
-
-const TeacherCard = ({ 
-  name, 
-  description, 
-  socialLinks,
-  imageUrl
-}: { 
-  name: string; 
-  description: React.ReactNode; 
-  socialLinks: React.ReactNode;
-  imageUrl?: string;
-}) => (
-  <Card className="bg-white border border-dance-cream hover:shadow-md transition-all duration-300">
-    <CardHeader>
-      <div className="flex items-center gap-4">
-        {imageUrl ? (
-          <div className="w-16 h-16 rounded-full overflow-hidden bg-gray-100">
-            <img src={imageUrl} alt={name} className="w-full h-full object-cover" />
-          </div>
-        ) : (
-          <div className="w-16 h-16 rounded-full overflow-hidden bg-dance-cream flex items-center justify-center">
-            <User className="text-dance-brown" size={32} />
-          </div>
+        {contactInfo && (
+          <>
+            <Separator className="my-4" />
+            <div className="text-sm text-dance-black text-opacity-70">
+              {contactInfo}
+            </div>
+          </>
         )}
-        <CardTitle className="text-xl text-dance-brown">{name}</CardTitle>
-      </div>
-    </CardHeader>
-    <CardContent>
-      <div className="prose text-dance-black text-opacity-80">
-        {description}
-      </div>
-    </CardContent>
-    <CardFooter>
-      <div className="text-sm text-dance-black text-opacity-70 w-full">
-        {socialLinks}
-      </div>
-    </CardFooter>
-  </Card>
-);
+      </CardContent>
+      <CardFooter>
+        <Button asChild className="w-full bg-dance-orange hover:bg-dance-orange/90">
+          <a href={websiteUrl} target="_blank" rel="noopener noreferrer">{t("partners.visit_website")}</a>
+        </Button>
+      </CardFooter>
+    </Card>
+  );
 
-const Partners = () => {
-  const { t } = useLanguage();
+  const TeacherCard = ({ 
+    name, 
+    description, 
+    socialLinks,
+    imageUrl
+  }: { 
+    name: string; 
+    description: React.ReactNode; 
+    socialLinks: React.ReactNode;
+    imageUrl?: string;
+  }) => (
+    <Card className="bg-white border border-dance-cream hover:shadow-md transition-all duration-300">
+      <CardHeader>
+        <div className="flex items-center gap-4">
+          {imageUrl ? (
+            <div className="w-16 h-16 rounded-full overflow-hidden bg-gray-100">
+              <img src={imageUrl} alt={name} className="w-full h-full object-cover" />
+            </div>
+          ) : (
+            <div className="w-16 h-16 rounded-full overflow-hidden bg-dance-cream flex items-center justify-center">
+              <User className="text-dance-brown" size={32} />
+            </div>
+          )}
+          <CardTitle className="text-xl text-dance-brown">{name}</CardTitle>
+        </div>
+      </CardHeader>
+      <CardContent>
+        <div className="prose text-dance-black text-opacity-80">
+          {description}
+        </div>
+      </CardContent>
+      <CardFooter>
+        <div className="text-sm text-dance-black text-opacity-70 w-full">
+          {socialLinks}
+        </div>
+      </CardFooter>
+    </Card>
+  );
 
   return (
     <div className="min-h-screen flex flex-col">
@@ -312,3 +313,4 @@ const Partners = () => {
 };
 
 export default Partners;
+
