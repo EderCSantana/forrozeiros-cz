@@ -17,9 +17,7 @@ const PartnerSection = ({
 }) => (
   <section className="mb-16">
     <div className="flex items-center mb-6">
-      <div className="w-12 h-12 bg-dance-orange bg-opacity-10 rounded-full flex items-center justify-center mr-4">
-        <Icon className="text-dance-orange" size={24} />
-      </div>
+      <Icon className="text-dance-orange mr-4" size={24} />
       <h3 className="text-2xl md:text-3xl font-display font-medium no-bullet">
         {title}
       </h3>
