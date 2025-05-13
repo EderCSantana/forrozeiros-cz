@@ -1,3 +1,4 @@
+
 import Header from "../components/Header";
 import { useLanguage } from "../contexts/LanguageContext";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
@@ -41,8 +42,8 @@ const AboutForro = () => {
       {/* What is Forró Section */}
       <section className="py-16 bg-white">
         <div className="container-fluid mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
-            <div className="lg:col-span-2 space-y-8">
+          <div className="grid grid-cols-1 gap-12">
+            <div className="space-y-8">
               <div className="space-y-6">
                 <div className="flex items-center gap-3">
                   <Flag className="h-8 w-8 text-dance-brown" />
@@ -103,26 +104,6 @@ const AboutForro = () => {
                       </ul>
                     </div>
                   </div>
-                </div>
-              </div>
-            </div>
-            
-            {/* Sidebar */}
-            <div className="lg:col-span-1">
-              <div className="sticky top-24 space-y-8">               
-                <div className="bg-dance-brown text-white p-6 rounded-lg">
-                  <h3 className="text-xl font-display font-semibold mb-4">
-                    {t("about_forro.try_forro")}
-                  </h3>
-                  <p className="mb-6 text-white text-opacity-90">
-                    {t("about_forro.try_forro_desc")}
-                  </p>
-                  <a 
-                    href="/events" 
-                    className="block w-full bg-dance-orange hover:bg-dance-orange/90 text-white text-center py-3 px-4 rounded-md transition-colors duration-300 font-medium"
-                  >
-                    {t("about_forro.see_schedule")}
-                  </a>
                 </div>
               </div>
             </div>
@@ -251,15 +232,6 @@ const AboutForro = () => {
                 </AccordionContent>
               </AccordionItem>
             </Accordion>
-          </div>
-          
-          <div className="mt-16 text-center">
-            <a 
-              href="/events" 
-              className="forro-button inline-flex items-center gap-2"
-            >
-              {t("about_forro.see_schedule")}
-            </a>
           </div>
         </div>
       </section>
