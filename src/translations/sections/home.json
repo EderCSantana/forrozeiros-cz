@@ -1,4 +1,3 @@
-
 {
   "en": {
     "home.calendar.title": "Upcoming Events"
@@ -9,10 +8,16 @@
   "pt": {
     "home.calendar.title": "Próximos Eventos"
   },
-  "sk": {
-    "home.calendar.title": "Nadchádzajúce udalosti"
+  "ru": {
+    "home.calendar.title": "Предстоящие события"
   },
   "ua": {
     "home.calendar.title": "Майбутні події"
+  },
+  "cz": {
+    "home.calendar.title": "Nadcházející události"
+  },
+  "sk": {
+    "home.calendar.title": "Nadchádzajúce podujatia"
   }
 }
