@@ -35,5 +35,29 @@
     "partners.local_band": "Banda Local",
     "partners.others": "Outros Parceiros",
     "partners.visit_website": "Visitar Site"
+  },
+  "sk": {
+    "partners.title": "Naši partneri",
+    "partners.subtitle": "Spolupracujeme na podpore tanečnej kultúry",
+    "partners.become_partner": "Staňte sa partnerom",
+    "partners.contact_us": "Kontaktujte nás ohľadom partnerstva",
+    "partners.no_partners": "Aktuálne hľadáme nové partnerstvá",
+    "partners.venues": "Miesta",
+    "partners.teachers": "Učitelia",
+    "partners.local_band": "Miestna kapela",
+    "partners.others": "Ďalší partneri",
+    "partners.visit_website": "Navštíviť webstránku"
+  },
+  "ua": {
+    "partners.title": "Наші партнери",
+    "partners.subtitle": "Працюємо разом для просування танцювальної культури",
+    "partners.become_partner": "Станьте партнером",
+    "partners.contact_us": "Зв'яжіться з нами для партнерства",
+    "partners.no_partners": "В даний час шукаємо нові партнерства",
+    "partners.venues": "Майданчики",
+    "partners.teachers": "Викладачі",
+    "partners.local_band": "Місцевий гурт",
+    "partners.others": "Інші партнери",
+    "partners.visit_website": "Відвідати веб-сайт"
   }
 }

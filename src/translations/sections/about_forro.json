@@ -64,7 +64,7 @@
     "about_forro.dance_style_list_1_name": "Forró pé-de-serra:",
     "about_forro.dance_style_list_1_desc": "El estilo tradicional, caracterizado por pasos simples y abrazo cercano",
     "about_forro.dance_style_list_2_name": "Forró universitário:",
-    "about_forro.dance_style_list_2_desc": "Un estilo moderno, más elaborado, popular entre estudiantes universitarios",
+    "about_forro.dance_style_list_2_desc": "Un estilo moderno, más elaborado, popular entre estudiantes universitários",
     "about_forro.dance_style_list_3_name": "Forró eletrônico:",
     "about_forro.dance_style_list_3_desc": "Incorpora elementos de otros estilos de baile con influencias de música electrónica",
     "about_forro.cultural_title": "Significado Cultural",
@@ -109,5 +109,109 @@
     "about_forro.try_forro": "Quer Experimentar o Forró?",
     "about_forro.try_forro_desc": "Junte-se às nossas aulas semanais e experimente a alegria da dança do forró!",
     "about_forro.see_schedule": "Ver Nossa Programação"
+  },
+  "sk": {
+    "about_forro.title": "O Forró",
+    "about_forro.subtitle": "Objavte bohatú históriu a kultúrny význam tohto krásneho brazílskeho tanca",
+    
+    "about_forro.origins_title": "Čo je Forró?",
+    "about_forro.origins_p1": "Forró je mnohostranný hudobný žáner a kultúrny fenomén pochádzajúci z brazílskeho severovýchodu. Zahŕňa rôzne rytmy a tance a hrá významnú úlohu v brazílskej kultúrnej identite. Termín \"Forró\" môže označovať:",
+    "about_forro.origins_p2": "Hudobný žáner zložený zo súboru rytmov.\nJeden konkrétny rytmus v rámci tohto žánru.\nFormu tanca.\nTyp spoločenského stretnutia alebo večierka zameraného na túto hudbu a tanec.",
+    
+    "about_forro.dance_style_title": "Ako vyzerá Forró?",
+    "about_forro.dance_style_p1": "Forró nie je len o hudbe; je to rovnako aj o tanci. Tanec sa vyznačuje útulnou, prívetivou atmosférou, zvyčajne zahŕňajúcou blízku prácu s partnerom. Základný krok, známy ako \"dois pra lá e dois pra cá\", spočíva v urobení dvoch krokov na jednu stranu a dvoch na druhú, čím sa vytvára rytmický vzor, ktorý umožňuje rôzne otočky, pauzy a pohyby.",
+    "about_forro.dance_style_p2": "Hudba často obsahuje živý akordeón, zabumba (bubon) a triangel, s dôrazom na rytmus a skupinovú účasť, čo z nej robí komunitný zážitok na večierkoch a podujatiach.",
+    "about_forro.dance_style_list_1_name": "Akordeón",
+    "about_forro.dance_style_list_1_desc": "– vedúci melodický nástroj.",
+    "about_forro.dance_style_list_2_name": "Zabumba",
+    "about_forro.dance_style_list_2_desc": "– bubon, ktorý poskytuje hlboký, synkopovaný basový rytmus.",
+    "about_forro.dance_style_list_3_name": "Triangel",
+    "about_forro.dance_style_list_3_desc": "– pridáva vysoké perkusívne akcenty.",
+
+    "about_forro.styles_title": "Štýly Forró",
+    "about_forro.styles_p1": "Forró zahŕňa rôzne štýly, z ktorých každý má svoje jedinečné charakteristiky a výrazy:",
+
+    "about_forro.style_1_name": "Pé de Serra",
+    "about_forro.style_1_desc": "Tento štýl zostáva verný tradičným koreňom, charakterizovaný akustickými nástrojmi a silnými rytmami. Piesne často rozprávajú príbehy o vidieckom živote a brazílskom folklóre.",
+    
+    "about_forro.style_2_name": "Forró Universitário",
+    "about_forro.style_2_desc": "Moderná interpretácia, ktorá sa stala populárnou v univerzitnom prostredí, spájajúca tradičné prvky so súčasnými vplyvmi a často obsahujúca rozmanitejšiu škálu nástrojov a aranžmánov.",
+    
+    "about_forro.style_3_name": "Forró Eletrônico",
+    "about_forro.style_3_desc": "Vznikol v 90. rokoch, začleňujúc elektronické nástroje a beaty, čím sa stal prístupnejším pre mladšie publikum. Zachováva podstatu tradičného Forró a zároveň sa snaží o širší záujem v mestskom prostredí.",
+    
+    "about_forro.style_4_name": "Rojão",
+    "about_forro.style_4_desc": "Živý a energický rytmus, ktorý zdôrazňuje silný, jasný beat, často používaný pri tancoch, ktoré zahŕňajú rýchlu prácu nôh a energické pohyby.",
+    
+    "about_forro.style_5_name": "Xaxado",
+    "about_forro.style_5_desc": "Tento tanec zahŕňa výrazné pohyby bokov a zdôrazňuje rytmus, často spojený s cangaço (banditskou kultúrou), kde muži a ženy tancujú hrdo, predvádzajúc svoju silu a eleganciu.",
+    
+    "about_forro.style_6_name": "Arrasta-Pé",
+    "about_forro.style_6_desc": "Sviatočný tanečný štýl oslavovaný počas forró večierkov, charakterizovaný zmesou rytmickej práce nôh a živých interakcií s partnerom, vytvárajúc pozitívnu a spoločenskú atmosféru.",
+    
+    "about_forro.style_7_name": "Xote",
+    "about_forro.style_7_desc": "Pomalší tanečný rytmus, ktorý umožňuje romantickejší a uvoľnenejší štýl. Často sa tancuje v blízkom držaní a zvyčajne sa vyznačuje jemným, plynulým pohybom.",
+    
+    "about_forro.style_8_name": "Baião",
+    "about_forro.style_8_desc": "Charakteristický rytmus Forró, vyznačujúci sa synkopáciou a živým tempom. Často zahŕňa spev typu \"výzva a odpoveď\", čo intenzifikuje interakciu medzi tanečníkmi a hudobníkmi.",
+    
+    "about_forro.style_9_name": "Coco",
+    "about_forro.style_9_desc": "Aj keď je tradične oddelený od Forró, Coco je často miešaný do hudby Forró, charakterizovaný živým tempom a perkusívnymi prvkami, čo ho robí vhodným pre tanec.",
+
+    "about_forro.try_forro": "Chcete si vyskúšať Forró?",
+    "about_forro.try_forro_desc": "Pridajte sa k našim týždenným lekciám a zažite radosť z tanca forró!",
+    "about_forro.see_schedule": "Pozrite si náš program"
+  },
+  "ua": {
+    "about_forro.title": "Про Форро",
+    "about_forro.subtitle": "Відкрийте для себе багату історію та культурне значення цього прекрасного бразильського танцю",
+    
+    "about_forro.origins_title": "Що таке Форро?",
+    "about_forro.origins_p1": "Форро - це багатогранний музичний жанр і культурне явище, що походить з Північно-Східного регіону Бразилії. Воно охоплює різноманітні ритми і танці, відіграючи значну роль у бразильській культурній ідентичності. Термін \"Форро\" може означати:",
+    "about_forro.origins_p2": "Музичний жанр, що складається з набору ритмів.\nОдин конкретний ритм в межах цього жанру.\nФорму танцю.\nТип соціальних зібрань або вечірок, зосереджених навколо цієї музики та танцю.",
+    
+    "about_forro.dance_style_title": "Як виглядає Форро?",
+    "about_forro.dance_style_p1": "Форро - це не лише про музику; це в рівній мірі про танець. Танець характеризується затишною, привітною атмосферою, що зазвичай включає близьку роботу з партнером. Основний крок, відомий як \"dois pra lá e dois pra cá\", складається з двох кроків в одну сторону і двох в іншу, утворюючи ритмічний візерунок, що дозволяє різноманітні повороти, паузи та рухи.",
+    "about_forro.dance_style_p2": "Музика часто містить жвавий акордеон, забумба (барабан) і трикутник, з акцентом на ритм і групову участь, роблячи це спільним досвідом на вечірках і заходах.",
+    "about_forro.dance_style_list_1_name": "Акордеон",
+    "about_forro.dance_style_list_1_desc": "– головний мелодійний інструмент.",
+    "about_forro.dance_style_list_2_name": "Забумба",
+    "about_forro.dance_style_list_2_desc": "– барабан, що забезпечує глибокий, синкопований басовий ритм.",
+    "about_forro.dance_style_list_3_name": "Трикутник",
+    "about_forro.dance_style_list_3_desc": "– додає високочастотні перкусійні акценти.",
+
+    "about_forro.styles_title": "Стилі Форро",
+    "about_forro.styles_p1": "Форро охоплює різні стилі, кожен з яких має свої унікальні характеристики та вираження:",
+
+    "about_forro.style_1_name": "Pé de Serra",
+    "about_forro.style_1_desc": "Цей стиль зберігає вірність традиційним кореням, характеризується акустичною інструментацією та сильними ритмами. Пісні часто розповідають історії сільського життя та бразильського фольклору.",
+    
+    "about_forro.style_2_name": "Forró Universitário",
+    "about_forro.style_2_desc": "Сучасна інтерпретація, що стала популярною в університетському середовищі, поєднуючи традиційні елементи з сучасними впливами, часто з більш різноманітним набором інструментів та аранжувань.",
+    
+    "about_forro.style_3_name": "Forró Eletrônico",
+    "about_forro.style_3_desc": "З'явився в 1990-х роках, включаючи електронні інструменти та біти, роблячи його більш доступним для молодої аудиторії. Він зберігає сутність традиційного Форро, прагнучи до ширшого визнання в міському середовищі.",
+    
+    "about_forro.style_4_name": "Rojão",
+    "about_forro.style_4_desc": "Жвавий і бадьорий ритм, що підкреслює сильний, чіткий біт, часто використовується в танцях, які включають швидку роботу ніг та енергійні рухи.",
+    
+    "about_forro.style_5_name": "Xaxado",
+    "about_forro.style_5_desc": "Цей танець включає виразні рухи стегон і підкреслює ритм, часто асоціюється з cangaço (культурою бандитів), де чоловіки і жінки танцюють гордо, демонструючи свою силу та елегантність.",
+    
+    "about_forro.style_6_name": "Arrasta-Pé",
+    "about_forro.style_6_desc": "Святковий танцювальний стиль, що святкується під час вечірок форро, характеризується сумішшю ритмічної роботи ніг та жвавих партнерських взаємодій, створюючи піднесену та комунальну атмосферу.",
+    
+    "about_forro.style_7_name": "Xote",
+    "about_forro.style_7_desc": "Повільніший танцювальний ритм, що дозволяє більш романтичний і розслаблений стиль. Часто танцюється в тісному об'єднанні і зазвичай характеризується м'яким, плинним рухом.",
+    
+    "about_forro.style_8_name": "Baião",
+    "about_forro.style_8_desc": "Характерний ритм Форро, виділяється синкопуванням та жвавим темпом. Часто включає вокал типу \"поклик-відповідь\", посилюючи взаємодію між танцюристами і музикантами.",
+    
+    "about_forro.style_9_name": "Coco",
+    "about_forro.style_9_desc": "Хоча традиційно відокремлений від Форро, Коко часто змішується в музику Форро, характеризується жвавим темпом і перкусійними елементами, роблячи його придатним для танцю.",
+
+    "about_forro.try_forro": "Хочете спробувати Форро?",
+    "about_forro.try_forro_desc": "Приєднуйтесь до наших щотижневих занять і відчуйте радість танцю форро!",
+    "about_forro.see_schedule": "Переглянути наш розклад"
   }
 }

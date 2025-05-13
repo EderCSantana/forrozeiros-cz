@@ -26,5 +26,23 @@
     "general.cancel": "Cancelar",
     "general.submit": "Enviar",
     "general.read_more": "Leia Mais"
+  },
+  "sk": {
+    "general.loading": "Načítava sa...",
+    "general.error": "Vyskytla sa chyba",
+    "general.close": "Zavrieť",
+    "general.save": "Uložiť",
+    "general.cancel": "Zrušiť",
+    "general.submit": "Odoslať",
+    "general.read_more": "Čítať viac"
+  },
+  "ua": {
+    "general.loading": "Завантаження...",
+    "general.error": "Сталася помилка",
+    "general.close": "Закрити",
+    "general.save": "Зберегти",
+    "general.cancel": "Скасувати",
+    "general.submit": "Надіслати",
+    "general.read_more": "Читати далі"
   }
 }

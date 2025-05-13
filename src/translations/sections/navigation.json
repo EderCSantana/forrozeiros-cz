@@ -29,5 +29,25 @@
     "nav.rules": "Nossas Regras",
     "nav.partners": "Parceiros",
     "nav.contact": "Contato"
+  },
+  "sk": {
+    "nav.home": "Domov",
+    "nav.about_forro": "O Forró",
+    "nav.about_us": "O nás",
+    "nav.events": "Podujatia",
+    "nav.custom_events": "Vlastné podujatia",
+    "nav.rules": "Naše pravidlá",
+    "nav.partners": "Partneri",
+    "nav.contact": "Kontakt"
+  },
+  "ua": {
+    "nav.home": "Головна",
+    "nav.about_forro": "Про Форро",
+    "nav.about_us": "Про нас",
+    "nav.events": "Події",
+    "nav.custom_events": "Індивідуальні події",
+    "nav.rules": "Наші правила",
+    "nav.partners": "Партнери",
+    "nav.contact": "Контакт"
   }
 }

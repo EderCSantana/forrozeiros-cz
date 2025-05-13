@@ -35,5 +35,29 @@
     "home.updates.subtitle": "Fique informado sobre nossos novos eventos, aulas e notícias da comunidade",
     "home.cta.title": "Pronto para Entrar na Dança?",
     "home.cta.subtitle": "Experimente a alegria do Forró com nossa comunidade acolhedora"
+  },
+  "sk": {
+    "home.hero.title": "Vitajte v DanceEvent",
+    "home.hero.subtitle": "Zažite radosť z brazílskeho tanca",
+    "home.features.title": "Prečo si vybrať nás",
+    "home.features.events": "Pravidelné podujatia",
+    "home.features.community": "Živá komunita",
+    "home.features.music": "Živá hudba",
+    "home.updates.title": "Najnovšie aktualizácie",
+    "home.updates.subtitle": "Zostaňte informovaní o našich najnovších podujatiach, kurzoch a novinkách komunity",
+    "home.cta.title": "Pripravení sa pridať k tancu?",
+    "home.cta.subtitle": "Zažite radosť z tancovania Forró s našou priateľskou komunitou"
+  },
+  "ua": {
+    "home.hero.title": "Ласкаво просимо до DanceEvent",
+    "home.hero.subtitle": "Відчуйте радість бразильського танцю",
+    "home.features.title": "Чому обрати нас",
+    "home.features.events": "Регулярні події",
+    "home.features.community": "Яскрава спільнота",
+    "home.features.music": "Жива музика",
+    "home.updates.title": "Останні оновлення",
+    "home.updates.subtitle": "Будьте в курсі наших найновіших подій, занять та новин спільноти",
+    "home.cta.title": "Готові приєднатися до танцю?",
+    "home.cta.subtitle": "Відчуйте радість танцю Форро з нашою привітною спільнотою"
   }
 }

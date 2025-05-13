@@ -23,5 +23,21 @@
     "footer.newsletter": "Inscreva-se em nossa newsletter para os últimos eventos e atualizações",
     "footer.subscribe": "Inscrever-se",
     "footer.rights": "Todos os direitos reservados. Projetado com ♥ para amantes da dança."
+  },
+  "sk": {
+    "footer.quick_links": "Rýchle odkazy",
+    "footer.contact_us": "Kontaktujte nás",
+    "footer.stay_updated": "Zostaňte informovaní",
+    "footer.newsletter": "Prihláste sa k odberu noviniek o najnovších podujatiach a aktualizáciách",
+    "footer.subscribe": "Prihlásiť sa",
+    "footer.rights": "Všetky práva vyhradené. Navrhnuté s ♥ pre milovníkov tanca."
+  },
+  "ua": {
+    "footer.quick_links": "Швидкі посилання",
+    "footer.contact_us": "Зв'яжіться з нами",
+    "footer.stay_updated": "Будьте в курсі",
+    "footer.newsletter": "Підпишіться на нашу розсилку для отримання інформації про останні події та оновлення",
+    "footer.subscribe": "Підписатися",
+    "footer.rights": "Всі права захищені. Розроблено з ♥ для любителів танців."
   }
 }

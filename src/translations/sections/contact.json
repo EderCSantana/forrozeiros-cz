@@ -32,5 +32,27 @@
     "contact.location": "Localização",
     "contact.phone": "Telefone",
     "contact.email": "E-mail"
+  },
+  "sk": {
+    "contact.title": "Kontaktujte nás",
+    "contact.subtitle": "Spojte sa s naším tímom",
+    "contact.form.name": "Meno",
+    "contact.form.email": "Email",
+    "contact.form.message": "Správa",
+    "contact.form.submit": "Odoslať správu",
+    "contact.location": "Lokácia",
+    "contact.phone": "Telefón",
+    "contact.email": "Email"
+  },
+  "ua": {
+    "contact.title": "Зв'язатися з нами",
+    "contact.subtitle": "Зв'яжіться з нашою командою",
+    "contact.form.name": "Ім'я",
+    "contact.form.email": "Електронна пошта",
+    "contact.form.message": "Повідомлення",
+    "contact.form.submit": "Надіслати повідомлення",
+    "contact.location": "Розташування",
+    "contact.phone": "Телефон",
+    "contact.email": "Електронна пошта"
   }
 }

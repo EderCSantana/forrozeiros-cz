@@ -83,5 +83,61 @@
     "rules.recommendations.item4": "Você pode encerrar uma dança a qualquer momento, mesmo no meio de uma música.",
     "rules.recommendations.item5": "Seja colaborativo: Converse e dance com diferentes pessoas, incluindo iniciantes, e contribua para uma experiência acolhedora.",
     "rules.recommendations.item6": "Divirta-se e faça amigos :)"
+  },
+  "sk": {
+    "rules.title": "Naše pravidlá",
+    "rules.subtitle": "Smernice na zabezpečenie bezpečného, úctivého a príjemného zážitku pre všetkých",
+    "rules.general_rules": "Pravidlá podujatí",
+    "rules.general_description": "Tieto pravidlá platia pre všetky naše podujatia a pomáhajú vytvoriť prívetivé a úctivé prostredie.",
+    "rules.general.item1": "Buďte zdvorilí a úctiví. Predsudky a urážlivé správanie nebudú tolerované.",
+    "rules.general.item2": "Buďte si vedomí toho, čo ostatní chcú alebo nechcú.",
+    "rules.general.item3": "Vyhnite sa poskytovaniu nevyžiadaných rád ohľadom tanca.",
+    "rules.general.item4": "Osobné priestory a hranice by mali byť vždy rešpektované. Vytrvalá neželaná pozornosť, na tanečnom parkete alebo mimo neho, je neprijateľná.",
+    "rules.general.item5": "Ak vás niekto odmietne pre tanec, nie je to osobné odmietnutie. Prijmite to a hľadajte iného partnera.",
+    "rules.general.item6": "Ak váš partner poukáže na nepohodlie alebo limity, okamžite upravte svoje správanie.",
+    "rules.general.item7": "Náhodné dotyky citlivých častí tela: ospravedlňte sa.",
+    "rules.general.item8": "Prijatie pozvánky na tanec neznamená súhlas s ničím iným.",
+    
+    "rules.prostor_rules": "V Prostoru",
+    "rules.prostor.item1": "Nápoje na stole: V kostole musia byť všetky nápoje okolo stola, rozliatie na podlahu môže byť problém.",
+    "rules.prostor.item2": "Zákaz fajčenia vnútri, vrátane elektronických cigariet a podobných výrobkov.",
+    "rules.prostor.item3": "Pred vstupom na tanečný parket si prosím vyzujte topánky.",
+    "rules.prostor.item4": "Podporujte podujatia: Nezabudnite sa podpísať do zoznamu, a ak môžete a chceli by ste, prispejte do našej pokladnice alebo cez QR kód, sledujte nás na sociálnych sieťach a pozvite svojich priateľov.",
+    
+    "rules.recommendations": "Odporúčania",
+    "rules.recommendations.item1": "Udržujte sa čistí: Tanec v tesnej blízkosti vyžaduje dobré hygienické návyky pre pohodlie všetkých.",
+    "rules.recommendations.item2": "Buďte opatrní: Informujte svojho partnera, ak ste zranení alebo sa cítite nepohodlne.",
+    "rules.recommendations.item3": "Kontaktujte nás: Ak sa cítite nepríjemne alebo nebezpečne, vyhľadajte organizátora. Hlásenia budú braté vážne a obťažovanie bude mať za následok okamžité vylúčenie.",
+    "rules.recommendations.item4": "Môžete ukončiť tanec kedykoľvek, aj uprostred piesne.",
+    "rules.recommendations.item5": "Buďte spolupracujúci: Rozprávajte sa a tancujte s rôznymi ľuďmi, vrátane nováčikov, a prispievajte k príjemnému zážitku.",
+    "rules.recommendations.item6": "Bavte sa a nájdite si priateľov :)"
+  },
+  "ua": {
+    "rules.title": "Наші правила",
+    "rules.subtitle": "Рекомендації для забезпечення безпечного, шанобливого та приємного досвіду для всіх",
+    "rules.general_rules": "Правила заходів",
+    "rules.general_description": "Ці правила застосовуються до всіх наших заходів і допомагають створити привітне і шанобливе середовище.",
+    "rules.general.item1": "Будьте ввічливими та шанобливими. Упередження та образливе ставлення не будуть толеровані.",
+    "rules.general.item2": "Усвідомлюйте, що інші хочуть або не хочуть.",
+    "rules.general.item3": "Уникайте надання незапрошених порад щодо танцю.",
+    "rules.general.item4": "Особистий простір і межі завжди повинні поважатися. Наполеглива небажана увага, на танцмайданчику чи поза ним, є неприйнятною.",
+    "rules.general.item5": "Якщо хтось відмовляє вам у танці, це не особисте відхилення. Прийміть це і шукайте іншого партнера.",
+    "rules.general.item6": "Якщо ваш партнер вказує на дискомфорт або обмеження, негайно коригуйте свою поведінку.",
+    "rules.general.item7": "Випадкове торкання чутливих частин тіла: вибачтеся.",
+    "rules.general.item8": "Прийняття запрошення на танець не означає згоди на щось інше.",
+    
+    "rules.prostor_rules": "В Просторі",
+    "rules.prostor.item1": "Напої на столі: У церкві всі напої повинні бути навколо столу, розлиття на підлогу може бути проблемою.",
+    "rules.prostor.item2": "Заборонено курити всередині, включаючи електронні сигарети та подібні продукти.",
+    "rules.prostor.item3": "Будь ласка, зніміть взуття перед входом на танцювальний майданчик.",
+    "rules.prostor.item4": "Підтримуйте заходи: Пам'ятайте підписати список, і якщо можете і хочете, робіть пожертви в нашу скриньку або на QR-код, слідкуйте за нами в соціальних мережах та запрошуйте своїх друзів.",
+    
+    "rules.recommendations": "Рекомендації",
+    "rules.recommendations.item1": "Залишайтеся чистими: Танці в близькій відстані вимагають хороших гігієнічних звичок для комфорту всіх.",
+    "rules.recommendations.item2": "Будьте обережні: Повідомте свого партнера, якщо ви травмовані або відчуваєте дискомфорт.",
+    "rules.recommendations.item3": "Зв'яжіться з нами: Якщо ви відчуваєте дискомфорт або небезпеку, зверніться до організатора. Повідомлення будуть сприйняті серйозно, і переслідування призведе до негайного виключення.",
+    "rules.recommendations.item4": "Ви можете закінчити танець у будь-який час, навіть посеред пісні.",
+    "rules.recommendations.item5": "Будьте співпрацюючими: Спілкуйтеся та танцюйте з різними людьми, включаючи новачків, і сприяйте створенню привітного досвіду.",
+    "rules.recommendations.item6": "Веселіться та знаходьте друзів :)"
   }
 }

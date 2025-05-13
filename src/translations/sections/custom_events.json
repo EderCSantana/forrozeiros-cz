@@ -53,5 +53,41 @@
     "custom_events.public_events_title": "Workshops em Eventos Aprovados e Públicos",
     "custom_events.public_events_content": "Participamos de festivais locais, eventos multiculturais e acontecimentos ao ar livre. Nossos workshops atraem pessoas de todas as idades e origens e adicionam energia vibrante a reuniões públicas.",
     "custom_events.assistance": "Oferecemos assistência com seleção de professores, agendamento e todos os detalhes organizacionais gratuitamente. Nosso objetivo é ser uma \"janela de vidro\" para apresentar o forró a outros e compartilhar sua alegria e riqueza cultural com o maior número possível de pessoas. 🌟"
+  },
+  "sk": {
+    "custom_events.title": "Vlastné podujatia",
+    "custom_events.intro": "Ponúkame workshopy forró na mieru v spolupráci so skúsenými učiteľmi pre rôzne inštitúcie a príležitosti. Či už ide o vzdelávanie, budovanie komunity, alebo jednoducho zábavu, forró spája ľudí inkluzívnym a radostným spôsobom.",
+    "custom_events.help_intro": "Tu je kde môžeme pomôcť organizovať workshopy:",
+    "custom_events.schools_title": "Školy",
+    "custom_events.schools_content": "Forró je fantastický spôsob, ako predstaviť študentom brazílsku kultúru, hudbu a párové tance. Podporuje tímovú prácu, rytmus a fyzickú aktivitu v zábavnom a interaktívnom prostredí.",
+    "custom_events.universities_title": "Univerzity",
+    "custom_events.universities_content": "Univerzitné kultúrne programy a študentské organizácie často hľadajú pútavé a rôznorodé podujatia. Workshop forró je skvelý spôsob, ako preskúmať svetovú kultúru, podporiť inklúziu a poskytnúť relaxačnú prestávku od akademického života.",
+    "custom_events.team_building_title": "Firemné Teambuildingové Aktivity",
+    "custom_events.team_building_content": "Workshopy forró vytvárajú jedinečné a zábavné teambuildingové aktivity. Spoločný tanec podporuje komunikáciu, dôveru a pozitívneho tímového ducha, prinášajúc radosť a energiu na pracovisko.",
+    "custom_events.nonprofit_events_title": "Neziskové podujatia",
+    "custom_events.nonprofit_events_content": "Radi spolupracujeme s neziskovými organizáciami! Workshopy forró pridávajú prvok tepla, inkluzivity a kultúrneho bohatstva do iniciatív zameraných na komunitu a programov pomoci.",
+    "custom_events.nonprofit_projects_title": "Neziskové projekty",
+    "custom_events.nonprofit_projects_content": "Ak realizujete dlhodobý komunitný projekt alebo iniciatívu, môžeme pomôcť spájať ľudí prostredníctvom opakujúcich sa alebo jednorázových tanečných stretnutí, čím prispievame k vašim cieľom sociálneho dopadu.",
+    "custom_events.public_events_title": "Workshopy na schválených a verejných podujatiach",
+    "custom_events.public_events_content": "Zúčastňujeme sa miestnych festivalov, multikultúrnych podujatí a akcií pod holým nebom. Naše workshopy priťahujú ľudí všetkých vekových kategórií a prostredí a pridávajú živú energiu na verejné stretnutia.",
+    "custom_events.assistance": "Bezplatne poskytujeme pomoc pri výbere učiteľov, plánovaní a všetkých organizačných detailoch. Naším cieľom je byť \"skleneným oknom\" na predstavenie forró ostatným a zdieľať jeho radosť a kultúrne bohatstvo s čo najväčším počtom ľudí. 🌟"
+  },
+  "ua": {
+    "custom_events.title": "Індивідуальні події",
+    "custom_events.intro": "Ми пропонуємо індивідуальні майстер-класи форро у співпраці з досвідченими викладачами для різних установ та нагод. Чи то для освіти, побудови спільноти, чи просто для розваги, форро об'єднує людей інклюзивним та радісним способом.",
+    "custom_events.help_intro": "Ось де ми можемо допомогти організувати майстер-класи:",
+    "custom_events.schools_title": "Школи",
+    "custom_events.schools_content": "Форро - це фантастичний спосіб познайомити учнів з бразильською культурою, музикою та парними танцями. Це заохочує командну роботу, ритм та фізичну активність у веселому та інтерактивному середовищі.",
+    "custom_events.universities_title": "Університети",
+    "custom_events.universities_content": "Університетські культурні програми та студентські організації часто шукають привабливі та різноманітні заходи. Майстер-клас форро - це чудовий спосіб досліджувати світові культури, сприяти інклюзії та забезпечити розслабляючу перерву від академічного життя.",
+    "custom_events.team_building_title": "Корпоративні тимбілдинги",
+    "custom_events.team_building_content": "Майстер-класи форро створюють унікальні та веселі командотворчі заходи. Танцювання разом сприяє спілкуванню, довірі та позитивному командному духу, приносячи радість та енергію на робоче місце.",
+    "custom_events.nonprofit_events_title": "Неприбуткові події",
+    "custom_events.nonprofit_events_content": "Ми любимо співпрацювати з неприбутковими організаціями! Майстер-класи форро додають елемент тепла, інклюзивності та культурного багатства до ініціатив, орієнтованих на громаду, та просвітницьких програм.",
+    "custom_events.nonprofit_projects_title": "Неприбуткові проекти",
+    "custom_events.nonprofit_projects_content": "Якщо ви керуєте довгостроковим громадським проектом або ініціативою, ми можемо допомогти об'єднати людей через періодичні або одноразові танцювальні сесії, сприяючи досягненню ваших цілей соціального впливу.",
+    "custom_events.public_events_title": "Майстер-класи на затверджених та публічних заходах",
+    "custom_events.public_events_content": "Ми беремо участь у місцевих фестивалях, мультикультурних заходах та подіях під відкритим небом. Наші майстер-класи приваблюють людей усіх вікових категорій та походження та додають яскраву енергію до громадських зібрань.",
+    "custom_events.assistance": "Ми пропонуємо безкоштовну допомогу у виборі викладачів, плануванні та всіх організаційних деталях. Наша мета - бути \"скляним вікном\", щоб представити форро іншим та поділитися його радістю та культурним багатством з якомога більшою кількістю людей. 🌟"
   }
 }
