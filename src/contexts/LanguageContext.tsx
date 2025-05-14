@@ -6,8 +6,10 @@ export const languages = [
   { code: "EN", name: "English" },
   { code: "ES", name: "Español" },
   { code: "PT", name: "Português" },
-  { code: "SK", name: "Slovenčina" },
-  { code: "UA", name: "Українська" }
+  { code: "RU", name: "Русский" },
+  { code: "UA", name: "Українська" },
+  { code: "CZ", name: "Čeština" },
+  { code: "SK", name: "Slovenčina" }
 ];
 
 type LanguageContextType = {
@@ -41,7 +43,6 @@ export const LanguageProvider = ({ children }: LanguageProviderProps) => {
   });
   const [translations, setTranslations] = useState<Record<string, string>>({});
   const [isLoading, setIsLoading] = useState(true);
-  const baseUrl = import.meta.env.BASE_URL || "/";
 
   useEffect(() => {
     const loadTranslations = async () => {
@@ -75,10 +76,9 @@ export const LanguageProvider = ({ children }: LanguageProviderProps) => {
         // Use Promise.all for parallel loading
         await Promise.all(sections.map(async (section) => {
           try {
-            // Dynamic import, only for the needed language
-            // Use base path for imports
-            const sectionData = await import(`${baseUrl === "/" ? "" : baseUrl}../translations/sections/${section}.json`);
-            const sectionTranslations = sectionData[langCode] || sectionData['en'];
+            // Dynamic import, using relative path which works with any base URL
+            const sectionModule = await import(`../translations/sections/${section}.json`);
+            const sectionTranslations = sectionModule[langCode] || sectionModule['en'];
             
             if (sectionTranslations) {
               Object.assign(loadedTranslations, sectionTranslations);
@@ -97,9 +97,9 @@ export const LanguageProvider = ({ children }: LanguageProviderProps) => {
         // Fallback to English if translation files are missing
         if (!translationCache['EN']) {
           try {
-            const fallbackData = await import(`${baseUrl === "/" ? "" : baseUrl}../translations/sections/general.json`);
-            translationCache['EN'] = fallbackData.en;
-            setTranslations(fallbackData.en);
+            const fallbackModule = await import('../translations/sections/general.json');
+            translationCache['EN'] = fallbackModule.en;
+            setTranslations(fallbackModule.en);
           } catch (fallbackError) {
             console.error("Failed to load fallback translations", fallbackError);
           }
@@ -113,7 +113,7 @@ export const LanguageProvider = ({ children }: LanguageProviderProps) => {
 
     localStorage.setItem("language", language);
     loadTranslations();
-  }, [language, baseUrl]);
+  }, [language]);
 
   // Memoize the context value
   const contextValue = useMemo(() => ({
