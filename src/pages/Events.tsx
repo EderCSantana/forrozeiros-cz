@@ -1,3 +1,4 @@
+
 import { CalendarDays, MapPin, Clock, Users, Music, Ticket, PenSquare, FileText } from "lucide-react";
 import TitleStripe from "../components/TitleStripe";
 import { useLanguage } from "../contexts/LanguageContext";

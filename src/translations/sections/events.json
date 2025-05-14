@@ -1,5 +1,57 @@
 
 {
+  "en": {
+    "events.title": "Events",
+    "events.upcoming": "Upcoming Events",
+    "events.past": "Past Events",
+    "events.register": "Register",
+    "events.learn_more": "Learn More",
+    "events.no_events": "No events scheduled at the moment",
+
+    "events.weekly_prostor_title": "Weekly Events at Prostor",
+    "events.weekly_when": "When: Every Wednesday from 19:30 to 22:00.",
+    "events.weekly_format": "Format: A short workshop for beginners at the beginning, followed by social dancing.",
+    "events.weekly_after": "Post-event: We stay until 23:00 at the cafe for socializing.",
+    "events.weekly_summer": "Summer schedule: The event happens every other week (check our calendar for exact dates).",
+    "events.weekly_rules": "Rules: Please follow our event rules. Respect and proper dance etiquette are essential.",
+    "events.weekly_contribution": "Contribution: Donation-based. Contributions are not mandatory but help keep the event running.",
+
+    "events.letna_title": "Weekly Events at Letná",
+    "events.letna_when": "When: Every other week from 18:30 to 23:00 (only during warm summer days).",
+    "events.letna_where": "Where: On the stairs behind the Metronome.",
+    "events.letna_schedule": "Schedule: Check our calendar for specific dates.",
+    "events.letna_rules": "Rules: Follow guidelines for outdoor events. Be respectful of the space and other people in the area.",
+
+    "events.concerts_title": "Concerts of Três Corações",
+    "events.concerts_description": "Recently, they've been having events on Saturdays at Papas Bar and occasionally at Dorado Café.",
+    "events.concerts_schedule": "Schedule: Check our calendar for upcoming dates.",
+    "events.concerts_entrance": "Entrance: Paid.",
+    "events.concerts_rules": "Rules: Venue-specific rules apply. Respect the artists and other attendees.",
+
+    "events.seasonal_title": "Seasonal Events",
+    "events.seasonal_intro": "Some larger cultural events sometimes include forró, such as:",
+    "events.seasonal_lusofona": "Lusófona (Portuguese language event)",
+    "events.seasonal_kinobrasil": "KinoBrasil",
+    "events.seasonal_brazilfest": "Brazil Fest Brno",
+    "events.seasonal_festas": "Festas Juninas (various organizers, between June and July)",
+    "events.seasonal_note": "Note: We don't always organize these events, and they may not always include forró. However, we support them and encourage our community to participate when forró is included.",
+    "events.seasonal_rules": "Rules: Each event has its own guidelines. Check the specific event details.",
+
+    "events.nearby_title": "Nearby Events",
+    "events.nearby_intro": "We support forró events in cities close to Prague, such as:",
+    "events.nearby_brno": "Brno",
+    "events.nearby_dresden": "Dresden",
+    "events.nearby_budapest": "Budapest",
+    "events.nearby_check": "Check our calendar for more details about upcoming events in these cities.",
+    "events.nearby_rules": "Rules: When participating in events in other cities, respect their local communities and guidelines.",
+
+    "events.custom_events_title": "Custom Events",
+    "events.custom_events_description": "We are open to organizing both public and private events. If you are interested in having a forró workshop, performance, or class, please contact us.",
+    "events.custom_events_private": "Our team can provide customized forró experiences for your event. From quick demonstrations to full workshops.",
+    "events.custom_events_rules": "Rules: For custom events, we will discuss specific guidelines based on your needs and venue.",
+    "events.custom_events_learn_more": "Learn more about custom events",
+    "events.contact_us": "Contact us for more information"
+  },
   "es": {
     "events.title": "Eventos",
     "events.upcoming": "Próximos Eventos",
