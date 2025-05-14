@@ -1,0 +1,77 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Page Not Found - Forrozeiros CZ</title>
+    <script>
+      // Single Page Apps for GitHub Pages
+      // MIT License
+      // https://github.com/rafgraph/spa-github-pages
+      // This script takes the current URL and redirects to the proper URL for the SPA
+      (function() {
+        var pathSegmentsToKeep = 1; // Change this to match your repo name (e.g., for /forrozeiros-cz/ use 1)
+        
+        var l = window.location;
+        var segmentCount = 0;
+        var basePath = '';
+        
+        // Check if we're in production based on hostname
+        // Update this to match your GitHub Pages domain if needed
+        if (l.hostname !== 'localhost' && l.hostname !== '127.0.0.1') {
+          segmentCount = pathSegmentsToKeep;
+          basePath = '/forrozeiros-cz/'; // Update this to match your repo name with slashes
+        }
+
+        // Redirect to the index.html with the proper query string
+        l.replace(
+          l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
+          basePath +
+          l.pathname.split('/').slice(segmentCount).join('/') +
+          (l.search ? l.search : '') +
+          l.hash
+        );
+      })();
+    </script>
+    <style>
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        text-align: center;
+        background-color: #ffeec0;
+      }
+      .container {
+        max-width: 500px;
+        padding: 2rem;
+      }
+      h1 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+        color: #8b4513;
+      }
+      p {
+        margin-bottom: 1.5rem;
+        color: #5a3825;
+      }
+      a {
+        color: #e67e22;
+        text-decoration: none;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Page Not Found</h1>
+      <p>If you're not redirected automatically, please click <a href="/forrozeiros-cz/">here</a> to go to the homepage.</p>
+    </div>
+  </body>
+</html>
