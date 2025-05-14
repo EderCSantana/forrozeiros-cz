@@ -1,4 +1,3 @@
-
 import { CalendarDays, MapPin, Clock, Users, Music, Ticket, PenSquare, FileText } from "lucide-react";
 import TitleStripe from "../components/TitleStripe";
 import { useLanguage } from "../contexts/LanguageContext";
@@ -10,6 +9,7 @@ import { useState, useEffect } from "react";
 const Events = () => {
   const { t } = useLanguage();
   const [calendarHeight, setCalendarHeight] = useState(600);
+  const baseUrl = import.meta.env.BASE_URL;
   
   // Adjust calendar height based on window size
   useEffect(() => {
@@ -54,7 +54,7 @@ const Events = () => {
             <div className="rounded-full overflow-hidden border-4 border-dance-yellow shadow-lg">
               <AspectRatio ratio={1 / 1}>
                 <img 
-                  src={image} 
+                  src={image.startsWith('http') ? image : baseUrl + image.replace(/^\//, '')} 
                   alt={title} 
                   className="w-full h-full object-cover"
                 />
@@ -77,7 +77,7 @@ const Events = () => {
             {/* Weekly Events in Prostor Section */}
             <EventSection 
               title={t("events.weekly_prostor_title")}
-              image="/lovable-uploads/2cae19c8-c3d2-4964-ae04-bf0e54d92caf.png"
+              image={baseUrl + "lovable-uploads/2cae19c8-c3d2-4964-ae04-bf0e54d92caf.png"}
             >
               <p className="flex items-center gap-2"><Clock size={18} className="text-dance-brown" /> {t("events.weekly_when")}</p>
               <p className="flex items-center gap-2"><Users size={18} className="text-dance-brown" /> {t("events.weekly_format")}</p>
@@ -90,7 +90,7 @@ const Events = () => {
             {/* Weekly Events in Letna Section - Updated with new image */}
             <EventSection 
               title={t("events.letna_title")}
-              image="/lovable-uploads/a6572eb9-c316-45bf-9e11-2e8bfc2ff42c.png"
+              image={baseUrl + "lovable-uploads/a6572eb9-c316-45bf-9e11-2e8bfc2ff42c.png"}
               imageOnLeft={true}
             >
               <p className="flex items-center gap-2"><Clock size={18} className="text-dance-brown" /> {t("events.letna_when")}</p>
@@ -102,7 +102,7 @@ const Events = () => {
             {/* Concerts of Três Corações Section */}
             <EventSection 
               title={t("events.concerts_title")}
-              image="/lovable-uploads/93254ed9-ab60-412d-9531-191dc5ecac94.png"
+              image={baseUrl + "lovable-uploads/93254ed9-ab60-412d-9531-191dc5ecac94.png"}
             >
               <p className="flex items-center gap-2"><Music size={18} className="text-dance-brown" /> {t("events.concerts_description")}</p>
               <p className="flex items-center gap-2"><CalendarDays size={18} className="text-dance-brown" /> {t("events.concerts_schedule")}</p>
@@ -113,7 +113,7 @@ const Events = () => {
             {/* Seasonal Events Section */}
             <EventSection 
               title={t("events.seasonal_title")}
-              image="/lovable-uploads/90324c40-1385-412b-9fc0-18f075634823.png"
+              image={baseUrl + "lovable-uploads/90324c40-1385-412b-9fc0-18f075634823.png"}
               imageOnLeft={true}
             >
               <p>{t("events.seasonal_intro")}</p>
@@ -130,7 +130,7 @@ const Events = () => {
             {/* Nearby Events Section */}
             <EventSection 
               title={t("events.nearby_title")}
-              image="/lovable-uploads/388cb454-d069-4e71-9e8c-a8487c1f074c.png"
+              image={baseUrl + "lovable-uploads/388cb454-d069-4e71-9e8c-a8487c1f074c.png"}
             >
               <p>{t("events.nearby_intro")}</p>
               <ul className="list-disc pl-5">

@@ -6,6 +6,7 @@ import { School, University, Building, HandHeart, Gift, Calendar } from "lucide-
 
 const CustomEvents = () => {
   const { t } = useLanguage();
+  const baseUrl = import.meta.env.BASE_URL;
 
   return (
     <div className="min-h-screen flex flex-col">

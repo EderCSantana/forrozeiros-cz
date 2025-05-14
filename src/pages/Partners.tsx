@@ -32,6 +32,7 @@ const PartnerSection = ({
 
 const Partners = () => {
   const { t } = useLanguage();
+  const baseUrl = import.meta.env.BASE_URL;
   
   const PartnerCard = ({ 
     title, 
@@ -52,7 +53,7 @@ const Partners = () => {
           <CardTitle className="text-xl text-dance-brown">{title}</CardTitle>
           {imageUrl && (
             <div className="w-16 h-16 rounded-full overflow-hidden bg-white">
-              <img src={imageUrl} alt={title} className="w-full h-full object-cover" />
+              <img src={imageUrl.startsWith('http') ? imageUrl : baseUrl + imageUrl.replace(/^\//, '')} alt={title} className="w-full h-full object-cover" />
             </div>
           )}
         </div>
@@ -60,7 +61,7 @@ const Partners = () => {
       <CardContent>
         {imageUrl && imageUrl.includes("2c6ea6ad") && (
           <div className="w-full h-48 mb-4 rounded-md overflow-hidden">
-            <img src={imageUrl} alt={title} className="w-full h-full object-cover" />
+            <img src={imageUrl.startsWith('http') ? imageUrl : baseUrl + imageUrl.replace(/^\//, '')} alt={title} className="w-full h-full object-cover" />
           </div>
         )}
         <div className="prose text-dance-black text-opacity-80 mb-4">
@@ -99,7 +100,7 @@ const Partners = () => {
         <div className="flex items-center gap-4">
           {imageUrl ? (
             <div className="w-16 h-16 rounded-full overflow-hidden bg-gray-100">
-              <img src={imageUrl} alt={name} className="w-full h-full object-cover" />
+              <img src={imageUrl.startsWith('http') ? imageUrl : baseUrl + imageUrl.replace(/^\//, '')} alt={name} className="w-full h-full object-cover" />
             </div>
           ) : (
             <div className="w-16 h-16 rounded-full overflow-hidden bg-dance-cream flex items-center justify-center">
@@ -144,7 +145,7 @@ const Partners = () => {
               description={
                 <div dangerouslySetInnerHTML={{ __html: t("partners.venues.kps.description") }} />
               }
-              imageUrl="/lovable-uploads/2c6ea6ad-f9c8-4ae6-8770-9a1c57f0ead7.png"
+              imageUrl={baseUrl + "lovable-uploads/2c6ea6ad-f9c8-4ae6-8770-9a1c57f0ead7.png"}
               websiteUrl={t("partners.venues.kps.website")}
               contactInfo={
                 <>
@@ -162,7 +163,7 @@ const Partners = () => {
               description={
                 <div dangerouslySetInnerHTML={{ __html: t("partners.venues.dorado.description") }} />
               }
-              imageUrl="/lovable-uploads/da5481c2-3179-4ed6-a48e-bbc1ab623685.png"
+              imageUrl={baseUrl + "lovable-uploads/da5481c2-3179-4ed6-a48e-bbc1ab623685.png"}
               websiteUrl={t("partners.venues.dorado.website")}
               contactInfo={
                 <>
@@ -180,7 +181,7 @@ const Partners = () => {
           <PartnerSection title={t("partners.teachers")} icon={GraduationCap}>
             <TeacherCard
               name={t("partners.teachers.emilson.name")}
-              imageUrl="/lovable-uploads/c88e5523-748b-4dc0-8324-e940ec54e172.png"
+              imageUrl={baseUrl + "lovable-uploads/c88e5523-748b-4dc0-8324-e940ec54e172.png"}
               description={
                 <>
                   <p className="mb-2"><strong>{t("partners.teachers.emilson.title")}</strong></p>
@@ -225,7 +226,7 @@ const Partners = () => {
                 <div className="bg-dance-cream bg-opacity-20 p-4 rounded-lg">
                   <div className="flex items-center gap-3 mb-2">
                     <Avatar className="h-10 w-10">
-                      <AvatarImage src="public/lovable-uploads/f00dd62e-aa39-4ffa-89fd-dbb71a75823f.png" alt={t("partners.teachers.carlos_fernanda.name")} />
+                      <AvatarImage src={baseUrl + "lovable-uploads/f00dd62e-aa39-4ffa-89fd-dbb71a75823f.png"} alt={t("partners.teachers.carlos_fernanda.name")} />
                       <AvatarFallback>CF</AvatarFallback>
                     </Avatar>
                     <h5 className="text-dance-brown font-medium no-bullet">{t("partners.teachers.carlos_fernanda.name")}</h5>
@@ -240,7 +241,7 @@ const Partners = () => {
                 <div className="bg-dance-cream bg-opacity-20 p-4 rounded-lg">
                   <div className="flex items-center gap-3 mb-2">
                     <Avatar className="h-10 w-10">
-                      <AvatarImage src="public/lovable-uploads/e758027e-2d62-4b95-978a-9723007d7120.png" alt={t("partners.teachers.andre.name")} />
+                      <AvatarImage src={baseUrl + "lovable-uploads/e758027e-2d62-4b95-978a-9723007d7120.png"} alt={t("partners.teachers.andre.name")} />
                       <AvatarFallback>AN</AvatarFallback>
                     </Avatar>
                     <h5 className="text-dance-brown font-medium no-bullet">{t("partners.teachers.andre.name")}</h5>
@@ -261,7 +262,7 @@ const Partners = () => {
               description={
                 <div dangerouslySetInnerHTML={{ __html: t("partners.band.tres_coracoes.description") }} />
               }
-              imageUrl="/lovable-uploads/4248740d-6b87-4e68-8294-ae54f0b5c7fe.png"
+              imageUrl={baseUrl + "lovable-uploads/4248740d-6b87-4e68-8294-ae54f0b5c7fe.png"}
               websiteUrl={t("partners.band.tres_coracoes.website")}
               contactInfo={
                 <>
@@ -273,7 +274,7 @@ const Partners = () => {
                   <div className="mt-3">
                     <div className="flex items-center gap-2">
                       <Avatar className="h-8 w-8">
-                        <AvatarImage src="/lovable-uploads/31c5fb8c-8211-47ba-b540-cbf45b0af818.png" alt={t("partners.band.devail.name")} />
+                        <AvatarImage src={baseUrl + "lovable-uploads/31c5fb8c-8211-47ba-b540-cbf45b0af818.png"} alt={t("partners.band.devail.name")} />
                         <AvatarFallback>DS</AvatarFallback>
                       </Avatar>
                       <h5 className="font-medium">{t("partners.band.devail.name")}</h5>
@@ -313,4 +314,3 @@ const Partners = () => {
 };
 
 export default Partners;
-

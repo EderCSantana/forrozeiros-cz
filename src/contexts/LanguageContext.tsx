@@ -41,6 +41,7 @@ export const LanguageProvider = ({ children }: LanguageProviderProps) => {
   });
   const [translations, setTranslations] = useState<Record<string, string>>({});
   const [isLoading, setIsLoading] = useState(true);
+  const baseUrl = import.meta.env.BASE_URL || "/";
 
   useEffect(() => {
     const loadTranslations = async () => {
@@ -75,7 +76,8 @@ export const LanguageProvider = ({ children }: LanguageProviderProps) => {
         await Promise.all(sections.map(async (section) => {
           try {
             // Dynamic import, only for the needed language
-            const sectionData = await import(`../translations/sections/${section}.json`);
+            // Use base path for imports
+            const sectionData = await import(`${baseUrl === "/" ? "" : baseUrl}../translations/sections/${section}.json`);
             const sectionTranslations = sectionData[langCode] || sectionData['en'];
             
             if (sectionTranslations) {
@@ -95,7 +97,7 @@ export const LanguageProvider = ({ children }: LanguageProviderProps) => {
         // Fallback to English if translation files are missing
         if (!translationCache['EN']) {
           try {
-            const fallbackData = await import("../translations/sections/general.json");
+            const fallbackData = await import(`${baseUrl === "/" ? "" : baseUrl}../translations/sections/general.json`);
             translationCache['EN'] = fallbackData.en;
             setTranslations(fallbackData.en);
           } catch (fallbackError) {
@@ -111,7 +113,7 @@ export const LanguageProvider = ({ children }: LanguageProviderProps) => {
 
     localStorage.setItem("language", language);
     loadTranslations();
-  }, [language]);
+  }, [language, baseUrl]);
 
   // Memoize the context value
   const contextValue = useMemo(() => ({
