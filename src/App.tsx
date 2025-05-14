@@ -12,16 +12,14 @@ import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
 
-// Get the base URL from environment or default to "/"
-const baseUrl = import.meta.env.BASE_URL || "/";
-
+// Use the correct base path
 const App = () => (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
       <LanguageProvider>
         <Toaster />
         <Sonner />
-        <BrowserRouter basename={baseUrl}>
+        <BrowserRouter basename="/">
           <div className="flex flex-col min-h-screen">
             <Header />
             <div className="flex-grow">

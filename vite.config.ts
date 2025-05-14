@@ -6,7 +6,7 @@ import { componentTagger } from "lovable-tagger";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
-  base: mode === 'production' ? "/forrozeiros-cz/" : "/", // Use base path only in production
+  base: '/', // Use root-relative URLs for both development and production
   server: {
     host: "::",
     port: 8080,
