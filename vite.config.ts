@@ -20,4 +20,13 @@ export default defineConfig(({ mode }) => ({
       "@": path.resolve(__dirname, "./src"),
     },
   },
+  build: {
+    outDir: "dist",
+    rollupOptions: {
+      // Make sure the 404.html file is properly copied during build
+      input: {
+        main: 'index.html',
+      }
+    }
+  }
 }));
