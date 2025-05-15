@@ -12,20 +12,18 @@ import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
 
-// Use the correct base path
 const App = () => (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
       <LanguageProvider>
         <Toaster />
         <Sonner />
-        <BrowserRouter basename="/">
+        <BrowserRouter>
           <div className="flex flex-col min-h-screen">
             <Header />
             <div className="flex-grow">
               <Routes>
                 <Route path="/" element={<HomePage />} />
-                {/* Fallback route for any other paths */}
                 <Route path="*" element={<NotFound />} />
               </Routes>
             </div>
