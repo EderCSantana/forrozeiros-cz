@@ -10,18 +10,21 @@
       // MIT License
       // Modified from https://github.com/rafgraph/spa-github-pages
       (function() {
-        var redirectPath = '/';
+        var pathSegmentsToKeep = 0;
         var l = window.location;
         
-        // Handle both GitHub Pages and custom domain
-        if (l.pathname.split('/')[1] === 'forrozeiros-cz' && l.hostname.indexOf('github.io') !== -1) {
-          redirectPath = '/forrozeiros-cz/';
+        // Detect if on GitHub Pages or custom domain and set the redirect path
+        var redirectPath = '/';
+        if (l.hostname.indexOf('github.io') !== -1) {
+          // On GitHub Pages
+          pathSegmentsToKeep = 1;
+          redirectPath = '/' + l.pathname.split('/')[1] + '/';
         }
         
         l.replace(
           l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
           redirectPath +
-          l.pathname.split('/').slice(redirectPath === '/' ? 1 : 2).join('/') +
+          l.pathname.split('/').slice(pathSegmentsToKeep + 1).join('/') +
           (l.search ? l.search : '') +
           l.hash
         );
