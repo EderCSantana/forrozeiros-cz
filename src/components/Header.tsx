@@ -1,20 +1,12 @@
+
 import { useState, useEffect } from "react";
-import { Facebook, Instagram, Menu, X, ChevronDown } from "lucide-react";
-import LanguageSelector from "./LanguageSelector";
+import { Facebook, Instagram } from "lucide-react";
 import { useLanguage } from "../contexts/LanguageContext";
-import {
-  NavigationMenu,
-  NavigationMenuList,
-  NavigationMenuItem,
-  NavigationMenuLink,
-  navigationMenuTriggerStyle,
-} from "@/components/ui/navigation-menu";
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
+import DesktopNav from "./header/DesktopNav";
+import TabletNav from "./header/TabletNav";
+import MobileNav from "./header/MobileNav";
+import SocialIcons from "./header/SocialIcons";
+import HoverDetectionZone from "./header/HoverDetectionZone";
 
 const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -49,7 +41,7 @@ const Header = () => {
     }
   };
 
-  // Enhanced scroll handler to control header visibility
+  // Enhanced scroll handler with improved hover detection
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
@@ -61,7 +53,7 @@ const Header = () => {
         setIsScrolled(false);
       }
       
-      // Hide/show based on scroll direction, hover state, or explicit show request
+      // Hide/show based on scroll direction, hover state
       if (currentScrollY > lastScrollY && currentScrollY > 80 && !isHovering) {
         // Scrolling down & past header height & not hovering - hide header
         setIsVisible(false);
@@ -136,13 +128,8 @@ const Header = () => {
 
   return (
     <>
-      {/* Hover detection zone - invisible div at top of viewport that shows header on hover */}
-      <div 
-        className="fixed top-0 left-0 w-full h-6 z-40 cursor-default"
-        onMouseEnter={() => setIsHovering(true)}
-        onMouseLeave={() => setIsHovering(false)}
-        aria-hidden="true"
-      />
+      {/* Improved hover detection zone - larger area and more sensitive */}
+      <HoverDetectionZone setIsHovering={setIsHovering} />
       
       <header 
         className={`sticky top-0 z-50 w-full transition-all duration-300 ${
@@ -168,139 +155,33 @@ const Header = () => {
               </div>
             </a>
 
-            {/* Desktop Navigation (Large screens only) */}
-            <NavigationMenu className="hidden lg:flex">
-              <NavigationMenuList>
-                {navItems.map((item) => (
-                  <NavigationMenuItem key={item.id}>
-                    <NavigationMenuLink
-                      className={`${navigationMenuTriggerStyle()} text-dance-brown ${
-                        activeSection === item.id ? "text-dance-orange" : ""
-                      } hover:text-dance-orange hover:bg-transparent`}
-                      onClick={() => scrollToSection(item.id)}
-                    >
-                      {item.name}
-                    </NavigationMenuLink>
-                  </NavigationMenuItem>
-                ))}
-              </NavigationMenuList>
-            </NavigationMenu>
+            {/* Desktop Navigation */}
+            <DesktopNav 
+              activeSection={activeSection} 
+              navItems={navItems} 
+              scrollToSection={scrollToSection} 
+            />
 
-            {/* Tablet Navigation Dropdown (medium screens only) */}
-            <div className="hidden md:block lg:hidden">
-              <DropdownMenu>
-                <DropdownMenuTrigger className="flex items-center text-dance-brown hover:text-dance-orange bg-transparent border-none hover:bg-transparent focus:ring-0">
-                  Menu <ChevronDown className="ml-1 h-4 w-4" />
-                </DropdownMenuTrigger>
-                <DropdownMenuContent align="end" className="w-56 bg-[#ffeec0] border-dance-brown border-opacity-20">
-                  {navItems.map((item) => (
-                    <DropdownMenuItem 
-                      key={item.id} 
-                      className={`cursor-pointer ${
-                        activeSection === item.id ? "text-dance-orange" : "text-dance-brown"
-                      } hover:text-dance-orange hover:bg-[#fff8e8]`}
-                      onClick={() => scrollToSection(item.id)}
-                    >
-                      {item.name}
-                    </DropdownMenuItem>
-                  ))}
-                </DropdownMenuContent>
-              </DropdownMenu>
-            </div>
+            {/* Tablet Navigation Dropdown */}
+            <TabletNav 
+              activeSection={activeSection} 
+              navItems={navItems} 
+              scrollToSection={scrollToSection} 
+            />
 
-            {/* Social Icons and Language Selector - Only visible on non-mobile screens */}
-            <div className="hidden md:flex items-center space-x-2 sm:space-x-4">
-              <a
-                href="https://www.facebook.com/profile.php?id=61571664788308"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-dance-brown hover:text-dance-orange transition-colors duration-300"
-                aria-label="Facebook"
-              >
-                <Facebook size={20} />
-              </a>
-              <a
-                href="https://www.instagram.com/forrozeiros_cz/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-dance-brown hover:text-dance-orange transition-colors duration-300"
-                aria-label="Instagram"
-              >
-                <Instagram size={20} />
-              </a>
-              <LanguageSelector />
-            </div>
+            {/* Social Icons and Language Selector */}
+            <SocialIcons />
 
-            {/* Mobile Menu Button - Only visible on mobile */}
-            <button
-              id="mobile-menu-button"
-              className="md:hidden text-dance-brown hover:text-dance-orange focus:outline-none"
-              onClick={toggleMobileMenu}
-              aria-label="Toggle mobile menu"
-            >
-              {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
-            </button>
+            {/* Mobile Menu Button and Navigation */}
+            <MobileNav 
+              mobileMenuOpen={mobileMenuOpen} 
+              toggleMobileMenu={toggleMobileMenu} 
+              activeSection={activeSection} 
+              navItems={navItems} 
+              scrollToSection={scrollToSection} 
+            />
           </div>
         </div>
-
-        {/* Mobile Menu - Only renders when mobileMenuOpen is true */}
-        {mobileMenuOpen && (
-          <div
-            id="mobile-menu"
-            className="md:hidden fixed inset-0 bg-[#ffeec0] z-40 pt-20 px-4 overflow-y-auto"
-          >
-            <div className="container mx-auto">
-              <div className="flex justify-end mb-6">
-                <button
-                  className="text-dance-brown hover:text-dance-orange focus:outline-none"
-                  onClick={toggleMobileMenu}
-                  aria-label="Close mobile menu"
-                >
-                  <X size={24} />
-                </button>
-              </div>
-              
-              <nav className="flex flex-col space-y-4">
-                {navItems.map((item) => (
-                  <a
-                    key={item.id}
-                    onClick={() => scrollToSection(item.id)}
-                    className={`text-lg font-medium py-2 border-b border-dance-brown border-opacity-10 ${
-                      activeSection === item.id ? "text-dance-orange" : "text-dance-brown"
-                    }`}
-                  >
-                    {item.name}
-                  </a>
-                ))}
-              </nav>
-              
-              {/* Social media and language selector in mobile menu */}
-              <div className="mt-8 flex items-center justify-between">
-                <div className="flex space-x-4">
-                  <a
-                    href="https://www.facebook.com/profile.php?id=61571664788308"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-dance-brown hover:text-dance-orange transition-colors duration-300"
-                    aria-label="Facebook"
-                  >
-                    <Facebook size={24} />
-                  </a>
-                  <a
-                    href="https://www.instagram.com/forrozeiros_cz/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-dance-brown hover:text-dance-orange transition-colors duration-300"
-                    aria-label="Instagram"
-                  >
-                    <Instagram size={24} />
-                  </a>
-                </div>
-                <LanguageSelector />
-              </div>
-            </div>
-          </div>
-        )}
       </header>
     </>
   );
