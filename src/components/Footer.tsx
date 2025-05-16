@@ -5,6 +5,17 @@ import { Facebook, Instagram, Mail } from "lucide-react";
 const Footer = () => {
   const year = new Date().getFullYear();
 
+  // Function to scroll to a section by ID
+  const scrollToSection = (sectionId: string) => (e: React.MouseEvent) => {
+    e.preventDefault();
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+      // Update URL without page reload
+      window.history.pushState({}, "", `/#${sectionId}`);
+    }
+  };
+
   return (
     <footer className="bg-dance-brown text-white">
       <div className="container-fluid mx-auto">
@@ -33,64 +44,71 @@ const Footer = () => {
                 <div>
                   <ul className="space-y-2 text-white text-opacity-80">
                     <li>
-                      <Link
-                        to="/about-forro"
+                      <a
+                        href="/#about-forro"
                         className="hover:text-dance-orange transition-colors duration-300"
+                        onClick={scrollToSection("about-forro")}
                       >
                         About Forró
-                      </Link>
+                      </a>
                     </li>
                     <li>
-                      <Link
-                        to="/about-us"
+                      <a
+                        href="/#about-us"
                         className="hover:text-dance-orange transition-colors duration-300"
+                        onClick={scrollToSection("about-us")}
                       >
                         About Us
-                      </Link>
+                      </a>
                     </li>
                     <li>
-                      <Link
-                        to="/events"
+                      <a
+                        href="/#events"
                         className="hover:text-dance-orange transition-colors duration-300"
+                        onClick={scrollToSection("events")}
                       >
                         Events
-                      </Link>
+                      </a>
                     </li>
                     <li>
-                      <Link
-                        to="/custom-events"
+                      <a
+                        href="/#custom-events"
                         className="hover:text-dance-orange transition-colors duration-300"
+                        onClick={scrollToSection("custom-events")}
                       >
                         Custom Events
-                      </Link>
+                      </a>
                     </li>
                   </ul>
                 </div>
                 <div>
                   <ul className="space-y-2 text-white text-opacity-80">
                     <li>
-                      <Link
-                        to="/rules"
+                      <a
+                        href="/#rules"
                         className="hover:text-dance-orange transition-colors duration-300"
+                        onClick={scrollToSection("rules")}
                       >
                         Our Rules
-                      </Link>
+                      </a>
                     </li>
                     <li>
-                      <Link
-                        to="/partners"
+                      <a
+                        href="/#partners"
                         className="hover:text-dance-orange transition-colors duration-300"
+                        onClick={scrollToSection("partners")}
                       >
                         Partners
-                      </Link>
+                      </a>
                     </li>
                     <li>
-                      <Link
-                        to="/contact"
+                      <a
+                        href="/#contact"
                         className="hover:text-dance-orange transition-colors duration-300"
+                        onClick={scrollToSection("contact")}
                       >
                         Contact
-                      </Link>
+                      </a>
                     </li>
                   </ul>
                 </div>
