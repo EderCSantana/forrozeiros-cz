@@ -21,6 +21,8 @@ const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("home");
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isVisible, setIsVisible] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
   const { t } = useLanguage();
 
   const navItems = [
@@ -47,19 +49,34 @@ const Header = () => {
     }
   };
 
-  // Check scroll position to add background on scroll
+  // Enhanced scroll handler to control header visibility
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 10) {
+      const currentScrollY = window.scrollY;
+      
+      // Add background when scrolled
+      if (currentScrollY > 10) {
         setIsScrolled(true);
       } else {
         setIsScrolled(false);
       }
+      
+      // Hide/show based on scroll direction, not hover
+      if (currentScrollY > lastScrollY && currentScrollY > 80) {
+        // Scrolling down & past header height - hide header
+        setIsVisible(false);
+      } else if (currentScrollY < lastScrollY) {
+        // Scrolling up - show header
+        setIsVisible(true);
+      }
+      
+      // Update the last scroll position
+      setLastScrollY(currentScrollY);
     };
 
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  }, [lastScrollY]);
 
   // Setup intersection observer to update active section on scroll
   useEffect(() => {
@@ -121,6 +138,8 @@ const Header = () => {
     <header 
       className={`sticky top-0 z-50 w-full transition-all duration-300 ${
         isScrolled ? "bg-[#ffeec0] bg-opacity-95 backdrop-blur-md shadow-sm" : "bg-[#ffeec0] bg-opacity-80"
+      } ${
+        isVisible ? "translate-y-0" : "-translate-y-full"
       }`}
     >
       <div className="container mx-auto px-4">
