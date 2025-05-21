@@ -2,6 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Custom font declaration - direct approach */
+@font-face {
+  font-family: 'CustomFont';
+  src: url('/fonts/forro_font.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -90,12 +99,12 @@
   h1, h2, h3, h4, h5, h6,
   .nav-link, .navigation-item, 
   .section-title, .title {
-    font-family: 'CustomFont', sans-serif;
+    font-family: 'CustomFont', sans-serif !important;
   }
   
   /* Custom font classes */
   .font-custom {
-    font-family: 'CustomFont', sans-serif;
+    font-family: 'CustomFont', sans-serif !important;
   }
   
   /* Fix for container sizing */
