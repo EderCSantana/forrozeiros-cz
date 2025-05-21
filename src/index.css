@@ -86,6 +86,13 @@
     @apply bg-background text-foreground m-0 p-0 overflow-x-hidden;
   }
   
+  /* Apply custom font to all headings and navigation */
+  h1, h2, h3, h4, h5, h6,
+  .nav-link, .navigation-item, 
+  .section-title, .title {
+    font-family: 'CustomFont', sans-serif;
+  }
+  
   /* Custom font classes */
   .font-custom {
     font-family: 'CustomFont', sans-serif;
@@ -130,8 +137,8 @@
 }
 
 @layer components {
-  .nav-link:hover {
-    @apply text-dance-orange transition-colors duration-300;
+  .nav-link {
+    @apply text-dance-orange transition-colors duration-300 font-custom;
   }
   
   .bunting-container {
