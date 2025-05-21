@@ -88,6 +88,7 @@ export default {
 				sans: ['Inter', 'sans-serif'],
 				display: ['Playfair Display', 'serif'],
 				forroLogo: ['Arial', 'sans-serif'],
+				custom: ['CustomFont', 'sans-serif'], // Add the custom font here
 			},
 			keyframes: {
 				'accordion-down': {
