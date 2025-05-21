@@ -95,16 +95,42 @@
     @apply bg-background text-foreground m-0 p-0 overflow-x-hidden;
   }
   
-  /* Apply custom font to all headings and navigation */
+  /* Apply custom font to all headings and navigation with increased font sizes */
   h1, h2, h3, h4, h5, h6,
   .nav-link, .navigation-item, 
   .section-title, .title {
     font-family: 'CustomFont', sans-serif !important;
   }
+
+  /* Increased font sizes for headings */
+  h1 {
+    font-size: 2.5rem !important; /* 40px */
+  }
   
-  /* Custom font classes */
+  h2 {
+    font-size: 2.25rem !important; /* 36px */
+  }
+  
+  h3 {
+    font-size: 1.875rem !important; /* 30px */
+  }
+  
+  h4 {
+    font-size: 1.5rem !important; /* 24px */
+  }
+  
+  h5 {
+    font-size: 1.25rem !important; /* 20px */
+  }
+  
+  h6 {
+    font-size: 1.125rem !important; /* 18px */
+  }
+  
+  /* Custom font classes with bigger size */
   .font-custom {
     font-family: 'CustomFont', sans-serif !important;
+    font-size: 1.125rem !important; /* Base size for custom font text */
   }
   
   /* Fix for container sizing */
@@ -147,7 +173,7 @@
 
 @layer components {
   .nav-link {
-    @apply text-dance-orange transition-colors duration-300 font-custom;
+    @apply text-dance-orange transition-colors duration-300 font-custom text-lg;
   }
   
   .bunting-container {

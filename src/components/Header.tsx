@@ -146,7 +146,7 @@ const Header = () => {
               {navItems.map((item) => (
                 <NavigationMenuItem key={item.id}>
                   <NavigationMenuLink
-                    className={`${navigationMenuTriggerStyle()} text-dance-brown font-custom ${
+                    className={`${navigationMenuTriggerStyle()} text-dance-brown font-custom text-lg ${
                       activeSection === item.id ? "text-dance-orange" : ""
                     } hover:text-dance-orange hover:bg-transparent`}
                     onClick={() => scrollToSection(item.id)}
@@ -161,14 +161,14 @@ const Header = () => {
           {/* Tablet Navigation Dropdown (medium screens only) */}
           <div className="hidden md:block lg:hidden">
             <DropdownMenu>
-              <DropdownMenuTrigger className="flex items-center text-dance-brown hover:text-dance-orange bg-transparent border-none hover:bg-transparent focus:ring-0 font-custom">
+              <DropdownMenuTrigger className="flex items-center text-dance-brown hover:text-dance-orange bg-transparent border-none hover:bg-transparent focus:ring-0 font-custom text-lg">
                 Menu <ChevronDown className="ml-1 h-4 w-4" />
               </DropdownMenuTrigger>
               <DropdownMenuContent align="end" className="w-56 bg-[#ffeec0] border-dance-brown border-opacity-20">
                 {navItems.map((item) => (
                   <DropdownMenuItem 
                     key={item.id} 
-                    className={`cursor-pointer font-custom ${
+                    className={`cursor-pointer font-custom text-lg ${
                       activeSection === item.id ? "text-dance-orange" : "text-dance-brown"
                     } hover:text-dance-orange hover:bg-[#fff8e8]`}
                     onClick={() => scrollToSection(item.id)}
@@ -237,7 +237,7 @@ const Header = () => {
                 <a
                   key={item.id}
                   onClick={() => scrollToSection(item.id)}
-                  className={`text-lg font-medium py-2 border-b border-dance-brown border-opacity-10 font-custom ${
+                  className={`text-xl font-medium py-2 border-b border-dance-brown border-opacity-10 font-custom ${
                     activeSection === item.id ? "text-dance-orange" : "text-dance-brown"
                   }`}
                 >
