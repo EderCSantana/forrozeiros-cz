@@ -1,3 +1,4 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -95,42 +96,50 @@
     @apply bg-background text-foreground m-0 p-0 overflow-x-hidden;
   }
   
-  /* Apply custom font to all headings and navigation with increased font sizes */
+  /* Apply custom font to all headings and navigation with increased font sizes and letter spacing */
   h1, h2, h3, h4, h5, h6,
   .nav-link, .navigation-item, 
   .section-title, .title {
     font-family: 'CustomFont', sans-serif !important;
+    letter-spacing: 0.05em !important; /* Increased letter spacing for better readability */
   }
 
   /* Increased font sizes for headings */
   h1 {
     font-size: 2.5rem !important; /* 40px */
+    letter-spacing: 0.05em !important;
   }
   
   h2 {
     font-size: 2.25rem !important; /* 36px */
+    letter-spacing: 0.05em !important;
   }
   
   h3 {
     font-size: 1.875rem !important; /* 30px */
+    letter-spacing: 0.05em !important;
   }
   
   h4 {
     font-size: 1.5rem !important; /* 24px */
+    letter-spacing: 0.05em !important;
   }
   
   h5 {
     font-size: 1.25rem !important; /* 20px */
+    letter-spacing: 0.05em !important;
   }
   
   h6 {
     font-size: 1.125rem !important; /* 18px */
+    letter-spacing: 0.05em !important;
   }
   
-  /* Custom font classes with bigger size */
+  /* Custom font classes with bigger size and letter spacing */
   .font-custom {
     font-family: 'CustomFont', sans-serif !important;
-    font-size: 1.125rem !important; /* Base size for custom font text */
+    font-size: 1.25rem !important; /* Increased from 1.125rem to 1.25rem */
+    letter-spacing: 0.05em !important; /* Added letter spacing */
   }
   
   /* Fix for container sizing */
@@ -173,8 +182,12 @@
 
 @layer components {
   .nav-link {
-    @apply text-dance-orange transition-colors duration-300 font-custom text-lg;
+    @apply text-dance-orange transition-colors duration-300 font-custom;
+    font-size: 1.375rem !important; /* Increased from text-lg (1.125rem) to 1.375rem */
+    letter-spacing: 0.05em !important;
   }
+  
+  /* ... keep existing code (bunting-container, flag, no-bullet, min-h-section-content styles) */
   
   .bunting-container {
     overflow: hidden;
@@ -254,6 +267,8 @@
   }
 }
 
+/* ... keep existing code (utilities, keyframes, custom colors, flag colors, additional styles) */
+
 @layer utilities {
   .animate-flag-wave {
     animation: flag-wave 5s ease-in-out infinite;
@@ -304,3 +319,4 @@
 .bg-dance-cream {
   background-color: #FFF8E8;
 }
+
