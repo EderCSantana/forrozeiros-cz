@@ -1,4 +1,5 @@
 
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -104,41 +105,41 @@
     letter-spacing: 0.05em !important; /* Increased letter spacing for better readability */
   }
 
-  /* Significantly increased font sizes to compensate for custom font appearing much smaller */
+  /* Increased font sizes to compensate for custom font appearing smaller */
   h1 {
-    font-size: 4rem !important; /* Increased from 3rem to 4rem to match visual size of original */
+    font-size: 3rem !important; /* Increased from 2.5rem to match visual size of original */
     letter-spacing: 0.05em !important;
   }
   
   h2 {
-    font-size: 3.5rem !important; /* Increased from 2.75rem to 3.5rem to match visual size of original */
+    font-size: 2.75rem !important; /* Increased from 2.25rem to match visual size of original */
     letter-spacing: 0.05em !important;
   }
   
   h3 {
-    font-size: 3rem !important; /* Increased from 2.25rem to 3rem to match visual size of original */
+    font-size: 2.25rem !important; /* Increased from 1.875rem to match visual size of original */
     letter-spacing: 0.05em !important;
   }
   
   h4 {
-    font-size: 2.5rem !important; /* Increased from 1.875rem to 2.5rem to match visual size of original */
+    font-size: 1.875rem !important; /* Increased from 1.5rem to match visual size of original */
     letter-spacing: 0.05em !important;
   }
   
   h5 {
-    font-size: 2rem !important; /* Increased from 1.5rem to 2rem to match visual size of original */
+    font-size: 1.5rem !important; /* Increased from 1.25rem to match visual size of original */
     letter-spacing: 0.05em !important;
   }
   
   h6 {
-    font-size: 1.75rem !important; /* Increased from 1.375rem to 1.75rem to match visual size of original */
+    font-size: 1.375rem !important; /* Increased from 1.125rem to match visual size of original */
     letter-spacing: 0.05em !important;
   }
   
-  /* Custom font classes with significantly increased size to match visual appearance */
+  /* Custom font classes with increased size to match visual appearance */
   .font-custom {
     font-family: 'CustomFont', sans-serif !important;
-    font-size: 2rem !important; /* Increased from 1.5rem to 2rem to match visual size of original */
+    font-size: 1.5rem !important; /* Increased from 1.25rem to match visual size of original */
     letter-spacing: 0.05em !important; /* Added letter spacing */
   }
   
@@ -185,7 +186,7 @@
 @layer components {
   .nav-link {
     @apply text-dance-orange transition-colors duration-300 font-custom;
-    font-size: 2.2rem !important; /* Increased navigation size significantly to maintain 10% bigger relative to new base */
+    font-size: 1.65rem !important; /* Increased navigation size to maintain 10% bigger relative to new base */
     letter-spacing: 0.05em !important;
   }
   
@@ -321,3 +322,4 @@
 .bg-dance-cream {
   background-color: #FFF8E8;
 }
+
