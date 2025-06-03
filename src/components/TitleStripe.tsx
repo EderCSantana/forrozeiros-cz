@@ -1,5 +1,4 @@
 
-
 // TitleStripe component for consistent page headers
 const TitleStripe = ({ title }: { title: string }) => {
   // Bunting flags subcomponent - commented out but kept for future use
@@ -34,8 +33,8 @@ const TitleStripe = ({ title }: { title: string }) => {
     <section className="relative bg-dance-brown w-full">
       {/* Bunting flags commented out - can be re-enabled by uncommenting the line below */}
       {/* <BuntingFlags /> */}
-      <div className="container-fluid mx-auto text-center pt-4 pb-8">
-        <h2 className="text-3xl md:text-5xl font-bold text-dance-orange mb-6 animate-fade-in animation-delay-200 no-bullet">
+      <div className="container-fluid mx-auto text-center py-16">
+        <h2 className="text-[12rem] md:text-[20rem] font-display text-dance-orange mb-6 animate-fade-in no-bullet">
           {title}
         </h2>
       </div>
@@ -44,4 +43,3 @@ const TitleStripe = ({ title }: { title: string }) => {
 };
 
 export default TitleStripe;
-
