@@ -38,7 +38,7 @@ const TitleStripe = ({ title }: { title: string }) => {
           className="text-4xl md:text-6xl font-bold text-dance-orange mb-6 animate-fade-in animation-delay-200 no-bullet font-custom" 
           style={{ 
             fontFamily: "'CustomFont', sans-serif",
-            fontSize: 'clamp(5.5rem, 11vw, 13.2rem)'
+            fontSize: 'clamp(5.5rem, 11vw, 13.2rem)' /* Increased by 10% from previous values */
           }}
         >
           {title}
