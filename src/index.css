@@ -95,7 +95,7 @@
     @apply bg-background text-foreground m-0 p-0 overflow-x-hidden;
   }
   
-  /* Apply custom font to all headings and navigation with increased font sizes and letter spacing */
+  /* Apply custom font to all headings and navigation with increased letter spacing */
   h1, h2, h3, h4, h5, h6,
   .nav-link, .navigation-item, 
   .section-title, .title {
@@ -103,41 +103,41 @@
     letter-spacing: 0.05em !important; /* Increased letter spacing for better readability */
   }
 
-  /* Increased font sizes for headings - 10% bigger */
+  /* Restored original font sizes for headings - back to original sizes */
   h1 {
-    font-size: 2.75rem !important; /* Increased from 2.5rem (40px) to 2.75rem (44px) */
+    font-size: 2.5rem !important; /* Restored from 2.75rem back to original 2.5rem (40px) */
     letter-spacing: 0.05em !important;
   }
   
   h2 {
-    font-size: 2.475rem !important; /* Increased from 2.25rem (36px) to 2.475rem (~39.6px) */
+    font-size: 2.25rem !important; /* Restored from 2.475rem back to original 2.25rem (36px) */
     letter-spacing: 0.05em !important;
   }
   
   h3 {
-    font-size: 2.0625rem !important; /* Increased from 1.875rem (30px) to 2.0625rem (33px) */
+    font-size: 1.875rem !important; /* Restored from 2.0625rem back to original 1.875rem (30px) */
     letter-spacing: 0.05em !important;
   }
   
   h4 {
-    font-size: 1.65rem !important; /* Increased from 1.5rem (24px) to 1.65rem (~26.4px) */
+    font-size: 1.5rem !important; /* Restored from 1.65rem back to original 1.5rem (24px) */
     letter-spacing: 0.05em !important;
   }
   
   h5 {
-    font-size: 1.375rem !important; /* Increased from 1.25rem (20px) to 1.375rem (22px) */
+    font-size: 1.25rem !important; /* Restored from 1.375rem back to original 1.25rem (20px) */
     letter-spacing: 0.05em !important;
   }
   
   h6 {
-    font-size: 1.2375rem !important; /* Increased from 1.125rem (18px) to 1.2375rem (~19.8px) */
+    font-size: 1.125rem !important; /* Restored from 1.2375rem back to original 1.125rem (18px) */
     letter-spacing: 0.05em !important;
   }
   
-  /* Custom font classes with bigger size and letter spacing - 10% bigger */
+  /* Custom font classes with original size and letter spacing - restored to original */
   .font-custom {
     font-family: 'CustomFont', sans-serif !important;
-    font-size: 1.375rem !important; /* Increased from 1.25rem to 1.375rem */
+    font-size: 1.25rem !important; /* Restored from 1.375rem back to original 1.25rem */
     letter-spacing: 0.05em !important; /* Added letter spacing */
   }
   
@@ -182,7 +182,7 @@
 @layer components {
   .nav-link {
     @apply text-dance-orange transition-colors duration-300 font-custom;
-    font-size: 1.5125rem !important; /* Increased from 1.375rem to 1.5125rem (10% bigger) */
+    font-size: 1.5125rem !important; /* Keep navigation 10% bigger */
     letter-spacing: 0.05em !important;
   }
   
@@ -266,7 +266,7 @@
   }
 }
 
-/* ... keep existing code (utilities, keyframes, custom colors, flag colors, additional styles) */
+// ... keep existing code (utilities, keyframes, custom colors, flag colors, additional styles)
 
 @layer utilities {
   .animate-flag-wave {
