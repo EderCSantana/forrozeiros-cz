@@ -30,9 +30,6 @@ const Index: React.FC = () => {
   return (
     <div className="flex-1">
       <Carousel images={carouselImages} />
-      
-      {/* Add TitleStripe to show the large text */}
-      <TitleStripe title="FORRÓ" />
 
       <div className="container mx-auto px-4 py-8">
         {/* Calendar Section for Homepage */}
