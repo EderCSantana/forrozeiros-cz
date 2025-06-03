@@ -2,7 +2,6 @@
 import React, { useState, useEffect } from "react";
 import { useLanguage } from "../contexts/LanguageContext";
 import Carousel from "../components/Carousel";
-import TitleStripe from "../components/TitleStripe";
 import carouselImages from "../data/carouselImages";
 
 const Index: React.FC = () => {
@@ -30,9 +29,6 @@ const Index: React.FC = () => {
   return (
     <div className="flex-1">
       <Carousel images={carouselImages} />
-      
-      {/* Add TitleStripe to show the large text */}
-      <TitleStripe title="FORRÓ" />
 
       <div className="container mx-auto px-4 py-8">
         {/* Calendar Section for Homepage */}
