@@ -1,5 +1,4 @@
 
-
 // TitleStripe component for consistent page headers
 const TitleStripe = ({ title }: { title: string }) => {
   // Bunting flags subcomponent - commented out but kept for future use
@@ -35,7 +34,16 @@ const TitleStripe = ({ title }: { title: string }) => {
       {/* Bunting flags commented out - can be re-enabled by uncommenting the line below */}
       {/* <BuntingFlags /> */}
       <div className="container-fluid mx-auto text-center pt-4 pb-8">
-        <h2 className="text-4xl md:text-6xl font-display font-bold text-dance-orange mb-6 animate-fade-in no-bullet">
+        <h2 
+          className="text-4xl md:text-6xl font-bold text-dance-orange mb-6 animate-fade-in animation-delay-200 no-bullet font-custom"
+          style={{ 
+            fontFamily: "'CustomFont', sans-serif",
+            fontSize: 'clamp(5.5rem, 11vw, 13.2rem)',
+            lineHeight: '1.1',
+            transform: 'none !important',
+            zoom: '1 !important'
+          }}
+        >
           {title}
         </h2>
       </div>
@@ -44,4 +52,3 @@ const TitleStripe = ({ title }: { title: string }) => {
 };
 
 export default TitleStripe;
-
