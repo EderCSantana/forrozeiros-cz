@@ -183,7 +183,7 @@
 @layer components {
   .nav-link {
     @apply text-dance-orange transition-colors duration-300 font-custom;
-    font-size: 1.5125rem !important; /* Keep navigation 10% bigger */
+    font-size: 1.66375rem !important; /* Increased by 10% from 1.5125rem */
     letter-spacing: 0.05em !important;
   }
   
