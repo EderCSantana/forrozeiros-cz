@@ -37,8 +37,9 @@ const TitleStripe = ({ title }: { title: string }) => {
         <h2 
           className="text-4xl md:text-6xl font-bold text-dance-orange mb-6 animate-fade-in animation-delay-200 no-bullet font-custom"
           style={{ 
-            fontFamily: "'CustomFont', sans-serif !important",
-            fontSize: 'clamp(5.5rem, 11vw, 13.2rem) !important',
+            fontFamily: "'CustomFont', sans-serif",
+            fontSize: 'clamp(5.5rem, 11vw, 13.2rem)',
+            lineHeight: '1.1',
             transform: 'none !important',
             zoom: '1 !important'
           }}
