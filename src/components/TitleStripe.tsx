@@ -37,7 +37,10 @@ const TitleStripe = ({ title }: { title: string }) => {
       <div className="container-fluid mx-auto text-center pt-4 pb-8">
         <h2 
           className="text-4xl md:text-6xl font-bold text-dance-orange mb-6 animate-fade-in animation-delay-200 no-bullet font-custom" 
-          style={{ fontFamily: "'CustomFont', sans-serif" }}
+          style={{ 
+            fontFamily: "'CustomFont', sans-serif",
+            fontSize: 'clamp(2.75rem, 5vw, 6.6rem)' /* 10% bigger: from 2.5rem to 2.75rem min, 6rem to 6.6rem max */
+          }}
         >
           {title}
         </h2>

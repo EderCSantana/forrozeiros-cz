@@ -1,4 +1,3 @@
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -104,41 +103,41 @@
     letter-spacing: 0.05em !important; /* Increased letter spacing for better readability */
   }
 
-  /* Increased font sizes for headings */
+  /* Increased font sizes for headings - 10% bigger */
   h1 {
-    font-size: 2.5rem !important; /* 40px */
+    font-size: 2.75rem !important; /* Increased from 2.5rem (40px) to 2.75rem (44px) */
     letter-spacing: 0.05em !important;
   }
   
   h2 {
-    font-size: 2.25rem !important; /* 36px */
+    font-size: 2.475rem !important; /* Increased from 2.25rem (36px) to 2.475rem (~39.6px) */
     letter-spacing: 0.05em !important;
   }
   
   h3 {
-    font-size: 1.875rem !important; /* 30px */
+    font-size: 2.0625rem !important; /* Increased from 1.875rem (30px) to 2.0625rem (33px) */
     letter-spacing: 0.05em !important;
   }
   
   h4 {
-    font-size: 1.5rem !important; /* 24px */
+    font-size: 1.65rem !important; /* Increased from 1.5rem (24px) to 1.65rem (~26.4px) */
     letter-spacing: 0.05em !important;
   }
   
   h5 {
-    font-size: 1.25rem !important; /* 20px */
+    font-size: 1.375rem !important; /* Increased from 1.25rem (20px) to 1.375rem (22px) */
     letter-spacing: 0.05em !important;
   }
   
   h6 {
-    font-size: 1.125rem !important; /* 18px */
+    font-size: 1.2375rem !important; /* Increased from 1.125rem (18px) to 1.2375rem (~19.8px) */
     letter-spacing: 0.05em !important;
   }
   
-  /* Custom font classes with bigger size and letter spacing */
+  /* Custom font classes with bigger size and letter spacing - 10% bigger */
   .font-custom {
     font-family: 'CustomFont', sans-serif !important;
-    font-size: 1.25rem !important; /* Increased from 1.125rem to 1.25rem */
+    font-size: 1.375rem !important; /* Increased from 1.25rem to 1.375rem */
     letter-spacing: 0.05em !important; /* Added letter spacing */
   }
   
@@ -183,7 +182,7 @@
 @layer components {
   .nav-link {
     @apply text-dance-orange transition-colors duration-300 font-custom;
-    font-size: 1.375rem !important; /* Increased from text-lg (1.125rem) to 1.375rem */
+    font-size: 1.5125rem !important; /* Increased from 1.375rem to 1.5125rem (10% bigger) */
     letter-spacing: 0.05em !important;
   }
   
@@ -319,4 +318,3 @@
 .bg-dance-cream {
   background-color: #FFF8E8;
 }
-

@@ -149,7 +149,7 @@ const Header = () => {
                       activeSection === item.id ? "text-dance-orange" : ""
                     } hover:text-dance-orange hover:bg-transparent`}
                     style={{ 
-                      fontSize: '1.375rem', 
+                      fontSize: '1.5125rem', /* 10% bigger than previous 1.375rem */
                       letterSpacing: '0.05em' 
                     }}
                     onClick={() => scrollToSection(item.id)}
@@ -167,7 +167,7 @@ const Header = () => {
               <DropdownMenuTrigger 
                 className="flex items-center text-dance-brown hover:text-dance-orange bg-transparent border-none hover:bg-transparent focus:ring-0 font-custom"
                 style={{ 
-                  fontSize: '1.375rem', 
+                  fontSize: '1.5125rem', /* 10% bigger than previous 1.375rem */
                   letterSpacing: '0.05em' 
                 }}
               >
@@ -181,7 +181,7 @@ const Header = () => {
                       activeSection === item.id ? "text-dance-orange" : "text-dance-brown"
                     } hover:text-dance-orange hover:bg-[#fff8e8]`}
                     style={{ 
-                      fontSize: '1.375rem', 
+                      fontSize: '1.5125rem', /* 10% bigger than previous 1.375rem */
                       letterSpacing: '0.05em' 
                     }}
                     onClick={() => scrollToSection(item.id)}
@@ -254,7 +254,7 @@ const Header = () => {
                     activeSection === item.id ? "text-dance-orange" : "text-dance-brown"
                   }`}
                   style={{ 
-                    fontSize: '1.5rem', 
+                    fontSize: '1.65rem', /* 10% bigger than previous 1.5rem */
                     letterSpacing: '0.05em' 
                   }}
                 >
