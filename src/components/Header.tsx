@@ -139,17 +139,17 @@ const Header = () => {
             </div>
           </a>
 
-          {/* Desktop Navigation (Large screens only) */}
+          {/* Desktop Navigation (Large screens only) - reduced spacing and increased font size */}
           <NavigationMenu className="hidden lg:flex">
-            <NavigationMenuList>
+            <NavigationMenuList className="space-x-0">
               {navItems.map((item) => (
                 <NavigationMenuItem key={item.id}>
                   <NavigationMenuLink
-                    className={`${navigationMenuTriggerStyle()} text-dance-brown font-custom ${
+                    className={`${navigationMenuTriggerStyle()} text-dance-brown font-custom px-2 ${
                       activeSection === item.id ? "text-dance-orange" : ""
                     } hover:text-dance-orange hover:bg-transparent`}
                     style={{ 
-                      fontSize: '1.83rem', /* Increased by 10% from 1.66375rem */
+                      fontSize: '2.2rem', /* Significantly increased from 1.83rem */
                       letterSpacing: '0.05em' 
                     }}
                     onClick={() => scrollToSection(item.id)}
@@ -161,13 +161,13 @@ const Header = () => {
             </NavigationMenuList>
           </NavigationMenu>
 
-          {/* Tablet Navigation Dropdown (medium screens only) */}
+          {/* Tablet Navigation Dropdown (medium screens only) - increased font size */}
           <div className="hidden md:block lg:hidden">
             <DropdownMenu>
               <DropdownMenuTrigger 
                 className="flex items-center text-dance-brown hover:text-dance-orange bg-transparent border-none hover:bg-transparent focus:ring-0 font-custom"
                 style={{ 
-                  fontSize: '1.83rem', /* Increased by 10% from 1.66375rem */
+                  fontSize: '2.2rem', /* Significantly increased from 1.83rem */
                   letterSpacing: '0.05em' 
                 }}
               >
@@ -181,7 +181,7 @@ const Header = () => {
                       activeSection === item.id ? "text-dance-orange" : "text-dance-brown"
                     } hover:text-dance-orange hover:bg-[#fff8e8]`}
                     style={{ 
-                      fontSize: '1.83rem', /* Increased by 10% from 1.66375rem */
+                      fontSize: '2.2rem', /* Significantly increased from 1.83rem */
                       letterSpacing: '0.05em' 
                     }}
                     onClick={() => scrollToSection(item.id)}
@@ -245,7 +245,7 @@ const Header = () => {
               </button>
             </div>
             
-            <nav className="flex flex-col space-y-4">
+            <nav className="flex flex-col space-y-2">
               {navItems.map((item) => (
                 <a
                   key={item.id}
@@ -254,7 +254,7 @@ const Header = () => {
                     activeSection === item.id ? "text-dance-orange" : "text-dance-brown"
                   }`}
                   style={{ 
-                    fontSize: '1.997rem', /* Increased by 10% from 1.815rem */
+                    fontSize: '2.4rem', /* Significantly increased from 1.997rem */
                     letterSpacing: '0.05em' 
                   }}
                 >
