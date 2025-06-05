@@ -1,3 +1,4 @@
+
 import { CalendarDays, MapPin, Clock, Users, Music, Ticket, PenSquare, FileText } from "lucide-react";
 import TitleStripe from "../components/TitleStripe";
 import { useLanguage } from "../contexts/LanguageContext";
@@ -69,10 +70,10 @@ const Events = () => {
 
   return (
     <div className="min-h-screen flex flex-col">
-      <TitleStripe title={t("events.title")} />
-      
-      <main className="flex-grow bg-dance-beige">
-        <div className="container-fluid mx-auto py-12">
+      <main className="flex-grow py-12 bg-white">
+        <div className="container-fluid mx-auto">
+          <TitleStripe title={t("events.title")} />
+          
           <div className="space-y-8">
             {/* Weekly Events in Prostor Section */}
             <EventSection 
