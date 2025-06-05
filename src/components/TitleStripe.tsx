@@ -34,9 +34,9 @@ const TitleStripe = ({ title }: { title: string }) => {
       {/* Bunting flags commented out - can be re-enabled by uncommenting the line below */}
       {/* <BuntingFlags /> */}
       <div className="container-fluid mx-auto text-center py-10">
-        <h2 className="text-4xl md:text-6xl font-display text-dance-orange mb-6 animate-fade-in no-bullet">
+        <h1 className="text-4xl md:text-6xl font-display text-dance-orange mb-6 animate-fade-in no-bullet">
           {title}
-        </h2>
+        </h1>
       </div>
     </section>
   );
