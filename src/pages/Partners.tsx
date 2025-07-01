@@ -35,13 +35,15 @@ const PartnerCard = ({
   description, 
   websiteUrl, 
   imageUrl,
-  contactInfo
+  contactInfo,
+  t
 }: { 
   title: string; 
   description: React.ReactNode; 
   websiteUrl: string;
   imageUrl?: string;
   contactInfo?: React.ReactNode;
+  t: (key: string) => string;
 }) => {
   const baseUrl = import.meta.env.BASE_URL;
   
@@ -164,6 +166,7 @@ const Partners = () => {
                   </div>
                 </>
               }
+              t={t}
             />
             
             <PartnerCard
@@ -182,6 +185,7 @@ const Partners = () => {
                   </div>
                 </>
               }
+              t={t}
             />
           </PartnerSection>
           
@@ -294,6 +298,7 @@ const Partners = () => {
                   </div>
                 </>
               }
+              t={t}
             />
           </PartnerSection>
           
@@ -313,6 +318,7 @@ const Partners = () => {
                   </div>
                 </>
               }
+              t={t}
             />
           </PartnerSection>
         </div>
