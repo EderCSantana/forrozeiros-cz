@@ -1,47 +1,26 @@
 
+import React, { useState, useEffect } from "react";
 import { CalendarDays, MapPin, Clock, Users, Music, Ticket, PenSquare, FileText } from "lucide-react";
-import TitleStripe from "../components/TitleStripe";
+import { Link } from "react-router-dom";
 import { useLanguage } from "../contexts/LanguageContext";
+import TitleStripe from "../components/TitleStripe";
 import { Separator } from "@/components/ui/separator";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
-import { Link } from "react-router-dom";
-import { useState, useEffect } from "react";
 
-const Events = () => {
-  const { t } = useLanguage();
-  const [calendarHeight, setCalendarHeight] = useState(600);
+const EventSection = ({ 
+  title, 
+  image, 
+  children, 
+  imageOnLeft = false 
+}: { 
+  title: string; 
+  image?: string; 
+  children: React.ReactNode; 
+  imageOnLeft?: boolean 
+}) => {
   const baseUrl = import.meta.env.BASE_URL;
   
-  // Adjust calendar height based on window size
-  useEffect(() => {
-    const updateHeight = () => {
-      const width = window.innerWidth;
-      if (width < 640) {
-        setCalendarHeight(400);
-      } else if (width < 1024) {
-        setCalendarHeight(500);
-      } else {
-        setCalendarHeight(600);
-      }
-    };
-    
-    updateHeight();
-    window.addEventListener('resize', updateHeight);
-    return () => window.removeEventListener('resize', updateHeight);
-  }, []);
-  
-  // Event section component for consistent styling
-  const EventSection = ({ 
-    title, 
-    image, 
-    children, 
-    imageOnLeft = false 
-  }: { 
-    title: string; 
-    image?: string; 
-    children: React.ReactNode; 
-    imageOnLeft?: boolean 
-  }) => (
+  return (
     <div className="py-8 first:pt-0">
       <h3 className="text-2xl font-display font-bold mb-6 text-dance-brown">{title}</h3>
       <div className={`flex flex-col ${imageOnLeft ? 'md:flex-row' : 'md:flex-row-reverse'} gap-6 items-start`}>
@@ -67,13 +46,36 @@ const Events = () => {
       <Separator className="mt-8" />
     </div>
   );
+};
+
+const Events = () => {
+  const { t } = useLanguage();
+  const [calendarHeight, setCalendarHeight] = useState(600);
+  const baseUrl = import.meta.env.BASE_URL;
+  
+  useEffect(() => {
+    const updateHeight = () => {
+      const width = window.innerWidth;
+      if (width < 640) {
+        setCalendarHeight(400);
+      } else if (width < 1024) {
+        setCalendarHeight(500);
+      } else {
+        setCalendarHeight(600);
+      }
+    };
+    
+    updateHeight();
+    window.addEventListener('resize', updateHeight);
+    return () => window.removeEventListener('resize', updateHeight);
+  }, []);
 
   return (
     <div className="min-h-screen flex flex-col">
+      <TitleStripe title={t("events.title")} />
+      
       <main className="flex-grow py-12 bg-white">
-        <div className="container-fluid mx-auto">
-          <TitleStripe title={t("events.title")} />
-          
+        <div className="container mx-auto px-4">
           <div className="space-y-8">
             {/* Weekly Events in Prostor Section */}
             <EventSection 
@@ -88,7 +90,7 @@ const Events = () => {
               <p>{t("events.weekly_contribution")}</p>
             </EventSection>
             
-            {/* Weekly Events in Letna Section - Updated with new image */}
+            {/* Weekly Events in Letna Section */}
             <EventSection 
               title={t("events.letna_title")}
               image={baseUrl + "lovable-uploads/a6572eb9-c316-45bf-9e11-2e8bfc2ff42c.png"}
@@ -100,7 +102,7 @@ const Events = () => {
               <p className="flex items-center gap-2"><FileText size={18} className="text-dance-brown" /> {t("events.letna_rules")}</p>
             </EventSection>
             
-            {/* Concerts of Três Corações Section */}
+            {/* Concerts Section */}
             <EventSection 
               title={t("events.concerts_title")}
               image={baseUrl + "lovable-uploads/93254ed9-ab60-412d-9531-191dc5ecac94.png"}
@@ -143,7 +145,7 @@ const Events = () => {
               <p className="flex items-center gap-2 mt-4"><FileText size={18} className="text-dance-brown" /> {t("events.nearby_rules")}</p>
             </EventSection>
             
-            {/* Custom Events Section - Link to Custom Events Page */}
+            {/* Custom Events Section */}
             <div className="py-8">
               <h3 className="text-2xl font-display font-bold mb-6 text-dance-brown">{t("events.custom_events_title")}</h3>
               <div className="prose max-w-none space-y-4">
@@ -160,7 +162,7 @@ const Events = () => {
             </div>
           </div>
           
-          {/* Google Calendar Section - Moved to bottom */}
+          {/* Google Calendar Section */}
           <div className="py-8 mt-8">
             <h3 className="text-2xl font-display font-bold mb-6 text-dance-brown">{t("events.upcoming")}</h3>
             <div className="w-full rounded-lg shadow-lg overflow-hidden border border-dance-orange">

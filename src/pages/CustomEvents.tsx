@@ -6,13 +6,13 @@ import { School, University, Building, HandHeart, Gift, Calendar } from "lucide-
 
 const CustomEvents = () => {
   const { t } = useLanguage();
-  const baseUrl = import.meta.env.BASE_URL;
 
   return (
     <div className="min-h-screen flex flex-col">
       <TitleStripe title={t("custom_events.title")} />
-      <div className="flex-grow bg-dance-beige">
-        <div className="container-fluid mx-auto py-8 md:py-12">
+      
+      <main className="flex-grow py-12 bg-dance-beige">
+        <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto mb-10">
             <p className="text-lg mb-6">
               {t("custom_events.intro")}
@@ -26,7 +26,9 @@ const CustomEvents = () => {
             <div className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-all duration-300">
               <div className="flex items-center mb-4">
                 <School className="text-dance-orange mr-3" size={28} />
-                <h3 className="text-xl font-semibold text-dance-brown no-bullet">{t("custom_events.schools_title")}</h3>
+                <h3 className="text-xl font-semibold text-dance-brown no-bullet">
+                  {t("custom_events.schools_title")}
+                </h3>
               </div>
               <p>{t("custom_events.schools_content")}</p>
             </div>
@@ -34,7 +36,9 @@ const CustomEvents = () => {
             <div className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-all duration-300">
               <div className="flex items-center mb-4">
                 <University className="text-dance-orange mr-3" size={28} />
-                <h3 className="text-xl font-semibold text-dance-brown no-bullet">{t("custom_events.universities_title")}</h3>
+                <h3 className="text-xl font-semibold text-dance-brown no-bullet">
+                  {t("custom_events.universities_title")}
+                </h3>
               </div>
               <p>{t("custom_events.universities_content")}</p>
             </div>
@@ -42,7 +46,9 @@ const CustomEvents = () => {
             <div className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-all duration-300">
               <div className="flex items-center mb-4">
                 <Building className="text-dance-orange mr-3" size={28} />
-                <h3 className="text-xl font-semibold text-dance-brown no-bullet">{t("custom_events.team_building_title")}</h3>
+                <h3 className="text-xl font-semibold text-dance-brown no-bullet">
+                  {t("custom_events.team_building_title")}
+                </h3>
               </div>
               <p>{t("custom_events.team_building_content")}</p>
             </div>
@@ -50,7 +56,9 @@ const CustomEvents = () => {
             <div className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-all duration-300">
               <div className="flex items-center mb-4">
                 <HandHeart className="text-dance-orange mr-3" size={28} />
-                <h3 className="text-xl font-semibold text-dance-brown no-bullet">{t("custom_events.nonprofit_events_title")}</h3>
+                <h3 className="text-xl font-semibold text-dance-brown no-bullet">
+                  {t("custom_events.nonprofit_events_title")}
+                </h3>
               </div>
               <p>{t("custom_events.nonprofit_events_content")}</p>
             </div>
@@ -58,7 +66,9 @@ const CustomEvents = () => {
             <div className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-all duration-300">
               <div className="flex items-center mb-4">
                 <Gift className="text-dance-orange mr-3" size={28} />
-                <h3 className="text-xl font-semibold text-dance-brown no-bullet">{t("custom_events.nonprofit_projects_title")}</h3>
+                <h3 className="text-xl font-semibold text-dance-brown no-bullet">
+                  {t("custom_events.nonprofit_projects_title")}
+                </h3>
               </div>
               <p>{t("custom_events.nonprofit_projects_content")}</p>
             </div>
@@ -66,7 +76,9 @@ const CustomEvents = () => {
             <div className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-all duration-300">
               <div className="flex items-center mb-4">
                 <Calendar className="text-dance-orange mr-3" size={28} />
-                <h3 className="text-xl font-semibold text-dance-brown no-bullet">{t("custom_events.public_events_title")}</h3>
+                <h3 className="text-xl font-semibold text-dance-brown no-bullet">
+                  {t("custom_events.public_events_title")}
+                </h3>
               </div>
               <p>{t("custom_events.public_events_content")}</p>
             </div>
@@ -78,7 +90,7 @@ const CustomEvents = () => {
             </p>
           </div>
         </div>
-      </div>
+      </main>
     </div>
   );
 };

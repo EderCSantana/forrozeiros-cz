@@ -1,7 +1,7 @@
-
-import TitleStripe from "../components/TitleStripe";
-import { useLanguage } from "../contexts/LanguageContext";
+import React from "react";
 import { Building, Coffee, Music, User, GraduationCap, Globe } from "lucide-react";
+import { useLanguage } from "../contexts/LanguageContext";
+import TitleStripe from "../components/TitleStripe";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import { Button } from "@/components/ui/button";
@@ -30,23 +30,22 @@ const PartnerSection = ({
   </section>
 );
 
-const Partners = () => {
-  const { t } = useLanguage();
+const PartnerCard = ({ 
+  title, 
+  description, 
+  websiteUrl, 
+  imageUrl,
+  contactInfo
+}: { 
+  title: string; 
+  description: React.ReactNode; 
+  websiteUrl: string;
+  imageUrl?: string;
+  contactInfo?: React.ReactNode;
+}) => {
   const baseUrl = import.meta.env.BASE_URL;
   
-  const PartnerCard = ({ 
-    title, 
-    description, 
-    websiteUrl, 
-    imageUrl,
-    contactInfo
-  }: { 
-    title: string; 
-    description: React.ReactNode; 
-    websiteUrl: string;
-    imageUrl?: string;
-    contactInfo?: React.ReactNode;
-  }) => (
+  return (
     <Card className="bg-white border border-dance-cream hover:shadow-md transition-all duration-300">
       <CardHeader>
         <div className="flex items-center justify-between">
@@ -83,18 +82,22 @@ const Partners = () => {
       </CardFooter>
     </Card>
   );
+};
 
-  const TeacherCard = ({ 
-    name, 
-    description, 
-    socialLinks,
-    imageUrl
-  }: { 
-    name: string; 
-    description: React.ReactNode; 
-    socialLinks: React.ReactNode;
-    imageUrl?: string;
-  }) => (
+const TeacherCard = ({ 
+  name, 
+  description, 
+  socialLinks,
+  imageUrl
+}: { 
+  name: string; 
+  description: React.ReactNode; 
+  socialLinks: React.ReactNode;
+  imageUrl?: string;
+}) => {
+  const baseUrl = import.meta.env.BASE_URL;
+  
+  return (
     <Card className="bg-white border border-dance-cream hover:shadow-md transition-all duration-300">
       <CardHeader>
         <div className="flex items-center gap-4">
@@ -122,13 +125,18 @@ const Partners = () => {
       </CardFooter>
     </Card>
   );
+};
+
+const Partners = () => {
+  const { t } = useLanguage();
+  const baseUrl = import.meta.env.BASE_URL;
 
   return (
     <div className="min-h-screen flex flex-col">
       <TitleStripe title={t("partners.title")} />
       
-      <main className="flex-grow py-12 md:py-16 bg-white">
-        <div className="container-fluid mx-auto">
+      <main className="flex-grow py-12 bg-white">
+        <div className="container mx-auto px-4">
           <div className="mb-12">
             <h2 className="text-xl md:text-2xl font-medium text-dance-brown mb-4 no-bullet">
               {t("partners.intro")}
@@ -217,7 +225,7 @@ const Partners = () => {
               }
             />
             
-            {/* Other Forró Teachers */}
+            {/* Other Teachers */}
             <div className="md:col-span-2 mt-6">
               <h4 className="text-lg font-medium text-dance-brown mb-3 no-bullet">{t("partners.teachers.others.title")}</h4>
               <p className="mb-4 text-dance-black text-opacity-80">{t("partners.teachers.others.description")}</p>

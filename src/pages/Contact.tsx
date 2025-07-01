@@ -1,23 +1,22 @@
 
-import { useState } from "react";
+import React, { useState } from "react";
 import { Mail, Send, CheckCircle, Facebook, Instagram } from "lucide-react";
 import { useLanguage } from "../contexts/LanguageContext";
 import TitleStripe from "../components/TitleStripe";
-import emailjs from "emailjs-com";
 import { useToast } from "@/hooks/use-toast";
+import emailjs from "emailjs-com";
 
 const Contact = () => {
+  const { t } = useLanguage();
+  const { toast } = useToast();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     subject: "",
     message: "",
   });
-  
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [formSubmitted, setFormSubmitted] = useState(false);
-  const { t } = useLanguage();
-  const { toast } = useToast();
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
@@ -32,11 +31,8 @@ const Contact = () => {
     setIsSubmitting(true);
     
     try {
-      // Initialize EmailJS with the correct public key
       emailjs.init("-Q-rUQo795S9S_uXQ");
       
-      // Prepare the template parameters matching your EmailJS template variables
-      // and ensuring the "from" field is set correctly
       const templateParams = {
         title: formData.subject,
         name: formData.name,
@@ -49,17 +45,15 @@ const Contact = () => {
       
       console.log("Sending email with parameters:", templateParams);
       
-      // Send the email using EmailJS
       const response = await emailjs.send(
-        "service_fv979s4", // Service ID
-        "template_cyr9l4q", // Template ID
+        "service_fv979s4",
+        "template_cyr9l4q",
         templateParams
       );
       
       console.log("Email sent successfully:", response);
       setFormSubmitted(true);
       
-      // Reset form
       setFormData({
         name: "",
         email: "",
@@ -67,14 +61,12 @@ const Contact = () => {
         message: "",
       });
       
-      // Show success message
       toast({
         title: "Message sent!",
         description: "We've received your message and will get back to you soon.",
         variant: "default",
       });
       
-      // Reset success message after 5 seconds
       setTimeout(() => {
         setFormSubmitted(false);
       }, 5000);
@@ -94,8 +86,7 @@ const Contact = () => {
     <div className="min-h-screen flex flex-col">
       <TitleStripe title={t("contact.title") || "CONTACT US"} />
       
-      {/* Contact Info & Form Section */}
-      <section className="py-16 bg-dance-beige">
+      <main className="flex-grow py-12 bg-dance-beige">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Contact Info */}
@@ -259,7 +250,7 @@ const Contact = () => {
             </div>
           </div>
         </div>
-      </section>
+      </main>
     </div>
   );
 };
