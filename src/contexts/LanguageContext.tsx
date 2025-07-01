@@ -41,6 +41,8 @@ const detectBrowserLanguage = (): string => {
   const browserLang = navigator.language || navigator.languages?.[0] || 'en';
   const langCode = browserLang.split('-')[0].toLowerCase();
   
+  console.log('Browser language detected:', browserLang, 'Language code:', langCode);
+  
   // Map browser language codes to our supported language codes
   const languageMap: Record<string, string> = {
     'en': 'EN',
@@ -52,19 +54,22 @@ const detectBrowserLanguage = (): string => {
     'sk': 'SK'
   };
   
-  return languageMap[langCode] || 'EN'; // Default to English if not supported
+  const detectedLang = languageMap[langCode] || 'EN';
+  console.log('Mapped to language:', detectedLang);
+  return detectedLang;
 };
 
 export const LanguageProvider = ({ children }: LanguageProviderProps) => {
   const [language, setLanguage] = useState(() => {
     const savedLanguage = localStorage.getItem("language");
     if (savedLanguage) {
+      console.log('Using saved language:', savedLanguage);
       return savedLanguage;
     }
     
     // If no saved language, detect browser language
     const detectedLanguage = detectBrowserLanguage();
-    console.log('Detected browser language:', detectedLanguage);
+    console.log('Using detected browser language:', detectedLanguage);
     return detectedLanguage;
   });
   const [translations, setTranslations] = useState<Record<string, string>>({});
@@ -98,6 +103,8 @@ export const LanguageProvider = ({ children }: LanguageProviderProps) => {
         
         const loadedTranslations: Record<string, string> = {};
         const langCode = language.toLowerCase();
+        
+        console.log('Loading translations for language:', language, 'using key:', langCode);
 
         // Use Promise.all for parallel loading
         await Promise.all(sections.map(async (section) => {
@@ -114,6 +121,8 @@ export const LanguageProvider = ({ children }: LanguageProviderProps) => {
           }
         }));
 
+        console.log('Loaded translations count:', Object.keys(loadedTranslations).length);
+        
         // Store in cache
         translationCache[language] = loadedTranslations;
         setTranslations(loadedTranslations);
