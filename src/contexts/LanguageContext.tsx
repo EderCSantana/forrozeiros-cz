@@ -36,10 +36,36 @@ type LanguageProviderProps = {
 // Cache for translations to avoid repeated fetch
 const translationCache: Record<string, Record<string, string>> = {};
 
+// Function to detect browser language and map it to supported languages
+const detectBrowserLanguage = (): string => {
+  const browserLang = navigator.language || navigator.languages?.[0] || 'en';
+  const langCode = browserLang.split('-')[0].toLowerCase();
+  
+  // Map browser language codes to our supported language codes
+  const languageMap: Record<string, string> = {
+    'en': 'EN',
+    'es': 'ES',
+    'pt': 'PT',
+    'ru': 'RU',
+    'uk': 'UA', // Ukrainian browser code maps to UA
+    'cs': 'CZ', // Czech browser code maps to CZ
+    'sk': 'SK'
+  };
+  
+  return languageMap[langCode] || 'EN'; // Default to English if not supported
+};
+
 export const LanguageProvider = ({ children }: LanguageProviderProps) => {
   const [language, setLanguage] = useState(() => {
     const savedLanguage = localStorage.getItem("language");
-    return savedLanguage || "EN";
+    if (savedLanguage) {
+      return savedLanguage;
+    }
+    
+    // If no saved language, detect browser language
+    const detectedLanguage = detectBrowserLanguage();
+    console.log('Detected browser language:', detectedLanguage);
+    return detectedLanguage;
   });
   const [translations, setTranslations] = useState<Record<string, string>>({});
   const [isLoading, setIsLoading] = useState(true);
