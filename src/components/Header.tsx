@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from "react";
 import { Facebook, Instagram, Menu, X, ChevronDown } from "lucide-react";
 import LanguageSelector from "./LanguageSelector";
@@ -139,19 +140,15 @@ const Header = () => {
             </div>
           </a>
 
-          {/* Desktop Navigation (Large screens only) - reduced spacing and increased font size */}
+          {/* Desktop Navigation (Large screens only) */}
           <NavigationMenu className="hidden lg:flex">
-            <NavigationMenuList className="space-x-0">
+            <NavigationMenuList>
               {navItems.map((item) => (
                 <NavigationMenuItem key={item.id}>
                   <NavigationMenuLink
-                    className={`${navigationMenuTriggerStyle()} text-dance-brown font-custom px-2 ${
+                    className={`${navigationMenuTriggerStyle()} text-dance-brown ${
                       activeSection === item.id ? "text-dance-orange" : ""
                     } hover:text-dance-orange hover:bg-transparent`}
-                    style={{ 
-                      fontSize: '2.2rem', /* Significantly increased from 1.83rem */
-                      letterSpacing: '0.05em' 
-                    }}
                     onClick={() => scrollToSection(item.id)}
                   >
                     {item.name}
@@ -161,29 +158,19 @@ const Header = () => {
             </NavigationMenuList>
           </NavigationMenu>
 
-          {/* Tablet Navigation Dropdown (medium screens only) - increased font size */}
+          {/* Tablet Navigation Dropdown (medium screens only) */}
           <div className="hidden md:block lg:hidden">
             <DropdownMenu>
-              <DropdownMenuTrigger 
-                className="flex items-center text-dance-brown hover:text-dance-orange bg-transparent border-none hover:bg-transparent focus:ring-0 font-custom"
-                style={{ 
-                  fontSize: '2.2rem', /* Significantly increased from 1.83rem */
-                  letterSpacing: '0.05em' 
-                }}
-              >
+              <DropdownMenuTrigger className="flex items-center text-dance-brown hover:text-dance-orange bg-transparent border-none hover:bg-transparent focus:ring-0">
                 Menu <ChevronDown className="ml-1 h-4 w-4" />
               </DropdownMenuTrigger>
               <DropdownMenuContent align="end" className="w-56 bg-[#ffeec0] border-dance-brown border-opacity-20">
                 {navItems.map((item) => (
                   <DropdownMenuItem 
                     key={item.id} 
-                    className={`cursor-pointer font-custom ${
+                    className={`cursor-pointer ${
                       activeSection === item.id ? "text-dance-orange" : "text-dance-brown"
                     } hover:text-dance-orange hover:bg-[#fff8e8]`}
-                    style={{ 
-                      fontSize: '2.2rem', /* Significantly increased from 1.83rem */
-                      letterSpacing: '0.05em' 
-                    }}
                     onClick={() => scrollToSection(item.id)}
                   >
                     {item.name}
@@ -245,18 +232,14 @@ const Header = () => {
               </button>
             </div>
             
-            <nav className="flex flex-col space-y-2">
+            <nav className="flex flex-col space-y-4">
               {navItems.map((item) => (
                 <a
                   key={item.id}
                   onClick={() => scrollToSection(item.id)}
-                  className={`font-medium py-2 border-b border-dance-brown border-opacity-10 font-custom ${
+                  className={`text-lg font-medium py-2 border-b border-dance-brown border-opacity-10 ${
                     activeSection === item.id ? "text-dance-orange" : "text-dance-brown"
                   }`}
-                  style={{ 
-                    fontSize: '2.4rem', /* Significantly increased from 1.997rem */
-                    letterSpacing: '0.05em' 
-                  }}
                 >
                   {item.name}
                 </a>

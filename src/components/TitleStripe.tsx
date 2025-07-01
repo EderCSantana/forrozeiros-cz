@@ -30,13 +30,13 @@ const TitleStripe = ({ title }: { title: string }) => {
   };
 
   return (
-    <section className="relative bg-dance-brown w-full">
+    <section className="relative py-16 bg-dance-brown w-full">
       {/* Bunting flags commented out - can be re-enabled by uncommenting the line below */}
       {/* <BuntingFlags /> */}
-      <div className="container-fluid mx-auto text-center py-10">
-        <h1 className="text-4xl md:text-6xl font-display text-dance-orange mb-6 animate-fade-in no-bullet">
+      <div className="container-fluid mx-auto text-center pt-4 pb-8">
+        <h2 className="text-3xl md:text-5xl font-bold text-dance-orange mb-6 animate-fade-in animation-delay-200 no-bullet">
           {title}
-        </h1>
+        </h2>
       </div>
     </section>
   );

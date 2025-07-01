@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from "react";
 import { useLanguage } from "../contexts/LanguageContext";
 import Carousel from "../components/Carousel";
+import TitleStripe from "../components/TitleStripe";
 import carouselImages from "../data/carouselImages";
 
 const Index: React.FC = () => {
