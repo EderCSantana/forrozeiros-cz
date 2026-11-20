@@ -1,0 +1,53 @@
+{
+  "en": {
+    "contact.title": "Contact Us",
+    "contact.form.submit": "Send Message",
+    "contact.get_in_touch": "Get in Touch",
+    "contact.email_us": "Email Us",
+    "contact.follow_us": "Follow Us",
+    "contact.follow_us_description": "Stay connected with us on social media for the latest updates and event announcements.",
+    "contact.form.title": "Send Us a Message",
+    "contact.form.your_name": "Your Name *",
+    "contact.form.your_email": "Your Email *",
+    "contact.form.subject": "Subject *",
+    "contact.form.subject_placeholder": "Select a subject",
+    "contact.subject.general": "General Inquiry",
+    "contact.subject.events": "Event Information",
+    "contact.subject.classes": "Class Registration",
+    "contact.subject.partnership": "Partnership Opportunity",
+    "contact.subject.feedback": "Feedback",
+    "contact.subject.other": "Other",
+    "contact.form.your_message": "Your Message *",
+    "contact.form.sending": "Sending...",
+    "contact.success.title": "Thank you!",
+    "contact.success.description": "Your message has been sent successfully. We'll get back to you shortly.",
+    "contact.toast.sent_title": "Message sent!",
+    "contact.toast.sent_description": "We've received your message and will get back to you soon.",
+    "contact.toast.error_title": "Error sending message",
+    "contact.toast.error_description": "Please try again later or contact us directly at forrozeiroscz@gmail.com"
+  },
+  "es": {
+    "contact.title": "Contáctanos",
+    "contact.form.submit": "Enviar mensaje"
+  },
+  "pt": {
+    "contact.title": "Fale Conosco",
+    "contact.form.submit": "Enviar Mensagem"
+  },
+  "ru": {
+    "contact.title": "Свяжитесь с нами",
+    "contact.form.submit": "Отправить сообщение"
+  },
+  "ua": {
+    "contact.title": "Зв’яжіться з нами",
+    "contact.form.submit": "Надіслати повідомлення"
+  },
+  "cz": {
+    "contact.title": "Kontaktujte nás",
+    "contact.form.submit": "Odeslat zprávu"
+  },
+  "sk": {
+    "contact.title": "Kontaktujte nás",
+    "contact.form.submit": "Odoslať správu"
+  }
+}

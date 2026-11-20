@@ -1,171 +1,78 @@
-
-import { Link } from "react-router-dom";
 import { Facebook, Instagram, Mail } from "lucide-react";
+import ExternalLink from "@/components/ExternalLink";
+import { contactEmail, navItems, socialLinks } from "@/data/site";
+import { useLanguage } from "@/i18n/LanguageContext";
 
-const Footer = () => {
+const linkClasses = "transition-colors duration-300 hover:text-forro-amber";
+
+// The footer lists every section except "home", split in two columns.
+const footerNavItems = navItems.filter((item) => item.id !== "home");
+const footerNavColumns = [footerNavItems.slice(0, 4), footerNavItems.slice(4)];
+
+export default function Footer() {
+  const { t } = useLanguage();
   const year = new Date().getFullYear();
 
-  // Function to scroll to a section by ID
-  const scrollToSection = (sectionId: string) => (e: React.MouseEvent) => {
-    e.preventDefault();
-    const section = document.getElementById(sectionId);
-    if (section) {
-      section.scrollIntoView({ behavior: "smooth" });
-      // Update URL without page reload
-      window.history.pushState({}, "", `/#${sectionId}`);
-    }
-  };
-
   return (
-    <footer className="bg-dance-brown text-white">
-      <div className="container-fluid mx-auto">
-        <div className="pt-16 pb-10">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {/* About Column */}
-            <div>
-              <h3 className="text-xl font-display font-medium mb-4">
-                Forrozeiros.cz
-              </h3>
-              <p className="text-white text-opacity-80 mb-4">
-                Spreading the joy of Forró in Czechia and beyond.<br />
-                Workshops · Parties · Community · Culture
-              </p>
-              <p className="text-white text-opacity-80 italic">
-                Made by the Forrozeiros collective.
-              </p>
-            </div>
+    <footer className="bg-forro-brown px-4 text-white">
+      <div className="grid grid-cols-1 gap-8 pb-10 pt-16 md:grid-cols-2 lg:grid-cols-3">
+        <div>
+          <h3 className="mb-4 font-display text-xl font-medium">Forrozeiros.cz</h3>
+          <p className="mb-4 text-white/80">
+            {t("footer.tagline")}
+            <br />
+            {t("footer.activities")}
+          </p>
+          <p className="italic text-white/80">{t("footer.made_by")}</p>
+        </div>
 
-            {/* Quick Links - Now in 2 columns */}
-            <div>
-              <h3 className="text-xl font-display font-medium mb-4">
-                Quick Links
-              </h3>
-              <div className="grid grid-cols-2 gap-2">
-                <div>
-                  <ul className="space-y-2 text-white text-opacity-80">
-                    <li>
-                      <a
-                        href="/#about-forro"
-                        className="hover:text-dance-orange transition-colors duration-300"
-                        onClick={scrollToSection("about-forro")}
-                      >
-                        About Forró
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="/#about-us"
-                        className="hover:text-dance-orange transition-colors duration-300"
-                        onClick={scrollToSection("about-us")}
-                      >
-                        About Us
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="/#events"
-                        className="hover:text-dance-orange transition-colors duration-300"
-                        onClick={scrollToSection("events")}
-                      >
-                        Events
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="/#custom-events"
-                        className="hover:text-dance-orange transition-colors duration-300"
-                        onClick={scrollToSection("custom-events")}
-                      >
-                        Custom Events
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-                <div>
-                  <ul className="space-y-2 text-white text-opacity-80">
-                    <li>
-                      <a
-                        href="/#rules"
-                        className="hover:text-dance-orange transition-colors duration-300"
-                        onClick={scrollToSection("rules")}
-                      >
-                        Our Rules
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="/#partners"
-                        className="hover:text-dance-orange transition-colors duration-300"
-                        onClick={scrollToSection("partners")}
-                      >
-                        Partners
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="/#contact"
-                        className="hover:text-dance-orange transition-colors duration-300"
-                        onClick={scrollToSection("contact")}
-                      >
-                        Contact
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-
-            {/* Contact Info */}
-            <div>
-              <h3 className="text-xl font-display font-medium mb-4">
-                Contact Us
-              </h3>
-              <ul className="space-y-3 text-white text-opacity-80">
-                <li className="flex items-center">
-                  <Mail size={18} className="mr-3 flex-shrink-0" />
-                  <a
-                    href="mailto:forrozeiroscz@gmail.com"
-                    className="hover:text-dance-orange transition-colors duration-300"
-                  >
-                    forrozeiroscz@gmail.com
-                  </a>
-                </li>
-                <li className="flex items-center">
-                  <Facebook size={18} className="mr-3 flex-shrink-0" />
-                  <a
-                    href="https://www.facebook.com/profile.php?id=61571664788308"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="hover:text-dance-orange transition-colors duration-300"
-                  >
-                    Forrozeiros CZ
-                  </a>
-                </li>
-                <li className="flex items-center">
-                  <Instagram size={18} className="mr-3 flex-shrink-0" />
-                  <a
-                    href="https://www.instagram.com/forrozeiros_cz/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="hover:text-dance-orange transition-colors duration-300"
-                  >
-                    @forrozeiros_cz
-                  </a>
-                </li>
+        <div>
+          <h3 className="mb-4 font-display text-xl font-medium">{t("footer.quick_links")}</h3>
+          <div className="grid grid-cols-2 gap-2">
+            {footerNavColumns.map((column, index) => (
+              <ul key={index} className="space-y-2 text-white/80">
+                {column.map((item) => (
+                  <li key={item.id}>
+                    <a href={`/#${item.id}`} className={linkClasses}>
+                      {t(item.labelKey)}
+                    </a>
+                  </li>
+                ))}
               </ul>
-            </div>
+            ))}
           </div>
         </div>
 
-        {/* Bottom Footer */}
-        <div className="border-t border-white border-opacity-10 py-6 text-center text-white text-opacity-60">
-          <p>
-            © {year} Forrozeiros.cz. All rights reserved. Made by the Forrozeiros collective.
-          </p>
+        <div>
+          <h3 className="mb-4 font-display text-xl font-medium">{t("footer.contact_us")}</h3>
+          <ul className="space-y-3 text-white/80">
+            <li className="flex items-center">
+              <Mail size={18} className="mr-3 flex-shrink-0" />
+              <a href={`mailto:${contactEmail}`} className={linkClasses}>
+                {contactEmail}
+              </a>
+            </li>
+            <li className="flex items-center">
+              <Facebook size={18} className="mr-3 flex-shrink-0" />
+              <ExternalLink href={socialLinks.facebook} className={linkClasses}>
+                Forrozeiros CZ
+              </ExternalLink>
+            </li>
+            <li className="flex items-center">
+              <Instagram size={18} className="mr-3 flex-shrink-0" />
+              <ExternalLink href={socialLinks.instagram} className={linkClasses}>
+                @forrozeiros_cz
+              </ExternalLink>
+            </li>
+          </ul>
         </div>
+      </div>
+
+      <div className="border-t border-white/10 py-6 text-center text-white/60">
+        <p>
+          © {year} Forrozeiros.cz. {t("footer.copyright")}
+        </p>
       </div>
     </footer>
   );
-};
-
-export default Footer;
+}

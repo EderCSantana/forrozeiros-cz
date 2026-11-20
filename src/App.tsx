@@ -1,40 +1,21 @@
+import Footer from "@/components/Footer";
+import Header from "@/components/Header";
+import LanguageProvider from "@/i18n/LanguageProvider";
+import HomePage from "@/pages/HomePage";
+import NotFound from "@/pages/NotFound";
 
-import { Toaster } from "@/components/ui/toaster";
-import { Toaster as Sonner } from "@/components/ui/sonner";
-import { TooltipProvider } from "@/components/ui/tooltip";
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { LanguageProvider } from "./contexts/LanguageContext";
-import Header from "./components/Header";
-import Footer from "./components/Footer";
-import HomePage from "./pages/HomePage";
-import NotFound from "./pages/NotFound";
+const homePaths = ["/", "/index.html"];
 
-const queryClient = new QueryClient();
+export default function App() {
+  const isHomePage = homePaths.includes(window.location.pathname);
 
-// Use the correct base path
-const App = () => (
-  <QueryClientProvider client={queryClient}>
-    <TooltipProvider>
-      <LanguageProvider>
-        <Toaster />
-        <Sonner />
-        <BrowserRouter basename="/">
-          <div className="flex flex-col min-h-screen">
-            <Header />
-            <div className="flex-grow">
-              <Routes>
-                <Route path="/" element={<HomePage />} />
-                {/* Fallback route for any other paths */}
-                <Route path="*" element={<NotFound />} />
-              </Routes>
-            </div>
-            <Footer />
-          </div>
-        </BrowserRouter>
-      </LanguageProvider>
-    </TooltipProvider>
-  </QueryClientProvider>
-);
-
-export default App;
+  return (
+    <LanguageProvider>
+      <div className="flex min-h-screen flex-col">
+        <Header />
+        <main className="flex-grow">{isHomePage ? <HomePage /> : <NotFound />}</main>
+        <Footer />
+      </div>
+    </LanguageProvider>
+  );
+}

@@ -1,0 +1,34 @@
+{
+  "en": {
+    "footer.quick_links": "Quick Links",
+    "footer.contact_us": "Contact Us",
+    "footer.tagline": "Spreading the joy of Forró in Czechia and beyond.",
+    "footer.activities": "Workshops · Parties · Community · Culture",
+    "footer.made_by": "Made by the Forrozeiros collective.",
+    "footer.copyright": "All rights reserved. Made by the Forrozeiros collective."
+  },
+  "es": {
+    "footer.quick_links": "Enlaces Rápidos",
+    "footer.contact_us": "Contáctanos"
+  },
+  "pt": {
+    "footer.quick_links": "Links Rápidos",
+    "footer.contact_us": "Fale Conosco"
+  },
+  "ru": {
+    "footer.quick_links": "Быстрые ссылки",
+    "footer.contact_us": "Связаться с нами"
+  },
+  "ua": {
+    "footer.quick_links": "Швидкі посилання",
+    "footer.contact_us": "Зв'яжіться з нами"
+  },
+  "cz": {
+    "footer.quick_links": "Rychlé Odkazy",
+    "footer.contact_us": "Kontaktujte nás"
+  },
+  "sk": {
+    "footer.quick_links": "Rýchle Odkazy",
+    "footer.contact_us": "Kontaktujte nás"
+  }
+}

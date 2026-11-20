@@ -1,76 +1,49 @@
+import { useRef, useState } from "react";
+import { Check, ChevronDown } from "lucide-react";
+import useClickOutside from "@/hooks/useClickOutside";
+import { useLanguage } from "@/i18n/LanguageContext";
+import { languages, type LanguageCode } from "@/i18n/languages";
 
-import { useState, useRef, useEffect } from "react";
-import { ChevronDown, Check } from "lucide-react";
-import { useLanguage, languages } from "../contexts/LanguageContext";
-
-const LanguageSelector = () => {
-  const [isOpen, setIsOpen] = useState(false);
+export default function LanguageSelector() {
   const { language, setLanguage } = useLanguage();
-  const dropdownRef = useRef<HTMLDivElement>(null);
+  const [isOpen, setIsOpen] = useState(false);
+  const containerRef = useRef<HTMLDivElement>(null);
 
-  const selectedLanguage = languages.find(lang => lang.code === language) || languages[0];
+  useClickOutside(containerRef, () => setIsOpen(false));
 
-  const toggleDropdown = () => {
-    setIsOpen(!isOpen);
-  };
-
-  const selectLanguage = (languageCode: string) => {
-    setLanguage(languageCode);
+  const selectLanguage = (code: LanguageCode) => {
+    setLanguage(code);
     setIsOpen(false);
   };
 
-  // Close dropdown when clicking outside
-  useEffect(() => {
-    const handleClickOutside = (event: MouseEvent) => {
-      if (
-        dropdownRef.current &&
-        !dropdownRef.current.contains(event.target as Node)
-      ) {
-        setIsOpen(false);
-      }
-    };
-
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
-    };
-  }, []);
-
   return (
-    <div className="relative" ref={dropdownRef}>
+    <div ref={containerRef} className="relative">
       <button
-        onClick={toggleDropdown}
-        className="flex items-center space-x-1 px-2 py-1 rounded-md hover:bg-dance-cream transition-colors duration-200"
+        type="button"
+        onClick={() => setIsOpen(!isOpen)}
         aria-label="Select language"
+        className="flex items-center space-x-1 rounded-md px-2 py-1 transition-colors duration-200 hover:bg-forro-cream"
       >
-        <span className="text-sm font-medium">{selectedLanguage.code}</span>
-        <ChevronDown
-          size={16}
-          className={`transition-transform duration-200 ${
-            isOpen ? "transform rotate-180" : ""
-          }`}
-        />
+        <span className="text-sm font-medium">{language}</span>
+        <ChevronDown size={16} className={`transition-transform duration-200 ${isOpen ? "rotate-180" : ""}`} />
       </button>
 
       {isOpen && (
-        <div className="absolute right-0 mt-2 py-2 w-48 bg-white rounded-md shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none z-50 animate-fade-in">
+        <div className="absolute right-0 z-50 mt-2 w-48 animate-fade-in rounded-md bg-white py-2 shadow-lg ring-1 ring-black/5">
           <div className="max-h-56 overflow-y-auto">
-            {languages.map((lang) => (
+            {languages.map((option) => (
               <button
-                key={lang.code}
-                onClick={() => selectLanguage(lang.code)}
-                className={`flex items-center justify-between w-full px-4 py-2 text-sm hover:bg-dance-cream transition-colors duration-150 ${
-                  language === lang.code
-                    ? "text-dance-orange"
-                    : "text-dance-black"
+                key={option.code}
+                type="button"
+                onClick={() => selectLanguage(option.code)}
+                className={`flex w-full items-center justify-between px-4 py-2 text-sm transition-colors duration-150 hover:bg-forro-cream ${
+                  option.code === language ? "text-forro-orange" : ""
                 }`}
               >
                 <span>
-                  {lang.code} - {lang.name}
+                  {option.code} - {option.name}
                 </span>
-                {language === lang.code && (
-                  <Check size={16} className="text-dance-orange" />
-                )}
+                {option.code === language && <Check size={16} className="text-forro-orange" />}
               </button>
             ))}
           </div>
@@ -78,6 +51,4 @@ const LanguageSelector = () => {
       )}
     </div>
   );
-};
-
-export default LanguageSelector;
+}

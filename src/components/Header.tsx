@@ -1,272 +1,165 @@
+import { useEffect, useRef, useState } from "react";
+import { ChevronDown, Menu, X } from "lucide-react";
+import LanguageSelector from "@/components/LanguageSelector";
+import SocialIcons from "@/components/SocialIcons";
+import { navItems } from "@/data/site";
+import useClickOutside from "@/hooks/useClickOutside";
+import { useLanguage } from "@/i18n/LanguageContext";
 
-import { useState, useEffect } from "react";
-import { Facebook, Instagram, Menu, X, ChevronDown } from "lucide-react";
-import LanguageSelector from "./LanguageSelector";
-import { useLanguage } from "../contexts/LanguageContext";
-import {
-  NavigationMenu,
-  NavigationMenuList,
-  NavigationMenuItem,
-  NavigationMenuLink,
-  navigationMenuTriggerStyle,
-} from "@/components/ui/navigation-menu";
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
+const MD_BREAKPOINT = 768;
 
-const Header = () => {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+export default function Header() {
+  const { t } = useLanguage();
   const [activeSection, setActiveSection] = useState("home");
   const [isScrolled, setIsScrolled] = useState(false);
-  const { t } = useLanguage();
+  const [isTabletMenuOpen, setIsTabletMenuOpen] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const tabletMenuRef = useRef<HTMLDivElement>(null);
 
-  const navItems = [
-    { name: t("nav.home"), id: "home" },
-    { name: t("nav.about_forro"), id: "about-forro" },
-    { name: t("nav.about_us"), id: "about-us" },
-    { name: t("nav.events"), id: "events" },
-    { name: t("nav.custom_events"), id: "custom-events" },
-    { name: t("nav.rules"), id: "rules" },
-    { name: t("nav.partners"), id: "partners" },
-    { name: t("nav.contact"), id: "contact" },
-  ];
+  useClickOutside(tabletMenuRef, () => setIsTabletMenuOpen(false));
 
-  const toggleMobileMenu = () => {
-    setMobileMenuOpen(!mobileMenuOpen);
-  };
-
-  const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-      setActiveSection(sectionId);
-      setMobileMenuOpen(false);
-    }
-  };
-
-  // Check scroll position to add background on scroll
   useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 10) {
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(false);
-      }
-    };
-
+    const handleScroll = () => setIsScrolled(window.scrollY > 10);
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Setup intersection observer to update active section on scroll
+  // Highlight the menu item of the section currently on screen.
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setActiveSection(entry.target.id);
-          }
+          if (entry.isIntersecting) setActiveSection(entry.target.id);
         });
       },
-      { threshold: 0.5 }
+      { threshold: 0.5 },
     );
-
     navItems.forEach((item) => {
-      const element = document.getElementById(item.id);
-      if (element) observer.observe(element);
+      const section = document.getElementById(item.id);
+      if (section) observer.observe(section);
     });
-
-    return () => {
-      navItems.forEach((item) => {
-        const element = document.getElementById(item.id);
-        if (element) observer.unobserve(element);
-      });
-    };
+    return () => observer.disconnect();
   }, []);
 
-  // Close mobile menu on window resize to prevent menu issues
   useEffect(() => {
     const handleResize = () => {
-      if (window.innerWidth >= 768 && mobileMenuOpen) {
-        setMobileMenuOpen(false);
-      }
+      if (window.innerWidth >= MD_BREAKPOINT) setIsMobileMenuOpen(false);
     };
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
-  }, [mobileMenuOpen]);
-
-  // Close mobile menu when clicking outside
-  useEffect(() => {
-    const handleClickOutside = (e: MouseEvent) => {
-      const mobileMenu = document.getElementById('mobile-menu');
-      const mobileMenuButton = document.getElementById('mobile-menu-button');
-      
-      if (mobileMenu && mobileMenuButton && 
-          !mobileMenu.contains(e.target as Node) && 
-          !mobileMenuButton.contains(e.target as Node) &&
-          mobileMenuOpen) {
-        setMobileMenuOpen(false);
-      }
-    };
-
-    document.addEventListener('mousedown', handleClickOutside);
-    return () => document.removeEventListener('mousedown', handleClickOutside);
-  }, [mobileMenuOpen]);
+  const handleNavigate = (sectionId: string) => {
+    setActiveSection(sectionId);
+    setIsTabletMenuOpen(false);
+    setIsMobileMenuOpen(false);
+  };
 
   return (
-    <header 
+    <header
       className={`sticky top-0 z-50 w-full transition-all duration-300 ${
-        isScrolled ? "bg-[#ffeec0] bg-opacity-95 backdrop-blur-md shadow-sm" : "bg-[#ffeec0] bg-opacity-80"
+        isScrolled ? "bg-forro-sand/95 shadow-sm backdrop-blur-md" : "bg-forro-sand/80"
       }`}
     >
-      <div className="container mx-auto px-4">
+      <div className="container">
         <div className="flex items-center justify-between py-4">
-          {/* Logo as Home Button */}
-          <a 
-            onClick={() => scrollToSection("home")} 
-            className="flex-shrink-0 cursor-pointer" 
-            aria-label="Home"
-          >
-            <div className="flex items-center">
-              <img 
-                src="/lovable-uploads/762ed430-c94d-4c3e-b69a-7b4da26f6abb.png" 
-                alt="Forró Zeiros" 
-                className="h-12 md:h-14 lg:h-16"
-              />
-            </div>
+          <a href="/#home" onClick={() => handleNavigate("home")} aria-label="Home" className="flex-shrink-0">
+            <img src="/images/logo.png" alt="Forró Zeiros" className="h-12 md:h-14 lg:h-16" />
           </a>
 
-          {/* Desktop Navigation (Large screens only) */}
-          <NavigationMenu className="hidden lg:flex">
-            <NavigationMenuList>
+          {/* Desktop: full menu */}
+          <nav className="relative z-10 hidden max-w-max flex-1 items-center justify-center lg:flex">
+            <ul className="flex flex-1 items-center justify-center space-x-2">
               {navItems.map((item) => (
-                <NavigationMenuItem key={item.id}>
-                  <NavigationMenuLink
-                    className={`${navigationMenuTriggerStyle()} text-dance-brown ${
-                      activeSection === item.id ? "text-dance-orange" : ""
-                    } hover:text-dance-orange hover:bg-transparent`}
-                    onClick={() => scrollToSection(item.id)}
+                <li key={item.id}>
+                  <a
+                    href={`/#${item.id}`}
+                    onClick={() => handleNavigate(item.id)}
+                    className="inline-flex h-10 w-max items-center justify-center rounded-md px-3 py-2 text-sm font-medium text-forro-brown transition-colors hover:text-forro-amber focus:outline-none"
                   >
-                    {item.name}
-                  </NavigationMenuLink>
-                </NavigationMenuItem>
+                    {t(item.labelKey)}
+                  </a>
+                </li>
               ))}
-            </NavigationMenuList>
-          </NavigationMenu>
+            </ul>
+          </nav>
 
-          {/* Tablet Navigation Dropdown (medium screens only) */}
-          <div className="hidden md:block lg:hidden">
-            <DropdownMenu>
-              <DropdownMenuTrigger className="flex items-center text-dance-brown hover:text-dance-orange bg-transparent border-none hover:bg-transparent focus:ring-0">
-                Menu <ChevronDown className="ml-1 h-4 w-4" />
-              </DropdownMenuTrigger>
-              <DropdownMenuContent align="end" className="w-56 bg-[#ffeec0] border-dance-brown border-opacity-20">
+          {/* Tablet: dropdown menu */}
+          <div ref={tabletMenuRef} className="relative hidden md:block lg:hidden">
+            <button
+              type="button"
+              onClick={() => setIsTabletMenuOpen(!isTabletMenuOpen)}
+              className="flex items-center text-forro-brown hover:text-forro-amber"
+            >
+              {t("nav.menu")} <ChevronDown className="ml-1 h-4 w-4" />
+            </button>
+            {isTabletMenuOpen && (
+              <div className="absolute right-0 top-full z-50 mt-1 w-56 overflow-hidden rounded-md border border-forro-rust/20 bg-forro-sand p-1 shadow-md">
                 {navItems.map((item) => (
-                  <DropdownMenuItem 
-                    key={item.id} 
-                    className={`cursor-pointer ${
-                      activeSection === item.id ? "text-dance-orange" : "text-dance-brown"
-                    } hover:text-dance-orange hover:bg-[#fff8e8]`}
-                    onClick={() => scrollToSection(item.id)}
+                  <a
+                    key={item.id}
+                    href={`/#${item.id}`}
+                    onClick={() => handleNavigate(item.id)}
+                    className={`flex select-none items-center rounded-sm px-2 py-1.5 text-sm transition-colors hover:bg-forro-cream hover:text-forro-amber ${
+                      activeSection === item.id ? "text-forro-orange" : "text-forro-brown"
+                    }`}
                   >
-                    {item.name}
-                  </DropdownMenuItem>
+                    {t(item.labelKey)}
+                  </a>
                 ))}
-              </DropdownMenuContent>
-            </DropdownMenu>
+              </div>
+            )}
           </div>
 
-          {/* Social Icons and Language Selector - Only visible on non-mobile screens */}
-          <div className="hidden md:flex items-center space-x-2 sm:space-x-4">
-            <a
-              href="https://www.facebook.com/profile.php?id=61571664788308"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-dance-brown hover:text-dance-orange transition-colors duration-300"
-              aria-label="Facebook"
-            >
-              <Facebook size={20} />
-            </a>
-            <a
-              href="https://www.instagram.com/forrozeiros_cz/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-dance-brown hover:text-dance-orange transition-colors duration-300"
-              aria-label="Instagram"
-            >
-              <Instagram size={20} />
-            </a>
+          <div className="hidden items-center space-x-4 md:flex">
+            <SocialIcons size={20} />
             <LanguageSelector />
           </div>
 
-          {/* Mobile Menu Button - Only visible on mobile */}
           <button
-            id="mobile-menu-button"
-            className="md:hidden text-dance-brown hover:text-dance-orange focus:outline-none"
-            onClick={toggleMobileMenu}
+            type="button"
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             aria-label="Toggle mobile menu"
+            className="text-forro-brown hover:text-forro-amber focus:outline-none md:hidden"
           >
-            {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
         </div>
       </div>
 
-      {/* Mobile Menu - Only renders when mobileMenuOpen is true */}
-      {mobileMenuOpen && (
-        <div
-          id="mobile-menu"
-          className="md:hidden fixed inset-0 bg-[#ffeec0] z-40 pt-20 px-4 overflow-y-auto"
-        >
-          <div className="container mx-auto">
-            <div className="flex justify-end mb-6">
+      {/* Mobile: full-screen menu */}
+      {isMobileMenuOpen && (
+        <div className="fixed inset-0 z-40 overflow-y-auto bg-forro-sand px-4 pt-20 md:hidden">
+          <div className="container">
+            <div className="mb-6 flex justify-end">
               <button
-                className="text-dance-brown hover:text-dance-orange focus:outline-none"
-                onClick={toggleMobileMenu}
+                type="button"
+                onClick={() => setIsMobileMenuOpen(false)}
                 aria-label="Close mobile menu"
+                className="text-forro-brown hover:text-forro-amber focus:outline-none"
               >
                 <X size={24} />
               </button>
             </div>
-            
+
             <nav className="flex flex-col space-y-4">
               {navItems.map((item) => (
                 <a
                   key={item.id}
-                  onClick={() => scrollToSection(item.id)}
-                  className={`text-lg font-medium py-2 border-b border-dance-brown border-opacity-10 ${
-                    activeSection === item.id ? "text-dance-orange" : "text-dance-brown"
+                  href={`/#${item.id}`}
+                  onClick={() => handleNavigate(item.id)}
+                  className={`border-b border-forro-rust/10 py-2 text-lg font-medium ${
+                    activeSection === item.id ? "text-forro-orange" : "text-forro-brown"
                   }`}
                 >
-                  {item.name}
+                  {t(item.labelKey)}
                 </a>
               ))}
             </nav>
-            
-            {/* Social media and language selector in mobile menu */}
+
             <div className="mt-8 flex items-center justify-between">
               <div className="flex space-x-4">
-                <a
-                  href="https://www.facebook.com/profile.php?id=61571664788308"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-dance-brown hover:text-dance-orange transition-colors duration-300"
-                  aria-label="Facebook"
-                >
-                  <Facebook size={24} />
-                </a>
-                <a
-                  href="https://www.instagram.com/forrozeiros_cz/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-dance-brown hover:text-dance-orange transition-colors duration-300"
-                  aria-label="Instagram"
-                >
-                  <Instagram size={24} />
-                </a>
+                <SocialIcons size={24} />
               </div>
               <LanguageSelector />
             </div>
@@ -275,6 +168,4 @@ const Header = () => {
       )}
     </header>
   );
-};
-
-export default Header;
+}
